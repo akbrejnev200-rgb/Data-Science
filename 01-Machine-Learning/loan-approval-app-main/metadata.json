@@ -1,0 +1,93 @@
+{
+  "feature_names": [
+    "Gender",
+    "Married",
+    "Dependents",
+    "Education",
+    "Self_Employed",
+    "Loan_Amount_Term",
+    "Credit_History",
+    "EMI_to_Income",
+    "LoanAmount_log",
+    "TotalIncome_log",
+    "AppIncome_log",
+    "Property_Area_Rural",
+    "Property_Area_Semiurban",
+    "Property_Area_Urban"
+  ],
+  "n_features": 14,
+  "n_train": 491,
+  "n_test": 123,
+  "models": {
+    "logistic_regression": {
+      "accuracy": 0.8536585365853658,
+      "precision": 0.8316831683168316,
+      "recall": 0.9882352941176471,
+      "f1": 0.9032258064516129,
+      "auc": 0.8674922600619195,
+      "cv_auc_mean": 0.7190713887866171,
+      "cv_auc_std": 0.04974126051686879,
+      "confusion_matrix": [
+        [
+          21,
+          17
+        ],
+        [
+          1,
+          84
+        ]
+      ],
+      "feature_importance": {
+        "Gender": 0.07655106320381351,
+        "Married": 0.2435224531941612,
+        "Dependents": 0.08779716351854604,
+        "Education": 0.1686126173826366,
+        "Self_Employed": 0.07971011330311106,
+        "Loan_Amount_Term": 0.14983856342806579,
+        "Credit_History": 1.2437418768298134,
+        "EMI_to_Income": 0.22419715166331225,
+        "LoanAmount_log": 0.04745754062826179,
+        "TotalIncome_log": 0.13570325623887325,
+        "AppIncome_log": 0.013259041783060078,
+        "Property_Area_Rural": 0.1476968533595216,
+        "Property_Area_Semiurban": 0.226749396857578,
+        "Property_Area_Urban": 0.09013926721509422
+      }
+    },
+    "random_forest": {
+      "accuracy": 0.8292682926829268,
+      "precision": 0.872093023255814,
+      "recall": 0.8823529411764706,
+      "f1": 0.8771929824561403,
+      "auc": 0.8368421052631579,
+      "cv_auc_mean": 0.7471684745154681,
+      "cv_auc_std": 0.04275109515907013,
+      "confusion_matrix": [
+        [
+          27,
+          11
+        ],
+        [
+          10,
+          75
+        ]
+      ],
+      "feature_importance": {
+        "Gender": 0.011312855922651582,
+        "Married": 0.019443638724857656,
+        "Dependents": 0.042495580953397394,
+        "Education": 0.018147723950094893,
+        "Self_Employed": 0.013808132839420858,
+        "Loan_Amount_Term": 0.030317108308615948,
+        "Credit_History": 0.257516899492193,
+        "EMI_to_Income": 0.14169339551996393,
+        "LoanAmount_log": 0.12407560644272894,
+        "TotalIncome_log": 0.1392375986744726,
+        "AppIncome_log": 0.14137849745513315,
+        "Property_Area_Rural": 0.019538390360226407,
+        "Property_Area_Semiurban": 0.026191652214128627,
+        "Property_Area_Urban": 0.014842919142114911
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+# Environnement virtuel
+venv/
+env/
+
+# Poids intermédiaires (pas nécessaires pour le déploiement)
+*.weights.h5
+
+# Data (trop lourd)
+data/
+dataset/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
