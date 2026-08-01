@@ -1,0 +1,17 @@
+venv/
+__pycache__/
+*.pyc
+*.csv
+*.joblib
+.env
+*.log
+
+*.txt
+
+# Secrets et credentials
+*.json
+.env
+service-account*.json
+credentials*.json
+*.pem
+*.key
