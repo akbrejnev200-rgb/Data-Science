@@ -9,7 +9,10 @@ from sklearn.preprocessing import StandardScaler
 
 from data_loading import load_account_features
 from features import prepare_features, FEATURES
-from train import train_isolation_forest, select_best_depth, train_random_forest
+from train import (
+    train_isolation_forest, select_best_depth, train_random_forest,
+    select_best_xgboost_params, train_xgboost,
+)
 from evaluate import evaluate_isolation_forest, calibrate_threshold, evaluate_final
 
 PROJECT_ID = "mlops-vertex-demo"
@@ -66,13 +69,13 @@ def main():
         print(f"  Rappel visé {target_recall} -> seuil={vals['threshold']:.3f}, "
               f"précision={vals['precision']:.3f}, rappel={vals['recall']:.3f}")
 
-    # --- Entraînement final sur train+validation, évaluation sur test ---
+    # --- Entraînement final Random Forest sur train+validation, évaluation sur test ---
     X_train_full = pd.concat([X_train, X_val])
     y_train_full = pd.concat([y_train, y_val])
     rf_final = train_random_forest(X_train_full, y_train_full, max_depth=best_depth)
 
     print("\n" + "=" * 60)
-    print("EVALUATION FINALE SUR LE TEST")
+    print("EVALUATION FINALE SUR LE TEST — RANDOM FOREST")
     print("=" * 60)
 
     result_default = evaluate_final(rf_final, X_test, y_test, threshold=0.5)
@@ -90,11 +93,70 @@ def main():
     print(f"\nAUC-ROC (test) : {result_default['auc_roc']:.3f}")
     print(f"AUC-PR (test) : {result_default['auc_pr']:.3f}")
 
-    # --- Sauvegarde des artefacts ---
+    # ======================================================
+    # XGBoost — comparaison
+    # ======================================================
+    print("\n" + "=" * 60)
+    print("MODELE 3 : XGBoost — sélection d'hyperparamètres")
+    print("=" * 60)
+    best_xgb_params, xgb_results, scale_pos_weight = select_best_xgboost_params(
+        X_train, y_train, X_val, y_val
+    )
+    for key, auc_pr in xgb_results.items():
+        print(f"  {key} -> AUC-PR (validation) = {auc_pr:.3f}")
+    print(f"Meilleurs hyperparamètres retenus : {best_xgb_params}")
+
+    xgb_val = train_xgboost(X_train, y_train, best_xgb_params, scale_pos_weight)
+    best_threshold_xgb, threshold_table_xgb = calibrate_threshold(xgb_val, X_val, y_val)
+    print(f"\nSeuil optimal XGBoost (F1) : {best_threshold_xgb:.3f}")
+    print("Table des compromis rappel/précision (XGBoost) :")
+    for target_recall, vals in threshold_table_xgb.items():
+        print(f"  Rappel visé {target_recall} -> seuil={vals['threshold']:.3f}, "
+              f"précision={vals['precision']:.3f}, rappel={vals['recall']:.3f}")
+
+    xgb_final = train_xgboost(X_train_full, y_train_full, best_xgb_params, scale_pos_weight)
+
+    print("\n" + "=" * 60)
+    print("EVALUATION FINALE SUR LE TEST — XGBOOST")
+    print("=" * 60)
+
+    xgb_result_default = evaluate_final(xgb_final, X_test, y_test, threshold=0.5)
+    print("\n--- Seuil par défaut (0.5) ---")
+    print(f"Précision suspect : {xgb_result_default['report']['suspect']['precision']:.3f}, "
+          f"Rappel suspect : {xgb_result_default['report']['suspect']['recall']:.3f}")
+    print(xgb_result_default["confusion_matrix"])
+
+    xgb_result_calibre = evaluate_final(xgb_final, X_test, y_test, threshold=best_threshold_xgb)
+    print(f"\n--- Seuil calibré ({best_threshold_xgb:.3f}) ---")
+    print(f"Précision suspect : {xgb_result_calibre['report']['suspect']['precision']:.3f}, "
+          f"Rappel suspect : {xgb_result_calibre['report']['suspect']['recall']:.3f}")
+    print(xgb_result_calibre["confusion_matrix"])
+
+    print(f"\nAUC-ROC (test) : {xgb_result_default['auc_roc']:.3f}")
+    print(f"AUC-PR (test) : {xgb_result_default['auc_pr']:.3f}")
+
+    print("\n" + "=" * 60)
+    print("COMPARAISON FINALE Random Forest vs XGBoost (AUC-PR test)")
+    print("=" * 60)
+    print(f"Random Forest : {result_default['auc_pr']:.3f}")
+    print(f"XGBoost       : {xgb_result_default['auc_pr']:.3f}")
+
+    # --- Sauvegarde des artefacts (on garde le meilleur des deux comme modèle principal) ---
+    if xgb_result_default['auc_pr'] > result_default['auc_pr']:
+        meilleur_modele = xgb_final
+        meilleur_seuil = best_threshold_xgb
+        print("\n-> XGBoost retenu comme modèle final")
+    else:
+        meilleur_modele = rf_final
+        meilleur_seuil = best_threshold
+        print("\n-> Random Forest retenu comme modèle final")
+
     joblib.dump(iso_forest, f"{MODELS_DIR}/isolation_forest_model.joblib")
+    joblib.dump(meilleur_modele, f"{MODELS_DIR}/best_model.joblib")
     joblib.dump(rf_final, f"{MODELS_DIR}/random_forest_model.joblib")
+    joblib.dump(xgb_final, f"{MODELS_DIR}/xgboost_model.joblib")
     joblib.dump(scaler, f"{MODELS_DIR}/scaler.joblib")
-    joblib.dump(best_threshold, f"{MODELS_DIR}/decision_threshold.joblib")
+    joblib.dump(meilleur_seuil, f"{MODELS_DIR}/decision_threshold.joblib")
     print(f"\nModèles sauvegardés dans {MODELS_DIR}/")
 
 

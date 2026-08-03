@@ -13,6 +13,8 @@ FEATURES = [
     "nb_banques_destinataires", "nb_banques_expediteurs",
     "nb_formats_paiement", "max_transactions_jour",
     "ratio_recu_envoye",
+    "nb_contreparties_envoi", "nb_contreparties_reception",
+    "nb_contreparties_reciproques", "ratio_reciprocite",
 ]
 
 LABEL = "label_laundering"
