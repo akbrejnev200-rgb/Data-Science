@@ -179,8 +179,12 @@ Connexion a la base PostgreSQL : voir `DB_USER` / `DB_PASSWORD` ci-dessus.
 ```
 Lancer_application.bat
 ```
-ou directement `python app/app.py`. L'app est servie sur `http://localhost:8050`
-(pas d'URL publique -- projet academique execute en local).
+ou directement `python app/app.py`. L'app est servie sur `http://localhost:8050`.
+
+**Version en ligne** : https://pilotage-predictif-sg.onrender.com (deployee sur
+Render, connectee a une base PostgreSQL Neon distincte de la base locale --
+voir `.env.neon`, non commite). Plan gratuit Render : l'app se met en veille
+apres une periode d'inactivite, premier chargement ~30-60s le temps du reveil.
 
 ## Contexte du memoire
 
