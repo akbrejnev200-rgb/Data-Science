@@ -353,16 +353,27 @@ FEATURES_CHARGE = [
 # avec un .pkl pas encore reentraine.
 
 
-def _features_incidents_jour(date_cible):
+def _charger_incidents_bruts():
+    """Snapshot brut de incidents_manager (1 requete). A recharger une
+    seule fois par appelant qui a besoin de plusieurs dates (ex. la boucle
+    recursive de construire_serie_prevision) plutot que par date -- sinon
+    chaque jour reinterroge toute la table (N+1 requetes, negligeable en
+    local mais tres sensible sur une base distante comme Neon : cout mesure
+    en secondes de latence cumulee sur une fenetre de 14-25 jours)."""
+    return pd.read_sql("SELECT * FROM incidents_manager", _engine, parse_dates=["date_evenement"])
+
+
+def _features_incidents_jour(date_cible, df_inc):
     """Equivalent, borne a une seule date, de
     modelisation_common.calculer_features_incidents() (cote pipeline) :
     somme des ETP impactes / du volume annonce des evenements
     incidents_manager actifs a `date_cible`. Duplique plutot qu'importe
     depuis notebooks_avec_ecriture_dans_database/ -- app/ et le pipeline
     restent deux mondes independants (meme principe que
-    convertir_temps_travail(), duplique depuis feature_engineering.py)."""
+    convertir_temps_travail(), duplique depuis feature_engineering.py).
+    `df_inc` : snapshot deja charge via _charger_incidents_bruts(), jamais
+    reinterroge ici -- voir le commentaire de cette fonction."""
     date_cible = pd.Timestamp(date_cible)
-    df_inc = pd.read_sql("SELECT * FROM incidents_manager", _engine, parse_dates=["date_evenement"])
     if not len(df_inc):
         return 0.0, 0.0
     duree = pd.to_numeric(df_inc["duree_jours"], errors="coerce").fillna(1).clip(lower=1)
@@ -373,13 +384,14 @@ def _features_incidents_jour(date_cible):
     return float(nb_etp), float(volume)
 
 
-def predire_charge_globale(m_charge, dj, date_cible, etp_global_prevu):
+def predire_charge_globale(m_charge, dj, date_cible, etp_global_prevu, df_inc):
     """Seule inference ML en direct de l'app : appelle m_charge.predict()
     pour le prochain jour ouvre. Les lags (volume/ETP a J-1/7/14/30) sont
     lus par position dans l'historique trie (memes semantiques que le
     .shift() utilise a l'entrainement, cf. feature_engineering.py Bloc E) --
     valide uniquement pour predire le jour immediatement apres le dernier
-    jour reel, pas un horizon plus lointain."""
+    jour reel, pas un horizon plus lointain. `df_inc` : snapshot
+    incidents_manager deja charge par l'appelant (cf. _features_incidents_jour)."""
     date_cible = pd.Timestamp(date_cible)
     dj_sorted = dj.sort_values("date").reset_index(drop=True)
 
@@ -388,7 +400,7 @@ def predire_charge_globale(m_charge, dj, date_cible, etp_global_prevu):
 
     jour_semaine = date_cible.dayofweek
     mois = date_cible.month
-    nb_etp_impactes_jour, volume_annonce_jour = _features_incidents_jour(date_cible)
+    nb_etp_impactes_jour, volume_annonce_jour = _features_incidents_jour(date_cible, df_inc)
     ligne = pd.DataFrame([{
         "volume_lag_1j": lag("volume_entrant_jour", 1),
         "volume_lag_7j": lag("volume_entrant_jour", 7),
@@ -449,6 +461,11 @@ def construire_serie_prevision(dj, df_previsions, df_agents, df_absences, taux_r
     serie = dj[["date", "volume_entrant_jour", "etp_disponible", "charge_par_etp", "taux_complexes"]].copy()
     serie = serie.sort_values("date").reset_index(drop=True)
 
+    # Charge une seule fois pour toute la boucle (cf. _charger_incidents_bruts) --
+    # avant, chaque jour de jours_cibles reinterrogeait incidents_manager,
+    # jusqu'a ~25 requetes reseau pour une seule fenetre de 14 jours.
+    df_inc = _charger_incidents_bruts()
+
     resultats = []
     for h, date_cible in enumerate(jours_cibles, start=1):
         ligne_prevue = df_previsions[df_previsions["horizon_j"] == h]
@@ -459,14 +476,14 @@ def construire_serie_prevision(dj, df_previsions, df_agents, df_absences, taux_r
         etp_global, etp_service, couverture_reelle = etp_disponible_projete(
             date_cible, df_agents, df_absences, taux_repli,
         )
-        charge_prevue = predire_charge_globale(m_charge, serie, date_cible, etp_global) if etp_global else None
+        charge_prevue = predire_charge_globale(m_charge, serie, date_cible, etp_global, df_inc) if etp_global else None
 
-        nb_etp_impactes_jour, volume_annonce_jour = _features_incidents_jour(date_cible)
+        nb_etp_impactes_jour, volume_annonce_jour = _features_incidents_jour(date_cible, df_inc)
 
         volume_prevu_ajuste = None if volume_prevu is None else volume_prevu + volume_annonce_jour
         if nb_etp_impactes_jour and etp_global:
             etp_ajuste = max(etp_global - nb_etp_impactes_jour, 0.1)
-            charge_prevue_ajustee = predire_charge_globale(m_charge, serie, date_cible, etp_ajuste)
+            charge_prevue_ajustee = predire_charge_globale(m_charge, serie, date_cible, etp_ajuste, df_inc)
         else:
             charge_prevue_ajustee = charge_prevue
 
