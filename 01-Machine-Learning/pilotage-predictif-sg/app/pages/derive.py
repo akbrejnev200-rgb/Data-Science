@@ -5,13 +5,28 @@ Detection d'anomalies au niveau tache/agent — signal pour un manager,
 jamais une decision RH automatique.
 """
 
+import pandas as pd
 import plotly.graph_objects as go
 from dash import dcc, html
 
 from components.layout_common import chart_block, figure_layout_defaults, kpi_card, kpi_row, page_wrapper
 from components.theme import ORDRE_SERVICES, SERVICES_COULEURS, SG_ROUGE
+from data.loader import MODELS_DIR
 
 NOTE_ETHIQUE = "Signal à vérifier avec l'agent, jamais une évaluation automatisée."
+
+# Libelles lisibles pour les 7 variables du modele d'anomalies (Bloc 3D) --
+# les noms techniques (snake_case, franglais) parlent a un data scientist,
+# pas a un manager en soutenance.
+LIBELLES_FEATURES_SHAP = {
+    "coeff_productivite_contrat": "Coefficient de productivité du contrat",
+    "delai_prise_en_charge_j": "Délai de prise en charge (jours)",
+    "Volume_Dossiers": "Volume de dossiers traités",
+    "complexite_num": "Complexité du dossier (score 1-3)",
+    "duree_traitement_reelle_j": "Durée de traitement réelle (jours)",
+    "productivite_dossiers_par_heure": "Productivité (dossiers / heure)",
+    "Temps_Passe_Declare_Min": "Temps déclaré (minutes)",
+}
 
 # Le modele flague ~2% de TOUTES les taches (contamination=0.02) : avec des
 # centaines/milliers de taches par agent, chaque agent a statistiquement au
@@ -36,13 +51,15 @@ def construire_kpis(df_feat, df_anomalies):
     taux_global = df_anomalies["par_agent"]["nb_anomalies"].sum() / df_anomalies["par_agent"]["nb_taches_evaluees"].sum() * 100
     seuil = taux_global * MULTIPLICATEUR_SEUIL
     n_taux_eleve = int((par_agent["taux_pct"] > seuil).sum())
-    prod_moy = df_feat["productivite_moy"].mean()
 
+    # "Productivite moyenne" retire : une moyenne globale (tous agents, tous
+    # services confondus) n'apporte pas de valeur actionnable -- remarque de
+    # l'utilisateur. Ne restent que des KPI directement lies au suivi de
+    # derive (agents suivis, agents a taux anormal, pic d'anomalie).
     return kpi_row(
         kpi_card("Agents suivis", n_agents, "au total"),
         kpi_card("Agents à taux anormal", n_taux_eleve, f"> {seuil:.1f}% (3x le taux global {taux_global:.1f}%)",
                   statut="avertissement" if n_taux_eleve else "bon"),
-        kpi_card("Productivité moyenne", f"{prod_moy:.1f}", "dossiers / heure"),
         kpi_card("Taux d'anomalie le plus élevé", f"{par_agent['taux_pct'].max():.1f}%", "d'un seul agent"),
     )
 
@@ -114,7 +131,32 @@ def construire_fig_top_agents(df_anomalies, n=10):
     return figure_layout_defaults(fig, hauteur=340)
 
 
+def construire_fig_shap_importance():
+    """Remplace le graphique SHAP "beeswarm" (image brute shap.summary_plot,
+    pensee pour un public data science : nuage de points colore avec une
+    legende "feature value low/high" a interpreter) par un classement en
+    barres des variables par importance moyenne -- meme logique que "Agents
+    les plus atypiques" juste au-dessus, deja valide comme lisible. Les
+    valeurs viennent de models/shap_anomalies_importance.csv, exportees par
+    modelisation_anomalies.py (moyenne de |valeur SHAP| par variable sur un
+    echantillon de 2000 taches, Bloc 3D)."""
+    chemin = MODELS_DIR / "shap_anomalies_importance.csv"
+    if not chemin.exists():
+        return None
+    df_imp = pd.read_csv(chemin).sort_values("importance_moyenne_abs", ascending=False)
+    df_imp["libelle"] = df_imp["feature"].map(lambda f: LIBELLES_FEATURES_SHAP.get(f, f))
+
+    fig = go.Figure(go.Bar(
+        y=df_imp["libelle"], x=df_imp["importance_moyenne_abs"], orientation="h", marker_color=SG_ROUGE,
+        hovertemplate="%{y}<br>Importance moyenne : %{x:.2f}<extra></extra>",
+    ))
+    fig.update_layout(yaxis=dict(autorange="reversed"))
+    fig.update_xaxes(title_text="Importance moyenne (impact sur la décision du modèle)")
+    return figure_layout_defaults(fig, hauteur=300)
+
+
 def layout(df_feat, df_anomalies):
+    fig_shap = construire_fig_shap_importance()
     contenu = [
         html.Div(id="derive-kpi-row", children=construire_kpis(df_feat, df_anomalies)),
         html.Div([
@@ -145,8 +187,10 @@ def layout(df_feat, df_anomalies):
         ], className="grid-2"),
         chart_block(
             "Importance des caractéristiques (SHAP)",
-            html.Img(src="/model-assets/shap_anomalies_summary.png", style={"maxWidth": "100%", "borderRadius": "3px"}),
-            "Ce que le modèle regarde pour juger une tâche atypique ou non.",
+            dcc.Graph(figure=fig_shap, config={"displayModeBar": False}) if fig_shap is not None
+            else html.Img(src="/model-assets/shap_anomalies_summary.png", style={"maxWidth": "100%", "borderRadius": "3px"}),
+            "Plus la barre est longue, plus cette caractéristique pèse dans la décision du modèle pour juger "
+            "une tâche atypique ou non (Bloc 3D, Isolation Forest).",
         ),
         html.Div([
             html.H3("Détail par agent", className="chart-title"),

@@ -29,7 +29,12 @@ def sidebar(pathname):
         if section != derniere_section:
             if liens_section:
                 sections.append(html.Div(liens_section, className="nav-container"))
-            sections.append(html.Div(section, className="nav-section-label"))
+            # Premiere section : pas de ligne de separation (juste apres le
+            # bloc marque, qui a deja sa propre bordure). Les suivantes ont
+            # une ligne au-dessus pour bien marquer que c'est un regroupement
+            # -- pas une page cliquable de plus dans la liste.
+            classe_label = "nav-section-label" if derniere_section is None else "nav-section-label nav-section-label-divider"
+            sections.append(html.Div(section, className=classe_label))
             derniere_section = section
             liens_section = []
         liens_section.append(dcc.Link(

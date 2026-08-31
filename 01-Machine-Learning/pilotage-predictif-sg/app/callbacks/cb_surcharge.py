@@ -9,7 +9,8 @@ from components.layout_common import chart_block
 from pages.surcharge import (
     FENETRE_TACHES_EN_COURS_JOURS, bloc_grid_prevision, caption_previsions_service,
     construire_donnees_prevision, construire_fig_forecast, construire_kpis,
-    construire_table_previsions_service, construire_table_risque_retard,
+    construire_risque_surcharge_fenetre, construire_table_previsions_service,
+    construire_table_risque_retard,
 )
 
 
@@ -21,7 +22,7 @@ def register(app, dj, djs, df_previsions, m_charge, df_agents, df_absences, taux
     def maj_forecast(horizon_j):
         return chart_block(
             "", dcc.Graph(figure=construire_fig_forecast(dj, df_previsions, horizon_j), config={"displayModeBar": False}),
-            "Modèle Ensemble (SARIMA + XGBoost), erreur moyenne ≈ 645 dossiers/jour — détail sur la page Fiabilité.",
+            "Modèle Ensemble (SARIMA + XGBoost), erreur moyenne ≈ 647 dossiers/jour — détail sur la page Fiabilité.",
         )
 
     @app.callback(
@@ -45,7 +46,10 @@ def register(app, dj, djs, df_previsions, m_charge, df_agents, df_absences, taux
         prevision = construire_donnees_prevision(
             dj, djs, df_previsions, m_charge, df_agents, df_absences, taux_repli, horizon_j,
         )
-        return construire_kpis(prevision), bloc_grid_prevision(djs, prevision)
+        risque_fenetre = construire_risque_surcharge_fenetre(
+            dj, djs, df_previsions, m_charge, df_agents, df_absences, taux_repli, horizon_j,
+        )
+        return construire_kpis(prevision, risque_fenetre, df_risque_retard), bloc_grid_prevision(djs, prevision)
 
     @app.callback(
         Output("surcharge-table-retard", "children"),

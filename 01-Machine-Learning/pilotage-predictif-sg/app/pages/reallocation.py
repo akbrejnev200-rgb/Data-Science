@@ -14,10 +14,14 @@ n'a ete entraine par service (teste et ecarte, cf.
 docs/AMELIORATION_MODELES.md -- un SARIMA par service s'est revele 22.8%
 pire qu'une simple moyenne mobile).
 
-Le graphique "Évolution de l'écart entre services" a son propre filtre
-independant (fenetre historique + sous-ensemble de services), car lui
-seul a besoin de regarder en arriere pour juger si le desequilibre
-s'aggrave ou se resorbe.
+Le graphique "Service le plus chargé, sur la période" a son propre filtre
+independant (fenetre historique uniquement), car lui seul a besoin de
+regarder en arriere : il compte, sur la fenetre choisie, combien de jours
+chaque service a ete le plus charge. Un desequilibre ponctuel (le service
+en tete change souvent) ne justifie pas de reorganiser durablement l'equipe
+-- contrairement a un desequilibre structurel (toujours le meme service en
+tete) -- une question que ni le KPI (jour cible unique) ni la table de
+suggestion (photo instantanee) ne permettent de trancher seuls.
 """
 
 from datetime import timedelta
@@ -27,11 +31,10 @@ import plotly.graph_objects as go
 from dash import dash_table, dcc, html
 
 from components.layout_common import chart_block, figure_layout_defaults, kpi_card, kpi_row, page_wrapper
-from components.theme import ORDRE_SERVICES, SERVICES_COULEURS, SG_ROUGE
+from components.theme import ORDRE_SERVICES, SERVICES_COULEURS
 from data.loader import NOM_JOURS, PROCHAINS_JOURS_OUVRES, TODAY, etp_disponible_projete
 
 FENETRES = {"30j": 30, "90j": 90, "tout": None}
-FENETRE_ETP_PROJECTION = "90j"  # fenetre stable pour l'ETP moyen recent, utilisee par le graphique d'ecart uniquement
 
 
 def _jour_projection(fenetre):
@@ -97,6 +100,19 @@ def _donnees_projection(djs, df_previsions, df_agents, df_absences, taux_repli, 
     return charges, etp_ref, label_etp
 
 
+def _charge_globale_ponderee(moyennes, etp):
+    """Charge de reference ponderee par l'ETP de chaque service (pas une
+    moyenne simple des 4 charges) : necessaire pour que la reallocation
+    suggeree soit a somme nulle -- ce qui est retire aux services
+    sur-dotes egale exactement ce qui est ajoute aux services sous-dotes.
+    Une moyenne simple (non ponderee) ne garantit pas cette egalite (ecart
+    constate en pratique : ~0.1 ETP entre les deux sommes)."""
+    total_etp = etp.sum()
+    if not total_etp:
+        return moyennes.mean()
+    return (moyennes * etp).sum() / total_etp
+
+
 def construire_kpis(djs, fenetre, df_previsions=None, df_agents=None, df_absences=None, taux_repli=None):
     moyennes, etp_moyen, label_etp = _donnees_projection(djs, df_previsions, df_agents, df_absences, taux_repli, fenetre)
     if not len(moyennes):
@@ -104,17 +120,23 @@ def construire_kpis(djs, fenetre, df_previsions=None, df_agents=None, df_absence
 
     plus_charge = moyennes.idxmax()
     moins_charge = moyennes.idxmin()
-    ecart = moyennes.max() / moyennes.min() if moyennes.min() > 0 else float("nan")
-    charge_globale_moy = moyennes.mean()
+    ecart_pct = (moyennes.max() / moyennes.min() - 1) * 100 if moyennes.min() > 0 else float("nan")
+    charge_globale_moy = _charge_globale_ponderee(moyennes, etp_moyen)
     etp_a_deplacer = sum(
         max(0, etp_moyen[s] * (moyennes[s] - charge_globale_moy) / charge_globale_moy)
         for s in moyennes.index
     )
 
+    # "Service le plus/moins charge" retire en tant que KPI dedie : deja
+    # visible d'un coup d'oeil sur le graphique juste en dessous (Charge par
+    # ETP projetee par service) -- remarque du manager de l'utilisateur,
+    # redondance inutile. Les noms des 2 services extremes restent utiles
+    # pour comprendre l'ecart : replies dans le sous-texte de l'ecart
+    # plutot qu'en KPI a part, et le multiplicateur abstrait (x1.25) devient
+    # un pourcentage direct ("+25%") -- se lit comme une phrase, pas comme
+    # une formule a interpreter.
     return kpi_row(
-        kpi_card("Service le plus chargé", plus_charge, f"{moyennes[plus_charge]:.0f} dossiers/ETP", statut="alerte"),
-        kpi_card("Service le moins chargé", moins_charge, f"{moyennes[moins_charge]:.0f} dossiers/ETP", statut="bon"),
-        kpi_card("Écart d'équilibre", f"×{ecart:.2f}", "charge max / charge min"),
+        kpi_card("Écart d'équilibre", f"+{ecart_pct:.0f}%", f"{plus_charge} vs {moins_charge}"),
         kpi_card("ETP à redéployer (est.)", f"≈ {etp_a_deplacer:.1f}", f"ETP {label_etp}" if label_etp else "pour équilibrer"),
     )
 
@@ -135,72 +157,34 @@ def construire_fig_charge_boxplot(djs, fenetre, df_previsions=None, df_agents=No
     return figure_layout_defaults(fig)
 
 
-def _projeter_ecart_futur(djs, d, df_previsions, horizon_j, services):
-    prev = df_previsions[df_previsions["horizon_j"] <= horizon_j]
-    if not len(prev):
-        return pd.Series(dtype=float)
-    part_volume = djs[djs["Service"].isin(services)].groupby("Service")["volume_entrant_jour"].sum()
-    part_volume = part_volume / part_volume.sum()
-    etp_moyen = d[d["Service"].isin(services)].groupby("Service")["etp_disponible"].mean()
-
-    projection = pd.DataFrame(index=prev["date"].values)
-    for s in services:
-        if s not in etp_moyen.index or etp_moyen[s] <= 0:
-            continue
-        volume_service = prev.set_index("date")["volume_prevu"].values * part_volume.get(s, 0)
-        projection[s] = volume_service / etp_moyen[s]
-    if projection.shape[1] < 2:
-        return pd.Series(dtype=float)
-    return projection.max(axis=1) / projection.min(axis=1)
-
-
-HORIZON_PROJECTION_ECART = 30  # portion pointillee toujours affichee jusqu'a J+30
-
-
-def construire_fig_ecart_temporel(djs, fenetre_historique, df_previsions=None, services=None):
-    # Ni le graphique de charge (moyenne+dispersion sur la periode) ni le
-    # tableau (photo instantanee) ne montrent si le desequilibre s'aggrave
-    # ou se resorbe -- seule une serie temporelle de l'ecart repond a ca.
-    # Filtre independant du reste de la page : fenetre historique (30/90j/
-    # tout) + sous-ensemble de services (l'ecart max/min ne se calcule que
-    # sur les services coches, au moins 2 necessaires).
-    services = services or ORDRE_SERVICES
+def construire_fig_frequence_plus_charge(djs, fenetre_historique):
+    """Nombre de jours ou chaque service a ete LE PLUS charge (charge_par_etp
+    maximale ce jour-la), sur la fenetre choisie. Repond a la question que
+    se pose un manager avant de reorganiser son equipe : un desequilibre
+    ponctuel (le service en tete change tout le temps) ne justifie pas de
+    deplacer durablement des agents, contrairement a un desequilibre
+    structurel (toujours le meme service en tete). Le KPI "Service le plus
+    charge" en haut de page ne montre que le jour cible selectionne ; ce
+    graphique montre si cette situation est habituelle ou exceptionnelle."""
     fig = go.Figure()
-
-    if len(services) < 2:
-        fig.add_annotation(text="Sélectionnez au moins 2 services", showarrow=False)
-        return figure_layout_defaults(fig)
-
-    d = _filtrer_fenetre(djs[djs["Service"].isin(services)], fenetre_historique)
+    d = _filtrer_fenetre(djs, fenetre_historique)
     par_jour = d.pivot_table(index="date", columns="Service", values="charge_par_etp")
-    ecart_brut = par_jour.max(axis=1) / par_jour.min(axis=1)
-    ecart_lisse = ecart_brut.rolling(window=7, min_periods=1).mean()
+    par_jour = par_jour.dropna(how="all")
+    if not len(par_jour):
+        fig.add_annotation(text="Donnée indisponible", showarrow=False)
+        return figure_layout_defaults(fig)
+    plus_charge_par_jour = par_jour.idxmax(axis=1)
+    total_jours = len(plus_charge_par_jour)
+    comptes = plus_charge_par_jour.value_counts().reindex(ORDRE_SERVICES).fillna(0).astype(int)
 
-    fig.add_trace(go.Scatter(
-        x=ecart_brut.index, y=ecart_brut.values, mode="lines", name="Écart quotidien",
-        line=dict(color="#e5e1d5", width=1),
-        hovertemplate="%{x|%d/%m/%Y}<br>×%{y:.2f}<extra></extra>",
+    fig.add_trace(go.Bar(
+        x=comptes.index, y=comptes.values,
+        marker_color=[SERVICES_COULEURS[s] for s in comptes.index], opacity=0.85,
+        text=[f"{v} j" for v in comptes.values], textposition="outside",
+        hovertemplate=f"%{{x}}<br>Service le plus chargé %{{y}} jours sur {total_jours}<extra></extra>",
     ))
-    fig.add_trace(go.Scatter(
-        x=ecart_lisse.index, y=ecart_lisse.values, mode="lines", name="Moyenne mobile 7j",
-        line=dict(color=SG_ROUGE, width=2),
-        hovertemplate="%{x|%d/%m/%Y}<br>×%{y:.2f} (moy. 7j)<extra></extra>",
-    ))
-
-    if df_previsions is not None and len(df_previsions):
-        d_etp = _filtrer_fenetre(djs, FENETRE_ETP_PROJECTION)
-        ecart_projete = _projeter_ecart_futur(djs, d_etp, df_previsions, HORIZON_PROJECTION_ECART, services)
-        if len(ecart_projete):
-            fig.add_trace(go.Scatter(
-                x=ecart_projete.index, y=ecart_projete.values, mode="lines", name="Projection (illustrative)",
-                line=dict(color=SG_ROUGE, width=1.6, dash="dot"),
-                hovertemplate="%{x|%d/%m/%Y}<br>×%{y:.2f} (projeté)<extra></extra>",
-            ))
-
-    fig.add_hline(y=1, line=dict(color="#c3c2b7", width=1, dash="dash"),
-                   annotation_text="équilibre parfait", annotation_position="bottom right",
-                   annotation_font=dict(color="#948f80", size=10))
-    fig.update_yaxes(title_text="Écart (charge max ÷ charge min)")
+    fig.update_layout(showlegend=False)
+    fig.update_yaxes(title_text=f"Jours en tête (sur {total_jours})")
     return figure_layout_defaults(fig)
 
 
@@ -209,7 +193,7 @@ def construire_table_reallocation(djs, fenetre, df_previsions=None, df_agents=No
     if not len(moyennes_charge):
         return html.P("Projection indisponible.", className="table-note")
 
-    charge_globale_moy = moyennes_charge.mean()
+    charge_globale_moy = _charge_globale_ponderee(moyennes_charge, moyennes_etp)
     lignes = []
     for s in moyennes_charge.index:
         etp_actuel = moyennes_etp[s]
@@ -253,9 +237,10 @@ def titre_boxplot(fenetre):
     return f"Charge par ETP projetée par service (J+{jour})" if jour else "Charge par ETP projetée par service"
 
 
-CAPTION_ECART = (
-    "Écart qui se creuse : déséquilibre structurel. Écart qui se resorbe : pic ponctuel. "
-    "Portion pointillée : projection illustrative, pas une sortie de modèle."
+CAPTION_FREQUENCE = (
+    "Toujours le même service en tête : déséquilibre structurel, qui justifie de déplacer des "
+    "agents durablement. Le service en tête change souvent : déséquilibre ponctuel, pas la peine "
+    "de réorganiser pour ça."
 )
 
 OPTIONS_FILTRE = [
@@ -266,7 +251,7 @@ OPTIONS_FILTRE = [
 VALEUR_FILTRE_DEFAUT = "projection_j1"
 
 
-OPTIONS_FENETRE_ECART = [
+OPTIONS_FENETRE_FREQ = [
     {"label": "30 derniers jours", "value": "30j"},
     {"label": "90 derniers jours", "value": "90j"},
     {"label": "Historique complet", "value": "tout"},
@@ -282,16 +267,11 @@ def layout(djs, df_previsions=None, df_agents=None, df_absences=None, taux_repli
         ),
     ], className="filtre-row")
 
-    filtre_ecart = html.Div([
+    filtre_freq = html.Div([
         html.Span("Période :", className="filtre-label"),
         dcc.Dropdown(
-            id="reallocation-ecart-window", options=OPTIONS_FENETRE_ECART,
+            id="reallocation-freq-window", options=OPTIONS_FENETRE_FREQ,
             value="90j", clearable=False, style={"width": "200px"},
-        ),
-        html.Span("Services :", className="filtre-label"),
-        dcc.Dropdown(
-            id="reallocation-ecart-services", options=[{"label": s, "value": s} for s in ORDRE_SERVICES],
-            value=ORDRE_SERVICES, multi=True, clearable=False, style={"width": "420px"},
         ),
     ], className="filtre-row")
 
@@ -310,12 +290,12 @@ def layout(djs, df_previsions=None, df_agents=None, df_absences=None, taux_repli
             construire_table_reallocation(*args),
             "Calcul illustratif d'aide à la décision — pas une sortie du modèle.",
         )),
-        filtre_ecart,
-        html.Div(id="reallocation-chart-ecart", children=chart_block(
-            "Évolution de l'écart entre services",
-            dcc.Graph(figure=construire_fig_ecart_temporel(djs, "90j", df_previsions, ORDRE_SERVICES),
+        filtre_freq,
+        html.Div(id="reallocation-chart-freq", children=chart_block(
+            "Service le plus chargé, sur la période",
+            dcc.Graph(figure=construire_fig_frequence_plus_charge(djs, "90j"),
                       config={"displayModeBar": False}),
-            CAPTION_ECART,
+            CAPTION_FREQUENCE,
         )),
     ]
     return page_wrapper(*contenu)

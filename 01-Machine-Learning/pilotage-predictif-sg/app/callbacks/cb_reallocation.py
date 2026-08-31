@@ -1,15 +1,14 @@
 """callbacks/cb_reallocation.py -- deux filtres independants :
 "reallocation-window" (jour de prevision J+1..J+30) pilote KPI + boxplot +
-table ; "reallocation-ecart-window" + "-services" pilote uniquement le
-graphique d'ecart temporel (fenetre historique + sous-ensemble de
-services)."""
+table ; "reallocation-freq-window" pilote uniquement le graphique de
+frequence "service le plus charge" (fenetre historique)."""
 
 from dash import Input, Output, dcc
 
 from components.layout_common import chart_block
 from pages.reallocation import (
-    CAPTION_ECART, caption_boxplot, construire_fig_charge_boxplot,
-    construire_fig_ecart_temporel, construire_kpis, construire_table_reallocation, titre_boxplot,
+    CAPTION_FREQUENCE, caption_boxplot, construire_fig_charge_boxplot,
+    construire_fig_frequence_plus_charge, construire_kpis, construire_table_reallocation, titre_boxplot,
 )
 
 
@@ -37,14 +36,13 @@ def register(app, djs, df_previsions=None, df_agents=None, df_absences=None, tau
         return kpis, bloc_box, bloc_table
 
     @app.callback(
-        Output("reallocation-chart-ecart", "children"),
-        Input("reallocation-ecart-window", "value"),
-        Input("reallocation-ecart-services", "value"),
+        Output("reallocation-chart-freq", "children"),
+        Input("reallocation-freq-window", "value"),
     )
-    def maj_ecart(fenetre_historique, services):
+    def maj_freq(fenetre_historique):
         return chart_block(
-            "Évolution de l'écart entre services",
-            dcc.Graph(figure=construire_fig_ecart_temporel(djs, fenetre_historique, df_previsions, services),
+            "Service le plus chargé, sur la période",
+            dcc.Graph(figure=construire_fig_frequence_plus_charge(djs, fenetre_historique),
                       config={"displayModeBar": False}),
-            CAPTION_ECART,
+            CAPTION_FREQUENCE,
         )

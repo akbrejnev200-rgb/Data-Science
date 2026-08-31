@@ -45,7 +45,6 @@ def construire_donnees_prevision(dj, djs, df_previsions, m_charge, df_agents, df
     jour = serie[-1]
 
     volume_prevu = jour["volume_prevu"]
-    volume_prevu_max = jour["volume_prevu_max"]
     etp_service = jour["etp_service"]
 
     seuils_service = djs.groupby("Service")["charge_par_etp"].quantile(0.75)
@@ -62,16 +61,11 @@ def construire_donnees_prevision(dj, djs, df_previsions, m_charge, df_agents, df
             charges[s] = (volume_global * part_volume.get(s, 0)) / etp_service[s]
         return pd.Series(charges)
 
+    # Alertes basees sur la meme prevision centrale que le KPI "Volume
+    # entrant (prevu)" et les barres du graphique -- un seul chiffre de
+    # volume dans toute la page, pas de scenario haut separe qui ne
+    # correspondrait a aucun autre nombre affiche.
     charges_service = _repartir(volume_prevu)
-    # Une prevision est une estimation centrale lissee : comparee au seuil
-    # historique (75e percentile de donnees reelles, donc bruitees), elle
-    # ne le depasse quasiment jamais, meme les jours a forte charge --
-    # constate empiriquement (0/30 jours declenchaient une alerte). Les
-    # alertes se basent donc sur la borne haute de l'intervalle de
-    # prevision (volume_prevu_max) : "et si le haut de la fourchette se
-    # realise ?", plus pertinent pour un signal de risque. Les barres du
-    # graphique, elles, restent sur l'estimation centrale (informative).
-    charges_service_risque = _repartir(volume_prevu_max)
 
     return {
         "date_cible": jour["date"],
@@ -82,7 +76,6 @@ def construire_donnees_prevision(dj, djs, df_previsions, m_charge, df_agents, df
         "couverture_reelle": jour["couverture_reelle"],
         "charge_prevue": jour["charge_prevue"],
         "charges_service": charges_service,
-        "charges_service_risque": charges_service_risque,
         "seuils_service": seuils_service,
         "nb_etp_impactes_jour": jour["nb_etp_impactes_jour"],
         "volume_annonce_jour": jour["volume_annonce_jour"],
@@ -91,23 +84,86 @@ def construire_donnees_prevision(dj, djs, df_previsions, m_charge, df_agents, df
     }
 
 
-def _carte_charge(prevision):
-    """Charge globale/ETP : sortie brute du modele (Bloc 3B), sauf si un
-    incident ETP est actif pour ce jour cible -- dans ce cas, affiche aussi
-    le chiffre recalcule avec l'ETP disponible reduit d'autant (cf.
-    data.loader.construire_serie_prevision), sans jamais remplacer le
-    chiffre du modele par le chiffre ajuste."""
-    charge_prevue = prevision["charge_prevue"]
-    if charge_prevue is None:
-        return kpi_card("Charge globale/ETP (prévu)", "—", "dossiers, modèle Bloc 3B")
+def _carte_taches_risque(df_risque_retard):
+    """Nombre de taches actuellement "En cours" signalees a risque de retard
+    (Bloc 3C, scoring en direct) -- resume en un chiffre la table "Taches a
+    risque de retard" plus bas sur la meme page, sans nouveau calcul.
+    Remplace l'ancien KPI "Charge globale/ETP", redondant avec le graphique
+    "Charge par service" juste en dessous (meme information, deja par
+    service)."""
+    if df_risque_retard is None or not len(df_risque_retard):
+        return kpi_card("Tâches à risque de retard", "—", "aucune tâche en cours évaluée")
+    total = len(df_risque_retard)
+    a_risque = int(df_risque_retard["est_a_risque"].sum())
+    return kpi_card(
+        "Tâches à risque de retard", f"{a_risque}", f"sur {total} tâches en cours évaluées",
+        statut="alerte" if a_risque else "bon",
+    )
 
-    nb_etp_impactes = prevision.get("nb_etp_impactes_jour") or 0
-    if nb_etp_impactes:
-        return kpi_card_ajuste(
-            "Charge globale/ETP (prévu)", f"{charge_prevue:.0f}", f"{prevision['charge_prevue_ajustee']:.0f}",
-            f"ajusté : {nb_etp_impactes:g} ETP en moins signalé(s)",
-        )
-    return kpi_card("Charge globale/ETP (prévu)", f"{charge_prevue:.0f}", "dossiers, modèle Bloc 3B")
+
+def construire_risque_surcharge_fenetre(dj, djs, df_previsions, m_charge, df_agents, df_absences, taux_repli, horizon_depart=1, horizon_jours=14):
+    """Services dont la charge par ETP PREVUE (estimation centrale) est EN
+    MOYENNE, sur une fenetre de `horizon_jours` jours ouvres DEMARRANT a
+    J+`horizon_depart`, au-dessus du seuil historique (P75) -- la fenetre
+    est ancree sur le jour actuellement selectionne dans "Prevision pour"
+    (horizon_depart), pas toujours sur aujourd'hui : inspecter J+5 montre
+    les 2 semaines qui suivent J+5, pas celles qui suivent aujourd'hui.
+
+    Pourquoi une moyenne et pas "au moins un jour depasse le seuil" (version
+    initiale) : un seuil P75 est par definition deja depasse par 25% des
+    jours pris individuellement. Sur une fenetre de 14 jours, la probabilite
+    qu'AU MOINS UN jour le depasse avoisine 1-0.75**14 ~= 98%, meme sans
+    aucune vraie tendance a la hausse -- ca revient a alerter (presque)
+    tout le temps, pour (presque) tous les services, sans rien dire de reel
+    (constate en pratique : 4/4 services systematiquement signales). Une
+    moyenne sur la fenetre lisse le bruit quotidien : elle ne depasse le
+    seuil que si la pression est reellement soutenue sur la periode, pas a
+    cause d'un pic isole.
+
+    construire_serie_prevision doit recevoir la chaine complete depuis J+1
+    (necessaire pour la recursion des lags et l'alignement de son compteur
+    d'horizon interne avec df_previsions.horizon_j) ; seule la fin de la
+    serie (les horizon_jours derniers jours, a partir de horizon_depart) est
+    utilisee pour la moyenne -- au-dela de J+30 (fin de la prevision
+    modele), la fenetre se retrecit naturellement plutot que de planter.
+
+    Retourne (moyennes_en_alerte, date_debut, date_fin) : moyennes_en_alerte
+    ne contient que les services en depassement ; date_debut/date_fin sont
+    les bornes reelles (calendaires) de la fenetre de horizon_jours jours
+    OUVRES -- a afficher telles quelles plutot qu'un texte du type "2
+    semaines" qui suggere a tort une duree calendaire fixe (une fenetre de
+    14 jours ouvres peut chevaucher 2 week-ends et donc couvrir 18 jours
+    calendaires reels)."""
+    fin = horizon_depart + horizon_jours - 1
+    jours_cibles = PROCHAINS_JOURS_OUVRES[:fin]
+    serie = construire_serie_prevision(dj, df_previsions, df_agents, df_absences, taux_repli, m_charge, jours_cibles)
+    fenetre = serie[horizon_depart - 1:]
+    date_debut = fenetre[0]["date"] if fenetre else None
+    date_fin = fenetre[-1]["date"] if fenetre else None
+
+    seuils_service = djs.groupby("Service")["charge_par_etp"].quantile(0.75)
+    part_volume = djs.groupby("Service")["volume_entrant_jour"].sum()
+    part_volume = part_volume / part_volume.sum()
+
+    charges_par_service = {s: [] for s in ORDRE_SERVICES}
+    for jour in fenetre:
+        if jour["volume_prevu"] is None:
+            continue
+        etp_service = jour["etp_service"]
+        for s in ORDRE_SERVICES:
+            if s not in etp_service.index or etp_service[s] <= 0:
+                continue
+            charges_par_service[s].append((jour["volume_prevu"] * part_volume.get(s, 0)) / etp_service[s])
+
+    moyennes_en_alerte = {}
+    for s, valeurs in charges_par_service.items():
+        if not valeurs:
+            continue
+        moyenne = sum(valeurs) / len(valeurs)
+        if moyenne > seuils_service.get(s, float("inf")):
+            moyennes_en_alerte[s] = moyenne
+
+    return moyennes_en_alerte, date_debut, date_fin
 
 
 def _carte_volume(prevision):
@@ -117,7 +173,7 @@ def _carte_volume(prevision):
     chiffre du modele par le chiffre ajuste."""
     volume_prevu = prevision["volume_prevu"]
     if volume_prevu is None:
-        return kpi_card("Volume entrant (prévu)", "—", "dossiers, modèle Ensemble")
+        return kpi_card("Volume entrant (prévu)", "—")
 
     def _fmt(v):
         return f"{v:,.0f}".replace(",", " ")
@@ -128,22 +184,34 @@ def _carte_volume(prevision):
             "Volume entrant (prévu)", _fmt(volume_prevu), _fmt(prevision["volume_prevu_ajuste"]),
             f"ajusté : +{volume_annonce:g} dossiers annoncés",
         )
-    return kpi_card("Volume entrant (prévu)", _fmt(volume_prevu), "dossiers, modèle Ensemble")
+    return kpi_card("Volume entrant (prévu)", _fmt(volume_prevu))
 
 
-def construire_kpis(prevision):
+def construire_kpis(prevision, risque_fenetre, df_risque_retard):
     etp_global = prevision["etp_global"]
-    charges_risque = prevision["charges_service_risque"]
-    seuils_service = prevision["seuils_service"]
-
-    services_alerte = [s for s in charges_risque.index if charges_risque[s] > seuils_service.get(s, float("inf"))]
     label_etp = "réel (contrats + congés)" if prevision["couverture_reelle"] else "estimé (taux d'absence historique)"
 
+    moyennes_en_alerte, date_debut_fenetre, date_fin_fenetre = risque_fenetre
+    services_alerte = sorted(moyennes_en_alerte, key=moyennes_en_alerte.get, reverse=True)
+
+    # Plage de dates reelle affichee telle quelle (pas "2 semaines", qui
+    # suggere a tort une duree calendaire fixe -- 14 jours OUVRES peuvent
+    # chevaucher 2 week-ends et couvrir jusqu'a 18 jours calendaires).
+    def _fmt_date(d):
+        return f"{d.day:02d}/{d.month:02d}" if d is not None else "?"
+    periode = f"{_fmt_date(date_debut_fenetre)} → {_fmt_date(date_fin_fenetre)}"
+
+    # Titre volontairement court pour tenir sur une seule ligne dans la
+    # carte KPI -- le detail precis (duree + plage de dates reelle) va
+    # dans le sous-texte, qui peut s'étaler sur plusieurs lignes sans que
+    # ça ait l'air casse (meme traitement que les autres cartes).
+    detail_fenetre = f"14 j. ouvrés, {periode}"
+    sous_texte = f"{', '.join(services_alerte)} · {detail_fenetre}" if services_alerte else f"aucun · {detail_fenetre}"
+
     return kpi_row(
-        _carte_charge(prevision),
-        kpi_card("Services à risque de surcharge", f"{len(services_alerte)} / {len(ORDRE_SERVICES)}",
-                  ", ".join(services_alerte) if services_alerte else "aucun · si haut de fourchette",
-                  statut="alerte" if services_alerte else "bon"),
+        _carte_taches_risque(df_risque_retard),
+        kpi_card("Services en surcharge soutenue", f"{len(services_alerte)} / {len(ORDRE_SERVICES)}",
+                  sous_texte, statut="alerte" if services_alerte else "bon"),
         _carte_volume(prevision),
         kpi_card("ETP disponibles (prévu)", f"{etp_global:.1f}" if etp_global is not None else "—", label_etp),
     )
@@ -244,7 +312,6 @@ def caption_previsions_service(service):
 
 def bloc_charge_services(prevision):
     charges = prevision["charges_service"]
-    charges_risque = prevision["charges_service_risque"]
     seuils = prevision["seuils_service"]
     if not len(charges):
         return html.P("Prévision indisponible.", className="table-note")
@@ -253,11 +320,10 @@ def bloc_charge_services(prevision):
     for nom in ORDRE_SERVICES:
         if nom not in charges.index:
             continue
-        # La hauteur de barre reste l'estimation centrale (informative) ;
-        # le marquage "en alerte" utilise le scenario haut (cf.
-        # construire_donnees_prevision), pour rester coherent avec le
-        # KPI et la liste d'alertes juste a cote.
-        en_alerte = charges_risque.get(nom, charges[nom]) > seuils.get(nom, float("inf"))
+        # Le marquage "en alerte" compare la meme estimation centrale que
+        # la hauteur de barre au seuil -- coherent avec le KPI et la liste
+        # d'alertes juste a cote (un seul chiffre de volume sur la page).
+        en_alerte = charges[nom] > seuils.get(nom, float("inf"))
         lignes.append(service_bar_row(
             nom, charges[nom], seuils.get(nom, charges[nom]),
             max_echelle, SERVICES_COULEURS[nom], bool(en_alerte),
@@ -266,15 +332,15 @@ def bloc_charge_services(prevision):
 
 
 def bloc_alertes(djs, prevision):
-    charges_risque = prevision["charges_service_risque"]
+    charges = prevision["charges_service"]
     seuils = prevision["seuils_service"]
     services_alerte = sorted(
-        (s for s in charges_risque.index if charges_risque[s] > seuils.get(s, float("inf"))),
-        key=lambda s: charges_risque[s], reverse=True,
+        (s for s in charges.index if charges[s] > seuils.get(s, float("inf"))),
+        key=lambda s: charges[s], reverse=True,
     )
 
     if not services_alerte:
-        return html.P("Aucun service à risque pour ce jour, même en scénario haut.", className="table-note")
+        return html.P("Aucun service à risque pour ce jour, sur la base de la prévision.", className="table-note")
 
     # Le compteur "deja en alerte reelle" ne compare que le dernier jour
     # reel connu au jour cible : ca n'a de sens que pour J+1 (suite directe
@@ -285,7 +351,7 @@ def bloc_alertes(djs, prevision):
 
     items = []
     for s in services_alerte:
-        detail = f"jusqu'à {charges_risque[s]:.0f} dossiers/ETP si le haut de la fourchette se réalise"
+        detail = f"≈ {charges[s]:.0f} dossiers/ETP prévus, au-dessus du seuil habituel ({seuils[s]:.0f})"
         if horizon_j == 1:
             historique_service = djs[djs["Service"] == s].sort_values("date")
             recentes = historique_service.tail(14)
@@ -318,7 +384,7 @@ def bloc_grid_prevision(djs, prevision):
             html.Div([bloc_charge_services(prevision)], className="chart-block"),
         ),
         section_block(
-            f"Alertes prévues — {jour}", "scénario haut",
+            f"Alertes prévues — {jour}", "sur la prévision",
             html.Div([bloc_alertes(djs, prevision)], className="chart-block"),
         ),
     ], className="grid-2")
@@ -373,6 +439,8 @@ def construire_table_risque_retard(df_risque_retard, service=TOUS_SERVICES, n=12
 
 def layout(dj, djs, df_previsions, m_charge, df_agents, df_absences, taux_repli, df_risque_retard=None):
     prevision = construire_donnees_prevision(dj, djs, df_previsions, m_charge, df_agents, df_absences, taux_repli, 1)
+    risque_fenetre = construire_risque_surcharge_fenetre(dj, djs, df_previsions, m_charge, df_agents, df_absences, taux_repli, 1)
+    # risque_fenetre = (moyennes_en_alerte, date_debut, date_fin)
 
     filtre_jour = html.Div([
         html.Span("Prévision pour :", className="filtre-label"),
@@ -385,12 +453,12 @@ def layout(dj, djs, df_previsions, m_charge, df_agents, df_absences, taux_repli,
 
     contenu = [
         filtre_jour,
-        html.Div(id="surcharge-kpi-row", children=construire_kpis(prevision)),
+        html.Div(id="surcharge-kpi-row", children=construire_kpis(prevision, risque_fenetre, df_risque_retard)),
 
         html.Div(id="surcharge-prevision-grid", children=bloc_grid_prevision(djs, prevision)),
 
         section_block(
-            "Prévision de volume", "Modèle Ensemble · MAE test 644,7 dossiers/j · à partir du prochain jour ouvré",
+            "Prévision de volume", None,
             html.Div([
                 html.Span("Horizon :", className="filtre-label"),
                 dcc.RadioItems(
@@ -401,7 +469,7 @@ def layout(dj, djs, df_previsions, m_charge, df_agents, df_absences, taux_repli,
             ], className="filtre-row"),
             html.Div(id="surcharge-chart-forecast", children=chart_block(
                 "", dcc.Graph(figure=construire_fig_forecast(dj, df_previsions, 30), config={"displayModeBar": False}),
-                "Modèle Ensemble (SARIMA + XGBoost), erreur moyenne ≈ 645 dossiers/jour — détail sur la page Fiabilité.",
+                "Modèle Ensemble (SARIMA + XGBoost), erreur moyenne ≈ 647 dossiers/jour — détail sur la page Fiabilité.",
             )),
             html.Div([
                 html.Span("Service :", className="filtre-label"),

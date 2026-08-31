@@ -141,6 +141,15 @@ def run():
         plt.savefig(MODELS_DIR / "shap_anomalies_summary.png", dpi=150, bbox_inches="tight")
         plt.close()
         print("  models/shap_anomalies_summary.png sauvegarde")
+
+        # Export brut (feature, importance moyenne |SHAP|) pour que l'appli
+        # Dash puisse tracer son propre graphique lisible (barres triees,
+        # libelles francais) plutot que d'incorporer l'image beeswarm brute,
+        # pensee pour un public data-scientist (cf. page Derive individuelle).
+        shap_importance.rename("importance_moyenne_abs").rename_axis("feature").reset_index().to_csv(
+            MODELS_DIR / "shap_anomalies_importance.csv", index=False,
+        )
+        print("  models/shap_anomalies_importance.csv sauvegarde")
         top_feature_shap = shap_importance.index[0]
     except Exception as e:
         print(f"  SHAP indisponible ({e}), etape ignoree.")
