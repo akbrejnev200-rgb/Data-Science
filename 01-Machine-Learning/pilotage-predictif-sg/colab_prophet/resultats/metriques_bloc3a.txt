@@ -1,0 +1,10 @@
+BLOC 3A - COMPARAISON PROPHET vs SARIMA vs XGBOOST (execute sur Google Colab)
+======================================================================
+
+ Modele  MAE (test)  RMSE (test)  MAPE (test)
+Prophet  856.034556  1014.028029    18.698104
+ SARIMA  667.264983   837.154777    12.974178
+XGBoost  684.012947   855.747494    12.775077
+
+Modele retenu : SARIMA (MAE test = 667.3)
+Ordre SARIMA : (2, 1, 2), seasonal_order=(1, 1, 1, 7)

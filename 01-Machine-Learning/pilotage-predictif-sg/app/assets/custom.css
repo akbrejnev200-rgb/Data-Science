@@ -1,0 +1,229 @@
+:root {
+  --ink: #14130f;
+  --ink-soft: #3a372f;
+  --muted: #6b6759;
+  --faint: #948f80;
+  --paper: #f6f4ee;
+  --surface: #ffffff;
+  --line: #e5e1d5;
+  --line-soft: #efece2;
+  --accent: #e60028;
+  --accent-wash: #fdeaec;
+  --panel: #1c1a16;
+  --panel-line: #35322a;
+  --panel-ink: #f2f0e8;
+  --panel-muted: #a8a396;
+  --good: #1a7a3c;
+  --good-wash: #e9f5ec;
+  --warn: #a3660a;
+  --warn-wash: #faf0dd;
+  --radius: 3px;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; height: 100%; }
+body {
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+}
+.tabular { font-variant-numeric: tabular-nums; }
+
+/* ---------- App shell ---------- */
+.app-shell { display: flex; min-height: 100vh; align-items: stretch; }
+
+/* #sidebar-container et #topbar-container/#page-content sont des wrappers
+   techniques (necessaires pour que le routing Dash puisse remplacer leur
+   contenu) : display:contents les rend transparents dans la mise en page,
+   pour que .sidebar devienne le vrai enfant flex de .app-shell et s'etire
+   sur toute la hauteur au lieu de ne faire que la hauteur de son contenu. */
+#sidebar-container { display: contents; }
+#topbar-container { display: contents; }
+
+/* ---------- Sidebar ---------- */
+.sidebar {
+  width: 232px;
+  flex-shrink: 0;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  background: var(--panel);
+  color: var(--panel-ink);
+  display: flex;
+  flex-direction: column;
+  padding: 22px 0 18px;
+}
+/* La nav peut deborder (beaucoup de pages/sections) : elle scrolle seule,
+   pendant que le pied de sidebar (deconnexion) reste toujours visible. */
+.sidebar-scroll { flex: 1; min-height: 0; overflow-y: auto; }
+.brand { padding: 0 22px 22px; border-bottom: 1px solid var(--panel-line); margin-bottom: 6px; }
+.brand-mark { display: flex; align-items: center; gap: 9px; margin-bottom: 12px; }
+.brand-mark .bar { width: 4px; height: 20px; background: var(--accent); border-radius: 1px; }
+.brand-name { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+.brand-title { font-size: 14px; font-weight: 600; line-height: 1.35; color: var(--panel-ink); }
+.brand-sub { font-size: 11.5px; color: var(--panel-muted); margin-top: 4px; }
+
+.nav-section-label {
+  font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--panel-muted); padding: 14px 22px 6px; opacity: 0.7;
+}
+.nav-container { display: flex; flex-direction: column; gap: 1px; padding: 4px 12px; }
+.nav-link {
+  display: flex; align-items: center; gap: 10px; padding: 9px 10px;
+  border-radius: var(--radius); color: var(--panel-muted); text-decoration: none;
+  font-size: 13px; font-weight: 500; border-left: 2px solid transparent;
+}
+.nav-link:hover { color: var(--panel-ink); background: rgba(255,255,255,0.04); }
+.nav-link-active {
+  color: var(--panel-ink); background: rgba(230,0,40,0.14);
+  border-left: 2px solid var(--accent); font-weight: 600;
+}
+.sidebar-foot { margin-top: auto; padding: 14px 22px 0; border-top: 1px solid var(--panel-line); }
+.sidebar-foot a { color: var(--panel-muted); font-size: 12px; text-decoration: none; }
+.sidebar-foot a:hover { color: var(--panel-ink); }
+
+/* ---------- Main ---------- */
+.main { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 32px; border-bottom: 1px solid var(--line); background: var(--surface);
+  position: sticky; top: 0; z-index: 5;
+}
+.topbar-title { font-size: 17px; font-weight: 600; letter-spacing: -0.01em; }
+.topbar-date { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+.last-sync { font-size: 11.5px; color: var(--faint); display: flex; align-items: center; gap: 6px; }
+.last-sync .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--good); display: inline-block; }
+
+.content { padding: 28px 36px 56px; max-width: 1520px; margin: 0 auto; }
+
+/* ---------- KPI strip ---------- */
+.kpi-row-label {
+  font-size: 12px; font-weight: 600; color: var(--accent); text-transform: uppercase;
+  letter-spacing: 0.04em; margin-bottom: 10px;
+}
+.kpi-row {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+  background: var(--line); border: 1px solid var(--line); border-radius: var(--radius);
+  overflow: hidden; margin-bottom: 28px;
+}
+.kpi-card { background: var(--surface); padding: 16px 20px 18px; }
+.kpi-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 10px; }
+.kpi-value { font-size: 27px; font-weight: 600; letter-spacing: -0.01em; font-variant-numeric: tabular-nums; }
+.kpi-subtext {
+  display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 600;
+  padding: 2px 7px; border-radius: 20px; margin-top: 9px;
+}
+.kpi-subtext.statut-alerte { background: var(--accent-wash); color: var(--accent); }
+.kpi-subtext.statut-bon { background: var(--good-wash); color: var(--good); }
+.kpi-subtext.statut-avertissement { background: var(--warn-wash); color: var(--warn); }
+.kpi-subtext.statut-neutre { background: var(--line-soft); color: var(--muted); }
+.dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; flex-shrink: 0; }
+
+/* Carte KPI avec ajustement manuel (incidents_manager) : chiffre modele -> chiffre ajuste */
+.kpi-value-row { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.kpi-value-base { font-size: 19px; font-weight: 500; color: var(--faint); font-variant-numeric: tabular-nums; }
+.kpi-value-arrow { font-size: 15px; color: var(--faint); }
+.kpi-value-adjusted { font-size: 27px; font-weight: 600; letter-spacing: -0.01em; color: var(--ink); font-variant-numeric: tabular-nums; }
+
+/* ---------- Sections / cards ---------- */
+.section-block { margin-bottom: 24px; display: flex; flex-direction: column; }
+.section-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 12px; }
+.section-title { font-size: 14.5px; font-weight: 600; margin: 0; }
+.section-meta { font-size: 12px; color: var(--muted); }
+
+/* Dans une .section-block, le .chart-block remplit toute la hauteur
+   disponible : deux section-block cote a cote dans .grid-2 (ex. "Charge
+   par service" / "Alertes prevues") s'etirent alors a la meme hauteur
+   grace au stretch par defaut de la grille, contenu variable ou non. */
+.section-block > .chart-block { flex: 1; margin-bottom: 0; }
+
+.chart-block, .card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 20px 24px 20px; margin-bottom: 24px;
+}
+.chart-title { font-size: 14.5px; font-weight: 600; margin: 0 0 12px; }
+.chart-caption {
+  font-size: 12px; color: var(--muted); line-height: 1.55; margin: 12px 0 0;
+  padding-top: 12px; border-top: 1px solid var(--line-soft); max-width: 72ch;
+}
+
+/* ---------- Filters ---------- */
+.filtre-row { display: flex; gap: 12px; align-items: center; margin-bottom: 16px; }
+.filtre-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.03em; }
+
+/* ---------- Service load bars ---------- */
+.service-bars { display: flex; flex-direction: column; gap: 14px; }
+.service-row { display: grid; grid-template-columns: 160px 1fr 64px; align-items: center; gap: 14px; }
+.service-name { font-size: 12.5px; color: var(--ink-soft); font-weight: 500; }
+.service-track { height: 8px; background: var(--line-soft); border-radius: 4px; position: relative; }
+.service-fill { height: 100%; border-radius: 4px; }
+.service-threshold { position: absolute; top: -3px; bottom: -3px; width: 2px; background: var(--accent); }
+.service-val { font-size: 12.5px; text-align: right; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.service-val.over { color: var(--accent); font-weight: 600; }
+
+/* ---------- Alert list ---------- */
+.alert-list { display: flex; flex-direction: column; }
+.alert-item { display: flex; align-items: center; justify-content: space-between; padding: 11px 0; border-bottom: 1px solid var(--line-soft); }
+.alert-item:last-child { border-bottom: none; padding-bottom: 2px; }
+.alert-left { display: flex; align-items: center; gap: 10px; }
+.sev-stripe { width: 3px; height: 28px; border-radius: 2px; background: var(--accent); }
+.sev-stripe.warn { background: var(--warn); }
+.alert-service { font-size: 13px; font-weight: 600; color: var(--ink); }
+.alert-detail { font-size: 11.5px; color: var(--muted); margin-top: 1px; }
+.alert-days { font-size: 12px; color: var(--muted); text-align: right; }
+.alert-days b { color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+
+/* ---------- Grid layouts ---------- */
+.grid-2 { display: grid; grid-template-columns: 1.3fr 1fr; gap: 18px; }
+
+/* ---------- Misc ---------- */
+.table-note { font-size: 11.5px; color: var(--faint); margin-top: 8px; }
+
+.Select-control, .dash-dropdown .Select-control {
+  border-radius: var(--radius) !important;
+  border-color: var(--line) !important;
+}
+
+/* ---------- Formulaire (page Incidents & Annonces) ---------- */
+.incidents-form { display: flex; flex-direction: column; gap: 18px; }
+
+.type-toggle { display: inline-flex; gap: 2px; background: var(--line-soft); border-radius: var(--radius); padding: 3px; width: fit-content; }
+.type-toggle-btn {
+  border: none; background: transparent; color: var(--muted);
+  font-size: 12.5px; font-weight: 600; padding: 8px 18px; border-radius: 2px;
+  cursor: pointer; font-family: inherit;
+}
+.type-toggle-btn:hover { color: var(--ink-soft); }
+.type-toggle-btn-active { background: var(--surface); color: var(--ink); box-shadow: 0 1px 2px rgba(20,19,15,0.08); }
+
+.form-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px 20px; }
+.form-field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.form-label { font-size: 11.5px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.03em; }
+
+.form-input, .form-textarea {
+  border: 1px solid var(--line); border-radius: var(--radius); padding: 8px 10px;
+  font-size: 13px; font-family: inherit; color: var(--ink); background: var(--surface); width: 100%;
+}
+.form-input:focus, .form-textarea:focus { outline: none; border-color: var(--accent); }
+.form-textarea { min-height: 68px; resize: vertical; }
+
+.form-datepicker .SingleDatePickerInput,
+.form-datepicker .DateInput { border-radius: var(--radius); width: 100%; }
+.form-datepicker .DateInput_input {
+  font-size: 13px; font-family: inherit; color: var(--ink); border-bottom: 1px solid var(--line);
+  padding: 8px 4px;
+}
+.form-datepicker .CalendarDay__selected, .form-datepicker .CalendarDay__selected:hover {
+  background: var(--accent); border-color: var(--accent);
+}
+
+.form-actions { display: flex; align-items: center; gap: 16px; margin-top: 4px; }
+.btn-accent {
+  background: var(--accent); color: #fff; border: none; border-radius: var(--radius);
+  font-size: 13px; font-weight: 600; padding: 10px 22px; cursor: pointer; font-family: inherit;
+}
+.btn-accent:hover { background: #c4001f; }
+
+.form-feedback { font-size: 12.5px; font-weight: 600; padding: 6px 12px; border-radius: 20px; }
+.form-feedback.success { background: var(--good-wash); color: var(--good); }
+.form-feedback.error { background: var(--accent-wash); color: var(--accent); }

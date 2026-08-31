@@ -1,0 +1,31 @@
+# Configuration de deploiement Render (https://render.com).
+# Aucune valeur secrete ici -- les variables marquees "sync: false" sont
+# saisies a la main dans le tableau de bord Render au moment du deploiement,
+# jamais commitees dans ce depot.
+services:
+  - type: web
+    name: pilotage-predictif-sg
+    runtime: python
+    plan: free
+    rootDir: 01-Machine-Learning/pilotage-predictif-sg
+    buildCommand: pip install -r requirements-deploy.txt
+    startCommand: cd app && gunicorn app:server --bind 0.0.0.0:$PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.11
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        sync: false
+      - key: DB_NAME
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: FLASK_SECRET_KEY
+        sync: false
+      - key: APP_USERNAME
+        sync: false
+      - key: APP_PASSWORD_HASH
+        sync: false

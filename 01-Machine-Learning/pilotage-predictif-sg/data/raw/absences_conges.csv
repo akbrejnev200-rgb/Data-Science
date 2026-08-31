@@ -1,0 +1,2507 @@
+Matricule,Type_Contrat,Service,Type_Absence,Date_Debut,Date_Fin,Duree_Jours,Valide,Commentaire_RH
+6bbeffeb0e5e,CDI,Recouvrement,RTT,29/04/2024,2024-04-29,1,O,En attente validation
+6bbeffeb0e5e,cdi,Recouvrement,MALADIE,22.01.2025,01/26/2025,5,O,RAS
+6bbeffeb0e5e,CDI,Recouvrement,CONGE_PAYE,12/03/2024,20.03.2024,9,Y,URGENT
+6bbeffeb0e5e,CDI,Recouvrement,CP,02-05-2025,07/05/2025,6,O,A régulariser
+6bbeffeb0e5e,cdi,Recouvrement,rtt,28.04.2025,04/28/2025,1,Y,
+6bbeffeb0e5e,cdi,Recouvrement,Congé Payé,10/01/2024,15.01.2024,6,0,A régulariser
+6bbeffeb0e5e,CDI,Recouvrement,CONGE_PAYE,2024-08-17,2024-08-25,9,0,
+6bbeffeb0e5e,CDI,Recouvrement,Maladie,27/10/2024,24.10.2024,1,Y,Validé manager
+6bbeffeb0e5e,cdi,Recouvrement,FORMATION,28.03.2024,03/31/2024,4,N,Validé manager
+6bbeffeb0e5e,CDI,Recouvrement,Congé Payé,15-09-2024,20/09/2024,6,NON,En attente validation
+6bbeffeb0e5e,cdi,Recouvrement,Formation,12-10-2024,15/10/24,4,0,RAS
+6bbeffeb0e5e,cdi,Recouvrement,Absent,08-04-2025,2025-04-08,1,N,
+6bbeffeb0e5e,cdi,Recouvrement,CONGE_PAYE,19/02/25,02/28/2025,10,1,Validé manager
+6bbeffeb0e5e,cdi,Recouvrement,Congé Payé,2024-06-09,06/18/2024,10,O,RAS
+6bbeffeb0e5e,CDI,Recouvrement,CONGE_PAYE,10.07.2025,14/07/25,5,N,RAS
+6bbeffeb0e5e,cdi,Recouvrement,MALADIE,2025-12-06,06/12/2025,1,O,Certificat fourni
+6bbeffeb0e5e,CDI,Recouvrement,Congé Payé,18-03-2024,23.03.2024,6,1,Certificat fourni
+6bbeffeb0e5e,CDI,Recouvrement,RTT,02-11-2024,02-11-2024,1,NON,Validé manager
+6bbeffeb0e5e,cdi,Recouvrement,Congé Payé,31/10/24,09.11.2024,10,NON,Certificat fourni
+6bbeffeb0e5e,cdi,Recouvrement,CP,18-08-2024,25.08.2024,8,N,
+6bbeffeb0e5e,CDI,Recouvrement,Absent,05/07/2025,2025-07-05,1,Y,Certificat fourni
+6bbeffeb0e5e,CDI,Recouvrement,MALADIE,11/28/2024,30.11.2024,3,OUI,
+6bbeffeb0e5e,cdi,Recouvrement,Formation,27/03/2026,2026-03-28,2,OUI,
+6bbeffeb0e5e,cdi,Recouvrement,rtt,23.02.2024,23-02-2024,1,O,Certificat fourni
+6bbeffeb0e5e,CDI,Recouvrement,Formation,2025-05-13,14/05/25,2,Y,URGENT
+6bbeffeb0e5e,CDI,Recouvrement,RTT,28/05/25,05/28/2025,1,0,RAS
+6bbeffeb0e5e,cdi,Recouvrement,CP,18/09/24,09/24/2024,7,0,
+6bbeffeb0e5e,CDI,Recouvrement,CP,2025-03-07,11.03.2025,5,NON,URGENT
+d5d3fea0d185,cdi,Conformité KYC,rtt,27-02-2024,27-02-2024,1,OUI,
+d5d3fea0d185,CDI,Conformité KYC,FORMATION,26/01/26,2026-01-28,3,N,A régulariser
+d5d3fea0d185,cdi,Conformité KYC,CONGE_PAYE,2024-01-08,2024-01-12,5,Y,Validé manager
+d5d3fea0d185,cdi,Conformité KYC,Absent,04-11-2024,04.11.2024,1,1,
+d5d3fea0d185,CDI,Conformité KYC,rtt,24/02/24,24-02-2024,1,0,A régulariser
+d5d3fea0d185,cdi,Conformité KYC,Maladie,12/06/2024,12/06/2024,1,Y,A régulariser
+d5d3fea0d185,cdi,Conformité KYC,rtt,21/09/2024,2024-09-21,-1,OUI,A régulariser
+d5d3fea0d185,cdi,Conformité KYC,RTT,28-03-2025,28-03-2025,1,O,Validé manager
+d5d3fea0d185,cdi,Conformité KYC,MALADIE,2025-11-27,28.11.2025,2,Y,Validé manager
+d5d3fea0d185,cdi,Conformité KYC,Congé Payé,02-02-2025,06/02/2025,5,O,A régulariser
+d5d3fea0d185,CDI,Conformité KYC,Formation,24/04/25,27/04/2025,4,0,
+d5d3fea0d185,CDI,Conformité KYC,CONGE_PAYE,12/05/2024,18/05/24,7,OUI,Certificat fourni
+d5d3fea0d185,CDI,Conformité KYC,rtt,24/06/24,24/06/24,1,N,
+d5d3fea0d185,cdi,Conformité KYC,rtt,2024-09-26,26.09.2024,1,O,RAS
+d5d3fea0d185,CDI,Conformité KYC,CONGE_PAYE,11-12-2024,17-12-2024,7,Y,
+d5d3fea0d185,CDI,Conformité KYC,RTT,10/04/2026,2026-04-10,1,0,Certificat fourni
+d5d3fea0d185,cdi,Conformité KYC,RTT,22.03.2026,21/03/26,1,0,En attente validation
+d5d3fea0d185,CDI,Conformité KYC,Absent,27/05/24,27.05.2024,1,O,En attente validation
+d5d3fea0d185,cdi,Conformité KYC,Formation,09.04.2026,2026-04-11,3,NON,
+d5d3fea0d185,cdi,Conformité KYC,Maladie,07.09.2024,07/09/2024,1,OUI,En attente validation
+d5d3fea0d185,cdi,Conformité KYC,Maladie,28/02/2025,01/03/2025,2,O,En attente validation
+d5d3fea0d185,cdi,Conformité KYC,rtt,03/27/2025,27-03-2025,1,1,
+d5d3fea0d185,cdi,Conformité KYC,FORMATION,27/02/25,03-03-2025,5,NON,RAS
+d5d3fea0d185,cdi,Conformité KYC,Formation CFA,26-04-2024,28/04/2024,3,1,En attente validation
+d5d3fea0d185,CDI,Conformité KYC,RTT,06.04.2026,06-04-2026,95,1,RAS
+d5d3fea0d185,CDI,Conformité KYC,Formation,27.07.2024,30-07-2024,4,Y,URGENT
+d5d3fea0d185,cdi,Conformité KYC,FORMATION,18/07/2024,20-07-2024,3,N,Validé manager
+20a8323e4291,Alternant,Recouvrement,Absent,27/04/2024,2024-04-27,1,1,URGENT
+20a8323e4291,Alternant,Recouvrement,Congé Payé,2024-04-24,2024-05-03,10,NON,URGENT
+20a8323e4291,alternant,Recouvrement,CP,09-02-2024,02/16/2024,8,NON,
+20a8323e4291,Alternant,Recouvrement,CP,2024-01-19,2024-01-28,10,OUI,
+20a8323e4291,alternant,Recouvrement,Maladie,09/03/2024,10/03/2024,2,1,Certificat fourni
+20a8323e4291,alternant,Recouvrement,RTT,28/05/2024,28/05/24,1,O,A régulariser
+20a8323e4291,alternant,Recouvrement,CP,17.03.2024,21/03/2024,5,O,En attente validation
+20a8323e4291,alternant,Recouvrement,Congé Payé,04/19/2024,27/04/24,95,OUI,
+20a8323e4291,alternant,Recouvrement,rtt,18/03/2024,18-03-2024,1,OUI,
+20a8323e4291,Alternant,Recouvrement,rtt,28.01.2024,28-01-2024,1,N,
+20a8323e4291,Alternant,Recouvrement,Congé Payé,02-01-2024,2024-01-11,10,O,
+20a8323e4291,alternant,Recouvrement,Congé Payé,2024-04-22,04/26/2024,5,1,A régulariser
+20a8323e4291,Alternant,Recouvrement,RTT,02.01.2024,02-01-2024,1,OUI,RAS
+20a8323e4291,alternant,Recouvrement,rtt,10/06/2024,10.06.2024,1,N,RAS
+20a8323e4291,alternant,Recouvrement,MALADIE,10/03/2024,10.03.2024,1,1,
+20a8323e4291,alternant,Recouvrement,CP,25.02.2024,03-03-2024,8,N,
+20a8323e4291,alternant,Recouvrement,CP,05.03.2024,14.03.2024,10,N,A régulariser
+20a8323e4291,Alternant,Recouvrement,Maladie,20/04/2024,21.04.2024,2,N,URGENT
+20a8323e4291,Alternant,,Congé Payé,26/05/24,02-06-2024,8,OUI,En attente validation
+20a8323e4291,alternant,Recouvrement,RTT,31/01/2024,31/01/24,1,N,Certificat fourni
+20a8323e4291,Alternant,Recouvrement,RTT,24/03/2024,24.03.2024,1,0,A régulariser
+20a8323e4291,Alternant,Recouvrement,Maladie,01-01-2024,03-01-2024,3,O,En attente validation
+20a8323e4291,Alternant,Recouvrement,MALADIE,04/21/2024,22/04/2024,2,0,Certificat fourni
+20a8323e4291,alternant,Recouvrement,rtt,24/02/24,24/02/24,1,O,A régulariser
+20a8323e4291,Alternant,Recouvrement,CP,2024-05-29,2024-05-28,7,0,RAS
+20a8323e4291,Alternant,Recouvrement,RTT,25/03/2024,25-03-2024,1,0,En attente validation
+20a8323e4291,alternant,Recouvrement,FORMATION,05/26/2024,2024-05-27,2,N,RAS
+20a8323e4291,alternant,Recouvrement,RTT,04/22/2024,2024-04-22,1,NON,En attente validation
+20a8323e4291,alternant,Recouvrement,CONGE_PAYE,14.05.2024,2024-05-22,9,Y,Certificat fourni
+20a8323e4291,Alternant,Recouvrement,Formation,17/05/2024,21-05-2024,5,0,En attente validation
+20a8323e4291,Alternant,Recouvrement,rtt,16/03/24,16/03/2024,1,O,En attente validation
+38488e69482b,cdi,Recouvrement,rtt,2026-03-24,24/03/26,1,0,
+38488e69482b,CDI,Recouvrement,CONGE_PAYE,04/22/2025,04/27/2025,6,O,A régulariser
+38488e69482b,CDI,Recouvrement,Congé Payé,29-01-2025,06.02.2025,9,O,A régulariser
+38488e69482b,cdi,Recouvrement,Congé Payé,14/06/2025,21-06-2025,95,OUI,A régulariser
+38488e69482b,cdi,Recouvrement,CP,04/30/2026,06.05.2026,7,O,Certificat fourni
+38488e69482b,CDI,Recouvrement,Congé Payé,05-05-2025,09.05.2025,5,0,URGENT
+38488e69482b,CDI,Recouvrement,Maladie,2024-10-02,06-10-2024,5,OUI,RAS
+38488e69482b,CDI,Recouvrement,MALADIE,04.08.2025,05-08-2025,2,NON,Certificat fourni
+38488e69482b,cdi,Recouvrement,Maladie,25/10/2025,25.10.2025,1,0,
+38488e69482b,cdi,Recouvrement,CONGE_PAYE,25-03-2026,29.03.2026,5,0,Validé manager
+38488e69482b,CDI,Recouvrement,CP,29-01-2026,02.02.2026,5,0,A régulariser
+38488e69482b,cdi,Recouvrement,RTT,17/02/2026,17.02.2026,1,N,
+38488e69482b,CDI,Recouvrement,CONGE_PAYE,26/12/25,2026-01-01,7,0,A régulariser
+38488e69482b,cdi,Recouvrement,CP,21-08-2025,27.08.2025,7,NON,Validé manager
+38488e69482b,cdi,Recouvrement,Congé Payé,06.06.2026,06/15/2026,10,OUI,RAS
+38488e69482b,CDI,Recouvrement,MALADIE,31-01-2024,03.02.2024,4,N,Certificat fourni
+38488e69482b,cdi,Recouvrement,rtt,25/06/24,25/06/2024,1,1,
+38488e69482b,CDI,Recouvrement,RTT,2025-06-26,26/06/2025,1,0,URGENT
+38488e69482b,CDI,Recouvrement,RTT,2025-05-27,27/05/2025,1,O,Certificat fourni
+38488e69482b,cdi,Recouvrement,RTT,28/05/2026,28-05-2026,1,Y,A régulariser
+38488e69482b,CDI,Recouvrement,Congé Payé,06-09-2025,2025-09-15,10,NON,RAS
+38488e69482b,cdi,Recouvrement,Maladie,01-03-2026,04-03-2026,4,OUI,Certificat fourni
+38488e69482b,CDI,Recouvrement,CONGE_PAYE,03-05-2025,12/05/2025,10,1,En attente validation
+38488e69482b,cdi,Recouvrement,Formation CFA,30/05/26,01.06.2026,3,Y,Certificat fourni
+38488e69482b,cdi,Recouvrement,Congé Payé,01/03/2025,07/03/2025,7,0,
+38488e69482b,CDI,Recouvrement,RTT,28-05-2024,28.05.2024,-1,OUI,Validé manager
+b0d111d6b116,PRESTATAIRE,Conformité KYC,Formation CFA,26-02-2026,01/03/2026,4,O,En attente validation
+b0d111d6b116,Prestataire,Conformité KYC,Congé Payé,01-08-2025,08.08.2025,8,N,En attente validation
+b0d111d6b116,Prestataire,Conformité KYC,FORMATION,01/07/2025,02.07.2025,2,0,Validé manager
+b0d111d6b116,Prestataire,Conformité KYC,RTT,25/03/2024,25/03/24,1,Y,Certificat fourni
+b0d111d6b116,PRESTATAIRE,Conformité KYC,Maladie,26/04/26,2026-04-28,3,1,URGENT
+b0d111d6b116,PRESTATAIRE,Conformité KYC,Maladie,2026-03-03,04/03/2026,2,OUI,
+b0d111d6b116,PRESTATAIRE,Conformité KYC,MALADIE,18/03/2026,21-03-2026,4,NON,RAS
+b0d111d6b116,PRESTATAIRE,Conformité KYC,Maladie,2025-04-26,04/26/2025,1,N,A régulariser
+b0d111d6b116,Prestataire,Conformité KYC,RTT,04/27/2025,27/04/25,1,OUI,RAS
+b0d111d6b116,Prestataire,Conformité KYC,Congé Payé,08-05-2026,12-05-2026,5,O,
+b0d111d6b116,Prestataire,Conformité KYC,CP,2025-09-20,29.09.2025,10,O,
+b0d111d6b116,Prestataire,Conformité KYC,RTT,2025-04-26,26-04-2025,1,0,En attente validation
+b0d111d6b116,Prestataire,Conformité KYC,MALADIE,08-03-2026,2026-03-08,1,NON,Certificat fourni
+b0d111d6b116,PRESTATAIRE,Conformité KYC,FORMATION,2025-06-25,28.06.2025,4,Y,Validé manager
+b0d111d6b116,PRESTATAIRE,Conformité KYC,CONGE_PAYE,09-06-2024,15-06-2024,7,OUI,RAS
+b0d111d6b116,Prestataire,Conformité KYC,CONGE_PAYE,27/03/2025,2025-04-05,10,OUI,A régulariser
+b0d111d6b116,PRESTATAIRE,Conformité KYC,Formation CFA,2025-12-25,27-12-2025,3,OUI,Validé manager
+b0d111d6b116,PRESTATAIRE,Conformité KYC,Congé Payé,2025-07-27,2025-08-05,10,O,RAS
+b0d111d6b116,PRESTATAIRE,Conformité KYC,rtt,2024-06-11,2024-06-11,1,O,URGENT
+b0d111d6b116,Prestataire,Conformité KYC,RTT,01-05-2025,01.05.2025,1,O,URGENT
+b0d111d6b116,PRESTATAIRE,Conformité KYC,MALADIE,10/10/2024,13.10.2024,4,Y,En attente validation
+b0d111d6b116,Prestataire,Conformité KYC,Maladie,07-01-2025,09/01/2025,3,NON,
+b0d111d6b116,Prestataire,Conformité KYC,Congé Payé,13/04/2026,2026-04-21,9,Y,RAS
+b0d111d6b116,PRESTATAIRE,Conformité KYC,Maladie,16.09.2025,18.09.2025,3,0,RAS
+b0d111d6b116,PRESTATAIRE,Conformité KYC,CP,2024-06-28,27-06-2024,7,Y,A régulariser
+b0d111d6b116,PRESTATAIRE,Conformité KYC,rtt,03/03/2025,03/03/2025,1,0,
+b0d111d6b116,PRESTATAIRE,Conformité KYC,RTT,27-01-2024,27/01/2024,1,N,
+b0d111d6b116,PRESTATAIRE,Conformité KYC,RTT,11/24/2025,2025-11-24,1,NON,
+b0d111d6b116,Prestataire,Conformité KYC,Absent,01.11.2025,2025-11-01,1,Y,En attente validation
+b0d111d6b116,Prestataire,Conformité KYC,RTT,02/26/2026,02/26/2026,1,O,A régulariser
+b0d111d6b116,PRESTATAIRE,Conformité KYC,CONGE_PAYE,13-10-2024,10/21/2024,9,N,A régulariser
+0c84277a6559,cdi,Épargne & Placements,MALADIE,09/09/2025,09.09.2025,1,Y,RAS
+0c84277a6559,CDI,Épargne & Placements,CONGE_PAYE,03/11/2024,11.11.2024,9,N,En attente validation
+0c84277a6559,CDI,Épargne & Placements,rtt,03-05-2026,2026-05-03,1,OUI,
+0c84277a6559,CDI,Épargne & Placements,Maladie,25/04/26,27/04/2026,3,O,Validé manager
+0c84277a6559,CDI,Épargne & Placements,CP,23-03-2024,28-03-2024,6,NON,URGENT
+0c84277a6559,CDI,Épargne & Placements,CONGE_PAYE,09/27/2024,26/09/24,6,N,A régulariser
+0c84277a6559,cdi,Épargne & Placements,FORMATION,2024-12-28,2024-12-29,2,0,En attente validation
+0c84277a6559,CDI,Épargne & Placements,CP,01/13/2025,19.01.2025,7,O,En attente validation
+0c84277a6559,cdi,Épargne & Placements,Formation CFA,24.12.2025,27-12-2025,4,OUI,Validé manager
+0c84277a6559,cdi,Épargne & Placements,RTT,09/27/2024,27-09-2024,1,NON,Validé manager
+0c84277a6559,cdi,Épargne & Placements,RTT,02/03/2026,02.03.2026,1,0,Validé manager
+0c84277a6559,cdi,Épargne & Placements,RTT,26/12/25,26-12-2025,1,O,A régulariser
+0c84277a6559,cdi,Épargne & Placements,Formation CFA,26-05-2024,27.05.2024,2,0,
+0c84277a6559,cdi,,rtt,28-12-2024,28.12.2024,1,O,RAS
+0c84277a6559,CDI,Épargne & Placements,Maladie,16.09.2024,19/09/24,4,Y,Validé manager
+0c84277a6559,cdi,Épargne & Placements,Formation CFA,08/24/2024,27.08.2024,4,0,URGENT
+0c84277a6559,CDI,Épargne & Placements,Maladie,2024-04-10,12.04.2024,3,NON,RAS
+0c84277a6559,CDI,Épargne & Placements,MALADIE,30.03.2026,2026-04-02,4,0,En attente validation
+0c84277a6559,cdi,Épargne & Placements,RTT,2026-05-25,25-05-2026,1,0,Certificat fourni
+0c84277a6559,CDI,Épargne & Placements,Congé Payé,11/20/2025,27/11/25,8,0,
+0c84277a6559,CDI,Épargne & Placements,MALADIE,2025-06-22,2025-06-22,1,Y,
+0c84277a6559,cdi,Épargne & Placements,CONGE_PAYE,2024-07-08,12/07/2024,5,0,RAS
+0c84277a6559,cdi,Épargne & Placements,CP,14/06/25,06/23/2025,10,O,
+0c84277a6559,cdi,Épargne & Placements,RTT,15/03/25,03/15/2025,1,OUI,URGENT
+0c84277a6559,CDI,Épargne & Placements,CONGE_PAYE,06/16/2024,2024-06-20,5,Y,En attente validation
+2e2721336864,CDD,Recouvrement,rtt,2024-01-24,01/24/2024,1,N,En attente validation
+2e2721336864,CDD,Recouvrement,Congé Payé,22/01/2024,01/26/2024,5,OUI,RAS
+2e2721336864,CDD,Recouvrement,Maladie,07/01/2024,11-01-2024,5,0,Validé manager
+2e2721336864,CDD,Recouvrement,RTT,05-01-2024,05/01/2024,1,Y,URGENT
+2e2721336864,CDD,Recouvrement,FORMATION,2024-01-06,2024-01-09,4,Y,A régulariser
+2e2721336864,CDD,Recouvrement,Formation CFA,03-01-2024,04-01-2024,2,OUI,A régulariser
+2e2721336864,CDD,Recouvrement,CONGE_PAYE,17/01/24,25/01/24,9,1,A régulariser
+2e2721336864,cdd,Recouvrement,rtt,2024-01-24,24.01.2024,1,0,
+2e2721336864,cdd,Recouvrement,Absent,13/01/2024,13.01.2024,1,NON,URGENT
+2e2721336864,cdd,Recouvrement,Formation,03/01/2024,2024-01-07,5,0,En attente validation
+2e2721336864,CDD,Recouvrement,Maladie,2024-01-06,10-01-2024,5,Y,RAS
+2e2721336864,cdd,Recouvrement,Congé Payé,2024-01-13,10.01.2024,8,0,
+2e2721336864,CDD,Recouvrement,CONGE_PAYE,21.01.2024,01/25/2024,5,Y,RAS
+2e2721336864,cdd,Recouvrement,CONGE_PAYE,05/01/2024,10/01/2024,6,OUI,RAS
+2e2721336864,cdd,Recouvrement,RTT,24-01-2024,24-01-2024,1,O,Certificat fourni
+2e2721336864,cdd,Recouvrement,rtt,04.01.2024,04/01/2024,1,OUI,
+2e2721336864,cdd,Recouvrement,CONGE_PAYE,10/01/2024,14/01/24,5,NON,En attente validation
+2e2721336864,CDD,Recouvrement,Maladie,20/01/24,01/21/2024,2,0,RAS
+2e2721336864,cdd,Recouvrement,Formation,01/24/2024,26-01-2024,3,OUI,URGENT
+2e2721336864,CDD,Recouvrement,MALADIE,10-01-2024,10-01-2024,1,O,A régulariser
+2e2721336864,CDD,Recouvrement,Maladie,03.01.2024,03/01/2024,1,N,URGENT
+2e2721336864,cdd,Recouvrement,RTT,2024-01-24,2024-01-24,1,1,Certificat fourni
+2e2721336864,CDD,Recouvrement,FORMATION,10-01-2024,12-01-2024,3,NON,Validé manager
+2e2721336864,CDD,Recouvrement,Congé Payé,07.01.2024,2024-01-12,6,0,En attente validation
+2e2721336864,cdd,Recouvrement,rtt,01/23/2024,23/01/24,1,NON,
+2e2721336864,cdd,Recouvrement,Maladie,12/01/2024,12-01-2024,1,N,
+a6c60371a7a9,CDI,Épargne & Placements,CONGE_PAYE,01-03-2025,2025-03-08,8,OUI,
+a6c60371a7a9,cdi,Épargne & Placements,CONGE_PAYE,24.04.2025,03.05.2025,10,N,Certificat fourni
+a6c60371a7a9,CDI,,Congé Payé,07/13/2024,17/07/2024,5,OUI,RAS
+a6c60371a7a9,CDI,Épargne & Placements,Formation,27/04/2026,29.04.2026,3,Y,A régulariser
+a6c60371a7a9,cdi,Épargne & Placements,Formation,26/04/24,30/04/24,5,N,Certificat fourni
+a6c60371a7a9,CDI,Épargne & Placements,Maladie,2025-12-11,11.12.2025,1,O,
+a6c60371a7a9,CDI,Épargne & Placements,rtt,09/25/2024,25-09-2024,1,1,Certificat fourni
+a6c60371a7a9,CDI,Épargne & Placements,CP,16/01/2026,20.01.2026,5,0,RAS
+a6c60371a7a9,cdi,Épargne & Placements,CONGE_PAYE,05.05.2026,2026-05-14,10,0,RAS
+a6c60371a7a9,CDI,Épargne & Placements,Maladie,03/25/2024,2024-03-28,4,Y,
+a6c60371a7a9,cdi,Épargne & Placements,CONGE_PAYE,11-09-2024,2024-09-20,10,NON,RAS
+a6c60371a7a9,cdi,Épargne & Placements,CP,2026-06-09,06/15/2026,7,O,
+a6c60371a7a9,CDI,Épargne & Placements,CONGE_PAYE,2026-02-26,2026-03-05,8,1,
+a6c60371a7a9,cdi,Épargne & Placements,CONGE_PAYE,19-11-2025,23.11.2025,5,O,URGENT
+a6c60371a7a9,cdi,Épargne & Placements,CP,14.07.2025,2025-07-19,6,OUI,RAS
+a6c60371a7a9,CDI,Épargne & Placements,MALADIE,30/04/25,2025-05-04,5,NON,RAS
+a6c60371a7a9,CDI,Épargne & Placements,Formation,10/31/2024,04-11-2024,5,O,URGENT
+a6c60371a7a9,cdi,,Congé Payé,20/04/2024,26/04/24,7,O,En attente validation
+a6c60371a7a9,CDI,Épargne & Placements,CONGE_PAYE,2024-08-24,01/09/2024,9,OUI,RAS
+a6c60371a7a9,CDI,Épargne & Placements,MALADIE,2024-11-03,06.11.2024,4,N,Certificat fourni
+a6c60371a7a9,CDI,Épargne & Placements,Formation CFA,16-08-2024,17/08/2024,2,O,Certificat fourni
+a6c60371a7a9,CDI,Épargne & Placements,CP,14/03/2024,03/18/2024,5,N,Certificat fourni
+a6c60371a7a9,CDI,Épargne & Placements,Congé Payé,15-09-2025,09/22/2025,8,N,RAS
+a6c60371a7a9,CDI,Épargne & Placements,FORMATION,10/21/2025,23/10/25,3,O,
+a6c60371a7a9,CDI,Épargne & Placements,RTT,08/26/2024,08/26/2024,1,1,
+a6c60371a7a9,CDI,Épargne & Placements,Maladie,29/10/25,10/31/2025,3,NON,A régulariser
+a6c60371a7a9,cdi,Épargne & Placements,CP,12/28/2025,2026-01-03,7,Y,
+a6c60371a7a9,CDI,,Maladie,12/07/2024,13/07/2024,2,1,RAS
+a6c60371a7a9,cdi,Épargne & Placements,rtt,25/09/2025,25.09.2025,1,Y,En attente validation
+a6c60371a7a9,cdi,Épargne & Placements,FORMATION,02/27/2024,29.02.2024,3,O,
+a6c60371a7a9,cdi,Épargne & Placements,Formation,25-03-2024,29/03/24,5,N,En attente validation
+a6c60371a7a9,cdi,Épargne & Placements,Congé Payé,08/25/2025,03/09/2025,10,1,En attente validation
+264d28d68214,cdi,Recouvrement,Maladie,06/09/2025,06-09-2025,1,O,Certificat fourni
+264d28d68214,CDI,Recouvrement,rtt,09/11/2024,09/11/2024,1,NON,
+264d28d68214,cdi,Recouvrement,RTT,2025-05-27,27/05/25,1,OUI,Validé manager
+264d28d68214,CDI,Recouvrement,RTT,24/01/2024,2024-01-24,1,O,URGENT
+264d28d68214,CDI,,CONGE_PAYE,18-01-2024,25/01/2024,8,1,
+264d28d68214,cdi,Recouvrement,rtt,2024-12-27,2024-12-27,1,O,Validé manager
+264d28d68214,CDI,Recouvrement,Maladie,04/25/2025,04/28/2025,4,Y,Certificat fourni
+264d28d68214,cdi,Recouvrement,FORMATION,25-05-2025,26/05/25,2,N,
+264d28d68214,CDI,Recouvrement,FORMATION,03-07-2024,05/07/2024,3,O,En attente validation
+264d28d68214,cdi,Recouvrement,CONGE_PAYE,31.01.2026,04-02-2026,5,N,
+264d28d68214,cdi,Recouvrement,RTT,28/05/25,05/28/2025,1,0,Validé manager
+264d28d68214,CDI,Recouvrement,CP,08/19/2025,27/08/25,9,O,Certificat fourni
+264d28d68214,cdi,Recouvrement,RTT,2025-07-25,25-07-2025,1,1,URGENT
+264d28d68214,CDI,,MALADIE,2025-03-13,14/03/25,2,O,A régulariser
+264d28d68214,CDI,Recouvrement,Formation,27.04.2026,29.04.2026,3,O,RAS
+264d28d68214,CDI,Recouvrement,Congé Payé,02/08/2025,2025-08-11,10,N,RAS
+264d28d68214,CDI,Recouvrement,RTT,05/26/2024,26/05/2024,1,O,A régulariser
+264d28d68214,cdi,Recouvrement,Maladie,28/10/2025,25/10/25,3,N,
+264d28d68214,cdi,Recouvrement,rtt,26-03-2024,2024-03-26,1,Y,Certificat fourni
+264d28d68214,CDI,Recouvrement,Maladie,28-12-2025,30/12/25,3,0,Validé manager
+264d28d68214,cdi,Recouvrement,Maladie,06/02/2024,08/02/2024,3,O,
+264d28d68214,cdi,,Formation,30-10-2025,02-11-2025,4,OUI,Validé manager
+264d28d68214,cdi,Recouvrement,MALADIE,26.01.2024,01/30/2024,5,1,
+264d28d68214,cdi,Recouvrement,CONGE_PAYE,08.02.2025,2025-02-12,5,O,A régulariser
+264d28d68214,CDI,Recouvrement,Formation CFA,19/12/2024,21/12/24,3,O,Validé manager
+264d28d68214,cdi,Recouvrement,MALADIE,03.03.2025,2025-03-05,3,OUI,Certificat fourni
+264d28d68214,CDI,Recouvrement,FORMATION,25-10-2025,10/28/2025,4,OUI,
+264d28d68214,CDI,Recouvrement,Congé Payé,29.12.2024,02.01.2025,5,0,En attente validation
+264d28d68214,CDI,Recouvrement,RTT,28-02-2025,28/02/2025,1,NON,Certificat fourni
+264d28d68214,CDI,Recouvrement,rtt,2024-11-20,20.11.2024,1,NON,Validé manager
+9d719ebffb3e,CDD,,rtt,09-05-2026,09/05/2026,1,0,Validé manager
+9d719ebffb3e,CDD,Recouvrement,MALADIE,18/04/2026,22.04.2026,5,Y,Certificat fourni
+9d719ebffb3e,CDD,Recouvrement,Maladie,03/30/2026,2026-04-02,4,N,A régulariser
+9d719ebffb3e,cdd,Recouvrement,RTT,24.05.2026,2026-05-24,1,1,
+9d719ebffb3e,cdd,Recouvrement,Formation,2026-05-28,30/05/26,3,N,
+9d719ebffb3e,CDD,Recouvrement,RTT,03/26/2026,26/03/26,1,0,
+9d719ebffb3e,CDD,Recouvrement,Congé Payé,25/05/26,05/29/2026,5,0,
+9d719ebffb3e,cdd,Recouvrement,Formation,03.04.2026,2026-04-07,5,NON,RAS
+9d719ebffb3e,CDD,Recouvrement,Maladie,08/06/2026,08.06.2026,1,Y,A régulariser
+9d719ebffb3e,CDD,Recouvrement,Formation CFA,22/03/26,03/26/2026,5,O,En attente validation
+9d719ebffb3e,CDD,Recouvrement,CONGE_PAYE,13/03/26,17/03/26,5,O,
+9d719ebffb3e,CDD,Recouvrement,Congé Payé,24.04.2026,04/30/2026,7,OUI,
+9d719ebffb3e,CDD,Recouvrement,MALADIE,2026-05-24,2026-05-27,4,NON,En attente validation
+9d719ebffb3e,cdd,Recouvrement,Formation,03-04-2026,05/04/2026,120,O,A régulariser
+9d719ebffb3e,cdd,Recouvrement,MALADIE,03/21/2026,2026-03-21,1,1,Certificat fourni
+9d719ebffb3e,cdd,Recouvrement,Congé Payé,2026-04-11,17/04/2026,7,0,
+9d719ebffb3e,CDD,Recouvrement,Absent,21/03/26,2026-03-21,1,0,URGENT
+9d719ebffb3e,CDD,Recouvrement,Congé Payé,24.03.2026,28/03/2026,5,1,A régulariser
+9d719ebffb3e,cdd,Recouvrement,RTT,2026-03-26,2026-03-26,1,NON,
+9d719ebffb3e,cdd,Recouvrement,RTT,26/04/2026,26.04.2026,1,1,Validé manager
+9d719ebffb3e,cdd,Recouvrement,FORMATION,24/05/26,27-05-2026,4,OUI,Validé manager
+9d719ebffb3e,CDD,Recouvrement,MALADIE,05-04-2026,06.04.2026,2,N,A régulariser
+1d35b98de7d8,cdi,Épargne & Placements,CP,04-03-2025,11-03-2025,8,OUI,Validé manager
+1d35b98de7d8,cdi,Épargne & Placements,CP,10.11.2025,2025-11-14,5,N,Certificat fourni
+1d35b98de7d8,CDI,Épargne & Placements,RTT,25/05/24,25-05-2024,1,O,
+1d35b98de7d8,cdi,Épargne & Placements,CP,11.11.2024,17-11-2024,7,O,Validé manager
+1d35b98de7d8,cdi,Épargne & Placements,RTT,04/24/2026,04/24/2026,1,N,RAS
+1d35b98de7d8,CDI,Épargne & Placements,Congé Payé,29-11-2025,2025-12-08,120,1,A régulariser
+1d35b98de7d8,CDI,Épargne & Placements,FORMATION,28.03.2024,2024-03-30,3,OUI,A régulariser
+1d35b98de7d8,CDI,Épargne & Placements,CP,30.03.2025,06/04/2025,8,Y,URGENT
+1d35b98de7d8,cdi,Épargne & Placements,Congé Payé,10.08.2024,16/08/24,7,N,
+1d35b98de7d8,cdi,Épargne & Placements,FORMATION,24/02/24,2024-02-26,3,N,RAS
+1d35b98de7d8,CDI,Épargne & Placements,Congé Payé,05-05-2024,13/05/24,9,1,Validé manager
+1d35b98de7d8,CDI,Épargne & Placements,RTT,09.11.2025,09-11-2025,1,1,Certificat fourni
+1d35b98de7d8,cdi,Épargne & Placements,RTT,18-06-2024,18/06/2024,1,Y,Certificat fourni
+1d35b98de7d8,cdi,Épargne & Placements,rtt,13/07/24,13-07-2024,1,OUI,Validé manager
+1d35b98de7d8,CDI,Épargne & Placements,FORMATION,07/24/2024,07/26/2024,3,0,Certificat fourni
+1d35b98de7d8,CDI,Épargne & Placements,Maladie,24/05/25,2025-05-28,5,1,
+1d35b98de7d8,CDI,Épargne & Placements,rtt,2025-03-11,11-03-2025,1,OUI,A régulariser
+1d35b98de7d8,cdi,Épargne & Placements,Congé Payé,14/11/2024,19.11.2024,-1,1,
+1d35b98de7d8,cdi,Épargne & Placements,FORMATION,20/11/24,19/11/2024,3,O,
+1d35b98de7d8,CDI,Épargne & Placements,CP,28-12-2025,03/01/2026,7,O,Validé manager
+1d35b98de7d8,CDI,Épargne & Placements,RTT,24/05/25,24/05/25,-1,0,
+1d35b98de7d8,CDI,Épargne & Placements,CP,07.03.2025,14/03/2025,8,1,RAS
+1d35b98de7d8,cdi,Épargne & Placements,MALADIE,15/02/24,17-02-2024,3,0,RAS
+1d35b98de7d8,CDI,Épargne & Placements,Maladie,01.01.2025,02/01/2025,2,0,Certificat fourni
+1d35b98de7d8,CDI,Épargne & Placements,CONGE_PAYE,31-05-2025,07.06.2025,8,O,Certificat fourni
+1d35b98de7d8,cdi,Épargne & Placements,MALADIE,2025-07-14,2025-07-18,5,Y,En attente validation
+1d35b98de7d8,cdi,Épargne & Placements,rtt,29-03-2024,29.03.2024,1,O,En attente validation
+1d35b98de7d8,CDI,Épargne & Placements,MALADIE,28/02/2026,02/03/2026,3,O,En attente validation
+aabe73103df3,cdi,Conformité KYC,Maladie,2025-09-28,28-09-2025,1,N,
+aabe73103df3,CDI,Conformité KYC,CP,11/01/2025,01/16/2025,6,0,URGENT
+aabe73103df3,CDI,Conformité KYC,Congé Payé,30.12.2024,08-01-2025,10,1,RAS
+aabe73103df3,cdi,Conformité KYC,Formation CFA,26/02/2026,28.02.2026,3,0,
+aabe73103df3,cdi,Conformité KYC,MALADIE,26-08-2024,08/27/2024,2,0,Certificat fourni
+aabe73103df3,CDI,Conformité KYC,rtt,27-09-2025,2025-09-27,1,N,
+aabe73103df3,CDI,Conformité KYC,FORMATION,11.02.2026,2026-02-13,3,O,RAS
+aabe73103df3,cdi,Conformité KYC,RTT,29/05/24,2024-05-29,1,Y,
+aabe73103df3,cdi,Conformité KYC,rtt,16.05.2025,16/05/2025,1,O,Certificat fourni
+aabe73103df3,cdi,Conformité KYC,CONGE_PAYE,04/25/2025,04/05/2025,10,O,En attente validation
+aabe73103df3,CDI,Conformité KYC,rtt,27-07-2024,07/27/2024,1,0,RAS
+aabe73103df3,CDI,Conformité KYC,CONGE_PAYE,2024-08-21,30.08.2024,10,1,RAS
+aabe73103df3,CDI,Conformité KYC,MALADIE,2026-02-22,22.02.2026,-1,1,En attente validation
+aabe73103df3,cdi,Conformité KYC,RTT,25/07/2024,07/25/2024,1,0,Validé manager
+aabe73103df3,cdi,Conformité KYC,Congé Payé,15.09.2024,23-09-2024,9,O,
+aabe73103df3,cdi,Conformité KYC,CONGE_PAYE,06-01-2026,15/01/2026,10,N,RAS
+aabe73103df3,CDI,Conformité KYC,Formation,09/29/2025,01-10-2025,3,1,A régulariser
+aabe73103df3,CDI,Conformité KYC,CONGE_PAYE,02/11/2024,2024-11-10,9,N,A régulariser
+aabe73103df3,CDI,Conformité KYC,MALADIE,14.04.2026,04/14/2026,1,0,URGENT
+aabe73103df3,CDI,Conformité KYC,Maladie,07.04.2026,07-04-2026,1,N,Validé manager
+aabe73103df3,CDI,Conformité KYC,Congé Payé,07/21/2024,29/07/24,9,NON,RAS
+aabe73103df3,CDI,Conformité KYC,MALADIE,08/04/2025,12.04.2025,5,Y,
+aabe73103df3,cdi,Conformité KYC,MALADIE,2025-10-05,08/10/2025,-1,NON,RAS
+aabe73103df3,cdi,Conformité KYC,CONGE_PAYE,19-02-2026,02/24/2026,6,1,URGENT
+aabe73103df3,CDI,Conformité KYC,rtt,23/12/2024,12/23/2024,1,O,RAS
+aabe73103df3,cdi,Conformité KYC,rtt,28-05-2026,2026-05-28,1,N,URGENT
+aabe73103df3,cdi,Conformité KYC,RTT,04.12.2025,04/12/2025,1,O,RAS
+aabe73103df3,CDI,,Absent,27/10/24,27/10/24,1,NON,A régulariser
+aabe73103df3,CDI,Conformité KYC,RTT,18/06/25,18.06.2025,1,N,
+356d59359603,CDI,,CONGE_PAYE,12-05-2025,2025-05-18,7,1,
+356d59359603,cdi,Recouvrement,FORMATION,12/28/2024,12/31/2024,4,OUI,
+356d59359603,CDI,,Congé Payé,2026-01-12,19/01/2026,8,1,URGENT
+356d59359603,CDI,Recouvrement,Formation,24.04.2024,04/26/2024,3,N,En attente validation
+356d59359603,cdi,Recouvrement,Maladie,06/18/2024,2024-06-19,2,0,
+356d59359603,CDI,Recouvrement,RTT,26-09-2024,26/09/24,1,0,
+356d59359603,CDI,,rtt,11-12-2025,2025-12-11,1,O,
+356d59359603,CDI,Recouvrement,MALADIE,28/01/2024,2024-02-01,5,0,
+356d59359603,CDI,Recouvrement,RTT,26/05/24,05/26/2024,1,Y,
+356d59359603,CDI,Recouvrement,Formation,12/25/2024,29/12/24,5,0,En attente validation
+356d59359603,CDI,Recouvrement,MALADIE,14.11.2025,18-11-2025,5,Y,Certificat fourni
+356d59359603,CDI,Recouvrement,CP,04-05-2024,05/13/2024,10,0,
+356d59359603,CDI,Recouvrement,rtt,11-09-2025,11.09.2025,1,OUI,Validé manager
+356d59359603,cdi,Recouvrement,Maladie,05.06.2026,08-06-2026,4,N,A régulariser
+356d59359603,CDI,Recouvrement,Maladie,17/12/24,2024-12-19,3,1,Validé manager
+356d59359603,CDI,Recouvrement,MALADIE,18-10-2025,10/18/2025,1,Y,Certificat fourni
+356d59359603,CDI,Recouvrement,CONGE_PAYE,31/08/24,06/09/2024,7,O,
+356d59359603,CDI,Recouvrement,Formation CFA,2025-07-20,23-07-2025,4,O,URGENT
+356d59359603,CDI,Recouvrement,Congé Payé,05/06/2024,09.06.2024,5,1,RAS
+356d59359603,cdi,Recouvrement,Absent,19/07/25,19/07/25,1,N,Certificat fourni
+356d59359603,cdi,Recouvrement,Maladie,12-04-2024,07.04.2024,5,O,En attente validation
+356d59359603,CDI,Recouvrement,Congé Payé,02-12-2025,09/12/2025,8,N,RAS
+f6b04c5461df,cdi,Recouvrement,Maladie,10-02-2026,11/02/2026,2,0,
+f6b04c5461df,cdi,Recouvrement,CP,05/19/2024,2024-05-26,8,Y,
+f6b04c5461df,CDI,Recouvrement,Absent,16/04/24,16/04/24,1,N,Certificat fourni
+f6b04c5461df,CDI,Recouvrement,CP,07-03-2026,11.03.2026,5,O,
+f6b04c5461df,cdi,Recouvrement,Congé Payé,07-09-2024,14/09/2024,8,N,
+f6b04c5461df,cdi,Recouvrement,Formation CFA,03/25/2024,03/27/2024,3,1,Certificat fourni
+f6b04c5461df,cdi,Recouvrement,RTT,26-03-2025,2025-03-26,1,0,
+f6b04c5461df,CDI,Recouvrement,Congé Payé,16.10.2025,20/10/25,5,OUI,RAS
+f6b04c5461df,CDI,Recouvrement,Absent,10.04.2026,10/04/2026,1,1,Validé manager
+f6b04c5461df,cdi,Recouvrement,rtt,2024-01-11,11/01/2024,1,NON,
+f6b04c5461df,cdi,Recouvrement,Maladie,27-04-2024,04/29/2024,3,OUI,
+f6b04c5461df,cdi,,Absent,11.02.2025,11/02/2025,1,OUI,
+f6b04c5461df,CDI,Recouvrement,rtt,24/03/24,24/03/2024,1,N,A régulariser
+f6b04c5461df,cdi,Recouvrement,RTT,2024-02-25,25/02/2024,1,NON,Certificat fourni
+f6b04c5461df,cdi,Recouvrement,MALADIE,09.07.2025,11/07/2025,3,N,
+f6b04c5461df,cdi,Recouvrement,CP,29.01.2025,06-02-2025,9,N,
+f6b04c5461df,cdi,Recouvrement,rtt,26/04/24,26-04-2024,1,1,RAS
+f6b04c5461df,CDI,Recouvrement,CP,04/17/2025,23/04/2025,7,1,
+f6b04c5461df,cdi,Recouvrement,MALADIE,30/11/2024,04.12.2024,120,NON,En attente validation
+f6b04c5461df,cdi,Recouvrement,Maladie,11-02-2026,13/02/2026,3,0,Certificat fourni
+f6b04c5461df,CDI,Recouvrement,Absent,2026-02-27,27-02-2026,1,O,Certificat fourni
+f6b04c5461df,CDI,Recouvrement,rtt,04/28/2024,04/28/2024,1,0,A régulariser
+f6b04c5461df,cdi,Recouvrement,FORMATION,25/12/2024,26/12/24,2,O,RAS
+f6b04c5461df,cdi,Recouvrement,Formation CFA,26/05/2026,29/05/2026,4,N,
+f6b04c5461df,cdi,Recouvrement,RTT,2024-12-14,14.12.2024,1,1,A régulariser
+f6b04c5461df,cdi,Recouvrement,RTT,02/19/2025,19/02/25,1,OUI,A régulariser
+f6b04c5461df,cdi,Recouvrement,rtt,05.02.2024,05/02/2024,1,O,RAS
+24e708becf23,CDI,Épargne & Placements,CP,08.07.2025,14.07.2025,7,NON,Certificat fourni
+24e708becf23,CDI,Épargne & Placements,RTT,27.03.2024,27/03/2024,1,NON,URGENT
+24e708becf23,cdi,Épargne & Placements,CONGE_PAYE,2025-03-16,25.03.2025,10,N,RAS
+24e708becf23,CDI,Épargne & Placements,MALADIE,14.04.2025,17.04.2025,4,OUI,URGENT
+24e708becf23,cdi,Épargne & Placements,rtt,27-02-2025,2025-02-27,1,O,En attente validation
+24e708becf23,CDI,Épargne & Placements,Formation CFA,02/03/2026,2026-03-05,4,0,URGENT
+24e708becf23,CDI,Épargne & Placements,FORMATION,2025-09-24,28-09-2025,5,OUI,URGENT
+24e708becf23,CDI,,RTT,24/09/24,09/24/2024,1,NON,URGENT
+24e708becf23,CDI,Épargne & Placements,rtt,28/09/24,2024-09-28,1,1,URGENT
+24e708becf23,cdi,Épargne & Placements,CP,09/10/2024,17/10/2024,9,OUI,
+24e708becf23,cdi,Épargne & Placements,CP,02/01/2026,2026-01-07,6,OUI,
+24e708becf23,CDI,Épargne & Placements,RTT,28.04.2025,28.04.2025,1,OUI,Certificat fourni
+24e708becf23,cdi,Épargne & Placements,rtt,29/05/24,29/05/2024,1,0,Certificat fourni
+24e708becf23,CDI,Épargne & Placements,MALADIE,11-07-2024,12/07/2024,2,OUI,
+24e708becf23,cdi,Épargne & Placements,CONGE_PAYE,04/19/2025,23/04/25,5,Y,En attente validation
+24e708becf23,CDI,Épargne & Placements,rtt,05/17/2026,17.05.2026,1,O,Certificat fourni
+24e708becf23,CDI,Épargne & Placements,CONGE_PAYE,2026-02-02,07-02-2026,6,1,Validé manager
+24e708becf23,CDI,Épargne & Placements,Formation CFA,11/05/2024,05/14/2024,4,N,RAS
+24e708becf23,cdi,Épargne & Placements,Congé Payé,24/05/2026,02-06-2026,10,Y,
+24e708becf23,CDI,,Maladie,22-06-2025,2025-06-25,4,Y,Certificat fourni
+24e708becf23,cdi,Épargne & Placements,MALADIE,04/02/2026,2026-02-05,2,O,
+24e708becf23,cdi,Épargne & Placements,CP,05-07-2025,13-07-2025,9,0,RAS
+24e708becf23,CDI,Épargne & Placements,Formation,01/27/2024,30/01/24,4,Y,
+3a22b132e0ad,CDI,Épargne & Placements,Absent,08-03-2024,2024-03-08,1,O,Validé manager
+3a22b132e0ad,CDI,,RTT,27/12/2025,27/12/25,1,0,Certificat fourni
+3a22b132e0ad,CDI,Épargne & Placements,CP,17/09/25,24-09-2025,8,OUI,Certificat fourni
+3a22b132e0ad,cdi,Épargne & Placements,CP,19/06/2025,06/27/2025,9,N,RAS
+3a22b132e0ad,CDI,Épargne & Placements,Maladie,11/29/2025,30.11.2025,2,O,A régulariser
+3a22b132e0ad,cdi,Épargne & Placements,rtt,06/27/2025,27.06.2025,1,O,URGENT
+3a22b132e0ad,cdi,Épargne & Placements,CP,08/31/2025,09-09-2025,10,OUI,URGENT
+3a22b132e0ad,cdi,Épargne & Placements,Formation,23-03-2026,03/27/2026,95,O,A régulariser
+3a22b132e0ad,CDI,Épargne & Placements,Formation,28/09/2025,09/29/2025,2,N,
+3a22b132e0ad,cdi,Épargne & Placements,Formation CFA,2024-06-24,25.06.2024,2,1,RAS
+3a22b132e0ad,CDI,Épargne & Placements,rtt,25/07/2025,25-07-2025,1,OUI,A régulariser
+3a22b132e0ad,CDI,Épargne & Placements,Maladie,12/18/2024,18/12/2024,1,0,URGENT
+3a22b132e0ad,cdi,Épargne & Placements,rtt,27/03/24,03/27/2024,1,NON,
+3a22b132e0ad,CDI,Épargne & Placements,rtt,28-04-2025,28/04/25,1,OUI,RAS
+3a22b132e0ad,CDI,,Formation,10/03/2026,11/03/2026,2,O,RAS
+3a22b132e0ad,cdi,Épargne & Placements,Congé Payé,2025-03-18,23/03/25,6,Y,Certificat fourni
+3a22b132e0ad,cdi,Épargne & Placements,FORMATION,25.11.2025,29/11/2025,5,Y,Certificat fourni
+3a22b132e0ad,cdi,Épargne & Placements,CP,01/06/2025,2025-06-10,10,OUI,URGENT
+3a22b132e0ad,cdi,Épargne & Placements,Absent,25-07-2025,25/07/2025,1,O,
+3a22b132e0ad,CDI,Épargne & Placements,CP,27/09/25,01/10/2025,5,1,
+3a22b132e0ad,cdi,Épargne & Placements,Maladie,02-05-2025,2025-05-05,4,OUI,
+3a22b132e0ad,CDI,,rtt,16-10-2024,10/16/2024,1,OUI,RAS
+3a22b132e0ad,CDI,Épargne & Placements,rtt,2025-12-05,05/12/2025,1,O,RAS
+3a22b132e0ad,CDI,Épargne & Placements,Maladie,2026-04-12,14-04-2026,3,Y,Certificat fourni
+3a22b132e0ad,cdi,Épargne & Placements,MALADIE,21.03.2026,22-03-2026,2,Y,
+a6dcd3ad6422,PRESTATAIRE,Épargne & Placements,rtt,27/06/2024,2024-06-27,1,1,
+a6dcd3ad6422,PRESTATAIRE,Épargne & Placements,CONGE_PAYE,24/05/25,2025-06-01,9,OUI,
+a6dcd3ad6422,Prestataire,Épargne & Placements,CP,16-09-2024,23-09-2024,8,0,
+a6dcd3ad6422,PRESTATAIRE,Épargne & Placements,CP,2025-01-06,15-01-2025,10,Y,En attente validation
+a6dcd3ad6422,PRESTATAIRE,Épargne & Placements,CP,2024-05-19,24.05.2024,6,N,
+a6dcd3ad6422,PRESTATAIRE,Épargne & Placements,Maladie,05.01.2025,2025-01-07,3,1,URGENT
+a6dcd3ad6422,PRESTATAIRE,Épargne & Placements,MALADIE,18/01/2026,18-01-2026,1,0,RAS
+a6dcd3ad6422,Prestataire,Épargne & Placements,CP,28-03-2026,06-04-2026,10,1,URGENT
+a6dcd3ad6422,Prestataire,Épargne & Placements,Absent,23.09.2024,23-09-2024,1,NON,RAS
+a6dcd3ad6422,PRESTATAIRE,Épargne & Placements,MALADIE,20-02-2026,22/02/2026,3,NON,A régulariser
+a6dcd3ad6422,Prestataire,Épargne & Placements,FORMATION,28/08/2024,30/08/24,3,O,A régulariser
+a6dcd3ad6422,PRESTATAIRE,Épargne & Placements,MALADIE,15/12/25,12/18/2025,4,NON,RAS
+a6dcd3ad6422,PRESTATAIRE,Épargne & Placements,rtt,2024-07-28,07/28/2024,1,0,
+a6dcd3ad6422,Prestataire,Épargne & Placements,RTT,01/01/2025,01/01/2025,1,O,Certificat fourni
+a6dcd3ad6422,PRESTATAIRE,Épargne & Placements,FORMATION,2024-10-17,20.10.2024,4,O,Validé manager
+a6dcd3ad6422,PRESTATAIRE,Épargne & Placements,Maladie,12/24/2024,28.12.2024,5,Y,En attente validation
+a6dcd3ad6422,PRESTATAIRE,Épargne & Placements,Maladie,08/12/2025,10/12/2025,3,Y,URGENT
+a6dcd3ad6422,PRESTATAIRE,Épargne & Placements,Formation,02-09-2024,2024-09-05,4,Y,RAS
+a6dcd3ad6422,PRESTATAIRE,Épargne & Placements,rtt,12/24/2025,24/12/25,1,N,Certificat fourni
+a6dcd3ad6422,Prestataire,,FORMATION,07/25/2025,26/07/2025,2,Y,Validé manager
+a6dcd3ad6422,PRESTATAIRE,Épargne & Placements,RTT,27/12/2025,27/12/25,1,1,RAS
+a6dcd3ad6422,PRESTATAIRE,Épargne & Placements,MALADIE,02-03-2026,04-03-2026,3,O,URGENT
+3bc605833b8a,cdi,Recouvrement,CP,24.05.2026,05/29/2026,6,0,
+3bc605833b8a,CDI,Recouvrement,CONGE_PAYE,12/09/2025,16-09-2025,5,N,
+3bc605833b8a,cdi,Recouvrement,CP,31/07/2024,07-08-2024,8,N,RAS
+3bc605833b8a,cdi,Recouvrement,RTT,2024-10-20,20/10/24,1,1,
+3bc605833b8a,cdi,Recouvrement,RTT,09.05.2025,2025-05-09,1,O,
+3bc605833b8a,cdi,Recouvrement,MALADIE,08.04.2025,12/04/2025,5,1,
+3bc605833b8a,CDI,Recouvrement,Congé Payé,15-09-2025,2025-09-20,6,OUI,URGENT
+3bc605833b8a,cdi,Recouvrement,CONGE_PAYE,31-05-2024,08/06/2024,9,O,URGENT
+3bc605833b8a,cdi,Recouvrement,CONGE_PAYE,29/05/2026,02.06.2026,5,1,URGENT
+3bc605833b8a,CDI,Recouvrement,Maladie,26/05/2025,29/05/25,4,O,Certificat fourni
+3bc605833b8a,cdi,Recouvrement,Formation,24/05/25,05/26/2025,3,0,URGENT
+3bc605833b8a,CDI,Recouvrement,Absent,2024-07-06,06/07/2024,1,O,RAS
+3bc605833b8a,cdi,Recouvrement,RTT,29/12/24,2024-12-29,1,O,A régulariser
+3bc605833b8a,CDI,Recouvrement,CP,10/22/2025,30.10.2025,9,NON,En attente validation
+3bc605833b8a,CDI,Recouvrement,MALADIE,01/06/2026,01.06.2026,1,0,
+3bc605833b8a,CDI,Recouvrement,MALADIE,23-05-2024,24/05/24,2,N,Validé manager
+3bc605833b8a,CDI,Recouvrement,rtt,2024-11-25,25/11/24,1,Y,RAS
+3bc605833b8a,cdi,Recouvrement,CP,23/10/2025,10/30/2025,8,OUI,A régulariser
+3bc605833b8a,CDI,Recouvrement,CONGE_PAYE,26-12-2024,2025-01-02,8,0,
+3bc605833b8a,cdi,Recouvrement,Maladie,26.10.2024,27/10/24,2,1,Validé manager
+3bc605833b8a,CDI,Recouvrement,Formation,15/09/2025,17-09-2025,3,NON,RAS
+3bc605833b8a,CDI,Recouvrement,MALADIE,05/19/2025,19/05/2025,1,1,URGENT
+3bc605833b8a,CDI,Recouvrement,MALADIE,10/24/2025,25.10.2025,2,0,
+3bc605833b8a,cdi,Recouvrement,CONGE_PAYE,21/07/24,28.07.2024,8,0,
+af78002e59b5,Prestataire,Recouvrement,Maladie,06/06/2025,03-06-2025,3,OUI,RAS
+af78002e59b5,PRESTATAIRE,Recouvrement,CONGE_PAYE,2026-02-06,12/02/2026,7,Y,URGENT
+af78002e59b5,Prestataire,Recouvrement,FORMATION,2024-02-07,11.02.2024,5,OUI,RAS
+af78002e59b5,PRESTATAIRE,Recouvrement,Maladie,05/18/2026,2026-05-18,1,O,En attente validation
+af78002e59b5,Prestataire,Recouvrement,rtt,08.11.2024,2024-11-08,1,N,Validé manager
+af78002e59b5,Prestataire,Recouvrement,Formation CFA,2026-03-08,2026-03-09,2,OUI,En attente validation
+af78002e59b5,Prestataire,Recouvrement,CP,23/02/26,01.03.2026,7,0,RAS
+af78002e59b5,Prestataire,Recouvrement,rtt,28.03.2024,28/03/2024,1,OUI,En attente validation
+af78002e59b5,Prestataire,Recouvrement,rtt,30-01-2026,30/01/2026,1,0,Validé manager
+af78002e59b5,PRESTATAIRE,Recouvrement,RTT,08/24/2024,08/24/2024,1,0,URGENT
+af78002e59b5,PRESTATAIRE,Recouvrement,Congé Payé,2025-08-06,12-08-2025,7,0,URGENT
+af78002e59b5,PRESTATAIRE,Recouvrement,Congé Payé,11-01-2026,01/16/2026,6,0,
+af78002e59b5,Prestataire,Recouvrement,CP,18-05-2024,25/05/2024,8,O,
+af78002e59b5,PRESTATAIRE,Recouvrement,CP,2025-08-27,31/08/25,5,N,Certificat fourni
+af78002e59b5,Prestataire,Recouvrement,rtt,27-01-2026,01/27/2026,1,0,URGENT
+af78002e59b5,Prestataire,Recouvrement,FORMATION,20/09/25,09/23/2025,4,NON,Certificat fourni
+af78002e59b5,PRESTATAIRE,Recouvrement,Congé Payé,22/07/2025,07/29/2025,8,0,
+af78002e59b5,Prestataire,Recouvrement,CONGE_PAYE,19/12/2024,27.12.2024,9,Y,RAS
+af78002e59b5,PRESTATAIRE,Recouvrement,rtt,11-06-2024,11-06-2024,1,0,RAS
+af78002e59b5,Prestataire,Recouvrement,Maladie,21.08.2024,22/08/2024,2,O,
+af78002e59b5,Prestataire,Recouvrement,MALADIE,16-02-2025,18-02-2025,3,NON,
+af78002e59b5,PRESTATAIRE,Recouvrement,Formation,12.04.2024,16.04.2024,5,1,A régulariser
+af78002e59b5,PRESTATAIRE,Recouvrement,Maladie,06/26/2024,06/28/2024,3,Y,Validé manager
+af78002e59b5,PRESTATAIRE,Recouvrement,CONGE_PAYE,05/10/2024,09-10-2024,5,1,Certificat fourni
+af78002e59b5,Prestataire,Recouvrement,CP,24-05-2026,28/05/26,5,1,Validé manager
+af78002e59b5,Prestataire,Recouvrement,MALADIE,24.04.2024,28-04-2024,5,0,A régulariser
+af78002e59b5,Prestataire,Recouvrement,CP,10/25/2024,10/30/2024,6,O,
+af78002e59b5,Prestataire,Recouvrement,Formation CFA,24/08/24,28/08/24,5,Y,
+073896489b66,cdi,Conformité KYC,FORMATION,27/12/2024,29.12.2024,3,N,URGENT
+073896489b66,cdi,Conformité KYC,Formation,2025-01-24,28/01/2025,5,Y,URGENT
+073896489b66,cdi,Conformité KYC,Formation,22-02-2026,26.02.2026,5,NON,URGENT
+073896489b66,CDI,Conformité KYC,RTT,23.10.2024,23/10/24,1,NON,
+073896489b66,cdi,Conformité KYC,Congé Payé,21/06/2025,30-06-2025,10,0,
+073896489b66,CDI,Conformité KYC,Absent,03/24/2025,2025-03-24,1,NON,Validé manager
+073896489b66,cdi,Conformité KYC,Formation,28/12/25,30.12.2025,3,OUI,Validé manager
+073896489b66,CDI,Conformité KYC,Formation,06-05-2025,09/05/2025,4,N,
+073896489b66,CDI,Conformité KYC,rtt,25/03/2024,25-03-2024,1,NON,Validé manager
+073896489b66,cdi,Conformité KYC,Maladie,02-11-2024,03.11.2024,2,NON,Validé manager
+073896489b66,cdi,Conformité KYC,rtt,2024-11-26,26-11-2024,1,1,
+073896489b66,cdi,Conformité KYC,Congé Payé,03/15/2024,21.03.2024,7,1,URGENT
+073896489b66,cdi,Conformité KYC,RTT,12-01-2024,12-01-2024,1,Y,URGENT
+073896489b66,cdi,Conformité KYC,Absent,04.11.2024,2024-11-04,1,0,En attente validation
+073896489b66,CDI,Conformité KYC,FORMATION,2024-07-13,16/07/2024,4,NON,
+073896489b66,cdi,Conformité KYC,rtt,2025-01-31,2025-01-31,1,N,RAS
+073896489b66,CDI,Conformité KYC,Formation CFA,12-06-2026,16-06-2026,5,O,Validé manager
+073896489b66,CDI,Conformité KYC,Formation,16.03.2026,19.03.2026,4,0,Certificat fourni
+073896489b66,cdi,Conformité KYC,Formation CFA,07-07-2025,08/07/2025,2,OUI,URGENT
+073896489b66,CDI,Conformité KYC,MALADIE,2024-01-16,17.01.2024,2,0,En attente validation
+073896489b66,cdi,Conformité KYC,Formation CFA,2025-03-12,03/13/2025,2,N,
+073896489b66,CDI,Conformité KYC,Formation,24/12/25,2025-12-28,5,NON,En attente validation
+073896489b66,CDI,Conformité KYC,Absent,01/30/2025,2025-01-30,1,NON,En attente validation
+073896489b66,CDI,Conformité KYC,rtt,24-08-2025,24.08.2025,1,N,Certificat fourni
+073896489b66,cdi,Conformité KYC,RTT,2026-05-31,2026-05-31,1,1,A régulariser
+073896489b66,cdi,Conformité KYC,CONGE_PAYE,2024-01-05,14.01.2024,10,Y,A régulariser
+073896489b66,cdi,Conformité KYC,RTT,01/25/2026,25/01/26,1,Y,
+073896489b66,CDI,Conformité KYC,Maladie,2025-12-05,2025-12-07,3,O,RAS
+bd771913927c,CDD,,CONGE_PAYE,2024-01-04,11-01-2024,8,OUI,
+bd771913927c,cdd,Crédit Immobilier,Formation CFA,15-01-2024,16.01.2024,2,OUI,URGENT
+bd771913927c,cdd,Crédit Immobilier,rtt,19/02/24,02/19/2024,1,NON,En attente validation
+bd771913927c,CDD,Crédit Immobilier,rtt,2024-02-18,02/18/2024,1,1,A régulariser
+bd771913927c,CDD,Crédit Immobilier,FORMATION,26.01.2024,29-01-2024,4,1,A régulariser
+bd771913927c,cdd,Crédit Immobilier,Formation,24/01/2024,27/01/24,4,Y,URGENT
+bd771913927c,cdd,Crédit Immobilier,CONGE_PAYE,21/02/24,02/26/2024,6,O,En attente validation
+bd771913927c,CDD,Crédit Immobilier,Congé Payé,20/02/24,27/02/24,8,O,URGENT
+bd771913927c,cdd,Crédit Immobilier,Congé Payé,01/19/2024,27/01/2024,9,N,Validé manager
+bd771913927c,CDD,Crédit Immobilier,CP,2024-03-05,13/03/24,9,1,Validé manager
+bd771913927c,cdd,Crédit Immobilier,CP,07/01/2024,11.01.2024,5,N,
+bd771913927c,CDD,Crédit Immobilier,Formation,2024-02-17,02/19/2024,3,N,En attente validation
+bd771913927c,CDD,Crédit Immobilier,RTT,2024-01-28,01/28/2024,1,0,Validé manager
+bd771913927c,CDD,Crédit Immobilier,Absent,05/02/2024,2024-02-05,1,0,A régulariser
+bd771913927c,CDD,Crédit Immobilier,Congé Payé,14-03-2024,22-03-2024,9,1,Validé manager
+bd771913927c,cdd,Crédit Immobilier,FORMATION,02/25/2024,26.02.2024,2,O,
+bd771913927c,cdd,Crédit Immobilier,CP,08-02-2024,2024-02-06,8,NON,A régulariser
+bd771913927c,CDD,Crédit Immobilier,MALADIE,01/22/2024,23/01/24,2,1,
+bd771913927c,cdd,Crédit Immobilier,Maladie,05/01/2024,06/01/2024,2,Y,Certificat fourni
+bd771913927c,CDD,Crédit Immobilier,RTT,25/01/24,25/01/2024,1,1,URGENT
+bd771913927c,CDD,Crédit Immobilier,MALADIE,2024-01-02,2024-01-02,1,NON,
+bd771913927c,cdd,Crédit Immobilier,CP,10.02.2024,18.02.2024,95,N,Certificat fourni
+bd771913927c,cdd,Crédit Immobilier,rtt,03.01.2024,03.01.2024,1,O,A régulariser
+bd771913927c,CDD,Crédit Immobilier,Maladie,2024-02-13,02/16/2024,4,N,Certificat fourni
+bd771913927c,cdd,Crédit Immobilier,CP,14.01.2024,2024-01-12,10,Y,En attente validation
+bd771913927c,CDD,Crédit Immobilier,CP,03/02/2024,2024-02-10,8,1,En attente validation
+bd771913927c,CDD,Crédit Immobilier,Maladie,13/01/24,2024-01-13,1,N,URGENT
+bd771913927c,CDD,Crédit Immobilier,MALADIE,13/01/24,15.01.2024,3,1,A régulariser
+bd771913927c,CDD,Crédit Immobilier,Congé Payé,2024-03-07,11-03-2024,5,1,
+bd771913927c,CDD,Crédit Immobilier,CP,10.03.2024,2024-03-14,5,O,
+bd771913927c,cdd,Crédit Immobilier,Absent,04/01/2024,03-01-2024,1,NON,Validé manager
+bd771913927c,CDD,Crédit Immobilier,CONGE_PAYE,02/29/2024,07-03-2024,8,N,URGENT
+57b73a4ab141,CDI,Conformité KYC,rtt,24-09-2024,24-09-2024,1,N,RAS
+57b73a4ab141,CDI,Conformité KYC,Maladie,27/12/25,2025-12-27,1,OUI,Certificat fourni
+57b73a4ab141,CDI,Conformité KYC,MALADIE,28-03-2025,28.03.2025,1,1,RAS
+57b73a4ab141,cdi,Conformité KYC,Maladie,2025-06-06,2025-06-10,5,NON,Validé manager
+57b73a4ab141,CDI,Conformité KYC,rtt,26/10/2025,2025-10-26,1,O,
+57b73a4ab141,cdi,Conformité KYC,CONGE_PAYE,2025-06-22,2025-07-01,10,1,Validé manager
+57b73a4ab141,CDI,Conformité KYC,CONGE_PAYE,01.01.2026,2026-01-10,10,1,
+57b73a4ab141,CDI,Conformité KYC,Congé Payé,19-11-2025,23-11-2025,5,0,URGENT
+57b73a4ab141,CDI,Conformité KYC,Maladie,04.10.2024,2024-10-07,4,O,RAS
+57b73a4ab141,cdi,Conformité KYC,MALADIE,04.11.2024,2024-11-06,3,1,A régulariser
+57b73a4ab141,CDI,Conformité KYC,Maladie,2025-05-30,03.06.2025,5,N,Validé manager
+57b73a4ab141,CDI,Conformité KYC,FORMATION,27-01-2026,30/01/26,4,O,A régulariser
+57b73a4ab141,cdi,Conformité KYC,MALADIE,06-04-2026,2026-04-08,3,Y,A régulariser
+57b73a4ab141,cdi,Conformité KYC,Maladie,2026-03-26,29-03-2026,4,O,
+57b73a4ab141,CDI,Conformité KYC,CONGE_PAYE,23-02-2026,01.03.2026,7,O,Validé manager
+57b73a4ab141,cdi,,Formation,03/22/2024,23/03/2024,2,0,
+57b73a4ab141,CDI,Conformité KYC,Congé Payé,10.11.2024,17.11.2024,8,NON,
+57b73a4ab141,cdi,Conformité KYC,CONGE_PAYE,13/12/24,2024-12-18,6,1,Certificat fourni
+57b73a4ab141,CDI,Conformité KYC,Formation CFA,28-11-2024,11/29/2024,2,N,Validé manager
+57b73a4ab141,CDI,Conformité KYC,Congé Payé,15/05/25,05/23/2025,9,N,Validé manager
+57b73a4ab141,CDI,Conformité KYC,RTT,25/11/24,25/11/24,1,Y,RAS
+57b73a4ab141,CDI,Conformité KYC,Maladie,2024-07-29,2024-08-01,4,1,RAS
+3de25133e507,cdi,,MALADIE,07/28/2025,2025-07-30,3,0,
+3de25133e507,cdi,Crédit Immobilier,RTT,05/13/2026,13.05.2026,1,1,Validé manager
+3de25133e507,CDI,Crédit Immobilier,RTT,2026-04-29,29-04-2026,1,N,
+3de25133e507,CDI,Crédit Immobilier,MALADIE,2025-12-30,02/01/2026,4,Y,En attente validation
+3de25133e507,CDI,Crédit Immobilier,CP,27/02/2026,04.03.2026,6,N,A régulariser
+3de25133e507,CDI,Crédit Immobilier,MALADIE,22.05.2026,25/05/2026,4,OUI,
+3de25133e507,cdi,Crédit Immobilier,RTT,17.09.2025,17/09/25,1,N,Certificat fourni
+3de25133e507,CDI,Crédit Immobilier,RTT,28.11.2025,11/28/2025,1,N,RAS
+3de25133e507,cdi,Crédit Immobilier,RTT,27/02/2026,27-02-2026,1,1,Validé manager
+3de25133e507,CDI,Crédit Immobilier,Maladie,2025-12-29,01.01.2026,4,OUI,En attente validation
+3de25133e507,CDI,Crédit Immobilier,RTT,25-09-2025,25/09/25,1,N,RAS
+3de25133e507,CDI,Crédit Immobilier,CONGE_PAYE,21/11/25,20.11.2025,10,0,Validé manager
+3de25133e507,CDI,Crédit Immobilier,rtt,2026-03-24,03/24/2026,1,N,
+3de25133e507,cdi,Crédit Immobilier,CONGE_PAYE,23/04/26,02/05/2026,10,0,RAS
+3de25133e507,CDI,Crédit Immobilier,rtt,2025-08-27,27-08-2025,1,O,URGENT
+3de25133e507,cdi,Crédit Immobilier,Absent,2026-04-28,28/04/26,1,N,Certificat fourni
+3de25133e507,cdi,Crédit Immobilier,CONGE_PAYE,16.11.2025,22/11/2025,7,O,Certificat fourni
+3de25133e507,cdi,Crédit Immobilier,rtt,27/08/2025,27/08/2025,1,OUI,
+3de25133e507,cdi,Crédit Immobilier,RTT,24.05.2026,24-05-2026,1,O,En attente validation
+3de25133e507,cdi,Crédit Immobilier,rtt,25/08/2025,25/08/2025,1,OUI,A régulariser
+3de25133e507,cdi,Crédit Immobilier,Formation,2026-05-28,29/05/26,2,O,Validé manager
+3de25133e507,CDI,Crédit Immobilier,Formation CFA,2025-12-28,30-12-2025,3,1,En attente validation
+3de25133e507,CDI,Crédit Immobilier,RTT,2025-09-24,24/09/2025,1,O,URGENT
+3de25133e507,CDI,Crédit Immobilier,CONGE_PAYE,05-12-2025,10/12/2025,6,Y,
+3de25133e507,CDI,Crédit Immobilier,RTT,24/02/26,24/02/2026,1,OUI,A régulariser
+0c06b7975393,PRESTATAIRE,Conformité KYC,rtt,14-09-2025,2025-09-14,1,1,Certificat fourni
+0c06b7975393,Prestataire,Conformité KYC,MALADIE,07/18/2024,22.07.2024,5,N,En attente validation
+0c06b7975393,Prestataire,Conformité KYC,Maladie,03.03.2026,2026-03-05,3,O,En attente validation
+0c06b7975393,PRESTATAIRE,Conformité KYC,CONGE_PAYE,21/05/24,26/05/24,6,1,Certificat fourni
+0c06b7975393,PRESTATAIRE,Conformité KYC,Congé Payé,03.03.2026,09.03.2026,7,1,En attente validation
+0c06b7975393,PRESTATAIRE,Conformité KYC,Formation CFA,09.12.2024,13/12/24,5,1,URGENT
+0c06b7975393,Prestataire,Conformité KYC,Congé Payé,2026-05-02,08.05.2026,7,0,Validé manager
+0c06b7975393,Prestataire,Conformité KYC,CP,2025-12-25,30.12.2025,6,1,
+0c06b7975393,PRESTATAIRE,Conformité KYC,CP,31/03/25,09-04-2025,10,N,Certificat fourni
+0c06b7975393,Prestataire,Conformité KYC,CP,17.01.2026,2026-01-21,5,O,A régulariser
+0c06b7975393,Prestataire,Conformité KYC,Maladie,25/04/26,27/04/2026,3,O,En attente validation
+0c06b7975393,PRESTATAIRE,Conformité KYC,RTT,26.01.2024,2024-01-26,1,1,URGENT
+0c06b7975393,Prestataire,Conformité KYC,CP,31/05/25,08.06.2025,9,NON,En attente validation
+0c06b7975393,PRESTATAIRE,Conformité KYC,CONGE_PAYE,01/29/2025,06.02.2025,9,OUI,RAS
+0c06b7975393,Prestataire,Conformité KYC,rtt,02/27/2024,27/02/24,1,N,Certificat fourni
+0c06b7975393,Prestataire,Conformité KYC,Formation CFA,26.07.2025,29/07/2025,4,1,URGENT
+0c06b7975393,PRESTATAIRE,Conformité KYC,RTT,25/04/24,04/25/2024,-1,1,
+0c06b7975393,Prestataire,Conformité KYC,CONGE_PAYE,18-07-2025,23.07.2025,6,O,A régulariser
+0c06b7975393,Prestataire,Conformité KYC,FORMATION,03.07.2025,06-07-2025,4,Y,
+0c06b7975393,Prestataire,Conformité KYC,RTT,07/24/2025,24/07/25,1,O,
+0c06b7975393,PRESTATAIRE,Conformité KYC,CONGE_PAYE,03.04.2026,2026-04-12,10,Y,
+0c06b7975393,Prestataire,Conformité KYC,Congé Payé,18.05.2024,2024-05-26,9,N,URGENT
+0c06b7975393,PRESTATAIRE,Conformité KYC,CP,01.08.2025,10/08/2025,10,O,Certificat fourni
+0c06b7975393,Prestataire,Conformité KYC,FORMATION,08/18/2024,20/08/2024,3,NON,URGENT
+0c06b7975393,PRESTATAIRE,Conformité KYC,rtt,06/24/2025,24.06.2025,1,0,URGENT
+b22077adf2ca,cdi,Crédit Immobilier,RTT,29.05.2025,2025-05-29,1,0,URGENT
+b22077adf2ca,cdi,Crédit Immobilier,Formation,11/03/2024,10/03/2024,3,0,A régulariser
+b22077adf2ca,CDI,Crédit Immobilier,CP,2024-06-29,05.07.2024,7,NON,Validé manager
+b22077adf2ca,CDI,Crédit Immobilier,rtt,26/02/2024,2024-02-26,1,0,A régulariser
+b22077adf2ca,CDI,Crédit Immobilier,RTT,2024-08-21,21/08/2024,1,OUI,Validé manager
+b22077adf2ca,CDI,Crédit Immobilier,FORMATION,21/01/2024,22.01.2024,2,0,Validé manager
+b22077adf2ca,cdi,Crédit Immobilier,RTT,23/10/24,20.10.2024,1,0,En attente validation
+b22077adf2ca,cdi,Crédit Immobilier,FORMATION,2025-07-28,07/30/2025,3,Y,
+b22077adf2ca,CDI,Crédit Immobilier,MALADIE,2025-01-13,13/01/25,1,NON,A régulariser
+b22077adf2ca,cdi,Crédit Immobilier,CONGE_PAYE,19-04-2025,26-04-2025,8,Y,
+b22077adf2ca,cdi,Crédit Immobilier,FORMATION,26.03.2024,27.03.2024,2,0,
+b22077adf2ca,CDI,Crédit Immobilier,rtt,11/21/2024,21.11.2024,1,OUI,A régulariser
+b22077adf2ca,cdi,Crédit Immobilier,Congé Payé,17/11/2024,24/11/2024,8,0,URGENT
+b22077adf2ca,CDI,Crédit Immobilier,RTT,2026-04-21,2026-04-21,1,O,A régulariser
+b22077adf2ca,CDI,Crédit Immobilier,Formation CFA,27.04.2024,2024-04-28,2,0,Validé manager
+b22077adf2ca,cdi,Crédit Immobilier,FORMATION,2025-05-22,05/17/2025,5,N,RAS
+b22077adf2ca,cdi,Crédit Immobilier,MALADIE,01-01-2026,02.01.2026,2,Y,URGENT
+b22077adf2ca,CDI,Crédit Immobilier,RTT,25/09/2025,25.09.2025,1,Y,
+b22077adf2ca,cdi,Crédit Immobilier,Formation,18.10.2025,2025-10-22,5,OUI,A régulariser
+b22077adf2ca,CDI,Crédit Immobilier,rtt,2024-02-27,2024-02-27,1,Y,En attente validation
+b22077adf2ca,CDI,Crédit Immobilier,CONGE_PAYE,09/26/2025,05.10.2025,10,N,RAS
+b22077adf2ca,CDI,Crédit Immobilier,MALADIE,13.05.2024,09/05/2024,1,N,URGENT
+b22077adf2ca,CDI,,rtt,06-04-2026,06.04.2026,1,1,
+b22077adf2ca,cdi,Crédit Immobilier,CONGE_PAYE,31/10/2024,2024-11-09,10,O,A régulariser
+b22077adf2ca,cdi,Crédit Immobilier,RTT,07/07/2025,07.07.2025,1,Y,URGENT
+b22077adf2ca,CDI,Crédit Immobilier,MALADIE,23-04-2026,23-04-2026,1,0,Validé manager
+b22077adf2ca,cdi,Crédit Immobilier,rtt,27/08/2024,08/27/2024,1,NON,
+b22077adf2ca,cdi,Crédit Immobilier,RTT,22/03/26,22.03.2026,1,OUI,URGENT
+b22077adf2ca,cdi,Crédit Immobilier,Maladie,06.05.2024,10-05-2024,5,0,URGENT
+cf4a083b5221,CDD,Conformité KYC,FORMATION,01/28/2025,01-02-2025,5,1,URGENT
+cf4a083b5221,CDD,Conformité KYC,Congé Payé,11.09.2025,19-09-2025,9,N,Certificat fourni
+cf4a083b5221,CDD,Conformité KYC,FORMATION,27/10/24,29/10/24,3,0,Certificat fourni
+cf4a083b5221,CDD,Conformité KYC,RTT,25/05/25,25/05/2025,1,Y,URGENT
+cf4a083b5221,cdd,Conformité KYC,RTT,14/08/24,08/14/2024,1,0,
+cf4a083b5221,cdd,Conformité KYC,Maladie,11/17/2024,11/21/2024,5,1,RAS
+cf4a083b5221,cdd,Conformité KYC,CP,05-07-2024,13.07.2024,9,N,
+cf4a083b5221,CDD,Conformité KYC,FORMATION,2024-09-04,07.09.2024,4,NON,
+cf4a083b5221,CDD,Conformité KYC,Formation CFA,2025-07-18,2025-07-21,4,N,
+cf4a083b5221,CDD,Conformité KYC,Absent,04.10.2025,04-10-2025,1,O,
+cf4a083b5221,CDD,Conformité KYC,MALADIE,2024-10-20,23-10-2024,4,1,
+cf4a083b5221,CDD,Conformité KYC,MALADIE,02/03/2025,2025-03-03,2,NON,URGENT
+cf4a083b5221,CDD,Conformité KYC,MALADIE,26/11/24,11/26/2024,1,NON,URGENT
+cf4a083b5221,cdd,Conformité KYC,Formation,24/10/24,10/28/2024,5,OUI,RAS
+cf4a083b5221,CDD,Conformité KYC,rtt,2024-09-27,27-09-2024,1,O,Certificat fourni
+cf4a083b5221,CDD,,CONGE_PAYE,22-03-2025,30/03/2025,9,0,
+cf4a083b5221,cdd,Conformité KYC,Absent,20-02-2025,2025-02-20,1,N,
+cf4a083b5221,CDD,Conformité KYC,CP,2025-05-18,2025-05-26,9,N,Validé manager
+cf4a083b5221,CDD,Conformité KYC,CP,24-08-2025,28/08/25,5,Y,
+cf4a083b5221,CDD,Conformité KYC,Formation,13/09/24,15.09.2024,3,N,A régulariser
+cf4a083b5221,cdd,Conformité KYC,CONGE_PAYE,16-10-2024,2024-10-22,7,0,URGENT
+cf4a083b5221,CDD,Conformité KYC,Formation CFA,2025-06-21,06/22/2025,2,Y,En attente validation
+cf4a083b5221,CDD,Conformité KYC,CP,06/10/2025,10.10.2025,5,O,En attente validation
+cf4a083b5221,CDD,Conformité KYC,CP,29.08.2025,04.09.2025,7,O,URGENT
+cf4a083b5221,CDD,Conformité KYC,Congé Payé,11/22/2024,28/11/24,7,1,
+cf4a083b5221,CDD,Conformité KYC,MALADIE,19/02/2025,23.02.2025,5,O,Validé manager
+cf4a083b5221,CDD,Conformité KYC,RTT,08/27/2025,27/08/25,1,O,RAS
+cf4a083b5221,CDD,Conformité KYC,FORMATION,2025-04-28,30.04.2025,3,0,URGENT
+cf4a083b5221,CDD,Conformité KYC,CONGE_PAYE,01/08/2025,08.08.2025,8,N,Certificat fourni
+cf4a083b5221,cdd,Conformité KYC,rtt,24/09/24,24.09.2024,1,Y,Certificat fourni
+cf4a083b5221,cdd,Conformité KYC,Maladie,26/03/25,30/03/25,5,0,Certificat fourni
+86eeea00062e,CDI,Épargne & Placements,CP,02/04/2026,2026-04-07,6,N,
+86eeea00062e,cdi,Épargne & Placements,RTT,05/26/2024,26.05.2024,1,NON,A régulariser
+86eeea00062e,cdi,Épargne & Placements,RTT,2024-03-26,26/03/24,120,O,Validé manager
+86eeea00062e,cdi,Épargne & Placements,CP,23/02/2026,02-03-2026,8,OUI,
+86eeea00062e,cdi,Épargne & Placements,Formation,2024-06-30,04/07/2024,5,OUI,A régulariser
+86eeea00062e,cdi,Épargne & Placements,Formation,28/06/25,29/06/25,2,Y,RAS
+86eeea00062e,CDI,Épargne & Placements,CP,2025-06-20,27/06/2025,8,N,
+86eeea00062e,cdi,Épargne & Placements,CONGE_PAYE,2024-02-28,2024-03-06,8,OUI,URGENT
+86eeea00062e,cdi,Épargne & Placements,MALADIE,30-07-2024,30/07/2024,1,Y,A régulariser
+86eeea00062e,CDI,Épargne & Placements,Congé Payé,12.05.2026,20-05-2026,9,NON,Certificat fourni
+86eeea00062e,CDI,Épargne & Placements,CONGE_PAYE,08/26/2024,04/09/2024,10,NON,URGENT
+86eeea00062e,cdi,Épargne & Placements,Formation CFA,2024-02-26,27/02/2024,2,1,Validé manager
+86eeea00062e,cdi,Épargne & Placements,Formation,2024-02-28,29/02/2024,2,N,Certificat fourni
+86eeea00062e,cdi,Épargne & Placements,Absent,01-09-2024,01.09.2024,1,NON,Validé manager
+86eeea00062e,cdi,Épargne & Placements,Absent,14/04/25,2025-04-14,1,NON,En attente validation
+86eeea00062e,cdi,Épargne & Placements,Congé Payé,31/01/2026,06.02.2026,7,0,RAS
+86eeea00062e,cdi,Épargne & Placements,CONGE_PAYE,29/03/24,04.04.2024,7,OUI,URGENT
+86eeea00062e,cdi,Épargne & Placements,CONGE_PAYE,13.03.2026,17.03.2026,5,0,URGENT
+86eeea00062e,cdi,Épargne & Placements,Formation,28-04-2024,29/04/24,2,NON,A régulariser
+86eeea00062e,CDI,Épargne & Placements,CONGE_PAYE,2024-01-04,11.01.2024,8,Y,RAS
+86eeea00062e,CDI,Épargne & Placements,CP,08/11/2025,2025-11-12,5,1,
+86eeea00062e,cdi,,CP,22-10-2024,26-10-2024,5,1,
+86eeea00062e,cdi,Épargne & Placements,CP,2024-04-10,16-04-2024,7,NON,Validé manager
+86eeea00062e,CDI,Épargne & Placements,Congé Payé,29/04/2024,08.05.2024,10,Y,
+86eeea00062e,cdi,Épargne & Placements,Formation CFA,2025-01-26,29-01-2025,4,OUI,A régulariser
+86eeea00062e,cdi,Épargne & Placements,CONGE_PAYE,2024-07-20,28/07/24,9,Y,RAS
+86eeea00062e,CDI,Épargne & Placements,CP,23/02/2024,02/03/2024,9,1,
+86eeea00062e,CDI,Épargne & Placements,Congé Payé,29-09-2025,04.10.2025,6,O,
+86eeea00062e,CDI,Épargne & Placements,Congé Payé,31-05-2026,2026-06-05,-1,Y,RAS
+c0973ce58b06,CDI,Recouvrement,Formation CFA,23/04/25,24-04-2025,2,OUI,A régulariser
+c0973ce58b06,cdi,Recouvrement,rtt,2024-08-24,24-08-2024,1,Y,Validé manager
+c0973ce58b06,CDI,Recouvrement,Congé Payé,09.02.2025,08/02/2025,8,NON,En attente validation
+c0973ce58b06,CDI,,RTT,23/06/24,06/23/2024,1,0,
+c0973ce58b06,CDI,Recouvrement,MALADIE,2024-04-03,03.04.2024,1,0,URGENT
+c0973ce58b06,cdi,Recouvrement,CONGE_PAYE,12-04-2024,04/21/2024,10,Y,RAS
+c0973ce58b06,cdi,Recouvrement,Maladie,12-01-2024,01/13/2024,2,0,
+c0973ce58b06,CDI,Recouvrement,Maladie,16-04-2025,20/04/25,5,NON,URGENT
+c0973ce58b06,cdi,Recouvrement,RTT,24/07/25,24.07.2025,1,1,
+c0973ce58b06,cdi,Recouvrement,Congé Payé,01.11.2025,2025-11-06,6,N,Certificat fourni
+c0973ce58b06,CDI,Recouvrement,Maladie,13/05/24,17-05-2024,5,Y,En attente validation
+c0973ce58b06,CDI,Recouvrement,rtt,2024-09-28,2024-09-28,1,Y,URGENT
+c0973ce58b06,CDI,Recouvrement,CONGE_PAYE,2026-01-06,10/01/2026,5,0,
+c0973ce58b06,CDI,Recouvrement,CP,19.11.2024,27.11.2024,9,NON,En attente validation
+c0973ce58b06,cdi,Recouvrement,MALADIE,2025-01-04,04/01/2025,1,OUI,
+c0973ce58b06,cdi,Recouvrement,Formation CFA,10/06/2024,2024-06-14,5,N,En attente validation
+c0973ce58b06,cdi,Recouvrement,rtt,2024-07-27,07/27/2024,1,OUI,RAS
+c0973ce58b06,CDI,Recouvrement,MALADIE,06.02.2025,09/02/2025,4,O,Certificat fourni
+c0973ce58b06,CDI,Recouvrement,CONGE_PAYE,28-04-2025,04-05-2025,7,O,RAS
+c0973ce58b06,cdi,Recouvrement,Maladie,2026-02-09,06-02-2026,2,OUI,URGENT
+c0973ce58b06,CDI,Recouvrement,FORMATION,30/07/2024,01.08.2024,3,NON,
+c0973ce58b06,cdi,Recouvrement,rtt,25/04/26,25.04.2026,1,OUI,RAS
+c0973ce58b06,CDI,Recouvrement,CP,14.08.2025,18/08/2025,5,NON,
+c0973ce58b06,cdi,Recouvrement,Congé Payé,09-05-2026,2026-05-14,6,NON,
+c0973ce58b06,cdi,Recouvrement,Formation,24.06.2025,2025-06-27,4,O,Certificat fourni
+c0973ce58b06,cdi,Recouvrement,Formation,27/09/25,29/09/25,3,0,Validé manager
+c0973ce58b06,cdi,Recouvrement,FORMATION,28/12/25,29/12/2025,2,N,A régulariser
+c0973ce58b06,cdi,Recouvrement,Congé Payé,2025-11-17,25-11-2025,9,OUI,RAS
+c0973ce58b06,CDI,Recouvrement,MALADIE,2025-01-08,09-01-2025,2,NON,
+c0973ce58b06,CDI,Recouvrement,RTT,05.04.2024,05-04-2024,1,Y,Validé manager
+c0973ce58b06,CDI,Recouvrement,Formation CFA,2026-06-01,05.06.2026,5,OUI,
+d792035a9f23,cdi,Conformité KYC,Absent,2025-12-20,12/20/2025,1,OUI,A régulariser
+d792035a9f23,CDI,Conformité KYC,Maladie,11/08/2024,2024-08-12,2,N,En attente validation
+d792035a9f23,cdi,Conformité KYC,MALADIE,2025-07-01,03/07/2025,3,N,URGENT
+d792035a9f23,CDI,Conformité KYC,Absent,12/17/2024,12/17/2024,1,N,URGENT
+d792035a9f23,cdi,Conformité KYC,Absent,30-07-2024,2024-07-30,1,O,URGENT
+d792035a9f23,cdi,Conformité KYC,RTT,26/03/2024,2024-03-26,1,NON,Validé manager
+d792035a9f23,cdi,Conformité KYC,rtt,12-10-2024,12-10-2024,1,0,
+d792035a9f23,CDI,Conformité KYC,Congé Payé,12/11/2024,18.11.2024,7,NON,
+d792035a9f23,CDI,Conformité KYC,Formation CFA,25.08.2024,08/29/2024,5,OUI,RAS
+d792035a9f23,cdi,Conformité KYC,CONGE_PAYE,15/06/24,21-06-2024,7,NON,
+d792035a9f23,cdi,,CP,2026-03-03,09-03-2026,7,0,RAS
+d792035a9f23,CDI,Conformité KYC,Congé Payé,31/10/25,08-11-2025,9,1,
+d792035a9f23,cdi,Conformité KYC,rtt,24-12-2025,12/24/2025,1,OUI,URGENT
+d792035a9f23,cdi,Conformité KYC,MALADIE,17-01-2024,2024-01-18,2,OUI,
+d792035a9f23,CDI,Conformité KYC,CONGE_PAYE,12/28/2025,2026-01-06,10,Y,Validé manager
+d792035a9f23,cdi,Conformité KYC,CP,08/02/2026,15/02/26,8,NON,
+d792035a9f23,CDI,Conformité KYC,MALADIE,13/02/2026,17/02/2026,5,O,Validé manager
+d792035a9f23,CDI,Conformité KYC,CONGE_PAYE,01.12.2025,10/12/2025,10,Y,
+d792035a9f23,cdi,Conformité KYC,RTT,2024-03-31,31/03/2024,1,N,A régulariser
+d792035a9f23,CDI,Conformité KYC,CP,03.10.2025,02/10/2025,9,1,
+d792035a9f23,cdi,Conformité KYC,CP,20-01-2026,01/24/2026,5,0,Certificat fourni
+d792035a9f23,CDI,Conformité KYC,CP,10/02/2024,17.02.2024,8,O,En attente validation
+d792035a9f23,CDI,Conformité KYC,CONGE_PAYE,28.05.2024,01-06-2024,5,NON,URGENT
+d792035a9f23,cdi,Conformité KYC,Absent,15-07-2024,15/07/24,1,N,URGENT
+d792035a9f23,cdi,Conformité KYC,RTT,08/25/2025,25/08/2025,1,Y,RAS
+71d540203fde,cdd,Recouvrement,Maladie,08.12.2025,09.12.2025,2,N,Validé manager
+71d540203fde,cdd,Recouvrement,Congé Payé,30/10/2025,03.11.2025,5,O,URGENT
+71d540203fde,cdd,Recouvrement,Maladie,17-02-2026,15/02/26,2,NON,RAS
+71d540203fde,cdd,Recouvrement,CP,11/11/2025,16/11/2025,6,0,Certificat fourni
+71d540203fde,cdd,Recouvrement,RTT,28/09/25,09/28/2025,1,O,En attente validation
+71d540203fde,CDD,Recouvrement,FORMATION,26.04.2026,28-04-2026,3,O,URGENT
+71d540203fde,CDD,Recouvrement,Absent,2025-09-24,24-09-2025,1,O,Certificat fourni
+71d540203fde,cdd,Recouvrement,CP,29.01.2026,05.02.2026,8,OUI,RAS
+71d540203fde,CDD,Recouvrement,Formation CFA,2025-12-24,27.12.2025,4,O,
+71d540203fde,CDD,Recouvrement,rtt,04/26/2026,2026-04-26,1,Y,En attente validation
+71d540203fde,CDD,Recouvrement,MALADIE,22-04-2026,25-04-2026,4,1,A régulariser
+71d540203fde,cdd,Recouvrement,Maladie,01.06.2026,2026-06-03,3,OUI,A régulariser
+71d540203fde,CDD,Recouvrement,Formation CFA,19.03.2026,22/03/26,4,NON,
+71d540203fde,cdd,Recouvrement,RTT,15-02-2026,02/15/2026,1,Y,Certificat fourni
+71d540203fde,CDD,Recouvrement,CONGE_PAYE,16/02/2026,24/02/26,9,Y,Validé manager
+71d540203fde,cdd,Recouvrement,Congé Payé,11/10/2025,10/20/2025,10,O,
+71d540203fde,CDD,Recouvrement,rtt,06/06/2026,06.06.2026,1,N,En attente validation
+71d540203fde,cdd,Recouvrement,Absent,2025-09-11,11/09/2025,1,N,Certificat fourni
+71d540203fde,CDD,Recouvrement,Absent,09.04.2026,09/04/2026,95,NON,URGENT
+71d540203fde,CDD,,Congé Payé,10/15/2025,10/23/2025,9,N,
+71d540203fde,CDD,Recouvrement,Absent,13.02.2026,2026-02-13,1,N,Validé manager
+71d540203fde,CDD,,rtt,10/19/2025,19/10/25,1,NON,A régulariser
+71d540203fde,cdd,Recouvrement,RTT,2026-01-28,28/01/26,1,1,
+71d540203fde,CDD,Recouvrement,rtt,26.11.2025,26/11/25,1,N,A régulariser
+71d540203fde,cdd,Recouvrement,Congé Payé,31/01/2026,08-02-2026,9,1,URGENT
+71d540203fde,cdd,Recouvrement,Maladie,01-12-2025,2025-12-05,5,0,En attente validation
+71d540203fde,CDD,Recouvrement,CONGE_PAYE,06-10-2025,2025-10-10,5,1,
+c4a1b2fdeb5e,CDI,Crédit Immobilier,RTT,04/25/2026,25-04-2026,1,0,
+c4a1b2fdeb5e,cdi,Crédit Immobilier,Congé Payé,01/20/2026,2026-01-29,10,O,URGENT
+c4a1b2fdeb5e,CDI,Crédit Immobilier,Formation CFA,09-12-2025,12-12-2025,4,1,URGENT
+c4a1b2fdeb5e,CDI,Crédit Immobilier,rtt,26/07/25,07/26/2025,1,Y,RAS
+c4a1b2fdeb5e,cdi,Crédit Immobilier,Formation CFA,14/11/2024,2024-11-15,2,N,Certificat fourni
+c4a1b2fdeb5e,CDI,Crédit Immobilier,rtt,26/09/25,09/26/2025,1,N,
+c4a1b2fdeb5e,CDI,Crédit Immobilier,Congé Payé,25.04.2025,02.05.2025,8,NON,A régulariser
+c4a1b2fdeb5e,cdi,Crédit Immobilier,Congé Payé,14.02.2026,20-02-2026,7,OUI,
+c4a1b2fdeb5e,CDI,Crédit Immobilier,CONGE_PAYE,04.08.2025,2025-08-12,9,Y,URGENT
+c4a1b2fdeb5e,CDI,Crédit Immobilier,MALADIE,08-06-2024,11.06.2024,4,O,
+c4a1b2fdeb5e,CDI,Crédit Immobilier,rtt,25/03/2026,25/03/26,1,NON,Validé manager
+c4a1b2fdeb5e,CDI,Crédit Immobilier,Formation CFA,18/04/26,19/04/26,2,N,Validé manager
+c4a1b2fdeb5e,CDI,Crédit Immobilier,CONGE_PAYE,01/15/2026,2026-01-22,8,NON,Validé manager
+c4a1b2fdeb5e,cdi,,Maladie,09.03.2024,2024-03-11,3,O,
+c4a1b2fdeb5e,cdi,Crédit Immobilier,rtt,28.05.2024,28/05/2024,1,N,Certificat fourni
+c4a1b2fdeb5e,CDI,Crédit Immobilier,Formation CFA,2024-10-27,28/10/24,2,OUI,RAS
+c4a1b2fdeb5e,cdi,Crédit Immobilier,MALADIE,03.06.2026,2026-06-05,3,0,A régulariser
+c4a1b2fdeb5e,CDI,Crédit Immobilier,Maladie,04/27/2026,29-04-2026,3,O,
+c4a1b2fdeb5e,cdi,Crédit Immobilier,rtt,24.01.2025,2025-01-24,1,1,Validé manager
+c4a1b2fdeb5e,CDI,Crédit Immobilier,CP,04/09/2025,2025-09-10,7,OUI,URGENT
+c4a1b2fdeb5e,CDI,Crédit Immobilier,Congé Payé,24/04/2025,2025-05-03,10,OUI,En attente validation
+c4a1b2fdeb5e,CDI,Crédit Immobilier,MALADIE,12/12/2024,14/12/24,3,0,RAS
+c4a1b2fdeb5e,CDI,Crédit Immobilier,rtt,11.07.2025,2025-07-11,1,NON,Certificat fourni
+c4a1b2fdeb5e,cdi,Crédit Immobilier,Congé Payé,2025-08-03,2025-08-11,9,NON,URGENT
+c4a1b2fdeb5e,cdi,Crédit Immobilier,Congé Payé,2024-05-07,16.05.2024,10,OUI,RAS
+c4a1b2fdeb5e,cdi,Crédit Immobilier,Congé Payé,2025-08-13,19/08/25,7,Y,Validé manager
+c4a1b2fdeb5e,cdi,Crédit Immobilier,MALADIE,29/06/25,2025-07-03,5,NON,En attente validation
+c4a1b2fdeb5e,cdi,Crédit Immobilier,Formation,05/24/2024,27/05/2024,4,O,En attente validation
+c4a1b2fdeb5e,CDI,Crédit Immobilier,CONGE_PAYE,05/02/2024,02/14/2024,10,1,En attente validation
+b5f5a164631b,CDI,Conformité KYC,MALADIE,2025-11-02,2025-11-06,5,OUI,En attente validation
+b5f5a164631b,CDI,Conformité KYC,CONGE_PAYE,06/29/2025,04-07-2025,6,NON,En attente validation
+b5f5a164631b,CDI,Conformité KYC,Maladie,2025-06-23,06/26/2025,4,1,Certificat fourni
+b5f5a164631b,CDI,Conformité KYC,Maladie,2025-01-08,10.01.2025,3,NON,URGENT
+b5f5a164631b,CDI,Conformité KYC,rtt,11.01.2026,11.01.2026,1,Y,
+b5f5a164631b,CDI,Conformité KYC,RTT,25/09/2024,09/25/2024,1,O,En attente validation
+b5f5a164631b,cdi,Conformité KYC,Congé Payé,2024-09-17,23.09.2024,7,OUI,Validé manager
+b5f5a164631b,cdi,Conformité KYC,CP,12.02.2025,19/02/2025,8,N,A régulariser
+b5f5a164631b,CDI,Conformité KYC,Maladie,06/08/2024,10-08-2024,5,0,En attente validation
+b5f5a164631b,CDI,Conformité KYC,Formation CFA,28.10.2025,29/10/25,2,NON,A régulariser
+b5f5a164631b,CDI,Conformité KYC,Absent,26/10/2025,26.10.2025,1,N,RAS
+b5f5a164631b,CDI,Conformité KYC,CP,18/08/2025,2025-08-24,7,OUI,URGENT
+b5f5a164631b,cdi,Conformité KYC,MALADIE,01/15/2026,01/18/2026,4,O,
+b5f5a164631b,CDI,Conformité KYC,RTT,24/07/24,24-07-2024,1,N,A régulariser
+b5f5a164631b,cdi,Conformité KYC,FORMATION,28/10/2025,01-11-2025,5,0,
+b5f5a164631b,CDI,Conformité KYC,Formation,05.09.2024,07.09.2024,3,NON,URGENT
+b5f5a164631b,CDI,Conformité KYC,rtt,26-04-2026,26/04/2026,1,0,RAS
+b5f5a164631b,cdi,Conformité KYC,Formation,24.05.2026,25/05/2026,2,1,RAS
+b5f5a164631b,cdi,Conformité KYC,rtt,24/11/24,24/11/24,1,N,URGENT
+b5f5a164631b,cdi,Conformité KYC,Absent,2025-06-01,01.06.2025,1,N,Validé manager
+b5f5a164631b,cdi,Conformité KYC,Maladie,04/01/2025,2025-01-04,1,NON,Certificat fourni
+b5f5a164631b,CDI,Conformité KYC,CP,09.09.2024,13/09/24,5,1,Certificat fourni
+b5f5a164631b,cdi,Conformité KYC,Congé Payé,22-11-2024,01/12/2024,120,OUI,RAS
+b5f5a164631b,CDI,Conformité KYC,RTT,25/06/2025,2025-06-25,1,N,RAS
+b5f5a164631b,cdi,Conformité KYC,Maladie,2026-06-09,2026-06-12,95,OUI,
+b5f5a164631b,cdi,Conformité KYC,Congé Payé,12-12-2024,21-12-2024,10,Y,Validé manager
+b5f5a164631b,CDI,Conformité KYC,CP,30/07/25,2025-08-06,8,Y,A régulariser
+b5f5a164631b,CDI,Conformité KYC,CP,21/06/24,06/28/2024,8,Y,URGENT
+b5f5a164631b,CDI,Conformité KYC,RTT,26/07/24,26/07/2024,1,O,URGENT
+b5f5a164631b,CDI,Conformité KYC,MALADIE,23/05/2025,25.05.2025,3,1,En attente validation
+b5f5a164631b,CDI,Conformité KYC,CP,10.05.2026,2026-05-16,7,0,A régulariser
+f097d32aaf0b,CDI,Crédit Immobilier,FORMATION,2025-07-27,07/31/2025,5,Y,URGENT
+f097d32aaf0b,CDI,Crédit Immobilier,CP,20-12-2025,24/12/25,5,OUI,Certificat fourni
+f097d32aaf0b,CDI,Crédit Immobilier,RTT,28/05/25,28.05.2025,1,1,RAS
+f097d32aaf0b,cdi,Crédit Immobilier,Congé Payé,17/04/25,2025-04-26,10,NON,URGENT
+f097d32aaf0b,cdi,Crédit Immobilier,Maladie,15-10-2025,19.10.2025,5,Y,
+f097d32aaf0b,cdi,Crédit Immobilier,CP,11/14/2024,11/21/2024,-1,0,
+f097d32aaf0b,cdi,Crédit Immobilier,CONGE_PAYE,24.02.2025,04.03.2025,9,O,A régulariser
+f097d32aaf0b,cdi,Crédit Immobilier,rtt,21.02.2025,21-02-2025,1,O,URGENT
+f097d32aaf0b,CDI,Crédit Immobilier,Congé Payé,06/19/2025,2025-06-26,8,Y,Certificat fourni
+f097d32aaf0b,CDI,,MALADIE,2025-05-02,05-05-2025,4,N,A régulariser
+f097d32aaf0b,cdi,Crédit Immobilier,Formation CFA,2026-01-14,01/18/2026,5,Y,
+f097d32aaf0b,cdi,Crédit Immobilier,FORMATION,25-05-2025,05/27/2025,3,N,
+f097d32aaf0b,CDI,Crédit Immobilier,CP,16-09-2025,20/09/2025,5,N,URGENT
+f097d32aaf0b,cdi,Crédit Immobilier,RTT,02/26/2026,2026-02-26,1,Y,A régulariser
+f097d32aaf0b,CDI,Crédit Immobilier,CP,20/05/2025,27-05-2025,8,0,RAS
+f097d32aaf0b,CDI,Crédit Immobilier,CP,2025-05-30,07.06.2025,9,1,Certificat fourni
+f097d32aaf0b,cdi,Crédit Immobilier,FORMATION,2025-04-24,2025-04-27,4,OUI,RAS
+f097d32aaf0b,cdi,Crédit Immobilier,Congé Payé,20-09-2025,09/27/2025,8,0,A régulariser
+f097d32aaf0b,cdi,Crédit Immobilier,Congé Payé,27/02/2025,08/03/2025,10,Y,
+f097d32aaf0b,CDI,Crédit Immobilier,Formation,16.04.2025,04/18/2025,3,OUI,En attente validation
+f097d32aaf0b,CDI,Crédit Immobilier,Formation CFA,2026-06-12,2026-06-15,4,0,
+f097d32aaf0b,CDI,Crédit Immobilier,CONGE_PAYE,02/25/2026,2026-03-03,7,0,
+f097d32aaf0b,CDI,Crédit Immobilier,RTT,12-11-2024,12.11.2024,1,NON,URGENT
+f097d32aaf0b,cdi,Crédit Immobilier,RTT,26/02/2026,26/02/2026,-1,0,A régulariser
+f097d32aaf0b,cdi,Crédit Immobilier,RTT,18/10/24,18.10.2024,1,0,Validé manager
+b049f01ca9ca,cdd,Conformité KYC,CONGE_PAYE,08/09/2024,16-09-2024,9,1,
+b049f01ca9ca,CDD,Conformité KYC,FORMATION,02.03.2024,05/03/2024,4,OUI,A régulariser
+b049f01ca9ca,CDD,Conformité KYC,rtt,06/04/2024,06/04/2024,1,NON,
+b049f01ca9ca,cdd,Conformité KYC,RTT,29-06-2024,29-06-2024,1,0,URGENT
+b049f01ca9ca,cdd,Conformité KYC,rtt,01-01-2024,2024-01-01,120,Y,
+b049f01ca9ca,cdd,Conformité KYC,CONGE_PAYE,26-01-2024,03-02-2024,9,1,
+b049f01ca9ca,CDD,Conformité KYC,Congé Payé,16.07.2024,25.07.2024,10,1,Certificat fourni
+b049f01ca9ca,cdd,Conformité KYC,Congé Payé,2024-04-07,2024-04-13,7,OUI,En attente validation
+b049f01ca9ca,CDD,Conformité KYC,Formation,26.02.2024,01.03.2024,5,0,RAS
+b049f01ca9ca,cdd,Conformité KYC,CP,28.02.2024,08-03-2024,10,N,A régulariser
+b049f01ca9ca,cdd,,FORMATION,2024-07-16,2024-07-17,2,0,RAS
+b049f01ca9ca,cdd,Conformité KYC,Congé Payé,01-06-2024,06/06/2024,6,NON,A régulariser
+b049f01ca9ca,cdd,Conformité KYC,rtt,01-07-2024,01-07-2024,1,OUI,Validé manager
+b049f01ca9ca,CDD,Conformité KYC,rtt,25.01.2024,25-01-2024,1,OUI,En attente validation
+b049f01ca9ca,cdd,Conformité KYC,RTT,07/01/2025,07/01/2025,1,0,
+b049f01ca9ca,CDD,Conformité KYC,CONGE_PAYE,07-06-2024,06/16/2024,10,0,En attente validation
+b049f01ca9ca,cdd,Conformité KYC,Congé Payé,12/25/2024,29.12.2024,5,1,En attente validation
+b049f01ca9ca,CDD,Conformité KYC,CP,04/21/2024,2024-04-30,10,NON,URGENT
+b049f01ca9ca,cdd,Conformité KYC,Congé Payé,24-10-2024,2024-10-31,8,NON,URGENT
+b049f01ca9ca,cdd,Conformité KYC,rtt,13-10-2024,13/10/24,1,N,Certificat fourni
+b049f01ca9ca,cdd,Conformité KYC,Maladie,13-04-2024,15/04/2024,3,Y,Validé manager
+b049f01ca9ca,cdd,Conformité KYC,CP,2024-01-28,2024-02-06,10,OUI,
+b049f01ca9ca,cdd,Conformité KYC,CP,13-05-2024,22/05/24,10,0,
+f48bd15c9ab4,Prestataire,Recouvrement,Maladie,11-11-2024,11/11/2024,1,Y,Validé manager
+f48bd15c9ab4,PRESTATAIRE,Recouvrement,Congé Payé,30/05/26,08-06-2026,10,OUI,A régulariser
+f48bd15c9ab4,PRESTATAIRE,Recouvrement,MALADIE,25.09.2025,26.09.2025,2,Y,A régulariser
+f48bd15c9ab4,PRESTATAIRE,Recouvrement,CP,2026-01-10,2026-01-14,5,OUI,Certificat fourni
+f48bd15c9ab4,Prestataire,Recouvrement,CONGE_PAYE,2026-05-16,05/24/2026,9,1,RAS
+f48bd15c9ab4,PRESTATAIRE,Recouvrement,Formation CFA,02/27/2026,03-03-2026,5,1,RAS
+f48bd15c9ab4,PRESTATAIRE,Recouvrement,Maladie,2025-06-12,13-06-2025,2,O,
+f48bd15c9ab4,PRESTATAIRE,Recouvrement,RTT,26-03-2026,2026-03-26,-1,OUI,Certificat fourni
+f48bd15c9ab4,Prestataire,Recouvrement,MALADIE,02.06.2024,2024-06-03,2,NON,Validé manager
+f48bd15c9ab4,PRESTATAIRE,Recouvrement,Formation CFA,23/05/24,27/05/24,5,O,En attente validation
+f48bd15c9ab4,Prestataire,Recouvrement,RTT,28/08/2024,28/08/24,1,N,A régulariser
+f48bd15c9ab4,PRESTATAIRE,Recouvrement,CONGE_PAYE,13/08/25,08/22/2025,10,OUI,Certificat fourni
+f48bd15c9ab4,PRESTATAIRE,Recouvrement,Formation CFA,2025-10-09,10-10-2025,2,OUI,A régulariser
+f48bd15c9ab4,Prestataire,Recouvrement,rtt,25-12-2024,25/12/24,1,0,Certificat fourni
+f48bd15c9ab4,PRESTATAIRE,Recouvrement,rtt,26-06-2025,26/06/25,1,N,URGENT
+f48bd15c9ab4,PRESTATAIRE,Recouvrement,RTT,01/24/2025,2025-01-24,1,0,
+f48bd15c9ab4,Prestataire,Recouvrement,Formation,22-07-2024,24/07/24,120,OUI,A régulariser
+f48bd15c9ab4,PRESTATAIRE,Recouvrement,Maladie,2024-06-23,06/23/2024,1,OUI,A régulariser
+f48bd15c9ab4,PRESTATAIRE,Recouvrement,CONGE_PAYE,18-02-2024,2024-02-26,9,NON,
+f48bd15c9ab4,PRESTATAIRE,Recouvrement,Congé Payé,03/04/2024,09-04-2024,7,Y,URGENT
+f48bd15c9ab4,Prestataire,Recouvrement,rtt,2024-05-28,2024-05-28,1,1,En attente validation
+f48bd15c9ab4,Prestataire,Recouvrement,FORMATION,02-02-2024,06-02-2024,120,N,En attente validation
+f48bd15c9ab4,PRESTATAIRE,Recouvrement,Absent,17/08/25,17-08-2025,1,Y,URGENT
+f48bd15c9ab4,PRESTATAIRE,Recouvrement,MALADIE,2024-08-06,07/08/2024,2,N,Validé manager
+f48bd15c9ab4,Prestataire,Recouvrement,rtt,27/02/2024,27.02.2024,1,1,Validé manager
+19f1351013b1,cdd,Recouvrement,rtt,28/06/2025,06/28/2025,1,0,
+19f1351013b1,CDD,Recouvrement,RTT,24/03/25,03/24/2025,1,N,En attente validation
+19f1351013b1,CDD,Recouvrement,Formation CFA,2025-05-20,22/05/25,3,N,Validé manager
+19f1351013b1,CDD,Recouvrement,RTT,24-03-2025,2025-03-24,1,O,RAS
+19f1351013b1,CDD,Recouvrement,RTT,2025-09-14,14.09.2025,1,Y,En attente validation
+19f1351013b1,cdd,Recouvrement,CONGE_PAYE,27.09.2025,2025-10-02,6,1,
+19f1351013b1,cdd,Recouvrement,FORMATION,24/03/2025,26.03.2025,3,N,
+19f1351013b1,CDD,Recouvrement,Formation CFA,24-08-2025,28/08/2025,5,0,
+19f1351013b1,CDD,Recouvrement,RTT,24/07/25,24-07-2025,1,NON,URGENT
+19f1351013b1,CDD,Recouvrement,Formation CFA,14/03/2025,2025-03-17,4,1,A régulariser
+19f1351013b1,cdd,Recouvrement,FORMATION,17.08.2025,21-08-2025,5,N,RAS
+19f1351013b1,CDD,Recouvrement,RTT,2025-08-25,25/08/2025,1,Y,
+19f1351013b1,CDD,Recouvrement,MALADIE,11.09.2025,09/14/2025,4,NON,URGENT
+19f1351013b1,CDD,Recouvrement,Congé Payé,18/05/25,22/05/25,5,NON,Validé manager
+19f1351013b1,cdd,Recouvrement,CONGE_PAYE,24/02/2025,01-03-2025,6,1,
+19f1351013b1,cdd,Recouvrement,RTT,07/26/2025,26/07/2025,1,1,
+19f1351013b1,cdd,Recouvrement,CONGE_PAYE,2025-04-03,09.04.2025,7,NON,URGENT
+19f1351013b1,CDD,Recouvrement,FORMATION,2025-03-26,03/28/2025,3,0,En attente validation
+19f1351013b1,cdd,Recouvrement,Absent,31-07-2025,2025-07-31,1,NON,RAS
+19f1351013b1,cdd,Recouvrement,rtt,26/09/25,2025-09-26,1,0,URGENT
+19f1351013b1,cdd,Recouvrement,CONGE_PAYE,31-08-2025,2025-09-05,6,OUI,RAS
+19f1351013b1,CDD,,CONGE_PAYE,2025-02-13,2025-02-19,7,NON,Validé manager
+19f1351013b1,cdd,Recouvrement,RTT,20-07-2025,20/07/2025,1,1,En attente validation
+19f1351013b1,CDD,Recouvrement,MALADIE,2025-03-31,04.04.2025,5,O,RAS
+19f1351013b1,CDD,Recouvrement,MALADIE,18.03.2025,18/03/25,1,O,A régulariser
+19f1351013b1,cdd,Recouvrement,Congé Payé,24/03/2025,31/03/25,8,N,A régulariser
+19f1351013b1,CDD,Recouvrement,CP,24.03.2025,02.04.2025,10,Y,
+19f1351013b1,CDD,Recouvrement,Maladie,17-06-2025,2025-06-14,5,N,Certificat fourni
+19f1351013b1,cdd,Recouvrement,RTT,24-03-2025,24.03.2025,95,NON,Validé manager
+19f1351013b1,CDD,Recouvrement,rtt,24.03.2025,24/03/2025,1,NON,URGENT
+19f1351013b1,CDD,Recouvrement,Formation,2025-03-23,25/03/2025,3,1,RAS
+19f1351013b1,cdd,Recouvrement,CONGE_PAYE,03.06.2025,07/06/2025,5,N,
+13468b810133,alternant,Conformité KYC,CP,13.05.2026,21/05/2026,9,0,URGENT
+13468b810133,alternant,Conformité KYC,FORMATION,10/22/2025,2025-10-23,2,N,A régulariser
+13468b810133,alternant,Conformité KYC,CP,30/11/25,04.12.2025,5,N,RAS
+13468b810133,alternant,Conformité KYC,RTT,24/04/2026,21/04/26,1,0,Certificat fourni
+13468b810133,Alternant,Conformité KYC,Formation CFA,02.06.2026,03-06-2026,2,O,RAS
+13468b810133,Alternant,Conformité KYC,MALADIE,26.10.2025,26/10/25,1,O,URGENT
+13468b810133,alternant,Conformité KYC,CP,2026-03-04,09/03/2026,6,Y,Certificat fourni
+13468b810133,alternant,Conformité KYC,FORMATION,25-05-2026,28/05/2026,4,1,Validé manager
+13468b810133,alternant,Conformité KYC,rtt,18-11-2025,18-11-2025,1,0,URGENT
+13468b810133,Alternant,Conformité KYC,rtt,24/03/26,03/24/2026,1,1,RAS
+13468b810133,Alternant,Conformité KYC,Congé Payé,29.11.2025,2025-12-07,9,0,Validé manager
+13468b810133,Alternant,Conformité KYC,CONGE_PAYE,2026-02-09,02/15/2026,7,Y,A régulariser
+13468b810133,Alternant,Conformité KYC,RTT,03.01.2026,03/01/2026,1,0,Certificat fourni
+13468b810133,Alternant,Conformité KYC,Congé Payé,04/19/2026,26/04/2026,8,OUI,Certificat fourni
+13468b810133,alternant,Conformité KYC,rtt,2025-12-20,20-12-2025,1,OUI,
+13468b810133,Alternant,Conformité KYC,rtt,04/28/2026,04/28/2026,1,OUI,RAS
+13468b810133,Alternant,Conformité KYC,Absent,16/10/2025,16/10/25,1,N,RAS
+13468b810133,Alternant,Conformité KYC,MALADIE,12/12/2025,15.12.2025,4,OUI,A régulariser
+13468b810133,alternant,Conformité KYC,CONGE_PAYE,11/01/2026,20/01/26,10,OUI,En attente validation
+13468b810133,Alternant,Conformité KYC,Congé Payé,07-11-2025,11.11.2025,5,O,
+13468b810133,alternant,Conformité KYC,Semaine école,07/02/2026,10/02/2026,4,1,A régulariser
+13468b810133,Alternant,Conformité KYC,Maladie,25.01.2026,26/01/2026,2,N,URGENT
+13468b810133,alternant,Conformité KYC,rtt,28.05.2026,28.05.2026,1,O,URGENT
+13468b810133,alternant,Conformité KYC,RTT,22.02.2026,22-02-2026,1,NON,
+13468b810133,Alternant,Conformité KYC,CONGE_PAYE,13.02.2026,2026-02-18,6,N,En attente validation
+13468b810133,Alternant,Conformité KYC,Congé Payé,10/25/2025,2025-11-03,10,O,RAS
+13468b810133,Alternant,Conformité KYC,Formation,2026-02-01,2026-02-05,5,0,RAS
+13468b810133,Alternant,Conformité KYC,RTT,10/05/2026,10/05/2026,1,OUI,En attente validation
+13468b810133,alternant,Conformité KYC,CP,08/10/2025,10/16/2025,9,N,
+13468b810133,alternant,Conformité KYC,MALADIE,30-01-2026,27.01.2026,2,Y,URGENT
+13468b810133,alternant,Conformité KYC,MALADIE,29/03/26,01/04/2026,4,N,En attente validation
+c4551d169398,INTERIMAIRE,Crédit Immobilier,Formation CFA,27/04/2026,2026-05-01,5,OUI,Validé manager
+c4551d169398,Interimaire,Crédit Immobilier,rtt,24/06/2025,24/06/25,1,0,
+c4551d169398,INTERIMAIRE,Crédit Immobilier,Congé Payé,2025-06-02,10/06/2025,9,NON,RAS
+c4551d169398,INTERIMAIRE,Crédit Immobilier,RTT,01-02-2025,2025-02-01,-1,Y,En attente validation
+c4551d169398,Intérimaire,Crédit Immobilier,Congé Payé,15/08/2025,08/19/2025,5,NON,RAS
+c4551d169398,Intérimaire,Crédit Immobilier,Congé Payé,11-08-2025,20/08/2025,10,NON,Validé manager
+c4551d169398,Interimaire,Crédit Immobilier,Formation,2025-03-24,23/03/25,3,N,
+c4551d169398,INTERIMAIRE,Crédit Immobilier,CONGE_PAYE,07/12/2025,02-12-2025,5,N,Certificat fourni
+c4551d169398,INTERIMAIRE,Crédit Immobilier,RTT,14/05/2025,14.05.2025,1,O,RAS
+c4551d169398,INTERIMAIRE,Crédit Immobilier,rtt,2025-02-25,25.02.2025,1,0,URGENT
+c4551d169398,Intérimaire,Crédit Immobilier,CONGE_PAYE,06/10/2025,2025-10-10,5,1,URGENT
+c4551d169398,Intérimaire,Crédit Immobilier,FORMATION,2025-06-21,22.06.2025,2,O,RAS
+c4551d169398,INTERIMAIRE,Crédit Immobilier,CP,10/05/2025,14-05-2025,5,OUI,Certificat fourni
+c4551d169398,Interimaire,Crédit Immobilier,CP,07/02/2025,14-02-2025,8,NON,En attente validation
+c4551d169398,Interimaire,,CONGE_PAYE,2026-02-03,10.02.2026,8,0,Validé manager
+c4551d169398,Interimaire,Crédit Immobilier,Formation CFA,02/27/2025,01/03/2025,3,NON,En attente validation
+c4551d169398,Interimaire,Crédit Immobilier,rtt,03-10-2025,2025-10-03,1,Y,En attente validation
+c4551d169398,Intérimaire,Crédit Immobilier,RTT,01/22/2026,22-01-2026,1,O,A régulariser
+c4551d169398,INTERIMAIRE,Crédit Immobilier,rtt,25.07.2025,25/07/25,1,O,URGENT
+c4551d169398,INTERIMAIRE,Crédit Immobilier,Absent,02.11.2025,02/11/2025,1,N,RAS
+c4551d169398,Interimaire,,FORMATION,26.10.2025,10/27/2025,2,O,En attente validation
+c4551d169398,Interimaire,Crédit Immobilier,FORMATION,22.08.2025,24.08.2025,3,0,
+c4551d169398,Interimaire,Crédit Immobilier,FORMATION,06/23/2025,06/27/2025,5,Y,Validé manager
+c4551d169398,Interimaire,Crédit Immobilier,CONGE_PAYE,2025-09-11,09/15/2025,5,O,En attente validation
+c4551d169398,Interimaire,Crédit Immobilier,MALADIE,07.04.2026,08-04-2026,2,1,Certificat fourni
+c4551d169398,Intérimaire,Crédit Immobilier,RTT,26-03-2026,26/03/2026,1,O,
+c4551d169398,INTERIMAIRE,Crédit Immobilier,CP,04/04/2026,10/04/2026,7,1,URGENT
+c4551d169398,Interimaire,Crédit Immobilier,Maladie,17-09-2025,09/19/2025,3,0,
+ab163c46da67,CDI,Épargne & Placements,FORMATION,26.01.2026,2026-01-29,4,N,En attente validation
+ab163c46da67,CDI,Épargne & Placements,rtt,12.06.2026,12.06.2026,1,Y,
+ab163c46da67,cdi,Épargne & Placements,RTT,26/05/26,26/05/2026,1,OUI,URGENT
+ab163c46da67,CDI,Épargne & Placements,CONGE_PAYE,12/12/2025,16.12.2025,5,N,Certificat fourni
+ab163c46da67,CDI,Épargne & Placements,Congé Payé,2026-05-27,01/06/2026,6,N,URGENT
+ab163c46da67,cdi,Épargne & Placements,RTT,25/12/25,25/12/2025,1,NON,URGENT
+ab163c46da67,CDI,Épargne & Placements,rtt,24/03/26,2026-03-24,1,N,
+ab163c46da67,cdi,Épargne & Placements,Formation,01.03.2026,05-03-2026,5,NON,En attente validation
+ab163c46da67,cdi,,rtt,26-04-2026,26/04/2026,1,NON,Certificat fourni
+ab163c46da67,cdi,Épargne & Placements,CP,01-06-2026,2026-06-07,7,1,Validé manager
+ab163c46da67,cdi,Épargne & Placements,Absent,2026-04-19,19-04-2026,1,0,Certificat fourni
+ab163c46da67,cdi,Épargne & Placements,Congé Payé,2025-12-20,2025-12-27,8,O,
+ab163c46da67,CDI,,CP,25/03/26,03.04.2026,10,NON,A régulariser
+ab163c46da67,CDI,Épargne & Placements,CP,22/04/2026,29.04.2026,8,1,
+ab163c46da67,CDI,Épargne & Placements,RTT,2026-02-28,02/23/2026,1,OUI,RAS
+ab163c46da67,CDI,Épargne & Placements,MALADIE,16-05-2026,05/16/2026,1,NON,En attente validation
+ab163c46da67,cdi,Épargne & Placements,Congé Payé,04-04-2026,11-04-2026,8,NON,Validé manager
+ab163c46da67,cdi,Épargne & Placements,Maladie,21-02-2026,24-02-2026,4,NON,A régulariser
+ab163c46da67,CDI,Épargne & Placements,RTT,12.06.2026,12-06-2026,1,N,RAS
+ab163c46da67,cdi,Épargne & Placements,CP,22.01.2026,27.01.2026,6,Y,
+ab163c46da67,CDI,Épargne & Placements,RTT,22-05-2026,22/05/26,1,Y,
+ab163c46da67,cdi,Épargne & Placements,CONGE_PAYE,13/04/26,18.04.2026,6,OUI,En attente validation
+ab163c46da67,CDI,Épargne & Placements,Maladie,2026-05-27,27.05.2026,1,Y,A régulariser
+ab163c46da67,CDI,Épargne & Placements,Maladie,21/03/2026,03/21/2026,1,1,RAS
+ab163c46da67,CDI,Épargne & Placements,Congé Payé,21-05-2026,27/05/2026,7,1,
+ab163c46da67,cdi,Épargne & Placements,CONGE_PAYE,11-05-2026,15/05/26,5,O,En attente validation
+ab163c46da67,CDI,Épargne & Placements,Congé Payé,28.01.2026,02-02-2026,6,NON,En attente validation
+ab163c46da67,CDI,Épargne & Placements,Maladie,04.06.2026,07/06/2026,4,0,Certificat fourni
+ab163c46da67,cdi,Épargne & Placements,Maladie,14/04/2026,2026-04-17,4,1,Validé manager
+ac686b5ca7d9,CDI,Conformité KYC,Maladie,2026-04-20,24/04/26,5,Y,RAS
+ac686b5ca7d9,cdi,Conformité KYC,Congé Payé,2026-05-21,05/25/2026,5,0,
+ac686b5ca7d9,CDI,Conformité KYC,CP,04/30/2026,04.05.2026,5,1,
+ac686b5ca7d9,cdi,Conformité KYC,CONGE_PAYE,05-06-2026,14.06.2026,10,1,A régulariser
+ac686b5ca7d9,CDI,Conformité KYC,MALADIE,20.02.2026,22-02-2026,3,1,A régulariser
+ac686b5ca7d9,CDI,Conformité KYC,CP,09/01/2026,08/01/2026,8,O,Validé manager
+ac686b5ca7d9,CDI,Conformité KYC,MALADIE,19-01-2026,2026-01-19,1,O,RAS
+ac686b5ca7d9,cdi,Conformité KYC,FORMATION,02-03-2026,05.03.2026,4,O,A régulariser
+ac686b5ca7d9,CDI,Conformité KYC,rtt,26.02.2026,02/26/2026,1,O,
+ac686b5ca7d9,CDI,Conformité KYC,rtt,24/03/2026,03/24/2026,1,Y,Validé manager
+ac686b5ca7d9,CDI,Conformité KYC,CONGE_PAYE,2026-04-15,04/23/2026,9,1,Certificat fourni
+ac686b5ca7d9,cdi,Conformité KYC,CONGE_PAYE,09.04.2026,17.04.2026,9,OUI,
+ac686b5ca7d9,cdi,Conformité KYC,Maladie,2026-04-20,21/04/26,2,OUI,A régulariser
+ac686b5ca7d9,CDI,Conformité KYC,CP,2026-06-06,06/14/2026,9,OUI,Certificat fourni
+ac686b5ca7d9,CDI,Conformité KYC,rtt,07.05.2026,07-05-2026,1,0,URGENT
+ac686b5ca7d9,cdi,Conformité KYC,MALADIE,14.01.2026,2026-01-15,2,Y,RAS
+ac686b5ca7d9,cdi,Conformité KYC,CP,28/01/2026,06-02-2026,10,O,Certificat fourni
+ac686b5ca7d9,CDI,Conformité KYC,Maladie,2026-02-02,2026-02-06,5,0,A régulariser
+ac686b5ca7d9,cdi,Conformité KYC,rtt,21.04.2026,04/21/2026,1,O,RAS
+ac686b5ca7d9,cdi,Conformité KYC,CONGE_PAYE,23.04.2026,21-04-2026,6,0,
+ac686b5ca7d9,cdi,Conformité KYC,FORMATION,05/28/2026,05/30/2026,3,0,En attente validation
+ac686b5ca7d9,cdi,Conformité KYC,RTT,03.04.2026,03.04.2026,1,OUI,En attente validation
+ac686b5ca7d9,CDI,Conformité KYC,Maladie,2026-01-18,19.01.2026,2,1,Certificat fourni
+ac686b5ca7d9,cdi,Conformité KYC,Formation,26/03/26,2026-03-29,4,0,En attente validation
+ac686b5ca7d9,cdi,Conformité KYC,rtt,22/01/2026,22/01/26,1,O,A régulariser
+ac686b5ca7d9,cdi,Conformité KYC,RTT,2026-01-07,07.01.2026,1,NON,Certificat fourni
+ac686b5ca7d9,cdi,Conformité KYC,RTT,19-01-2026,19/01/26,1,Y,RAS
+ac686b5ca7d9,CDI,Conformité KYC,FORMATION,20/02/2026,24/02/26,5,OUI,En attente validation
+ac686b5ca7d9,CDI,Conformité KYC,Congé Payé,23.05.2026,2026-05-31,9,1,
+ac686b5ca7d9,cdi,Conformité KYC,Congé Payé,03/23/2026,28/03/2026,6,NON,En attente validation
+ac686b5ca7d9,CDI,Conformité KYC,rtt,2026-04-18,2026-04-18,1,0,A régulariser
+ac686b5ca7d9,CDI,Conformité KYC,CONGE_PAYE,2026-03-02,09.03.2026,8,O,URGENT
+71a347385c94,CDI,Crédit Immobilier,Congé Payé,08/07/2024,2024-07-12,5,1,
+71a347385c94,cdi,Crédit Immobilier,CP,31/07/2025,04-08-2025,5,1,URGENT
+71a347385c94,CDI,Crédit Immobilier,CONGE_PAYE,2025-10-12,2025-10-18,7,0,A régulariser
+71a347385c94,CDI,Crédit Immobilier,rtt,25/10/2025,25-10-2025,1,N,RAS
+71a347385c94,cdi,Crédit Immobilier,RTT,24/08/2025,2025-08-24,1,N,A régulariser
+71a347385c94,cdi,Crédit Immobilier,Formation,26-12-2025,27.12.2025,2,0,Validé manager
+71a347385c94,CDI,Crédit Immobilier,MALADIE,22/07/2024,24/07/2024,3,N,
+71a347385c94,cdi,Crédit Immobilier,FORMATION,05/24/2024,2024-05-28,5,O,En attente validation
+71a347385c94,cdi,Crédit Immobilier,MALADIE,08/28/2025,08/28/2025,1,NON,Certificat fourni
+71a347385c94,cdi,Crédit Immobilier,Congé Payé,06/13/2025,2025-06-20,8,NON,
+71a347385c94,CDI,Crédit Immobilier,Congé Payé,2025-07-02,11/07/2025,10,O,Validé manager
+71a347385c94,CDI,Crédit Immobilier,FORMATION,2024-01-04,2024-01-08,5,O,A régulariser
+71a347385c94,cdi,Crédit Immobilier,rtt,2025-05-12,12-05-2025,1,NON,
+71a347385c94,cdi,Crédit Immobilier,Maladie,04.04.2025,07.04.2025,4,1,URGENT
+71a347385c94,CDI,Crédit Immobilier,Maladie,16-06-2025,18/06/2025,3,0,A régulariser
+71a347385c94,cdi,Crédit Immobilier,Congé Payé,2024-03-10,2024-03-19,10,1,En attente validation
+71a347385c94,CDI,Crédit Immobilier,Maladie,18-10-2024,2024-10-19,2,0,Validé manager
+71a347385c94,cdi,Crédit Immobilier,RTT,22-01-2024,22-01-2024,-1,0,Certificat fourni
+71a347385c94,cdi,,rtt,27-11-2024,27/11/2024,1,OUI,En attente validation
+71a347385c94,CDI,Crédit Immobilier,rtt,05/28/2026,2026-05-28,1,OUI,Validé manager
+71a347385c94,CDI,Crédit Immobilier,CP,06-12-2025,10-12-2025,5,1,Validé manager
+71a347385c94,CDI,Crédit Immobilier,RTT,06.02.2025,06-02-2025,1,O,Validé manager
+71a347385c94,cdi,Crédit Immobilier,CP,2026-02-17,24.02.2026,8,1,URGENT
+71a347385c94,cdi,Crédit Immobilier,FORMATION,24/07/25,2025-07-28,5,O,En attente validation
+f41fbc2fc4f1,CDI,Conformité KYC,Absent,30/07/2024,30/07/2024,1,N,RAS
+f41fbc2fc4f1,cdi,Conformité KYC,CP,05/27/2025,26-05-2025,6,O,En attente validation
+f41fbc2fc4f1,cdi,Conformité KYC,RTT,12/08/2024,12/08/2024,1,OUI,
+f41fbc2fc4f1,CDI,Conformité KYC,CP,11-07-2024,18/07/2024,8,0,
+f41fbc2fc4f1,cdi,Conformité KYC,CP,15.09.2025,21/09/2025,7,NON,Certificat fourni
+f41fbc2fc4f1,cdi,Conformité KYC,CONGE_PAYE,20/04/26,29/04/26,10,NON,
+f41fbc2fc4f1,CDI,Conformité KYC,RTT,26-09-2024,09/26/2024,1,Y,RAS
+f41fbc2fc4f1,CDI,Conformité KYC,MALADIE,05/04/2024,05-04-2024,1,OUI,RAS
+f41fbc2fc4f1,cdi,Conformité KYC,Formation CFA,2025-07-31,30/07/25,3,O,Certificat fourni
+f41fbc2fc4f1,CDI,Conformité KYC,rtt,24.05.2026,24-05-2026,1,0,URGENT
+f41fbc2fc4f1,CDI,Conformité KYC,Congé Payé,2025-09-15,23/09/25,9,Y,A régulariser
+f41fbc2fc4f1,cdi,Conformité KYC,rtt,27-03-2025,27/03/2025,1,Y,
+f41fbc2fc4f1,CDI,Conformité KYC,Congé Payé,13-06-2025,17/06/25,5,NON,En attente validation
+f41fbc2fc4f1,CDI,,CONGE_PAYE,07-10-2025,16/10/2025,10,N,En attente validation
+f41fbc2fc4f1,cdi,Conformité KYC,rtt,22.04.2024,22.04.2024,1,OUI,
+f41fbc2fc4f1,cdi,Conformité KYC,Congé Payé,19-02-2026,26-02-2026,8,Y,Certificat fourni
+f41fbc2fc4f1,CDI,Conformité KYC,rtt,03/04/2025,03.04.2025,1,Y,A régulariser
+f41fbc2fc4f1,cdi,Conformité KYC,Congé Payé,30/10/24,04.11.2024,6,NON,Validé manager
+f41fbc2fc4f1,cdi,Conformité KYC,Congé Payé,03.06.2026,09.06.2026,7,O,
+f41fbc2fc4f1,cdi,Conformité KYC,CONGE_PAYE,03/20/2026,2026-03-17,9,OUI,URGENT
+f41fbc2fc4f1,cdi,Conformité KYC,rtt,2025-05-24,2025-05-24,1,O,
+f41fbc2fc4f1,CDI,Conformité KYC,FORMATION,24.01.2025,2025-01-27,4,1,URGENT
+f41fbc2fc4f1,CDI,Conformité KYC,CP,10/16/2025,24-10-2025,9,N,
+f41fbc2fc4f1,cdi,Conformité KYC,RTT,12/27/2025,27.12.2025,1,0,
+f41fbc2fc4f1,cdi,Conformité KYC,MALADIE,03-07-2025,05-07-2025,3,1,RAS
+fb9dae555adf,cdd,,FORMATION,27/08/25,29/08/2025,3,OUI,En attente validation
+fb9dae555adf,cdd,Recouvrement,Maladie,24/11/2025,26/11/25,3,0,
+fb9dae555adf,CDD,Recouvrement,RTT,07/20/2025,20/07/2025,1,0,Certificat fourni
+fb9dae555adf,CDD,Recouvrement,Formation,28-05-2026,05/29/2026,2,0,
+fb9dae555adf,CDD,Recouvrement,rtt,2026-05-27,27/05/2026,1,N,En attente validation
+fb9dae555adf,CDD,Recouvrement,Formation CFA,2026-03-24,28.03.2026,5,O,URGENT
+fb9dae555adf,CDD,Recouvrement,Congé Payé,04/08/2025,08/13/2025,10,O,
+fb9dae555adf,CDD,Recouvrement,RTT,27.01.2026,01/27/2026,1,OUI,RAS
+fb9dae555adf,CDD,Recouvrement,rtt,28.08.2025,2025-08-28,1,O,Certificat fourni
+fb9dae555adf,cdd,Recouvrement,MALADIE,2025-06-19,20/06/25,2,1,RAS
+fb9dae555adf,cdd,Recouvrement,rtt,12-04-2025,12-04-2025,1,OUI,A régulariser
+fb9dae555adf,cdd,Recouvrement,Maladie,23-02-2025,25/02/25,3,OUI,
+fb9dae555adf,cdd,Recouvrement,MALADIE,12/11/2025,13.11.2025,2,N,URGENT
+fb9dae555adf,CDD,Recouvrement,CP,11/02/2026,2026-02-17,95,1,A régulariser
+fb9dae555adf,CDD,Recouvrement,Maladie,2025-10-17,21/10/25,5,N,
+fb9dae555adf,cdd,Recouvrement,Formation,26-11-2025,27/11/25,2,OUI,
+fb9dae555adf,CDD,Recouvrement,Congé Payé,14/07/2025,18/07/25,5,O,En attente validation
+fb9dae555adf,cdd,Recouvrement,RTT,08/24/2025,24-08-2025,1,1,Certificat fourni
+fb9dae555adf,CDD,Recouvrement,CP,2025-07-08,14/07/25,7,Y,En attente validation
+fb9dae555adf,CDD,Recouvrement,RTT,06/18/2025,18/06/25,1,Y,
+fb9dae555adf,CDD,Recouvrement,Formation,16/01/2026,17/01/2026,2,OUI,A régulariser
+fb9dae555adf,CDD,Recouvrement,rtt,2026-04-08,08-04-2026,1,Y,Validé manager
+fb9dae555adf,CDD,Recouvrement,Formation,28/07/2025,07/29/2025,2,O,RAS
+fb9dae555adf,CDD,Recouvrement,CONGE_PAYE,12/02/2026,2026-02-10,6,1,Validé manager
+fb9dae555adf,cdd,Recouvrement,Maladie,03-02-2026,2026-02-05,3,OUI,A régulariser
+fb9dae555adf,cdd,Recouvrement,Maladie,2025-12-21,21/12/2025,1,0,
+fb9dae555adf,CDD,Recouvrement,MALADIE,10-05-2025,11.05.2025,2,NON,En attente validation
+fb9dae555adf,CDD,Recouvrement,rtt,2026-05-25,2026-05-25,1,O,
+fb9dae555adf,cdd,Recouvrement,MALADIE,04-04-2026,2026-04-07,4,0,Certificat fourni
+fb9dae555adf,CDD,Recouvrement,RTT,2025-07-28,28/07/2025,1,0,
+cd9295e72c48,cdi,Recouvrement,Formation,25/01/24,28.01.2024,4,1,Certificat fourni
+cd9295e72c48,CDI,Recouvrement,Formation CFA,24/10/24,27-10-2024,4,0,URGENT
+cd9295e72c48,cdi,Recouvrement,CONGE_PAYE,2025-06-07,06/15/2025,9,NON,URGENT
+cd9295e72c48,cdi,Recouvrement,Formation CFA,05/25/2026,26.05.2026,2,Y,URGENT
+cd9295e72c48,CDI,Recouvrement,CONGE_PAYE,05.06.2025,06/14/2025,10,OUI,URGENT
+cd9295e72c48,CDI,Recouvrement,rtt,25/04/2024,2024-04-25,1,N,
+cd9295e72c48,CDI,Recouvrement,rtt,12.03.2026,12/03/2026,1,0,
+cd9295e72c48,CDI,Recouvrement,Maladie,08/31/2025,01-09-2025,2,NON,
+cd9295e72c48,CDI,Recouvrement,Maladie,16.04.2024,04/20/2024,5,O,
+cd9295e72c48,cdi,,RTT,2026-04-02,02/04/2026,1,O,
+cd9295e72c48,cdi,Recouvrement,MALADIE,19.05.2024,20.05.2024,2,OUI,
+cd9295e72c48,cdi,Recouvrement,Maladie,2024-03-29,29.03.2024,1,0,
+cd9295e72c48,CDI,Recouvrement,Formation CFA,2024-10-09,10/13/2024,5,N,A régulariser
+cd9295e72c48,CDI,Recouvrement,Congé Payé,10-11-2025,2025-11-14,5,OUI,RAS
+cd9295e72c48,CDI,Recouvrement,rtt,2024-01-04,04.01.2024,1,O,Validé manager
+cd9295e72c48,cdi,Recouvrement,MALADIE,2024-07-06,2024-07-10,5,NON,A régulariser
+cd9295e72c48,cdi,Recouvrement,rtt,2025-11-02,02/11/2025,1,0,A régulariser
+cd9295e72c48,cdi,Recouvrement,CP,07.09.2024,15-09-2024,9,OUI,Certificat fourni
+cd9295e72c48,CDI,Recouvrement,RTT,05/25/2024,25/05/2024,1,NON,RAS
+cd9295e72c48,CDI,Recouvrement,CP,11.05.2024,05/16/2024,6,NON,
+cd9295e72c48,CDI,Recouvrement,rtt,01/28/2026,28-01-2026,1,O,
+cd9295e72c48,cdi,Recouvrement,Formation,24/09/2024,28-09-2024,5,OUI,URGENT
+cd9295e72c48,CDI,Recouvrement,CP,19-02-2024,25.02.2024,7,Y,URGENT
+cd9295e72c48,cdi,Recouvrement,rtt,10/25/2025,25.10.2025,1,0,
+cd9295e72c48,CDI,Recouvrement,CP,23.11.2024,2024-11-30,8,O,Validé manager
+cd9295e72c48,CDI,,MALADIE,28/05/2026,28.05.2026,1,OUI,URGENT
+cd9295e72c48,cdi,Recouvrement,RTT,2025-09-14,14.09.2025,1,1,
+cd9295e72c48,cdi,Recouvrement,RTT,2024-10-16,2024-10-16,1,OUI,
+cd9295e72c48,CDI,Recouvrement,rtt,24.12.2025,24/12/25,1,1,Certificat fourni
+cd9295e72c48,cdi,Recouvrement,RTT,24/04/24,24.04.2024,1,0,Certificat fourni
+cd9295e72c48,CDI,Recouvrement,Maladie,01-06-2026,05-06-2026,5,1,URGENT
+cd9295e72c48,CDI,Recouvrement,Congé Payé,08-07-2024,2024-07-12,5,O,
+7d0b9cf9a5b4,cdi,Épargne & Placements,Congé Payé,19/04/25,28-04-2025,10,OUI,En attente validation
+7d0b9cf9a5b4,cdi,Épargne & Placements,CP,10.06.2024,18/06/24,9,1,Certificat fourni
+7d0b9cf9a5b4,cdi,Épargne & Placements,Maladie,05.08.2024,2024-08-06,2,OUI,Validé manager
+7d0b9cf9a5b4,cdi,Épargne & Placements,RTT,2025-04-22,22.04.2025,1,N,
+7d0b9cf9a5b4,cdi,Épargne & Placements,Formation CFA,09/11/2025,08-11-2025,4,Y,RAS
+7d0b9cf9a5b4,cdi,,CONGE_PAYE,2024-08-02,10-08-2024,95,O,A régulariser
+7d0b9cf9a5b4,cdi,Épargne & Placements,FORMATION,25-09-2024,26.09.2024,2,1,Validé manager
+7d0b9cf9a5b4,cdi,Épargne & Placements,Absent,30-09-2025,30.09.2025,1,OUI,En attente validation
+7d0b9cf9a5b4,CDI,Épargne & Placements,CONGE_PAYE,09-12-2024,2024-12-17,9,Y,
+7d0b9cf9a5b4,CDI,Épargne & Placements,MALADIE,23/05/2024,2024-05-25,3,0,URGENT
+7d0b9cf9a5b4,cdi,Épargne & Placements,MALADIE,03/18/2025,21-03-2025,4,N,A régulariser
+7d0b9cf9a5b4,CDI,Épargne & Placements,RTT,05-05-2024,05/05/2024,1,Y,
+7d0b9cf9a5b4,cdi,Épargne & Placements,Formation CFA,03/10/2024,05.10.2024,3,O,Validé manager
+7d0b9cf9a5b4,cdi,Épargne & Placements,rtt,28-09-2024,28/09/2024,1,NON,Validé manager
+7d0b9cf9a5b4,cdi,Épargne & Placements,Maladie,09.01.2024,13/01/2024,5,OUI,URGENT
+7d0b9cf9a5b4,cdi,Épargne & Placements,Congé Payé,02.11.2024,09.11.2024,8,NON,
+7d0b9cf9a5b4,cdi,Épargne & Placements,MALADIE,2025-06-27,01.07.2025,5,N,A régulariser
+7d0b9cf9a5b4,cdi,Épargne & Placements,MALADIE,20/07/2025,24/07/2025,5,Y,Certificat fourni
+7d0b9cf9a5b4,CDI,Épargne & Placements,Absent,07-09-2024,07.09.2024,1,0,
+7d0b9cf9a5b4,cdi,Épargne & Placements,FORMATION,2026-04-06,08.04.2026,3,N,
+7d0b9cf9a5b4,cdi,Épargne & Placements,CP,22/11/2025,11/26/2025,5,NON,Validé manager
+7d0b9cf9a5b4,cdi,Épargne & Placements,Maladie,01/02/2025,04.02.2025,4,1,A régulariser
+763e5af1d1d5,CDD,Recouvrement,Maladie,01-02-2026,03/02/2026,3,OUI,
+763e5af1d1d5,cdd,Recouvrement,CP,14-02-2026,23-02-2026,10,Y,A régulariser
+763e5af1d1d5,cdd,Recouvrement,CONGE_PAYE,26/11/25,04/12/2025,9,Y,RAS
+763e5af1d1d5,cdd,Recouvrement,Formation,25-02-2026,2026-03-01,5,O,A régulariser
+763e5af1d1d5,CDD,Recouvrement,CP,26-04-2026,05-05-2026,10,O,
+763e5af1d1d5,CDD,Recouvrement,rtt,25/05/26,25.05.2026,1,1,
+763e5af1d1d5,CDD,Recouvrement,RTT,26.03.2026,26-03-2026,1,OUI,RAS
+763e5af1d1d5,CDD,Recouvrement,Congé Payé,2025-08-20,08/27/2025,8,Y,
+763e5af1d1d5,CDD,Recouvrement,RTT,2025-08-25,25-08-2025,1,0,Certificat fourni
+763e5af1d1d5,CDD,Recouvrement,Formation CFA,21.03.2026,22-03-2026,2,0,En attente validation
+763e5af1d1d5,cdd,Recouvrement,CP,2025-10-02,2025-10-10,9,0,A régulariser
+763e5af1d1d5,CDD,Recouvrement,MALADIE,12/22/2025,22/12/2025,1,OUI,
+763e5af1d1d5,CDD,Recouvrement,CP,21/04/2026,27/04/2026,7,N,Validé manager
+763e5af1d1d5,cdd,Recouvrement,RTT,24-05-2026,24-05-2026,1,N,RAS
+763e5af1d1d5,CDD,Recouvrement,CP,05-08-2025,2025-08-10,6,1,URGENT
+763e5af1d1d5,cdd,Recouvrement,MALADIE,17-05-2026,21-05-2026,5,NON,URGENT
+763e5af1d1d5,cdd,Recouvrement,CP,22.02.2026,02/03/2026,9,O,Certificat fourni
+763e5af1d1d5,CDD,Recouvrement,CP,09-09-2025,18-09-2025,10,O,Certificat fourni
+763e5af1d1d5,CDD,Recouvrement,FORMATION,11-08-2025,2025-08-12,2,NON,A régulariser
+763e5af1d1d5,cdd,Recouvrement,CONGE_PAYE,13.08.2025,19/08/2025,7,O,Validé manager
+763e5af1d1d5,CDD,,RTT,26/02/2026,26/02/26,1,N,
+763e5af1d1d5,cdd,Recouvrement,Maladie,09/01/2026,2026-01-09,1,1,A régulariser
+763e5af1d1d5,cdd,,RTT,2025-12-25,25-12-2025,1,0,
+763e5af1d1d5,cdd,Recouvrement,rtt,2026-02-02,02.02.2026,1,NON,A régulariser
+763e5af1d1d5,CDD,Recouvrement,rtt,2025-11-01,01-11-2025,1,N,A régulariser
+cd1dc16cb9cd,CDI,Conformité KYC,rtt,2024-03-03,03/03/2024,1,N,Validé manager
+cd1dc16cb9cd,cdi,Conformité KYC,MALADIE,2026-04-11,04/15/2026,5,OUI,URGENT
+cd1dc16cb9cd,cdi,Conformité KYC,Maladie,09.04.2025,13/04/25,5,NON,URGENT
+cd1dc16cb9cd,CDI,Conformité KYC,Formation,24.11.2024,28/11/24,5,O,URGENT
+cd1dc16cb9cd,CDI,Conformité KYC,CP,2025-08-04,12-08-2025,9,0,Certificat fourni
+cd1dc16cb9cd,cdi,Conformité KYC,MALADIE,15/05/2026,2026-05-18,4,O,
+cd1dc16cb9cd,cdi,Conformité KYC,rtt,2026-04-07,07-04-2026,1,N,Validé manager
+cd1dc16cb9cd,CDI,,rtt,29-05-2026,29/05/2026,1,NON,URGENT
+cd1dc16cb9cd,CDI,Conformité KYC,Formation CFA,2024-02-12,15.02.2024,4,NON,En attente validation
+cd1dc16cb9cd,cdi,Conformité KYC,Formation CFA,26/03/2024,27/03/2024,2,OUI,
+cd1dc16cb9cd,CDI,Conformité KYC,RTT,08.06.2026,2026-06-08,1,Y,Certificat fourni
+cd1dc16cb9cd,cdi,Conformité KYC,RTT,31.08.2024,31-08-2024,1,N,
+cd1dc16cb9cd,cdi,Conformité KYC,FORMATION,2024-03-08,2024-03-12,5,N,En attente validation
+cd1dc16cb9cd,cdi,Conformité KYC,Formation,25/12/24,12/26/2024,2,1,Validé manager
+cd1dc16cb9cd,cdi,,Congé Payé,06.10.2025,2025-10-10,5,O,Validé manager
+cd1dc16cb9cd,cdi,Conformité KYC,Congé Payé,2024-11-04,2024-11-12,9,0,Validé manager
+cd1dc16cb9cd,cdi,Conformité KYC,CONGE_PAYE,10/10/2024,15.10.2024,6,OUI,Certificat fourni
+cd1dc16cb9cd,CDI,Conformité KYC,CP,02/15/2026,02/23/2026,9,O,URGENT
+cd1dc16cb9cd,CDI,Conformité KYC,Formation,27.01.2026,2026-01-28,2,N,
+cd1dc16cb9cd,cdi,Conformité KYC,Formation CFA,25-08-2024,2024-08-26,2,OUI,URGENT
+cd1dc16cb9cd,cdi,Conformité KYC,RTT,27.02.2025,2025-02-27,1,1,URGENT
+cd1dc16cb9cd,cdi,Conformité KYC,RTT,28-03-2024,28.03.2024,1,N,
+cd1dc16cb9cd,CDI,Conformité KYC,Maladie,01/11/2025,02-11-2025,2,N,URGENT
+7273d82ef112,Alternant,Épargne & Placements,MALADIE,17.03.2024,2024-03-21,5,NON,A régulariser
+7273d82ef112,Alternant,Épargne & Placements,CP,28-01-2024,01-02-2024,5,OUI,Certificat fourni
+7273d82ef112,alternant,Épargne & Placements,RTT,27/02/2024,2024-02-27,1,Y,RAS
+7273d82ef112,Alternant,Épargne & Placements,RTT,28.03.2024,2024-03-28,1,0,Certificat fourni
+7273d82ef112,alternant,Épargne & Placements,Maladie,06/03/2024,08/03/2024,3,O,Certificat fourni
+7273d82ef112,Alternant,Épargne & Placements,Maladie,21-02-2024,25.02.2024,5,O,RAS
+7273d82ef112,Alternant,Épargne & Placements,Formation,28.02.2024,03.03.2024,5,0,
+7273d82ef112,alternant,Épargne & Placements,RTT,28.02.2024,02/28/2024,1,N,Certificat fourni
+7273d82ef112,Alternant,Épargne & Placements,MALADIE,2024-03-09,09-03-2024,1,NON,En attente validation
+7273d82ef112,alternant,Épargne & Placements,CONGE_PAYE,28/01/24,03.02.2024,7,NON,En attente validation
+7273d82ef112,alternant,Épargne & Placements,RTT,26-03-2024,26/03/24,1,N,
+7273d82ef112,Alternant,Épargne & Placements,RTT,03/29/2024,29-03-2024,1,OUI,A régulariser
+7273d82ef112,alternant,Épargne & Placements,Congé Payé,10.01.2024,15/01/24,6,N,Certificat fourni
+7273d82ef112,alternant,Épargne & Placements,FORMATION,2024-03-17,03/18/2024,2,1,Validé manager
+7273d82ef112,Alternant,Épargne & Placements,RTT,2024-03-12,12/03/2024,1,0,
+7273d82ef112,alternant,Épargne & Placements,Semaine école,28-01-2024,30.01.2024,3,NON,A régulariser
+7273d82ef112,Alternant,Épargne & Placements,RTT,17/01/2024,17/01/24,1,N,RAS
+7273d82ef112,Alternant,Épargne & Placements,rtt,24-02-2024,24/02/24,1,OUI,RAS
+7273d82ef112,alternant,Épargne & Placements,Absent,03/21/2024,21/03/2024,1,NON,RAS
+7273d82ef112,Alternant,Épargne & Placements,Maladie,02/16/2024,2024-02-18,3,Y,URGENT
+7273d82ef112,Alternant,Épargne & Placements,rtt,2024-03-10,10-03-2024,1,NON,Validé manager
+7273d82ef112,Alternant,Épargne & Placements,Congé Payé,08-01-2024,13/01/24,6,O,URGENT
+7273d82ef112,alternant,Épargne & Placements,CONGE_PAYE,01-01-2024,2024-01-05,5,OUI,A régulariser
+7273d82ef112,Alternant,Épargne & Placements,Maladie,06.02.2024,2024-02-07,2,Y,
+7273d82ef112,alternant,Épargne & Placements,MALADIE,2024-01-04,2024-01-05,2,OUI,Certificat fourni
+87a37bfea4c7,CDI,Épargne & Placements,RTT,25.02.2025,2025-02-25,1,0,
+87a37bfea4c7,cdi,Épargne & Placements,Maladie,2025-03-19,22-03-2025,4,N,En attente validation
+87a37bfea4c7,cdi,,Maladie,28/08/2024,31/08/24,4,N,Validé manager
+87a37bfea4c7,cdi,Épargne & Placements,MALADIE,14/04/2025,17/04/25,4,Y,A régulariser
+87a37bfea4c7,CDI,Épargne & Placements,FORMATION,09.05.2026,12/05/2026,4,O,A régulariser
+87a37bfea4c7,cdi,Épargne & Placements,CONGE_PAYE,27-04-2024,04.05.2024,8,0,
+87a37bfea4c7,CDI,Épargne & Placements,rtt,25/12/2024,25/12/24,1,0,
+87a37bfea4c7,cdi,Épargne & Placements,MALADIE,26/11/24,30.11.2024,5,Y,En attente validation
+87a37bfea4c7,cdi,Épargne & Placements,Congé Payé,07/03/2026,16-03-2026,10,N,
+87a37bfea4c7,CDI,Épargne & Placements,rtt,27-07-2025,27.07.2025,1,OUI,URGENT
+87a37bfea4c7,cdi,Épargne & Placements,rtt,28/02/2024,02/28/2024,1,0,A régulariser
+87a37bfea4c7,CDI,Épargne & Placements,CP,2024-11-27,02/12/2024,6,OUI,A régulariser
+87a37bfea4c7,cdi,Épargne & Placements,RTT,20-12-2024,12/20/2024,1,NON,
+87a37bfea4c7,cdi,Épargne & Placements,RTT,24/04/2026,24.04.2026,1,0,RAS
+87a37bfea4c7,CDI,Épargne & Placements,Formation,11.02.2024,13/02/24,3,N,En attente validation
+87a37bfea4c7,cdi,Épargne & Placements,Congé Payé,2024-02-21,2024-02-27,7,1,Validé manager
+87a37bfea4c7,CDI,,rtt,28-04-2026,28-04-2026,1,N,En attente validation
+87a37bfea4c7,cdi,Épargne & Placements,rtt,22.04.2024,04/22/2024,1,Y,Certificat fourni
+87a37bfea4c7,CDI,Épargne & Placements,RTT,2024-01-27,27/01/2024,1,Y,Certificat fourni
+87a37bfea4c7,cdi,Épargne & Placements,MALADIE,2026-03-30,02/04/2026,4,OUI,Validé manager
+87a37bfea4c7,CDI,Épargne & Placements,CP,03-02-2024,10-02-2024,8,1,
+87a37bfea4c7,CDI,Épargne & Placements,RTT,01/21/2026,21.01.2026,1,0,Validé manager
+87a37bfea4c7,cdi,Épargne & Placements,Congé Payé,05/18/2024,25/05/24,8,NON,Validé manager
+87a37bfea4c7,CDI,Épargne & Placements,Formation,07/25/2024,29/07/24,5,1,En attente validation
+87a37bfea4c7,CDI,Épargne & Placements,CONGE_PAYE,03-07-2025,09/07/2025,7,0,RAS
+41368782cdae,Alternant,Épargne & Placements,CP,09/18/2025,27-09-2025,10,N,Validé manager
+41368782cdae,alternant,Épargne & Placements,rtt,18/05/25,18/05/2025,1,Y,
+41368782cdae,Alternant,Épargne & Placements,CP,22.08.2025,31/08/25,10,OUI,A régulariser
+41368782cdae,alternant,Épargne & Placements,rtt,17.07.2025,17.07.2025,1,1,Certificat fourni
+41368782cdae,alternant,Épargne & Placements,CP,2025-08-01,10.08.2025,10,OUI,Validé manager
+41368782cdae,alternant,Épargne & Placements,Semaine école,09/09/2025,10/09/2025,2,1,Validé manager
+41368782cdae,alternant,Épargne & Placements,Absent,2025-06-15,15.06.2025,1,0,Certificat fourni
+41368782cdae,alternant,Épargne & Placements,Absent,2025-04-12,12/04/2025,1,OUI,A régulariser
+41368782cdae,alternant,Épargne & Placements,FORMATION,11.05.2025,14/05/25,4,O,En attente validation
+41368782cdae,Alternant,Épargne & Placements,RTT,2025-04-18,18/04/2025,1,0,A régulariser
+41368782cdae,alternant,Épargne & Placements,CP,05/27/2025,01-06-2025,6,Y,URGENT
+41368782cdae,alternant,Épargne & Placements,Formation CFA,26.09.2025,28/09/2025,3,Y,Validé manager
+41368782cdae,alternant,Épargne & Placements,Formation CFA,25.09.2025,26-09-2025,2,N,
+41368782cdae,alternant,Épargne & Placements,Congé Payé,26-07-2025,2025-08-01,7,NON,En attente validation
+41368782cdae,Alternant,Épargne & Placements,RTT,2025-06-25,25.06.2025,1,O,En attente validation
+41368782cdae,alternant,Épargne & Placements,Formation,2025-07-04,08/07/2025,5,1,Certificat fourni
+41368782cdae,alternant,Épargne & Placements,Semaine école,25/07/25,28/07/25,4,Y,
+41368782cdae,Alternant,Épargne & Placements,CP,15.04.2025,21.04.2025,120,NON,
+41368782cdae,Alternant,Épargne & Placements,FORMATION,2025-08-23,2025-08-27,5,0,En attente validation
+41368782cdae,Alternant,Épargne & Placements,Congé Payé,2025-04-22,2025-04-29,8,O,
+41368782cdae,alternant,Épargne & Placements,Congé Payé,2025-07-29,06.08.2025,9,0,
+41368782cdae,alternant,Épargne & Placements,rtt,2025-08-31,08/31/2025,1,1,Certificat fourni
+41368782cdae,alternant,Épargne & Placements,RTT,02/08/2025,2025-08-02,1,Y,En attente validation
+41368782cdae,Alternant,Épargne & Placements,Formation,27.05.2025,28-05-2025,2,0,URGENT
+41368782cdae,alternant,Épargne & Placements,RTT,09.09.2025,09-09-2025,1,OUI,Certificat fourni
+f18427db0f39,Interimaire,Crédit Immobilier,CONGE_PAYE,07.11.2025,13-11-2025,7,N,A régulariser
+f18427db0f39,INTERIMAIRE,Crédit Immobilier,CONGE_PAYE,17/03/26,24-03-2026,8,0,Validé manager
+f18427db0f39,INTERIMAIRE,Crédit Immobilier,CP,31.08.2025,09-09-2025,10,0,A régulariser
+f18427db0f39,Intérimaire,Crédit Immobilier,CONGE_PAYE,2025-05-16,21.05.2025,6,0,Certificat fourni
+f18427db0f39,INTERIMAIRE,Crédit Immobilier,MALADIE,2026-01-29,01/29/2026,1,0,Validé manager
+f18427db0f39,INTERIMAIRE,Crédit Immobilier,rtt,26/04/26,26/04/26,1,1,A régulariser
+f18427db0f39,INTERIMAIRE,Crédit Immobilier,FORMATION,12/29/2025,12/30/2025,2,O,Validé manager
+f18427db0f39,Interimaire,Crédit Immobilier,CONGE_PAYE,04/23/2026,29.04.2026,7,O,En attente validation
+f18427db0f39,Intérimaire,Crédit Immobilier,rtt,09/28/2025,09/28/2025,1,N,URGENT
+f18427db0f39,Interimaire,Crédit Immobilier,Formation CFA,08.07.2025,12-07-2025,5,1,URGENT
+f18427db0f39,Interimaire,Crédit Immobilier,FORMATION,10/28/2025,01.11.2025,-1,O,URGENT
+f18427db0f39,Interimaire,Crédit Immobilier,CP,18-02-2026,25.02.2026,8,OUI,Certificat fourni
+f18427db0f39,Intérimaire,Crédit Immobilier,CONGE_PAYE,04.04.2025,04/13/2025,10,NON,Validé manager
+f18427db0f39,INTERIMAIRE,Crédit Immobilier,MALADIE,03/03/2026,05/03/2026,3,Y,En attente validation
+f18427db0f39,Intérimaire,,MALADIE,13.08.2025,2025-08-15,3,OUI,
+f18427db0f39,INTERIMAIRE,Crédit Immobilier,Maladie,06-05-2025,08-05-2025,3,NON,Validé manager
+f18427db0f39,INTERIMAIRE,Crédit Immobilier,FORMATION,19/08/2025,21/08/2025,3,1,Certificat fourni
+f18427db0f39,Interimaire,Crédit Immobilier,Maladie,30/06/25,03-07-2025,4,NON,RAS
+f18427db0f39,Interimaire,,FORMATION,05/01/2026,2026-01-07,3,Y,
+f18427db0f39,INTERIMAIRE,Crédit Immobilier,Absent,01-12-2025,2025-12-01,1,O,Validé manager
+f18427db0f39,Interimaire,Crédit Immobilier,MALADIE,2026-01-07,2026-01-09,3,0,RAS
+f18427db0f39,INTERIMAIRE,Crédit Immobilier,CP,07.05.2025,13/05/25,-1,NON,A régulariser
+f18427db0f39,Interimaire,Crédit Immobilier,FORMATION,27/05/2025,31.05.2025,5,NON,URGENT
+f18427db0f39,Interimaire,Crédit Immobilier,rtt,25-04-2026,04/25/2026,1,OUI,A régulariser
+f18427db0f39,INTERIMAIRE,Crédit Immobilier,RTT,03/09/2025,03-09-2025,1,O,RAS
+f18427db0f39,Intérimaire,Crédit Immobilier,Maladie,04/11/2025,06/11/2025,3,O,RAS
+f18427db0f39,Interimaire,Crédit Immobilier,Maladie,13/01/26,13.01.2026,1,N,A régulariser
+f18427db0f39,INTERIMAIRE,Crédit Immobilier,Formation CFA,20-04-2026,2026-04-21,2,Y,En attente validation
+f18427db0f39,Interimaire,Crédit Immobilier,Formation CFA,01/24/2026,01/27/2026,4,1,
+f18427db0f39,Intérimaire,Crédit Immobilier,Formation,25/08/2025,29-08-2025,5,0,URGENT
+f18427db0f39,Interimaire,Crédit Immobilier,RTT,09/28/2025,09/28/2025,1,0,Validé manager
+6f6abcb8b4ba,PRESTATAIRE,Recouvrement,CONGE_PAYE,03/16/2025,20/03/2025,5,O,URGENT
+6f6abcb8b4ba,Prestataire,Recouvrement,CONGE_PAYE,16-09-2024,2024-09-24,9,OUI,
+6f6abcb8b4ba,PRESTATAIRE,Recouvrement,Formation CFA,2025-05-20,24-05-2025,5,N,URGENT
+6f6abcb8b4ba,Prestataire,Recouvrement,rtt,26-01-2024,01/26/2024,1,NON,En attente validation
+6f6abcb8b4ba,Prestataire,Recouvrement,Congé Payé,2025-12-26,31/12/25,6,0,RAS
+6f6abcb8b4ba,PRESTATAIRE,Recouvrement,Congé Payé,17/03/2024,26-03-2024,10,N,Validé manager
+6f6abcb8b4ba,Prestataire,Recouvrement,MALADIE,27/10/2025,2025-10-27,1,OUI,Validé manager
+6f6abcb8b4ba,PRESTATAIRE,Recouvrement,Maladie,2024-09-25,28.09.2024,4,Y,
+6f6abcb8b4ba,Prestataire,Recouvrement,Maladie,29.06.2025,30.06.2025,2,OUI,Validé manager
+6f6abcb8b4ba,PRESTATAIRE,Recouvrement,Maladie,25/02/2026,25/02/2026,1,NON,En attente validation
+6f6abcb8b4ba,PRESTATAIRE,Recouvrement,CP,05/31/2025,09-06-2025,10,Y,En attente validation
+6f6abcb8b4ba,Prestataire,Recouvrement,rtt,28/09/2025,2025-09-28,1,N,A régulariser
+6f6abcb8b4ba,Prestataire,Recouvrement,RTT,2025-08-27,27/08/25,1,NON,Validé manager
+6f6abcb8b4ba,Prestataire,,CONGE_PAYE,09.02.2026,14/02/26,6,OUI,En attente validation
+6f6abcb8b4ba,Prestataire,Recouvrement,CP,09/01/2026,01/14/2026,6,Y,URGENT
+6f6abcb8b4ba,PRESTATAIRE,,CP,07-06-2025,15.06.2025,9,NON,RAS
+6f6abcb8b4ba,Prestataire,Recouvrement,rtt,28-12-2025,28/12/2025,1,OUI,Certificat fourni
+6f6abcb8b4ba,Prestataire,Recouvrement,MALADIE,11.02.2026,12-02-2026,2,OUI,En attente validation
+6f6abcb8b4ba,Prestataire,Recouvrement,Absent,19/05/25,05/19/2025,1,N,Validé manager
+6f6abcb8b4ba,Prestataire,Recouvrement,rtt,28/11/2025,28.11.2025,1,0,En attente validation
+6f6abcb8b4ba,Prestataire,Recouvrement,CP,01/20/2025,01/24/2025,5,O,RAS
+6f6abcb8b4ba,Prestataire,Recouvrement,Maladie,10/05/2024,2024-05-14,5,0,RAS
+6f6abcb8b4ba,PRESTATAIRE,Recouvrement,RTT,12/22/2024,22/12/2024,1,1,URGENT
+6f6abcb8b4ba,PRESTATAIRE,,FORMATION,24/02/24,27/02/2024,4,N,RAS
+6f6abcb8b4ba,Prestataire,Recouvrement,FORMATION,03.04.2024,04-04-2024,2,1,URGENT
+6f6abcb8b4ba,PRESTATAIRE,Recouvrement,rtt,25/06/2025,25-06-2025,1,1,Certificat fourni
+6f6abcb8b4ba,Prestataire,Recouvrement,Formation CFA,27/12/2025,29/12/25,3,1,Validé manager
+6f6abcb8b4ba,Prestataire,Recouvrement,CONGE_PAYE,18.12.2025,22/12/2025,5,OUI,RAS
+6f6abcb8b4ba,Prestataire,Recouvrement,Congé Payé,29/06/25,04/07/2025,6,OUI,URGENT
+6f6abcb8b4ba,Prestataire,Recouvrement,Congé Payé,2025-07-11,17/07/25,7,Y,URGENT
+6f6abcb8b4ba,PRESTATAIRE,Recouvrement,Congé Payé,20.12.2025,24.12.2025,5,Y,RAS
+6f6abcb8b4ba,Prestataire,Recouvrement,CONGE_PAYE,19/08/25,28-08-2025,10,O,A régulariser
+c80712ac62d7,cdi,Conformité KYC,MALADIE,11.07.2024,15-07-2024,5,1,
+c80712ac62d7,CDI,Conformité KYC,rtt,26.12.2024,26/12/2024,1,0,En attente validation
+c80712ac62d7,cdi,Conformité KYC,Formation,26/07/25,30.07.2025,5,Y,RAS
+c80712ac62d7,cdi,Conformité KYC,CONGE_PAYE,2025-07-07,15/07/25,9,0,URGENT
+c80712ac62d7,cdi,Conformité KYC,RTT,10/26/2024,2024-10-26,1,OUI,A régulariser
+c80712ac62d7,cdi,Conformité KYC,MALADIE,10/25/2025,27-10-2025,3,O,
+c80712ac62d7,CDI,Conformité KYC,CONGE_PAYE,05/26/2024,03-06-2024,9,NON,
+c80712ac62d7,cdi,Conformité KYC,FORMATION,2026-05-23,05/24/2026,2,NON,En attente validation
+c80712ac62d7,cdi,Conformité KYC,MALADIE,06/05/2025,08-05-2025,3,OUI,
+c80712ac62d7,CDI,Conformité KYC,RTT,06.05.2026,06/05/2026,1,OUI,Certificat fourni
+c80712ac62d7,cdi,Conformité KYC,rtt,15/05/26,15/05/26,1,1,En attente validation
+c80712ac62d7,cdi,Conformité KYC,MALADIE,23/09/2024,26/09/2024,4,0,
+c80712ac62d7,CDI,Conformité KYC,Maladie,2025-10-26,29-10-2025,4,NON,
+c80712ac62d7,CDI,Conformité KYC,CP,2025-07-27,05-08-2025,10,Y,Validé manager
+c80712ac62d7,CDI,Conformité KYC,CONGE_PAYE,2024-09-04,11/09/2024,8,0,A régulariser
+c80712ac62d7,cdi,Conformité KYC,CONGE_PAYE,2026-03-07,03/13/2026,7,OUI,A régulariser
+c80712ac62d7,CDI,Conformité KYC,rtt,2024-12-03,03.12.2024,1,0,Certificat fourni
+c80712ac62d7,cdi,Conformité KYC,rtt,26-10-2024,10/26/2024,1,O,URGENT
+c80712ac62d7,CDI,Conformité KYC,Congé Payé,11-04-2026,04/20/2026,10,O,URGENT
+c80712ac62d7,CDI,Conformité KYC,rtt,2024-12-02,2024-12-02,95,OUI,En attente validation
+c80712ac62d7,CDI,Conformité KYC,CONGE_PAYE,02-03-2025,07/03/2025,6,OUI,En attente validation
+c80712ac62d7,CDI,Conformité KYC,MALADIE,15.11.2024,17.11.2024,3,Y,URGENT
+c80712ac62d7,CDI,Conformité KYC,Congé Payé,13/01/25,18/01/2025,6,Y,En attente validation
+c80712ac62d7,cdi,Conformité KYC,MALADIE,25-08-2025,27-08-2025,3,OUI,
+c80712ac62d7,cdi,Conformité KYC,MALADIE,13/06/25,13-06-2025,1,Y,En attente validation
+c80712ac62d7,cdi,Conformité KYC,Congé Payé,07/09/2025,2025-09-12,6,OUI,Validé manager
+c80712ac62d7,CDI,Conformité KYC,rtt,13/06/2025,13/06/2025,-1,N,Validé manager
+c80712ac62d7,CDI,Conformité KYC,CP,07/19/2025,26-07-2025,8,O,RAS
+c80712ac62d7,cdi,Conformité KYC,Absent,24/01/2025,24.01.2025,-1,Y,RAS
+c80712ac62d7,cdi,Conformité KYC,CONGE_PAYE,30.04.2025,2025-05-05,6,0,URGENT
+d937eb392f22,cdi,Épargne & Placements,Formation,11.01.2024,12.01.2024,2,NON,RAS
+d937eb392f22,cdi,Épargne & Placements,Maladie,04/22/2026,26-04-2026,5,NON,A régulariser
+d937eb392f22,CDI,Épargne & Placements,CONGE_PAYE,03/22/2026,30-03-2026,9,O,A régulariser
+d937eb392f22,CDI,Épargne & Placements,RTT,2026-03-05,05-03-2026,1,NON,URGENT
+d937eb392f22,cdi,,Formation,25/03/2024,26/03/24,2,O,Validé manager
+d937eb392f22,CDI,Épargne & Placements,rtt,2025-11-06,06.11.2025,1,Y,Certificat fourni
+d937eb392f22,CDI,,Congé Payé,04-03-2025,12-03-2025,9,O,
+d937eb392f22,cdi,Épargne & Placements,CONGE_PAYE,27/06/24,2024-07-01,5,0,RAS
+d937eb392f22,CDI,Épargne & Placements,Formation,12/17/2024,21-12-2024,5,Y,En attente validation
+d937eb392f22,CDI,Épargne & Placements,CP,20/11/2025,11/29/2025,10,O,
+d937eb392f22,CDI,Épargne & Placements,rtt,05/16/2025,16/05/2025,1,OUI,Certificat fourni
+d937eb392f22,cdi,Épargne & Placements,MALADIE,20/01/25,2025-01-24,5,OUI,
+d937eb392f22,cdi,Épargne & Placements,CP,08.01.2026,15/01/2026,8,NON,Validé manager
+d937eb392f22,CDI,Épargne & Placements,MALADIE,14.01.2024,18/01/24,5,N,A régulariser
+d937eb392f22,CDI,Épargne & Placements,Congé Payé,27.01.2024,22-01-2024,5,OUI,RAS
+d937eb392f22,CDI,Épargne & Placements,Formation,25/04/2026,28-04-2026,4,0,RAS
+d937eb392f22,cdi,Épargne & Placements,CP,07/01/2025,2025-01-13,7,O,URGENT
+d937eb392f22,cdi,Épargne & Placements,Congé Payé,05/13/2024,2024-05-19,7,Y,
+d937eb392f22,CDI,Épargne & Placements,CP,25/10/2025,03/11/2025,10,O,RAS
+d937eb392f22,CDI,Épargne & Placements,CP,2025-11-07,12/11/2025,6,N,En attente validation
+d937eb392f22,cdi,Épargne & Placements,Congé Payé,14-06-2025,22.06.2025,9,0,En attente validation
+d937eb392f22,CDI,Épargne & Placements,Congé Payé,22-11-2024,11/30/2024,9,NON,Validé manager
+d937eb392f22,cdi,Épargne & Placements,Maladie,21.03.2024,25.03.2024,5,1,URGENT
+d937eb392f22,cdi,Épargne & Placements,Congé Payé,03/21/2026,30.03.2026,10,N,
+d937eb392f22,cdi,Épargne & Placements,Congé Payé,2025-12-16,2025-12-21,6,NON,En attente validation
+d937eb392f22,CDI,,CONGE_PAYE,10.04.2024,15-04-2024,6,NON,
+d937eb392f22,CDI,Épargne & Placements,MALADIE,12-01-2025,13-01-2025,2,Y,RAS
+d937eb392f22,CDI,Épargne & Placements,rtt,05/10/2024,05.10.2024,1,1,URGENT
+d937eb392f22,CDI,Épargne & Placements,Congé Payé,2024-02-12,19.02.2024,8,Y,
+d937eb392f22,cdi,Épargne & Placements,CP,10/23/2024,29-10-2024,7,0,
+26bc6c078665,CDI,Épargne & Placements,CONGE_PAYE,09-09-2024,18/09/24,10,1,En attente validation
+26bc6c078665,CDI,Épargne & Placements,CONGE_PAYE,11.08.2024,2024-08-15,5,1,RAS
+26bc6c078665,CDI,Épargne & Placements,CONGE_PAYE,12/03/2024,19/03/24,8,N,URGENT
+26bc6c078665,CDI,Épargne & Placements,Formation CFA,2025-01-28,01.02.2025,5,N,Certificat fourni
+26bc6c078665,cdi,Épargne & Placements,Congé Payé,13.01.2025,19.01.2025,7,Y,RAS
+26bc6c078665,cdi,Épargne & Placements,CONGE_PAYE,02-07-2024,06/07/2024,5,O,
+26bc6c078665,CDI,Épargne & Placements,Congé Payé,2025-02-07,12-02-2025,6,1,Certificat fourni
+26bc6c078665,cdi,Épargne & Placements,FORMATION,03-10-2025,06-10-2025,4,NON,RAS
+26bc6c078665,cdi,Épargne & Placements,CP,04/15/2024,19/04/2024,5,0,
+26bc6c078665,CDI,Épargne & Placements,Absent,2025-02-08,08.02.2025,1,OUI,
+26bc6c078665,cdi,,rtt,28.03.2024,03/28/2024,1,N,URGENT
+26bc6c078665,cdi,Épargne & Placements,RTT,12/23/2024,12/23/2024,1,0,
+26bc6c078665,cdi,Épargne & Placements,RTT,2024-08-23,23/08/2024,1,Y,A régulariser
+26bc6c078665,CDI,Épargne & Placements,CONGE_PAYE,08-03-2024,12.03.2024,5,Y,Validé manager
+26bc6c078665,cdi,Épargne & Placements,Congé Payé,18.01.2024,27.01.2024,10,N,
+26bc6c078665,cdi,Épargne & Placements,Congé Payé,29.04.2024,08-05-2024,10,1,Validé manager
+26bc6c078665,cdi,Épargne & Placements,Congé Payé,28/04/2024,06.05.2024,9,Y,Certificat fourni
+26bc6c078665,CDI,Épargne & Placements,rtt,26.01.2024,26-01-2024,1,N,Certificat fourni
+26bc6c078665,cdi,Épargne & Placements,rtt,29/04/2026,29.04.2026,1,NON,Certificat fourni
+26bc6c078665,CDI,Épargne & Placements,CP,04.05.2025,09.05.2025,6,1,
+26bc6c078665,cdi,Épargne & Placements,RTT,25/01/2026,2026-01-22,1,O,Certificat fourni
+26bc6c078665,CDI,Épargne & Placements,MALADIE,2026-01-12,2026-01-14,3,O,En attente validation
+26bc6c078665,CDI,Épargne & Placements,MALADIE,17/04/26,04/19/2026,3,N,RAS
+208ac4d1680a,alternant,Épargne & Placements,MALADIE,23.05.2024,24-05-2024,-1,1,Validé manager
+208ac4d1680a,alternant,Épargne & Placements,CP,04/02/2024,11.02.2024,8,0,Validé manager
+208ac4d1680a,alternant,Épargne & Placements,rtt,2025-06-26,26/06/2025,1,O,URGENT
+208ac4d1680a,Alternant,Épargne & Placements,rtt,10/24/2024,24/10/24,1,N,A régulariser
+208ac4d1680a,Alternant,Épargne & Placements,MALADIE,22.05.2024,25-05-2024,4,N,En attente validation
+208ac4d1680a,alternant,Épargne & Placements,MALADIE,22/02/25,26-02-2025,5,Y,A régulariser
+208ac4d1680a,Alternant,Épargne & Placements,Semaine école,26.06.2025,27.06.2025,2,0,
+208ac4d1680a,alternant,Épargne & Placements,CP,2024-06-05,2024-06-09,5,O,A régulariser
+208ac4d1680a,Alternant,Épargne & Placements,MALADIE,2025-05-11,13/05/2025,3,0,A régulariser
+208ac4d1680a,Alternant,Épargne & Placements,RTT,24-11-2024,24/11/2024,1,Y,Validé manager
+208ac4d1680a,Alternant,Épargne & Placements,rtt,09/27/2024,27-09-2024,1,NON,En attente validation
+208ac4d1680a,Alternant,Épargne & Placements,CONGE_PAYE,2025-03-27,05-04-2025,10,0,RAS
+208ac4d1680a,Alternant,Épargne & Placements,RTT,24.02.2025,2025-02-24,1,N,
+208ac4d1680a,Alternant,Épargne & Placements,rtt,25/06/2025,25-06-2025,1,Y,
+208ac4d1680a,alternant,Épargne & Placements,Formation CFA,25-08-2024,28-08-2024,4,NON,Validé manager
+208ac4d1680a,alternant,Épargne & Placements,CONGE_PAYE,09-06-2024,16/06/2024,8,1,Validé manager
+208ac4d1680a,Alternant,Épargne & Placements,CP,10.06.2024,19/06/2024,10,N,A régulariser
+208ac4d1680a,alternant,Épargne & Placements,RTT,05/28/2024,28.05.2024,1,Y,RAS
+208ac4d1680a,alternant,Épargne & Placements,RTT,24-05-2025,05/24/2025,1,0,URGENT
+208ac4d1680a,alternant,Épargne & Placements,Congé Payé,24.06.2025,30/06/25,7,Y,A régulariser
+208ac4d1680a,Alternant,Épargne & Placements,Congé Payé,22/07/24,26.07.2024,5,Y,A régulariser
+208ac4d1680a,alternant,Épargne & Placements,Congé Payé,20/05/25,2025-05-25,6,0,URGENT
+208ac4d1680a,alternant,Épargne & Placements,Congé Payé,08/01/2025,2025-01-17,10,O,
+208ac4d1680a,Alternant,Épargne & Placements,Formation CFA,2024-07-07,2024-07-08,2,N,Validé manager
+208ac4d1680a,Alternant,Épargne & Placements,Congé Payé,08/25/2024,31/08/24,7,N,RAS
+208ac4d1680a,Alternant,Épargne & Placements,MALADIE,07-05-2025,2025-05-09,3,NON,URGENT
+208ac4d1680a,alternant,Épargne & Placements,MALADIE,30.01.2024,01/30/2024,1,N,En attente validation
+208ac4d1680a,alternant,Épargne & Placements,Maladie,21/11/2024,24.11.2024,4,Y,URGENT
+814dd660e7ef,cdi,Épargne & Placements,FORMATION,28/10/2024,30/10/24,3,OUI,URGENT
+814dd660e7ef,cdi,Épargne & Placements,MALADIE,02.06.2025,03-06-2025,2,N,RAS
+814dd660e7ef,cdi,Épargne & Placements,rtt,2026-06-09,2026-06-09,1,N,En attente validation
+814dd660e7ef,CDI,Épargne & Placements,Congé Payé,10/17/2025,25/10/25,9,1,
+814dd660e7ef,CDI,Épargne & Placements,CP,06/27/2025,06-07-2025,10,0,A régulariser
+814dd660e7ef,CDI,Épargne & Placements,Congé Payé,09/18/2024,22-09-2024,5,NON,En attente validation
+814dd660e7ef,CDI,Épargne & Placements,Congé Payé,2026-05-23,2026-05-30,8,O,
+814dd660e7ef,cdi,Épargne & Placements,MALADIE,2024-10-06,2024-10-10,5,O,Validé manager
+814dd660e7ef,CDI,Épargne & Placements,Congé Payé,13.08.2025,2025-08-17,5,O,A régulariser
+814dd660e7ef,CDI,Épargne & Placements,Formation,26/01/2026,29-01-2026,4,OUI,
+814dd660e7ef,CDI,Épargne & Placements,Absent,04/08/2024,2024-08-04,1,O,
+814dd660e7ef,cdi,Épargne & Placements,CONGE_PAYE,08.12.2025,2025-12-15,8,Y,
+814dd660e7ef,cdi,Épargne & Placements,CP,31/03/24,04.04.2024,5,OUI,
+814dd660e7ef,CDI,Épargne & Placements,rtt,26-11-2024,26-11-2024,1,NON,A régulariser
+814dd660e7ef,CDI,Épargne & Placements,CONGE_PAYE,29/12/2025,04.01.2026,7,0,En attente validation
+814dd660e7ef,cdi,,MALADIE,13.05.2025,17/05/25,5,0,En attente validation
+814dd660e7ef,CDI,Épargne & Placements,CP,2025-10-02,09.10.2025,8,O,Certificat fourni
+814dd660e7ef,CDI,Épargne & Placements,Congé Payé,20/06/25,06/24/2025,5,0,En attente validation
+814dd660e7ef,cdi,Épargne & Placements,CP,01/23/2026,2026-01-29,7,NON,
+814dd660e7ef,cdi,Épargne & Placements,CONGE_PAYE,01/07/2025,10-07-2025,10,NON,A régulariser
+814dd660e7ef,cdi,Épargne & Placements,rtt,28-04-2026,28/04/26,1,Y,A régulariser
+814dd660e7ef,cdi,Épargne & Placements,Formation,24-05-2026,27.05.2026,4,1,URGENT
+814dd660e7ef,cdi,Épargne & Placements,CONGE_PAYE,2026-05-02,08.05.2026,7,N,
+814dd660e7ef,CDI,Épargne & Placements,rtt,2024-04-19,19-04-2024,1,NON,
+814dd660e7ef,CDI,Épargne & Placements,Maladie,12-12-2024,12/13/2024,2,0,
+814dd660e7ef,cdi,Épargne & Placements,Formation,2024-07-24,28/07/2024,5,O,RAS
+814dd660e7ef,cdi,Épargne & Placements,rtt,17/10/24,17/10/2024,1,N,En attente validation
+814dd660e7ef,CDI,Épargne & Placements,MALADIE,13/11/25,14.11.2025,2,NON,Validé manager
+814dd660e7ef,CDI,Épargne & Placements,FORMATION,01/25/2024,2024-01-29,5,Y,Validé manager
+814dd660e7ef,cdi,Épargne & Placements,rtt,28.05.2025,28/05/2025,1,0,A régulariser
+814dd660e7ef,CDI,Épargne & Placements,RTT,12/10/2025,12.10.2025,1,Y,
+c04fbf862b71,cdi,Crédit Immobilier,CONGE_PAYE,07.01.2026,11.01.2026,5,O,RAS
+c04fbf862b71,CDI,,CP,25-01-2026,2026-01-30,6,Y,URGENT
+c04fbf862b71,CDI,Crédit Immobilier,RTT,27/09/25,09/27/2025,1,N,Validé manager
+c04fbf862b71,CDI,Crédit Immobilier,Absent,25-08-2024,25.08.2024,1,O,
+c04fbf862b71,cdi,Crédit Immobilier,rtt,2026-04-18,04/18/2026,1,1,En attente validation
+c04fbf862b71,cdi,Crédit Immobilier,MALADIE,01/11/2024,04-11-2024,4,NON,
+c04fbf862b71,CDI,Crédit Immobilier,rtt,01/24/2026,01/24/2026,1,OUI,
+c04fbf862b71,CDI,Crédit Immobilier,Formation,04-11-2024,2024-11-05,2,0,
+c04fbf862b71,CDI,Crédit Immobilier,CP,2026-05-15,22-05-2026,8,Y,A régulariser
+c04fbf862b71,CDI,Crédit Immobilier,CONGE_PAYE,2024-08-30,03-09-2024,5,O,
+c04fbf862b71,CDI,Crédit Immobilier,rtt,11/22/2025,22-11-2025,1,0,A régulariser
+c04fbf862b71,CDI,Crédit Immobilier,MALADIE,06.02.2026,08.02.2026,3,Y,RAS
+c04fbf862b71,cdi,Crédit Immobilier,Formation,25-11-2025,27/11/25,3,Y,
+c04fbf862b71,cdi,Crédit Immobilier,CONGE_PAYE,31.10.2024,08-11-2024,9,1,
+c04fbf862b71,cdi,Crédit Immobilier,RTT,28/11/24,2024-11-28,1,0,Validé manager
+c04fbf862b71,cdi,Crédit Immobilier,Congé Payé,10.06.2025,06/15/2025,6,N,
+c04fbf862b71,CDI,Crédit Immobilier,CONGE_PAYE,09/28/2025,05.10.2025,95,0,
+c04fbf862b71,CDI,Crédit Immobilier,rtt,21.01.2025,2025-01-21,1,OUI,
+c04fbf862b71,CDI,Crédit Immobilier,Maladie,08.04.2024,12-04-2024,5,0,Certificat fourni
+c04fbf862b71,CDI,Crédit Immobilier,Formation,2025-08-24,08/28/2025,5,O,En attente validation
+c04fbf862b71,cdi,Crédit Immobilier,Formation CFA,06/25/2024,28/06/24,4,Y,En attente validation
+c04fbf862b71,cdi,Crédit Immobilier,Absent,2024-07-29,29/07/24,1,N,URGENT
+c04fbf862b71,CDI,Crédit Immobilier,Maladie,02/16/2026,16-02-2026,1,1,En attente validation
+c04fbf862b71,cdi,Crédit Immobilier,CONGE_PAYE,14-02-2026,19/02/2026,6,Y,RAS
+c04fbf862b71,CDI,Crédit Immobilier,Formation,18-07-2024,2024-07-20,3,Y,RAS
+c04fbf862b71,CDI,Crédit Immobilier,rtt,01/06/2024,05/28/2024,1,O,RAS
+c04fbf862b71,CDI,Crédit Immobilier,CONGE_PAYE,18/02/2026,02/22/2026,5,Y,
+c04fbf862b71,CDI,Crédit Immobilier,FORMATION,2024-06-28,29-06-2024,2,OUI,
+c04fbf862b71,cdi,Crédit Immobilier,CP,11.06.2024,19/06/2024,9,N,En attente validation
+bc7caf4a7bd1,CDI,Conformité KYC,CP,25-08-2025,2025-09-01,8,N,Certificat fourni
+bc7caf4a7bd1,cdi,Conformité KYC,rtt,28/06/2025,28-06-2025,1,0,En attente validation
+bc7caf4a7bd1,CDI,Conformité KYC,MALADIE,21/03/2025,22/03/25,2,1,A régulariser
+bc7caf4a7bd1,CDI,Conformité KYC,Congé Payé,02/02/2026,07.02.2026,6,O,En attente validation
+bc7caf4a7bd1,CDI,Conformité KYC,Formation CFA,26/08/24,27.08.2024,2,N,
+bc7caf4a7bd1,cdi,Conformité KYC,Congé Payé,12-02-2025,17/02/25,6,1,Validé manager
+bc7caf4a7bd1,CDI,Conformité KYC,CP,28.03.2024,01.04.2024,5,1,
+bc7caf4a7bd1,cdi,Conformité KYC,Congé Payé,05-01-2025,11-01-2025,7,NON,A régulariser
+bc7caf4a7bd1,CDI,Conformité KYC,Maladie,14.09.2025,09/18/2025,5,0,Validé manager
+bc7caf4a7bd1,CDI,,RTT,22/01/2026,22.01.2026,1,1,
+bc7caf4a7bd1,cdi,Conformité KYC,Maladie,06/14/2025,06/18/2025,120,N,RAS
+bc7caf4a7bd1,CDI,Conformité KYC,Congé Payé,18-05-2024,2024-05-22,5,OUI,RAS
+bc7caf4a7bd1,cdi,Conformité KYC,rtt,16.06.2025,16/06/2025,1,1,Certificat fourni
+bc7caf4a7bd1,CDI,Conformité KYC,RTT,25/02/25,25.02.2025,1,O,
+bc7caf4a7bd1,CDI,Conformité KYC,CP,18/04/2025,22/04/2025,95,NON,RAS
+bc7caf4a7bd1,CDI,Conformité KYC,rtt,22-12-2024,22/12/24,1,0,
+bc7caf4a7bd1,cdi,Conformité KYC,Congé Payé,13.08.2024,2024-08-18,6,0,
+bc7caf4a7bd1,CDI,Conformité KYC,CONGE_PAYE,13.04.2026,19/04/2026,7,0,Certificat fourni
+bc7caf4a7bd1,CDI,Conformité KYC,MALADIE,20/03/2026,24.03.2026,5,OUI,En attente validation
+bc7caf4a7bd1,CDI,Conformité KYC,rtt,26/03/2024,22-03-2024,1,1,A régulariser
+bc7caf4a7bd1,cdi,Conformité KYC,Congé Payé,20-04-2026,2026-04-25,6,O,URGENT
+bc7caf4a7bd1,CDI,Conformité KYC,MALADIE,09/08/2025,09.08.2025,1,NON,RAS
+4ed6d8faffc2,cdd,Crédit Immobilier,RTT,02.04.2024,2024-04-02,1,1,Certificat fourni
+4ed6d8faffc2,CDD,Crédit Immobilier,Congé Payé,15.01.2024,01/21/2024,7,N,
+4ed6d8faffc2,CDD,Crédit Immobilier,CP,13/01/2024,18/01/24,6,OUI,
+4ed6d8faffc2,CDD,Crédit Immobilier,MALADIE,28-05-2024,05/28/2024,1,0,Certificat fourni
+4ed6d8faffc2,cdd,,CP,01/20/2024,29/01/24,10,OUI,A régulariser
+4ed6d8faffc2,cdd,Crédit Immobilier,rtt,05/08/2024,05-08-2024,1,O,URGENT
+4ed6d8faffc2,CDD,Crédit Immobilier,Formation,26/03/2024,30.03.2024,5,O,Certificat fourni
+4ed6d8faffc2,cdd,,rtt,25/06/24,06/25/2024,1,OUI,Certificat fourni
+4ed6d8faffc2,cdd,Crédit Immobilier,CP,07/02/2024,16.02.2024,10,OUI,RAS
+4ed6d8faffc2,CDD,Crédit Immobilier,FORMATION,2024-03-24,27/03/24,4,1,
+4ed6d8faffc2,cdd,Crédit Immobilier,MALADIE,09/06/2024,11-06-2024,3,Y,URGENT
+4ed6d8faffc2,CDD,Crédit Immobilier,RTT,28.02.2024,28/02/24,1,NON,
+4ed6d8faffc2,CDD,Crédit Immobilier,RTT,22/07/2024,07/22/2024,1,N,RAS
+4ed6d8faffc2,CDD,Crédit Immobilier,Formation CFA,2024-07-12,07/15/2024,4,1,RAS
+4ed6d8faffc2,CDD,Crédit Immobilier,RTT,28/04/24,2024-04-28,1,0,
+4ed6d8faffc2,cdd,Crédit Immobilier,Formation,31.07.2024,03-08-2024,4,OUI,
+4ed6d8faffc2,CDD,,MALADIE,25.01.2024,01/26/2024,2,OUI,URGENT
+4ed6d8faffc2,cdd,Crédit Immobilier,rtt,27/04/24,27/04/24,1,N,Validé manager
+4ed6d8faffc2,cdd,Crédit Immobilier,rtt,2024-05-26,05/26/2024,1,O,En attente validation
+4ed6d8faffc2,CDD,Crédit Immobilier,Formation CFA,07/25/2024,07/28/2024,4,O,
+4ed6d8faffc2,cdd,Crédit Immobilier,Maladie,13/01/2024,01/13/2024,1,O,Certificat fourni
+4ed6d8faffc2,CDD,Crédit Immobilier,CP,09.03.2024,18/03/24,10,N,URGENT
+4ed6d8faffc2,CDD,Crédit Immobilier,Formation CFA,11/04/2024,2024-04-13,3,NON,URGENT
+4ed6d8faffc2,CDD,Crédit Immobilier,rtt,2024-01-25,25/01/24,1,N,
+4ed6d8faffc2,cdd,Crédit Immobilier,CONGE_PAYE,2024-01-28,02-02-2024,6,1,A régulariser
+fa481ecc15bc,INTERIMAIRE,Recouvrement,Congé Payé,01.03.2025,2025-03-07,7,1,
+fa481ecc15bc,Intérimaire,Recouvrement,CP,04/03/2025,09-03-2025,6,N,
+fa481ecc15bc,Intérimaire,Recouvrement,rtt,05/02/2025,31-01-2025,1,Y,A régulariser
+fa481ecc15bc,INTERIMAIRE,Recouvrement,Maladie,09/02/2025,2025-02-12,4,NON,
+fa481ecc15bc,Interimaire,Recouvrement,CONGE_PAYE,2024-12-05,13.12.2024,9,OUI,
+fa481ecc15bc,Intérimaire,Recouvrement,RTT,2024-10-26,26/10/2024,1,0,RAS
+fa481ecc15bc,Interimaire,Recouvrement,Congé Payé,26/11/2024,2024-12-04,9,OUI,Validé manager
+fa481ecc15bc,Interimaire,Recouvrement,rtt,17.01.2025,01/17/2025,1,NON,Validé manager
+fa481ecc15bc,Interimaire,Recouvrement,rtt,25.01.2025,25.01.2025,1,OUI,
+fa481ecc15bc,Interimaire,Recouvrement,Congé Payé,2025-04-07,2025-04-11,5,1,
+fa481ecc15bc,Intérimaire,Recouvrement,MALADIE,29.08.2024,31.08.2024,3,NON,En attente validation
+fa481ecc15bc,Interimaire,Recouvrement,Maladie,2024-11-16,2024-11-19,4,1,RAS
+fa481ecc15bc,Interimaire,Recouvrement,CONGE_PAYE,27-08-2024,2024-09-05,10,Y,RAS
+fa481ecc15bc,Interimaire,Recouvrement,MALADIE,02-02-2025,2025-02-05,4,OUI,RAS
+fa481ecc15bc,Interimaire,Recouvrement,CONGE_PAYE,30/10/2024,08/11/2024,10,1,A régulariser
+fa481ecc15bc,Intérimaire,Recouvrement,RTT,27/09/2024,27/09/2024,1,NON,Certificat fourni
+fa481ecc15bc,Intérimaire,Recouvrement,Congé Payé,15.10.2024,24/10/2024,10,1,Certificat fourni
+fa481ecc15bc,Intérimaire,Recouvrement,CP,29/08/24,02-09-2024,5,1,
+fa481ecc15bc,INTERIMAIRE,Recouvrement,rtt,25/02/25,25.02.2025,1,OUI,A régulariser
+fa481ecc15bc,INTERIMAIRE,Recouvrement,RTT,26/02/2025,2025-02-26,1,N,En attente validation
+fa481ecc15bc,Intérimaire,Recouvrement,CONGE_PAYE,2025-03-11,20.03.2025,10,0,RAS
+fa481ecc15bc,Interimaire,Recouvrement,CP,24/12/24,02-01-2025,10,1,
+fa481ecc15bc,INTERIMAIRE,Recouvrement,MALADIE,22/01/2025,01/26/2025,5,0,Certificat fourni
+fa481ecc15bc,Interimaire,Recouvrement,MALADIE,20/03/25,23/03/25,4,OUI,URGENT
+fa481ecc15bc,INTERIMAIRE,Recouvrement,CONGE_PAYE,03/18/2025,27/03/25,10,O,
+e902689ee603,Intérimaire,Conformité KYC,MALADIE,16/05/2025,19/05/25,4,Y,Validé manager
+e902689ee603,Interimaire,Conformité KYC,Congé Payé,15.01.2026,2026-01-20,6,1,En attente validation
+e902689ee603,INTERIMAIRE,Conformité KYC,Formation,24-05-2026,26-05-2026,3,OUI,Certificat fourni
+e902689ee603,Interimaire,Conformité KYC,MALADIE,07.05.2025,08-05-2025,2,OUI,
+e902689ee603,Intérimaire,Conformité KYC,CP,12/26/2025,2026-01-02,8,1,
+e902689ee603,Interimaire,Conformité KYC,Maladie,04.07.2025,08-07-2025,5,0,
+e902689ee603,Intérimaire,Conformité KYC,MALADIE,2025-12-05,06/12/2025,2,N,En attente validation
+e902689ee603,Intérimaire,Conformité KYC,CP,11/01/2026,15/01/26,5,O,
+e902689ee603,Intérimaire,Conformité KYC,MALADIE,16.03.2026,20.03.2026,5,O,
+e902689ee603,Interimaire,Conformité KYC,Formation,25-11-2025,2025-11-26,2,NON,Validé manager
+e902689ee603,Interimaire,Conformité KYC,Maladie,06/04/2025,2025-04-08,3,O,URGENT
+e902689ee603,Intérimaire,Conformité KYC,CONGE_PAYE,18/02/2025,2025-02-24,7,0,Validé manager
+e902689ee603,Intérimaire,Conformité KYC,RTT,12.06.2026,12-06-2026,1,0,
+e902689ee603,INTERIMAIRE,Conformité KYC,RTT,25.11.2025,25/11/25,1,O,URGENT
+e902689ee603,Intérimaire,Conformité KYC,FORMATION,15/12/25,2025-12-13,2,OUI,En attente validation
+e902689ee603,Intérimaire,Conformité KYC,CONGE_PAYE,14-05-2025,18.05.2025,5,O,URGENT
+e902689ee603,INTERIMAIRE,Conformité KYC,Absent,09.02.2026,09/02/2026,1,OUI,Validé manager
+e902689ee603,Interimaire,Conformité KYC,Formation,2025-12-28,2025-12-31,4,OUI,URGENT
+e902689ee603,Intérimaire,Conformité KYC,CP,2026-06-06,2026-06-14,9,1,A régulariser
+e902689ee603,Intérimaire,Conformité KYC,RTT,26.05.2025,26-05-2025,1,N,
+e902689ee603,INTERIMAIRE,Conformité KYC,FORMATION,30.04.2025,02-05-2025,3,OUI,En attente validation
+e902689ee603,INTERIMAIRE,Conformité KYC,FORMATION,2026-01-28,31.01.2026,120,NON,En attente validation
+e349a88b7120,INTERIMAIRE,Recouvrement,CONGE_PAYE,25/03/2025,01/04/2025,8,NON,
+e349a88b7120,Interimaire,Recouvrement,CONGE_PAYE,18/10/2024,27-10-2024,10,1,Certificat fourni
+e349a88b7120,Interimaire,Recouvrement,Formation CFA,28/11/25,01.12.2025,4,Y,Validé manager
+e349a88b7120,Intérimaire,Recouvrement,FORMATION,25.12.2025,12/27/2025,3,1,En attente validation
+e349a88b7120,Interimaire,Recouvrement,Absent,2024-12-10,2024-12-10,1,N,
+e349a88b7120,Interimaire,Recouvrement,Maladie,11/16/2024,20.11.2024,5,1,Certificat fourni
+e349a88b7120,INTERIMAIRE,Recouvrement,Congé Payé,10/09/2024,15/09/2024,6,NON,RAS
+e349a88b7120,Intérimaire,Recouvrement,Formation,24.05.2025,27.05.2025,4,OUI,A régulariser
+e349a88b7120,Interimaire,Recouvrement,Congé Payé,19-10-2024,27/10/24,9,1,
+e349a88b7120,Intérimaire,Recouvrement,MALADIE,04.06.2025,07/06/2025,4,N,En attente validation
+e349a88b7120,INTERIMAIRE,Recouvrement,FORMATION,25/04/2024,2024-04-28,4,OUI,RAS
+e349a88b7120,Intérimaire,Recouvrement,RTT,02/20/2025,02/20/2025,120,NON,URGENT
+e349a88b7120,Intérimaire,Recouvrement,Absent,27/12/2025,2025-12-27,1,O,
+e349a88b7120,INTERIMAIRE,Recouvrement,CONGE_PAYE,31/01/25,05.02.2025,6,Y,URGENT
+e349a88b7120,Intérimaire,Recouvrement,RTT,27/01/25,01/27/2025,1,0,Certificat fourni
+e349a88b7120,Intérimaire,Recouvrement,RTT,24/10/2025,2025-10-24,1,O,En attente validation
+e349a88b7120,Interimaire,Recouvrement,CONGE_PAYE,09/18/2025,2025-09-27,10,1,
+e349a88b7120,INTERIMAIRE,Recouvrement,MALADIE,25/02/2025,01.03.2025,5,0,URGENT
+e349a88b7120,INTERIMAIRE,Recouvrement,CONGE_PAYE,2025-05-01,06-05-2025,6,N,Validé manager
+e349a88b7120,Intérimaire,Recouvrement,FORMATION,26/08/2025,08/27/2025,2,OUI,RAS
+e349a88b7120,Intérimaire,Recouvrement,Formation,29/04/25,01.05.2025,3,N,Certificat fourni
+e349a88b7120,Intérimaire,Recouvrement,MALADIE,09/17/2024,09/20/2024,4,N,RAS
+e349a88b7120,Intérimaire,Recouvrement,CONGE_PAYE,07/18/2025,22.07.2025,5,Y,A régulariser
+e349a88b7120,Interimaire,Recouvrement,MALADIE,25.05.2024,26-05-2024,2,0,
+e349a88b7120,Interimaire,Recouvrement,Maladie,04/01/2026,07.01.2026,4,Y,Certificat fourni
+4275e01c69ac,cdi,Crédit Immobilier,Congé Payé,12.06.2026,19.06.2026,8,NON,
+4275e01c69ac,cdi,Crédit Immobilier,Congé Payé,2024-11-09,14/11/2024,6,1,
+4275e01c69ac,CDI,Crédit Immobilier,Formation CFA,26.01.2024,29-01-2024,4,N,RAS
+4275e01c69ac,CDI,,CONGE_PAYE,01/18/2024,23.01.2024,6,1,
+4275e01c69ac,cdi,Crédit Immobilier,Congé Payé,04.06.2024,10/06/2024,7,Y,En attente validation
+4275e01c69ac,CDI,,Maladie,10.03.2025,2025-03-10,1,NON,RAS
+4275e01c69ac,cdi,Crédit Immobilier,Maladie,08.01.2024,11/01/2024,4,N,URGENT
+4275e01c69ac,cdi,Crédit Immobilier,FORMATION,26.03.2024,29-03-2024,4,N,En attente validation
+4275e01c69ac,cdi,Crédit Immobilier,Formation CFA,24.03.2025,2025-03-28,5,OUI,
+4275e01c69ac,cdi,Crédit Immobilier,CONGE_PAYE,28.06.2024,03-07-2024,6,Y,RAS
+4275e01c69ac,cdi,Crédit Immobilier,rtt,26.07.2024,07/26/2024,1,O,En attente validation
+4275e01c69ac,cdi,Crédit Immobilier,CONGE_PAYE,27/05/25,31/05/25,5,0,A régulariser
+4275e01c69ac,cdi,Crédit Immobilier,rtt,04.02.2026,04/02/2026,1,Y,Certificat fourni
+4275e01c69ac,cdi,Crédit Immobilier,CONGE_PAYE,10.08.2024,17.08.2024,-1,1,En attente validation
+4275e01c69ac,CDI,Crédit Immobilier,Congé Payé,20.08.2025,25/08/25,6,1,A régulariser
+4275e01c69ac,CDI,,Congé Payé,28/04/2025,05-05-2025,8,Y,RAS
+4275e01c69ac,CDI,Crédit Immobilier,FORMATION,04/25/2025,29/04/25,5,Y,URGENT
+4275e01c69ac,CDI,Crédit Immobilier,FORMATION,27.06.2025,2025-06-29,3,NON,
+4275e01c69ac,cdi,Crédit Immobilier,Maladie,2024-06-03,04/06/2024,2,O,Certificat fourni
+4275e01c69ac,cdi,Crédit Immobilier,CP,12-06-2025,06/19/2025,8,N,
+4275e01c69ac,CDI,Crédit Immobilier,Formation CFA,27/07/2024,28/07/2024,2,OUI,RAS
+4275e01c69ac,cdi,Crédit Immobilier,Congé Payé,12/12/2025,12/16/2025,5,O,Validé manager
+4275e01c69ac,CDI,Crédit Immobilier,RTT,16/01/26,16/01/26,1,Y,En attente validation
+4275e01c69ac,cdi,Crédit Immobilier,MALADIE,12/25/2024,2024-12-25,1,1,A régulariser
+4275e01c69ac,cdi,Crédit Immobilier,Formation CFA,06/27/2025,28.06.2025,2,0,URGENT
+4275e01c69ac,CDI,Crédit Immobilier,CP,09-06-2025,15/06/2025,7,OUI,RAS
+4275e01c69ac,cdi,Crédit Immobilier,RTT,25-03-2025,2025-03-25,1,0,Certificat fourni
+4275e01c69ac,CDI,Crédit Immobilier,rtt,07/26/2025,26.07.2025,1,1,
+4275e01c69ac,cdi,Crédit Immobilier,Absent,2025-02-20,20/02/25,1,0,URGENT
+a3a5e3238d7f,cdi,Recouvrement,RTT,24/07/25,24/07/2025,1,0,Validé manager
+a3a5e3238d7f,CDI,Recouvrement,CONGE_PAYE,03/22/2024,28-03-2024,7,1,
+a3a5e3238d7f,CDI,Recouvrement,CP,2025-09-06,2025-09-15,10,O,URGENT
+a3a5e3238d7f,CDI,Recouvrement,FORMATION,18.11.2024,11/19/2024,2,OUI,
+a3a5e3238d7f,CDI,Recouvrement,CP,22/05/2024,26.05.2024,5,Y,
+a3a5e3238d7f,CDI,Recouvrement,rtt,24-04-2026,2026-04-24,1,NON,Certificat fourni
+a3a5e3238d7f,CDI,Recouvrement,Formation CFA,19/05/26,23.05.2026,5,O,URGENT
+a3a5e3238d7f,CDI,Recouvrement,Formation CFA,24-05-2026,2026-05-25,2,N,Validé manager
+a3a5e3238d7f,CDI,Recouvrement,Congé Payé,2025-04-14,23/04/2025,10,NON,
+a3a5e3238d7f,cdi,Recouvrement,Formation CFA,25-02-2025,28/02/25,4,1,
+a3a5e3238d7f,CDI,Recouvrement,CONGE_PAYE,05-12-2024,13/12/24,9,1,Validé manager
+a3a5e3238d7f,CDI,Recouvrement,rtt,27-05-2024,05/27/2024,1,O,
+a3a5e3238d7f,CDI,Recouvrement,FORMATION,25.05.2025,29.05.2025,5,0,URGENT
+a3a5e3238d7f,CDI,Recouvrement,Formation CFA,11.12.2024,13-12-2024,3,0,Validé manager
+a3a5e3238d7f,cdi,Recouvrement,MALADIE,14/06/25,18/06/25,5,O,URGENT
+a3a5e3238d7f,cdi,Recouvrement,CONGE_PAYE,2026-03-14,19/03/2026,6,0,Validé manager
+a3a5e3238d7f,CDI,Recouvrement,MALADIE,13-02-2025,15/02/25,3,1,Certificat fourni
+a3a5e3238d7f,CDI,Recouvrement,CP,22/05/2025,30/05/2025,9,N,Certificat fourni
+a3a5e3238d7f,cdi,Recouvrement,rtt,26/05/25,26.05.2025,1,NON,A régulariser
+a3a5e3238d7f,CDI,Recouvrement,CP,05-10-2024,2024-10-10,6,1,Validé manager
+a3a5e3238d7f,cdi,Recouvrement,Maladie,14.12.2024,16/12/2024,3,Y,En attente validation
+a3a5e3238d7f,cdi,Recouvrement,rtt,24-07-2025,24/07/2025,1,NON,
+a3a5e3238d7f,CDI,Recouvrement,CP,16-05-2026,2026-05-23,8,N,A régulariser
+a3a5e3238d7f,cdi,Recouvrement,CONGE_PAYE,2024-02-13,17.02.2024,5,N,URGENT
+a3a5e3238d7f,cdi,Recouvrement,Formation,05-12-2025,2025-12-08,4,OUI,
+a3a5e3238d7f,cdi,Recouvrement,MALADIE,26/06/24,06/26/2024,1,0,RAS
+a3a5e3238d7f,cdi,Recouvrement,rtt,10.07.2024,2024-07-10,1,OUI,Certificat fourni
+a3a5e3238d7f,CDI,Recouvrement,CONGE_PAYE,17-08-2025,26/08/25,10,OUI,En attente validation
+a3a5e3238d7f,CDI,Recouvrement,RTT,23-11-2024,11/23/2024,1,1,URGENT
+2c1bdd1027e7,cdd,Conformité KYC,Formation CFA,26/11/2025,2025-11-30,5,Y,URGENT
+2c1bdd1027e7,cdd,Conformité KYC,CP,19-08-2025,2025-08-24,6,Y,URGENT
+2c1bdd1027e7,CDD,Conformité KYC,rtt,28.04.2026,28/04/2026,120,O,
+2c1bdd1027e7,CDD,Conformité KYC,Maladie,14/04/26,16/04/2026,3,NON,Certificat fourni
+2c1bdd1027e7,CDD,Conformité KYC,MALADIE,15-11-2025,11/16/2025,2,NON,
+2c1bdd1027e7,CDD,Conformité KYC,Congé Payé,21/03/26,30/03/26,10,N,
+2c1bdd1027e7,CDD,Conformité KYC,rtt,2025-01-01,01/01/2025,1,O,A régulariser
+2c1bdd1027e7,CDD,Conformité KYC,Formation,02/24/2025,27.02.2025,4,0,RAS
+2c1bdd1027e7,CDD,Conformité KYC,Absent,26.05.2025,26/05/2025,1,0,A régulariser
+2c1bdd1027e7,cdd,Conformité KYC,CONGE_PAYE,2025-05-12,17/05/25,6,NON,
+2c1bdd1027e7,CDD,Conformité KYC,Congé Payé,16/07/25,20/07/25,5,0,RAS
+2c1bdd1027e7,CDD,Conformité KYC,Formation,16/04/2026,2026-04-18,120,NON,En attente validation
+2c1bdd1027e7,cdd,Conformité KYC,FORMATION,28/03/2025,30/03/25,3,OUI,RAS
+2c1bdd1027e7,CDD,Conformité KYC,rtt,24-01-2026,24.01.2026,1,1,A régulariser
+2c1bdd1027e7,CDD,Conformité KYC,MALADIE,01.03.2025,01/03/2025,1,OUI,RAS
+2c1bdd1027e7,CDD,Conformité KYC,CP,01.04.2025,2025-04-08,8,OUI,En attente validation
+2c1bdd1027e7,cdd,Conformité KYC,RTT,08/17/2025,2025-08-17,1,OUI,URGENT
+2c1bdd1027e7,CDD,Conformité KYC,MALADIE,17.04.2025,04/21/2025,5,1,URGENT
+2c1bdd1027e7,cdd,Conformité KYC,MALADIE,2025-02-25,26/02/25,2,1,Validé manager
+2c1bdd1027e7,CDD,Conformité KYC,rtt,27/02/25,2025-02-27,1,1,Validé manager
+2c1bdd1027e7,cdd,Conformité KYC,RTT,27-05-2025,27-05-2025,1,N,Certificat fourni
+2c1bdd1027e7,cdd,Conformité KYC,MALADIE,29.04.2025,29/04/25,1,0,Validé manager
+2c1bdd1027e7,cdd,Conformité KYC,MALADIE,07/14/2025,2025-07-18,5,NON,En attente validation
+2c1bdd1027e7,CDD,Conformité KYC,Formation,03/24/2025,26/03/2025,3,OUI,A régulariser
+2c1bdd1027e7,cdd,Conformité KYC,CP,01/10/2025,06-10-2025,6,OUI,
+2c1bdd1027e7,cdd,Conformité KYC,Formation CFA,03/26/2026,27/03/26,2,NON,En attente validation
+2c1bdd1027e7,cdd,Conformité KYC,CP,15.04.2025,19/04/2025,5,N,Certificat fourni
+8685352c6c3b,CDI,Conformité KYC,CONGE_PAYE,12/04/2025,18.04.2025,7,1,RAS
+8685352c6c3b,cdi,Conformité KYC,Formation,24/06/25,28.06.2025,5,NON,En attente validation
+8685352c6c3b,CDI,Conformité KYC,Formation CFA,2025-01-28,2025-01-31,4,N,URGENT
+8685352c6c3b,CDI,Conformité KYC,rtt,24/11/2025,24.11.2025,1,1,A régulariser
+8685352c6c3b,cdi,Conformité KYC,rtt,07/25/2024,25-07-2024,1,Y,
+8685352c6c3b,cdi,Conformité KYC,Maladie,10/03/2025,2025-03-14,5,N,A régulariser
+8685352c6c3b,CDI,Conformité KYC,Maladie,25/07/2025,2025-07-28,4,0,Certificat fourni
+8685352c6c3b,cdi,Conformité KYC,CONGE_PAYE,17.10.2025,22-10-2025,6,N,RAS
+8685352c6c3b,cdi,Conformité KYC,MALADIE,24/04/26,28/04/2026,5,O,En attente validation
+8685352c6c3b,CDI,Conformité KYC,rtt,18/11/24,18-11-2024,1,N,En attente validation
+8685352c6c3b,CDI,Conformité KYC,MALADIE,08-11-2024,2024-11-10,3,1,RAS
+8685352c6c3b,cdi,Conformité KYC,CONGE_PAYE,06-11-2025,2025-11-15,10,N,Certificat fourni
+8685352c6c3b,cdi,Conformité KYC,Maladie,25.09.2024,26/09/24,2,N,En attente validation
+8685352c6c3b,CDI,Conformité KYC,Formation CFA,15/12/2025,19.12.2025,5,NON,A régulariser
+8685352c6c3b,CDI,Conformité KYC,Congé Payé,08-05-2024,2024-05-13,6,0,Certificat fourni
+8685352c6c3b,CDI,Conformité KYC,Formation,08/08/2025,10.08.2025,3,0,RAS
+8685352c6c3b,CDI,Conformité KYC,MALADIE,11/13/2024,14-11-2024,2,O,En attente validation
+8685352c6c3b,cdi,Conformité KYC,MALADIE,18-03-2024,22-03-2024,5,O,RAS
+8685352c6c3b,CDI,Conformité KYC,CONGE_PAYE,10/06/2024,2024-06-17,8,O,En attente validation
+8685352c6c3b,cdi,Conformité KYC,RTT,24/07/2024,07/24/2024,1,Y,RAS
+8685352c6c3b,CDI,Conformité KYC,CP,27-11-2024,01/12/2024,5,1,Certificat fourni
+8685352c6c3b,cdi,Conformité KYC,rtt,25/05/2026,25/05/2026,1,N,
+8685352c6c3b,CDI,Conformité KYC,CONGE_PAYE,19/06/2024,28-06-2024,10,0,En attente validation
+8685352c6c3b,CDI,Conformité KYC,Formation CFA,24/10/24,25/10/2024,2,0,
+8685352c6c3b,CDI,Conformité KYC,FORMATION,25.09.2024,27-09-2024,3,NON,En attente validation
+8685352c6c3b,cdi,Conformité KYC,Maladie,11/13/2025,15/11/2025,3,O,Certificat fourni
+8685352c6c3b,CDI,Conformité KYC,Formation CFA,27/11/2024,2024-12-01,5,OUI,RAS
+8685352c6c3b,CDI,Conformité KYC,rtt,25-11-2025,2025-11-25,1,O,Validé manager
+4ea590afa041,CDI,Conformité KYC,RTT,27/05/25,05/27/2025,1,Y,RAS
+4ea590afa041,cdi,Conformité KYC,CP,27.04.2026,02/05/2026,6,O,URGENT
+4ea590afa041,CDI,Conformité KYC,Formation CFA,10/24/2025,25/10/25,2,NON,A régulariser
+4ea590afa041,CDI,Conformité KYC,FORMATION,06/03/2025,2025-03-08,3,NON,A régulariser
+4ea590afa041,cdi,Conformité KYC,RTT,26/02/2025,2025-02-26,1,Y,A régulariser
+4ea590afa041,cdi,Conformité KYC,Absent,23.07.2024,23/07/24,1,O,Validé manager
+4ea590afa041,CDI,Conformité KYC,MALADIE,04/28/2026,04/29/2026,2,Y,
+4ea590afa041,cdi,,MALADIE,05-06-2024,08/06/2024,120,O,URGENT
+4ea590afa041,cdi,Conformité KYC,RTT,08/12/2024,08.12.2024,1,O,A régulariser
+4ea590afa041,cdi,Conformité KYC,FORMATION,24-07-2025,07/27/2025,4,O,Certificat fourni
+4ea590afa041,CDI,Conformité KYC,CP,04/19/2026,27/04/26,9,NON,
+4ea590afa041,cdi,Conformité KYC,Absent,2024-10-01,2024-10-01,1,1,A régulariser
+4ea590afa041,CDI,Conformité KYC,CP,28.02.2024,2024-03-03,5,NON,RAS
+4ea590afa041,cdi,Conformité KYC,rtt,25/10/25,23/10/25,1,OUI,En attente validation
+4ea590afa041,CDI,Conformité KYC,FORMATION,2025-03-27,29/03/25,3,Y,En attente validation
+4ea590afa041,cdi,Conformité KYC,MALADIE,18/01/26,2026-01-21,4,0,En attente validation
+4ea590afa041,CDI,Conformité KYC,RTT,07/07/2025,07/07/2025,1,Y,URGENT
+4ea590afa041,CDI,Conformité KYC,CONGE_PAYE,07/10/2025,2025-10-15,9,Y,Certificat fourni
+4ea590afa041,cdi,Conformité KYC,RTT,24.02.2026,24-02-2026,1,0,Validé manager
+4ea590afa041,cdi,Conformité KYC,MALADIE,04.12.2025,04-12-2025,1,O,
+4ea590afa041,cdi,Conformité KYC,Formation CFA,03/26/2024,2024-03-30,5,O,
+4ea590afa041,CDI,Conformité KYC,MALADIE,09.07.2024,11.07.2024,3,Y,Validé manager
+4ea590afa041,CDI,Conformité KYC,FORMATION,24.11.2025,2025-11-27,4,Y,
+4ea590afa041,CDI,Conformité KYC,rtt,27.12.2024,27-12-2024,1,0,URGENT
+556c900d7339,cdd,Recouvrement,FORMATION,27/04/2026,29-04-2026,3,OUI,Validé manager
+556c900d7339,CDD,Recouvrement,CONGE_PAYE,2026-03-24,02/04/2026,10,0,Validé manager
+556c900d7339,cdd,Recouvrement,CP,23/07/2025,28/07/25,6,O,
+556c900d7339,CDD,Recouvrement,Formation CFA,03/28/2026,03/30/2026,3,O,URGENT
+556c900d7339,CDD,Recouvrement,Absent,13.04.2026,13/04/2026,1,NON,En attente validation
+556c900d7339,CDD,Recouvrement,CP,29-01-2026,03-02-2026,6,Y,
+556c900d7339,CDD,Recouvrement,CP,08-12-2025,16-12-2025,9,1,En attente validation
+556c900d7339,cdd,Recouvrement,CONGE_PAYE,09/28/2025,2025-10-05,8,O,A régulariser
+556c900d7339,CDD,Recouvrement,Formation CFA,26/03/2026,2026-03-28,3,O,
+556c900d7339,cdd,,RTT,08/06/2026,08/06/2026,1,OUI,Validé manager
+556c900d7339,cdd,Recouvrement,Congé Payé,23-03-2026,2026-03-28,6,O,
+556c900d7339,cdd,Recouvrement,Formation,01/28/2026,31/01/26,4,1,En attente validation
+556c900d7339,CDD,Recouvrement,Maladie,17/03/26,17-03-2026,1,Y,A régulariser
+556c900d7339,CDD,Recouvrement,Congé Payé,04.05.2026,10.05.2026,7,Y,URGENT
+556c900d7339,cdd,Recouvrement,FORMATION,24-07-2025,07/25/2025,2,0,A régulariser
+556c900d7339,CDD,Recouvrement,CP,02/15/2026,24/02/2026,10,O,Validé manager
+556c900d7339,CDD,Recouvrement,Maladie,04/17/2026,2026-04-18,2,O,URGENT
+556c900d7339,cdd,Recouvrement,Maladie,27-09-2025,01.10.2025,5,0,En attente validation
+556c900d7339,CDD,Recouvrement,Maladie,09/08/2025,09/08/2025,1,OUI,En attente validation
+556c900d7339,CDD,Recouvrement,Maladie,23/02/26,23/02/2026,1,O,
+556c900d7339,cdd,Recouvrement,rtt,01/24/2026,01/24/2026,1,0,A régulariser
+556c900d7339,cdd,Recouvrement,CP,2025-09-19,27-09-2025,9,OUI,En attente validation
+556c900d7339,CDD,Recouvrement,CP,27/12/25,01/01/2026,6,0,A régulariser
+556c900d7339,CDD,Recouvrement,Maladie,07/19/2025,20/07/2025,2,Y,RAS
+556c900d7339,CDD,Recouvrement,RTT,2025-09-07,07/09/2025,1,NON,En attente validation
+556c900d7339,CDD,Recouvrement,rtt,09/06/2026,2026-06-09,1,O,
+e88f8d4c892d,CDI,Recouvrement,rtt,04/25/2025,25/04/2025,1,NON,A régulariser
+e88f8d4c892d,cdi,Recouvrement,rtt,30/12/25,2025-12-30,1,Y,Validé manager
+e88f8d4c892d,cdi,Recouvrement,Congé Payé,2024-11-26,11/30/2024,5,N,Validé manager
+e88f8d4c892d,CDI,Recouvrement,Formation CFA,24/11/25,25/11/25,2,N,RAS
+e88f8d4c892d,cdi,Recouvrement,CP,10-06-2024,06/19/2024,10,O,
+e88f8d4c892d,CDI,Recouvrement,Congé Payé,2024-01-14,01/21/2024,8,O,
+e88f8d4c892d,CDI,Recouvrement,MALADIE,21/08/2024,23.08.2024,3,OUI,En attente validation
+e88f8d4c892d,CDI,Recouvrement,Formation CFA,26.07.2024,28/07/24,120,NON,RAS
+e88f8d4c892d,cdi,Recouvrement,RTT,2025-04-26,26.04.2025,1,OUI,URGENT
+e88f8d4c892d,CDI,Recouvrement,RTT,27/09/24,09/27/2024,1,0,Validé manager
+e88f8d4c892d,CDI,Recouvrement,CP,2024-06-08,17/06/2024,10,NON,En attente validation
+e88f8d4c892d,cdi,Recouvrement,CP,08/04/2026,16-04-2026,9,N,A régulariser
+e88f8d4c892d,CDI,Recouvrement,RTT,02-10-2025,02/10/2025,1,OUI,RAS
+e88f8d4c892d,cdi,Recouvrement,CONGE_PAYE,14/10/25,2025-10-20,7,N,RAS
+e88f8d4c892d,CDI,Recouvrement,MALADIE,31/07/25,04/08/2025,5,OUI,A régulariser
+e88f8d4c892d,CDI,Recouvrement,Formation CFA,27/08/25,30-08-2025,4,1,
+e88f8d4c892d,cdi,Recouvrement,CONGE_PAYE,27/07/24,31.07.2024,5,0,
+e88f8d4c892d,cdi,Recouvrement,Formation,26/07/24,07/29/2024,4,0,URGENT
+e88f8d4c892d,CDI,Recouvrement,Congé Payé,28/05/24,01-06-2024,5,Y,RAS
+e88f8d4c892d,CDI,Recouvrement,Congé Payé,06/09/2025,2025-09-12,7,O,En attente validation
+e88f8d4c892d,CDI,Recouvrement,RTT,26/06/25,26-06-2025,1,O,URGENT
+e88f8d4c892d,cdi,Recouvrement,Congé Payé,06-07-2025,15/07/2025,10,1,A régulariser
+e88f8d4c892d,CDI,Recouvrement,FORMATION,28/12/25,31.12.2025,4,NON,Validé manager
+e88f8d4c892d,cdi,Recouvrement,Formation,28/11/2025,29-11-2025,95,1,En attente validation
+e88f8d4c892d,cdi,Recouvrement,rtt,27/08/24,2024-08-27,1,O,En attente validation
+e88f8d4c892d,CDI,Recouvrement,CONGE_PAYE,2026-03-05,11/03/2026,7,1,En attente validation
+e88f8d4c892d,CDI,Recouvrement,Congé Payé,08-12-2024,2024-12-12,5,N,URGENT
+e88f8d4c892d,CDI,Recouvrement,Formation,02.06.2025,2025-06-05,4,1,URGENT
+e88f8d4c892d,cdi,Recouvrement,Formation CFA,27/09/2024,28.09.2024,2,1,A régulariser
+ea5c598670ee,cdi,Crédit Immobilier,Maladie,2025-08-21,08/21/2025,1,0,Certificat fourni
+ea5c598670ee,CDI,Crédit Immobilier,RTT,24.02.2024,24/02/24,1,N,En attente validation
+ea5c598670ee,CDI,Crédit Immobilier,MALADIE,2025-12-28,01-01-2026,5,OUI,
+ea5c598670ee,CDI,Crédit Immobilier,Maladie,08/13/2024,13/08/24,1,OUI,Validé manager
+ea5c598670ee,cdi,Crédit Immobilier,CP,2024-04-02,2024-04-11,10,1,A régulariser
+ea5c598670ee,CDI,Crédit Immobilier,FORMATION,28/08/2025,08/29/2025,2,Y,Validé manager
+ea5c598670ee,CDI,Crédit Immobilier,Formation,22.06.2025,26.06.2025,5,1,En attente validation
+ea5c598670ee,cdi,Crédit Immobilier,CONGE_PAYE,07.09.2024,2024-09-16,10,O,Certificat fourni
+ea5c598670ee,CDI,Crédit Immobilier,Congé Payé,16.02.2025,2025-02-20,5,1,RAS
+ea5c598670ee,cdi,Crédit Immobilier,MALADIE,21/06/2025,06/23/2025,3,NON,A régulariser
+ea5c598670ee,CDI,Crédit Immobilier,CP,30/07/25,2025-08-03,-1,NON,A régulariser
+ea5c598670ee,cdi,Crédit Immobilier,CP,07/08/2025,2025-08-12,6,NON,Validé manager
+ea5c598670ee,CDI,Crédit Immobilier,CP,11/12/2025,20-12-2025,10,1,A régulariser
+ea5c598670ee,cdi,Crédit Immobilier,CONGE_PAYE,20/01/2026,29/01/2026,10,Y,En attente validation
+ea5c598670ee,CDI,Crédit Immobilier,CP,27.02.2026,07-03-2026,9,OUI,
+ea5c598670ee,CDI,Crédit Immobilier,Maladie,18/02/2025,2025-02-21,4,N,Certificat fourni
+ea5c598670ee,CDI,Crédit Immobilier,rtt,2025-01-27,2025-01-27,1,N,
+ea5c598670ee,CDI,Crédit Immobilier,RTT,2025-04-22,04/22/2025,1,NON,
+ea5c598670ee,cdi,Crédit Immobilier,rtt,2025-01-24,01/24/2025,1,N,URGENT
+ea5c598670ee,cdi,Crédit Immobilier,MALADIE,12-03-2024,12-03-2024,1,N,RAS
+ea5c598670ee,cdi,Crédit Immobilier,Absent,12/03/2025,12-03-2025,1,1,Validé manager
+ea5c598670ee,cdi,Crédit Immobilier,RTT,24.11.2025,2025-11-24,1,N,
+ea5c598670ee,cdi,Crédit Immobilier,Congé Payé,2026-01-22,01/31/2026,10,O,
+ea5c598670ee,cdi,Crédit Immobilier,Congé Payé,25.05.2026,03/06/2026,10,0,Validé manager
+ea5c598670ee,CDI,Crédit Immobilier,MALADIE,28.02.2025,02.03.2025,3,N,
+ea5c598670ee,CDI,Crédit Immobilier,rtt,01/26/2024,01/26/2024,1,Y,Certificat fourni
+ea5c598670ee,CDI,Crédit Immobilier,RTT,25/04/2026,04/25/2026,1,O,RAS
+ff1c8a129b7b,cdi,Conformité KYC,CONGE_PAYE,2025-04-26,2025-05-03,8,1,RAS
+ff1c8a129b7b,cdi,Conformité KYC,CONGE_PAYE,24-01-2026,01.02.2026,9,N,
+ff1c8a129b7b,cdi,Conformité KYC,Formation,2024-02-24,28/02/24,5,O,RAS
+ff1c8a129b7b,CDI,Conformité KYC,Formation CFA,28.12.2024,2024-12-29,2,NON,A régulariser
+ff1c8a129b7b,CDI,Conformité KYC,Formation,08/27/2025,2025-08-30,4,Y,
+ff1c8a129b7b,cdi,Conformité KYC,CP,14/08/2025,2025-08-22,9,0,En attente validation
+ff1c8a129b7b,CDI,Conformité KYC,Congé Payé,10/25/2025,31/10/25,7,N,En attente validation
+ff1c8a129b7b,CDI,Conformité KYC,FORMATION,06/08/2024,07-08-2024,2,NON,
+ff1c8a129b7b,CDI,Conformité KYC,Maladie,09-04-2025,13.04.2025,-1,N,RAS
+ff1c8a129b7b,cdi,Conformité KYC,CP,09-01-2024,14-01-2024,6,1,En attente validation
+ff1c8a129b7b,CDI,Conformité KYC,Maladie,03/26/2025,27/03/25,2,O,
+ff1c8a129b7b,cdi,Conformité KYC,CP,01/06/2026,09.06.2026,9,OUI,URGENT
+ff1c8a129b7b,cdi,Conformité KYC,RTT,11-04-2026,11/04/2026,1,1,En attente validation
+ff1c8a129b7b,CDI,Conformité KYC,Congé Payé,20-02-2025,24/02/2025,5,1,Certificat fourni
+ff1c8a129b7b,CDI,Conformité KYC,Formation CFA,20-01-2025,21.01.2025,2,NON,RAS
+ff1c8a129b7b,CDI,Conformité KYC,Maladie,2024-01-06,10/01/2024,5,0,
+ff1c8a129b7b,cdi,Conformité KYC,RTT,27-05-2025,27.05.2025,1,N,Certificat fourni
+ff1c8a129b7b,cdi,Conformité KYC,MALADIE,11/03/2024,13.03.2024,3,NON,
+ff1c8a129b7b,cdi,Conformité KYC,rtt,2025-03-08,08-03-2025,1,O,
+ff1c8a129b7b,cdi,Conformité KYC,MALADIE,19/01/2024,2024-01-19,1,0,Certificat fourni
+ff1c8a129b7b,cdi,Conformité KYC,FORMATION,25/05/25,27/05/2025,3,1,Certificat fourni
+ff1c8a129b7b,cdi,Conformité KYC,Absent,12/16/2025,16.12.2025,1,O,Validé manager
+ff1c8a129b7b,CDI,Conformité KYC,FORMATION,2024-08-25,26/08/24,2,NON,
+ff1c8a129b7b,cdi,Conformité KYC,Formation,28.02.2024,01/03/2024,3,N,A régulariser
+ff1c8a129b7b,CDI,Conformité KYC,MALADIE,2026-03-22,25/03/26,4,NON,En attente validation
+ff1c8a129b7b,CDI,,MALADIE,2025-02-04,2025-02-07,4,O,Certificat fourni
+ff1c8a129b7b,cdi,,CP,11-05-2025,2025-05-16,6,Y,
+ff1c8a129b7b,cdi,Conformité KYC,CONGE_PAYE,17-09-2024,2024-09-21,5,Y,
+ff1c8a129b7b,cdi,Conformité KYC,FORMATION,2024-09-09,2024-09-13,5,NON,En attente validation
+ff1c8a129b7b,CDI,Conformité KYC,RTT,01.05.2024,01-05-2024,1,O,
+ff1c8a129b7b,cdi,Conformité KYC,Maladie,2026-06-10,2026-06-11,2,OUI,En attente validation
+3ab5fd23b6cc,alternant,Recouvrement,MALADIE,2025-12-29,02.01.2026,120,OUI,RAS
+3ab5fd23b6cc,Alternant,Recouvrement,Maladie,07.10.2025,08/10/2025,2,NON,Validé manager
+3ab5fd23b6cc,alternant,Recouvrement,RTT,27-10-2025,2025-10-27,1,1,En attente validation
+3ab5fd23b6cc,alternant,Recouvrement,CP,11/12/2025,2025-12-20,10,1,URGENT
+3ab5fd23b6cc,alternant,Recouvrement,RTT,24/02/26,24-02-2026,1,N,
+3ab5fd23b6cc,alternant,Recouvrement,Absent,15-02-2026,2026-02-15,1,1,URGENT
+3ab5fd23b6cc,alternant,Recouvrement,Congé Payé,10-10-2025,2025-10-14,5,NON,
+3ab5fd23b6cc,alternant,Recouvrement,RTT,03/28/2026,28-03-2026,1,0,A régulariser
+3ab5fd23b6cc,alternant,Recouvrement,CONGE_PAYE,05.03.2026,2026-03-10,6,N,
+3ab5fd23b6cc,Alternant,Recouvrement,rtt,16-01-2026,16-01-2026,1,O,Certificat fourni
+3ab5fd23b6cc,alternant,Recouvrement,Congé Payé,31-12-2025,04-01-2026,5,N,Certificat fourni
+3ab5fd23b6cc,alternant,Recouvrement,rtt,25/01/2026,25/01/2026,1,1,
+3ab5fd23b6cc,Alternant,Recouvrement,rtt,10/28/2025,28/10/2025,1,NON,
+3ab5fd23b6cc,Alternant,Recouvrement,MALADIE,04/19/2026,04/20/2026,2,0,URGENT
+3ab5fd23b6cc,Alternant,Recouvrement,Maladie,16-02-2026,20/02/26,5,OUI,
+3ab5fd23b6cc,Alternant,Recouvrement,RTT,2025-12-26,26.12.2025,1,1,Certificat fourni
+3ab5fd23b6cc,alternant,Recouvrement,CP,17/03/26,03/23/2026,7,0,A régulariser
+3ab5fd23b6cc,alternant,Recouvrement,MALADIE,27-02-2026,02-03-2026,4,1,
+3ab5fd23b6cc,Alternant,Recouvrement,Congé Payé,06.01.2026,10.01.2026,5,OUI,
+3ab5fd23b6cc,alternant,,CONGE_PAYE,11.10.2025,19/10/25,9,1,URGENT
+3ab5fd23b6cc,alternant,Recouvrement,CONGE_PAYE,31.12.2025,2026-01-07,8,O,
+3ab5fd23b6cc,Alternant,Recouvrement,Maladie,01-01-2026,2026-01-01,1,OUI,A régulariser
+3ab5fd23b6cc,alternant,,MALADIE,20/03/2026,22.03.2026,3,OUI,URGENT
+3ab5fd23b6cc,alternant,Recouvrement,FORMATION,2026-01-25,29/01/2026,5,OUI,
+3ab5fd23b6cc,alternant,Recouvrement,Congé Payé,2025-12-03,2025-11-28,7,O,A régulariser
+3ab5fd23b6cc,Alternant,Recouvrement,CP,08/03/2026,2026-03-07,7,Y,En attente validation
+3ab5fd23b6cc,alternant,Recouvrement,Congé Payé,18-04-2026,22.04.2026,5,1,URGENT
+3ab5fd23b6cc,alternant,Recouvrement,Maladie,22.01.2026,22-01-2026,1,1,RAS
+3ab5fd23b6cc,alternant,Recouvrement,MALADIE,16/12/25,19/12/25,4,Y,RAS
+3ab5fd23b6cc,Alternant,Recouvrement,SEMAINE_ECOLE,11-04-2026,13/04/26,3,N,
+3ab5fd23b6cc,alternant,Recouvrement,Congé Payé,2025-12-17,22/12/2025,6,N,URGENT
+3ab5fd23b6cc,Alternant,Recouvrement,Semaine école,28.09.2025,30.09.2025,3,OUI,A régulariser
+cf5e289adae2,alternant,Conformité KYC,Congé Payé,02-05-2025,10/05/2025,9,Y,A régulariser
+cf5e289adae2,alternant,Conformité KYC,MALADIE,27.05.2025,30/05/2025,4,O,
+cf5e289adae2,alternant,Conformité KYC,Congé Payé,2025-06-22,06/26/2025,5,1,En attente validation
+cf5e289adae2,alternant,Conformité KYC,Congé Payé,29/03/2025,02/04/2025,5,O,Validé manager
+cf5e289adae2,alternant,Conformité KYC,MALADIE,02/07/2025,2025-07-03,2,1,En attente validation
+cf5e289adae2,Alternant,Conformité KYC,rtt,2025-01-03,03-01-2025,1,Y,URGENT
+cf5e289adae2,alternant,Conformité KYC,FORMATION,2025-02-26,02.03.2025,5,0,A régulariser
+cf5e289adae2,alternant,Conformité KYC,MALADIE,07-04-2025,07-04-2025,1,O,A régulariser
+cf5e289adae2,Alternant,Conformité KYC,MALADIE,2024-12-30,2025-01-03,5,1,En attente validation
+cf5e289adae2,Alternant,Conformité KYC,Maladie,05/16/2025,16/05/25,1,O,URGENT
+cf5e289adae2,Alternant,Conformité KYC,CP,13-05-2025,05/22/2025,10,0,URGENT
+cf5e289adae2,Alternant,Conformité KYC,CP,25-02-2025,04-03-2025,8,N,RAS
+cf5e289adae2,Alternant,Conformité KYC,RTT,27/03/25,27/03/25,1,NON,URGENT
+cf5e289adae2,Alternant,Conformité KYC,Maladie,2025-06-11,14-06-2025,4,OUI,
+cf5e289adae2,Alternant,Conformité KYC,Formation,05/28/2025,2025-06-01,5,1,
+cf5e289adae2,Alternant,Conformité KYC,Maladie,02/25/2025,26/02/2025,2,0,Validé manager
+cf5e289adae2,alternant,Conformité KYC,rtt,2025-04-07,07.04.2025,1,N,Validé manager
+cf5e289adae2,Alternant,Conformité KYC,Congé Payé,26.05.2025,04/06/2025,10,O,A régulariser
+cf5e289adae2,alternant,Conformité KYC,MALADIE,2025-04-01,01/04/2025,1,1,Validé manager
+cf5e289adae2,Alternant,Conformité KYC,RTT,24-06-2025,24.06.2025,1,0,En attente validation
+cf5e289adae2,alternant,Conformité KYC,CONGE_PAYE,09.04.2025,04/16/2025,8,N,En attente validation
+cf5e289adae2,alternant,Conformité KYC,Formation,05/18/2025,22/05/25,5,Y,RAS
+cf5e289adae2,alternant,Conformité KYC,rtt,05/24/2025,24.05.2025,1,1,
+cf5e289adae2,alternant,Conformité KYC,Congé Payé,2025-06-08,07/06/2025,7,Y,
+36fac3a8fa5b,Interimaire,Crédit Immobilier,RTT,01/26/2026,26/01/26,1,1,
+36fac3a8fa5b,Intérimaire,Crédit Immobilier,MALADIE,03/02/2026,03/02/2026,1,Y,URGENT
+36fac3a8fa5b,Intérimaire,Crédit Immobilier,Formation,2026-04-30,02/05/2026,3,Y,A régulariser
+36fac3a8fa5b,Interimaire,Crédit Immobilier,CONGE_PAYE,04/02/2026,12-02-2026,9,0,Validé manager
+36fac3a8fa5b,Intérimaire,Crédit Immobilier,RTT,12.06.2026,12.06.2026,1,Y,
+36fac3a8fa5b,INTERIMAIRE,Crédit Immobilier,rtt,05/24/2026,24/05/26,1,NON,
+36fac3a8fa5b,Interimaire,Crédit Immobilier,MALADIE,2025-12-26,26/12/25,1,NON,
+36fac3a8fa5b,INTERIMAIRE,Crédit Immobilier,Formation CFA,2026-04-24,2026-04-27,4,NON,En attente validation
+36fac3a8fa5b,Interimaire,Crédit Immobilier,Formation CFA,29/04/26,04/30/2026,2,N,RAS
+36fac3a8fa5b,Intérimaire,Crédit Immobilier,Maladie,14/11/2025,17.11.2025,4,O,
+36fac3a8fa5b,INTERIMAIRE,Crédit Immobilier,Formation CFA,27.05.2026,05/31/2026,5,1,RAS
+36fac3a8fa5b,Intérimaire,Crédit Immobilier,CONGE_PAYE,05.04.2026,10-04-2026,6,0,RAS
+36fac3a8fa5b,Interimaire,Crédit Immobilier,Congé Payé,20/11/2025,24/11/25,5,N,Certificat fourni
+36fac3a8fa5b,Intérimaire,Crédit Immobilier,Maladie,15/04/26,16/04/2026,2,1,En attente validation
+36fac3a8fa5b,INTERIMAIRE,Crédit Immobilier,CP,10/11/2025,18/11/2025,9,0,
+36fac3a8fa5b,Intérimaire,Crédit Immobilier,Maladie,23-02-2026,2026-02-25,3,O,URGENT
+36fac3a8fa5b,Intérimaire,Crédit Immobilier,RTT,27-01-2026,2026-01-27,1,NON,URGENT
+36fac3a8fa5b,INTERIMAIRE,Crédit Immobilier,CP,13-12-2025,12/18/2025,6,OUI,A régulariser
+36fac3a8fa5b,INTERIMAIRE,Crédit Immobilier,CONGE_PAYE,02/28/2026,04.03.2026,5,Y,RAS
+36fac3a8fa5b,INTERIMAIRE,Crédit Immobilier,CP,08.03.2026,2026-03-12,5,N,A régulariser
+36fac3a8fa5b,INTERIMAIRE,Crédit Immobilier,CP,2025-11-08,14-11-2025,7,0,
+36fac3a8fa5b,INTERIMAIRE,Crédit Immobilier,rtt,10.12.2025,2025-12-10,1,O,URGENT
+36fac3a8fa5b,Interimaire,Crédit Immobilier,rtt,26-12-2025,12/26/2025,1,N,Validé manager
+36fac3a8fa5b,Intérimaire,Crédit Immobilier,Formation,28/12/25,31.12.2025,4,Y,
+36fac3a8fa5b,Intérimaire,Crédit Immobilier,Formation,02/26/2026,2026-03-02,5,O,
+4d877115cedd,Intérimaire,Crédit Immobilier,CP,2024-01-02,06.01.2024,5,Y,
+4d877115cedd,INTERIMAIRE,Crédit Immobilier,Congé Payé,11/02/2024,18/02/24,8,0,URGENT
+4d877115cedd,Interimaire,Crédit Immobilier,CONGE_PAYE,2024-01-31,06/02/2024,7,1,A régulariser
+4d877115cedd,INTERIMAIRE,Crédit Immobilier,MALADIE,02/17/2024,02/18/2024,2,NON,URGENT
+4d877115cedd,Intérimaire,Crédit Immobilier,RTT,01/28/2024,28/01/2024,1,1,En attente validation
+4d877115cedd,INTERIMAIRE,Crédit Immobilier,Formation CFA,06/02/2024,08/02/2024,3,OUI,URGENT
+4d877115cedd,Interimaire,Crédit Immobilier,Congé Payé,2024-03-26,04-04-2024,10,OUI,
+4d877115cedd,INTERIMAIRE,Crédit Immobilier,RTT,28/03/24,28/03/24,1,O,A régulariser
+4d877115cedd,Intérimaire,Crédit Immobilier,CP,30/03/2024,06.04.2024,8,0,
+4d877115cedd,Intérimaire,Crédit Immobilier,RTT,11.04.2024,2024-04-11,1,OUI,URGENT
+4d877115cedd,Intérimaire,Crédit Immobilier,rtt,2024-01-07,07/01/2024,1,N,Certificat fourni
+4d877115cedd,Intérimaire,Crédit Immobilier,CONGE_PAYE,29/03/24,06.04.2024,9,1,URGENT
+4d877115cedd,INTERIMAIRE,Crédit Immobilier,MALADIE,2024-03-26,03/28/2024,3,N,URGENT
+4d877115cedd,Interimaire,Crédit Immobilier,CP,25.02.2024,2024-03-05,10,1,
+4d877115cedd,INTERIMAIRE,Crédit Immobilier,FORMATION,16/02/24,2024-02-19,4,N,Validé manager
+4d877115cedd,Interimaire,Crédit Immobilier,rtt,26.01.2024,26/01/24,1,Y,URGENT
+4d877115cedd,Intérimaire,Crédit Immobilier,Maladie,17/02/2024,17.02.2024,1,O,RAS
+4d877115cedd,INTERIMAIRE,Crédit Immobilier,CONGE_PAYE,15.03.2024,23.03.2024,9,1,URGENT
+4d877115cedd,INTERIMAIRE,Crédit Immobilier,rtt,2024-03-28,28-03-2024,1,Y,Validé manager
+4d877115cedd,Intérimaire,Crédit Immobilier,CONGE_PAYE,2024-03-23,2024-03-31,9,0,Validé manager
+4d877115cedd,Interimaire,Crédit Immobilier,RTT,25.02.2024,2024-02-25,1,0,RAS
+4d877115cedd,INTERIMAIRE,Crédit Immobilier,FORMATION,06.04.2024,2024-04-10,5,Y,
+4d877115cedd,INTERIMAIRE,Crédit Immobilier,Congé Payé,01/14/2024,19-01-2024,6,NON,En attente validation
+4d877115cedd,INTERIMAIRE,Crédit Immobilier,Absent,2024-03-01,2024-03-01,1,NON,Validé manager
+4d877115cedd,Interimaire,Crédit Immobilier,Congé Payé,04/01/2024,11-01-2024,8,NON,
+4d877115cedd,Interimaire,Crédit Immobilier,Maladie,2024-03-03,03-03-2024,1,O,En attente validation
+4d877115cedd,Intérimaire,Crédit Immobilier,rtt,2024-03-27,27.03.2024,1,1,Validé manager
+4d877115cedd,Intérimaire,Crédit Immobilier,MALADIE,26/03/24,27/03/2024,2,0,Validé manager
+4d877115cedd,Intérimaire,Crédit Immobilier,rtt,24/02/2024,02/24/2024,1,NON,Validé manager
+4d877115cedd,Intérimaire,Crédit Immobilier,RTT,21/03/24,21/03/2024,1,OUI,Certificat fourni
+4d877115cedd,Interimaire,Crédit Immobilier,rtt,28/03/2024,28.03.2024,1,1,En attente validation
+5be217607699,cdd,Recouvrement,Maladie,18/03/26,20/03/2026,3,NON,Certificat fourni
+5be217607699,CDD,Recouvrement,Maladie,01/26/2026,29.01.2026,4,N,URGENT
+5be217607699,CDD,Recouvrement,Maladie,28/09/25,01-10-2025,4,0,
+5be217607699,CDD,Recouvrement,FORMATION,27.01.2026,01/31/2026,5,NON,A régulariser
+5be217607699,CDD,Recouvrement,MALADIE,2025-12-04,05/12/2025,2,N,
+5be217607699,CDD,Recouvrement,rtt,12.02.2026,12/02/2026,1,0,A régulariser
+5be217607699,cdd,Recouvrement,CONGE_PAYE,10/02/2026,19/02/26,-1,0,RAS
+5be217607699,cdd,Recouvrement,RTT,28/12/2025,28/12/25,1,0,URGENT
+5be217607699,CDD,Recouvrement,CP,30.08.2025,06-09-2025,8,NON,Validé manager
+5be217607699,CDD,Recouvrement,RTT,2025-07-25,25/07/25,1,Y,
+5be217607699,cdd,Recouvrement,CP,31.01.2026,04.02.2026,5,OUI,RAS
+5be217607699,CDD,Recouvrement,MALADIE,04.12.2025,06/12/2025,3,Y,URGENT
+5be217607699,cdd,Recouvrement,CP,2025-09-24,29.09.2025,6,NON,A régulariser
+5be217607699,cdd,Recouvrement,CP,02.01.2026,10.01.2026,9,0,A régulariser
+5be217607699,CDD,Recouvrement,Congé Payé,10/01/2026,14-01-2026,5,N,En attente validation
+5be217607699,CDD,Recouvrement,Formation CFA,2025-10-03,04/10/2025,2,0,
+5be217607699,CDD,Recouvrement,CONGE_PAYE,25-12-2025,2026-01-03,10,1,URGENT
+5be217607699,cdd,Recouvrement,Maladie,2025-06-08,2025-06-09,2,1,En attente validation
+5be217607699,CDD,Recouvrement,FORMATION,01/27/2026,28.01.2026,2,0,Validé manager
+5be217607699,cdd,Recouvrement,Congé Payé,01/31/2026,2026-02-05,-1,O,Certificat fourni
+5be217607699,cdd,Recouvrement,Maladie,20/06/25,20-06-2025,1,1,En attente validation
+5be217607699,cdd,Recouvrement,Formation CFA,02/08/2025,2025-08-05,4,Y,
+5be217607699,cdd,Recouvrement,Congé Payé,01-12-2025,2025-12-06,6,1,
+5be217607699,cdd,Recouvrement,rtt,27-07-2025,27.07.2025,1,Y,En attente validation
+5be217607699,cdd,Recouvrement,CP,08.12.2025,12/15/2025,8,OUI,
+5be217607699,CDD,Recouvrement,rtt,26.08.2025,2025-08-26,1,N,
+b9508679c426,CDI,Recouvrement,CP,19/10/24,2024-10-27,9,1,Certificat fourni
+b9508679c426,CDI,Recouvrement,CONGE_PAYE,10.05.2024,05/18/2024,9,1,
+b9508679c426,CDI,Recouvrement,CP,04.11.2025,2025-11-13,10,NON,Validé manager
+b9508679c426,cdi,Recouvrement,CONGE_PAYE,2025-09-01,05-09-2025,5,0,Certificat fourni
+b9508679c426,CDI,Recouvrement,Maladie,25.10.2024,2024-10-27,3,OUI,
+b9508679c426,cdi,Recouvrement,Absent,29.04.2024,2024-04-29,1,N,En attente validation
+b9508679c426,cdi,Recouvrement,CP,2024-08-07,15.08.2024,9,N,Certificat fourni
+b9508679c426,cdi,Recouvrement,RTT,2024-11-05,05.11.2024,1,NON,
+b9508679c426,CDI,Recouvrement,CONGE_PAYE,09/26/2025,2025-10-02,7,N,Certificat fourni
+b9508679c426,CDI,Recouvrement,CP,2024-12-30,05-01-2025,7,Y,URGENT
+b9508679c426,CDI,Recouvrement,CONGE_PAYE,26-12-2024,01-01-2025,7,NON,
+b9508679c426,cdi,Recouvrement,Formation,26/08/25,08/28/2025,3,OUI,En attente validation
+b9508679c426,CDI,Recouvrement,Formation CFA,2024-12-05,09.12.2024,5,1,Validé manager
+b9508679c426,CDI,Recouvrement,Formation,02/06/2025,2025-06-03,2,N,Validé manager
+b9508679c426,CDI,Recouvrement,FORMATION,07.07.2025,09.07.2025,3,1,
+b9508679c426,cdi,Recouvrement,rtt,28/06/24,28/06/2024,1,OUI,Validé manager
+b9508679c426,cdi,Recouvrement,Congé Payé,2024-04-16,20/04/24,5,1,URGENT
+b9508679c426,CDI,Recouvrement,rtt,2025-02-21,21/02/25,1,1,
+b9508679c426,cdi,Recouvrement,Formation CFA,23/05/2024,24/05/24,2,0,A régulariser
+b9508679c426,cdi,Recouvrement,RTT,25/07/25,2025-07-25,1,0,En attente validation
+b9508679c426,CDI,Recouvrement,Congé Payé,2026-01-20,2026-01-24,5,Y,
+b9508679c426,cdi,Recouvrement,MALADIE,2026-04-14,18-04-2026,5,0,URGENT
+b9508679c426,cdi,Recouvrement,RTT,27.02.2026,27.02.2026,1,OUI,RAS
+b9508679c426,CDI,Recouvrement,Formation,04.11.2025,05.11.2025,2,OUI,Certificat fourni
+b9508679c426,cdi,Recouvrement,FORMATION,04/24/2026,28/04/2026,120,0,A régulariser
+b9508679c426,CDI,Recouvrement,rtt,26-01-2024,26/01/24,1,0,En attente validation
+b9508679c426,CDI,Recouvrement,MALADIE,2024-12-14,12/14/2024,1,0,RAS
+b9508679c426,cdi,Recouvrement,rtt,28.01.2025,28/01/2025,1,NON,URGENT
+b9508679c426,CDI,,Maladie,03/12/2024,05/12/2024,3,N,Certificat fourni
+b9508679c426,CDI,Recouvrement,Formation,09/02/2024,10-02-2024,2,N,Certificat fourni
+b9508679c426,CDI,Recouvrement,Maladie,30/05/26,03-06-2026,5,N,URGENT
+b9508679c426,cdi,Recouvrement,CP,2024-05-12,17/05/24,6,O,En attente validation
+d16828a552cc,INTERIMAIRE,Crédit Immobilier,rtt,21.02.2024,21-02-2024,1,Y,URGENT
+d16828a552cc,INTERIMAIRE,Crédit Immobilier,CP,12/06/2024,17/06/2024,6,1,
+d16828a552cc,Interimaire,Crédit Immobilier,FORMATION,28-08-2024,01.09.2024,5,OUI,Validé manager
+d16828a552cc,Interimaire,Crédit Immobilier,FORMATION,28/03/2024,2024-03-29,2,0,URGENT
+d16828a552cc,Intérimaire,Crédit Immobilier,CONGE_PAYE,02/11/2024,09/11/2024,8,0,
+d16828a552cc,INTERIMAIRE,Crédit Immobilier,Maladie,10/02/2024,13-02-2024,4,N,
+d16828a552cc,Intérimaire,Crédit Immobilier,MALADIE,24/10/24,28-10-2024,5,0,URGENT
+d16828a552cc,Interimaire,Crédit Immobilier,Maladie,19/03/24,2024-03-14,5,N,Certificat fourni
+d16828a552cc,Interimaire,Crédit Immobilier,Maladie,17-04-2024,2024-04-18,2,OUI,
+d16828a552cc,Intérimaire,Crédit Immobilier,FORMATION,07/26/2024,27/07/2024,2,Y,Certificat fourni
+d16828a552cc,Intérimaire,Crédit Immobilier,rtt,03.07.2024,03.07.2024,1,1,En attente validation
+d16828a552cc,INTERIMAIRE,Crédit Immobilier,CP,06/16/2024,24/06/2024,9,NON,Certificat fourni
+d16828a552cc,Intérimaire,Crédit Immobilier,Congé Payé,30/04/24,07-05-2024,8,1,
+d16828a552cc,INTERIMAIRE,Crédit Immobilier,Congé Payé,28/05/2024,03/06/2024,7,O,RAS
+d16828a552cc,INTERIMAIRE,Crédit Immobilier,Congé Payé,20/07/24,24/07/24,5,1,RAS
+d16828a552cc,INTERIMAIRE,Crédit Immobilier,Maladie,10-04-2024,13/04/2024,4,O,A régulariser
+d16828a552cc,INTERIMAIRE,,Congé Payé,09/13/2024,21-09-2024,9,N,En attente validation
+d16828a552cc,INTERIMAIRE,Crédit Immobilier,Formation CFA,22/01/24,2024-01-24,3,1,A régulariser
+d16828a552cc,Intérimaire,Crédit Immobilier,Absent,03-08-2024,03/08/2024,1,NON,A régulariser
+d16828a552cc,Intérimaire,Crédit Immobilier,Maladie,01.04.2024,2024-04-01,1,OUI,URGENT
+d16828a552cc,Intérimaire,Crédit Immobilier,Formation,02-07-2024,2024-07-05,4,N,
+d16828a552cc,Interimaire,Crédit Immobilier,CONGE_PAYE,29/10/24,05.11.2024,8,N,
+d16828a552cc,INTERIMAIRE,Crédit Immobilier,Formation CFA,23.02.2024,24.02.2024,2,OUI,URGENT
+d16828a552cc,Interimaire,Crédit Immobilier,rtt,08.11.2024,2024-11-08,1,NON,URGENT
+d16828a552cc,Intérimaire,Crédit Immobilier,MALADIE,01-07-2024,04.07.2024,4,O,
+d16828a552cc,Intérimaire,Crédit Immobilier,Formation,25/09/24,26-09-2024,2,OUI,Validé manager
+d16828a552cc,Intérimaire,Crédit Immobilier,Formation,2024-10-27,10/29/2024,3,0,Validé manager
+d16828a552cc,Intérimaire,Crédit Immobilier,Congé Payé,09/26/2024,01/10/2024,-1,O,Validé manager
+d16828a552cc,Intérimaire,Crédit Immobilier,rtt,10.03.2024,10.03.2024,1,1,RAS
+2df1e2fe0fe1,cdi,Recouvrement,CONGE_PAYE,09.06.2026,2026-06-15,7,O,A régulariser
+2df1e2fe0fe1,CDI,Recouvrement,FORMATION,08.06.2026,2026-06-09,2,1,Validé manager
+2df1e2fe0fe1,CDI,Recouvrement,Congé Payé,2025-01-03,08/01/2025,6,O,URGENT
+2df1e2fe0fe1,CDI,Recouvrement,MALADIE,2024-03-18,20/03/2024,3,Y,URGENT
+2df1e2fe0fe1,cdi,Recouvrement,FORMATION,26/01/24,28/01/2024,3,Y,URGENT
+2df1e2fe0fe1,cdi,Recouvrement,RTT,26-06-2025,26/06/2025,1,O,
+2df1e2fe0fe1,CDI,Recouvrement,CONGE_PAYE,26.09.2025,09/30/2025,5,O,Validé manager
+2df1e2fe0fe1,cdi,Recouvrement,CP,2025-02-15,02/21/2025,7,O,URGENT
+2df1e2fe0fe1,cdi,Recouvrement,rtt,05.10.2024,2024-10-05,1,NON,Validé manager
+2df1e2fe0fe1,CDI,Recouvrement,FORMATION,17/09/2024,19.09.2024,3,O,En attente validation
+2df1e2fe0fe1,CDI,Recouvrement,CONGE_PAYE,01/08/2024,2024-08-10,10,1,En attente validation
+2df1e2fe0fe1,cdi,Recouvrement,CP,03/23/2024,01/04/2024,10,1,A régulariser
+2df1e2fe0fe1,CDI,Recouvrement,FORMATION,23-08-2024,25/08/24,3,OUI,A régulariser
+2df1e2fe0fe1,cdi,Recouvrement,CP,06.04.2026,2026-04-12,7,OUI,
+2df1e2fe0fe1,CDI,Recouvrement,Absent,23/08/25,23/08/2025,1,N,
+2df1e2fe0fe1,cdi,Recouvrement,CP,10/30/2024,2024-11-08,10,NON,En attente validation
+2df1e2fe0fe1,CDI,Recouvrement,MALADIE,24.03.2024,26.03.2024,3,Y,
+2df1e2fe0fe1,CDI,Recouvrement,CP,13/12/25,17.12.2025,5,OUI,
+2df1e2fe0fe1,cdi,Recouvrement,RTT,27/10/2025,27/10/2025,1,NON,
+2df1e2fe0fe1,cdi,Recouvrement,CONGE_PAYE,06/06/2025,2025-06-10,-1,OUI,
+2df1e2fe0fe1,cdi,Recouvrement,FORMATION,25/04/2026,26-04-2026,2,OUI,Certificat fourni
+2df1e2fe0fe1,CDI,Recouvrement,Absent,01/26/2025,01/26/2025,1,0,A régulariser
+2df1e2fe0fe1,CDI,Recouvrement,CONGE_PAYE,30/11/2024,09/12/2024,10,N,
+2df1e2fe0fe1,cdi,Recouvrement,rtt,26/10/25,26/10/2025,1,O,Certificat fourni
+2df1e2fe0fe1,CDI,Recouvrement,Formation CFA,17-04-2026,04/21/2026,5,Y,URGENT
+2df1e2fe0fe1,CDI,Recouvrement,rtt,2025-07-28,28/07/25,1,N,
+2df1e2fe0fe1,cdi,Recouvrement,Congé Payé,01/12/2024,08.12.2024,8,Y,
+2df1e2fe0fe1,cdi,Recouvrement,Formation CFA,2025-05-27,28.05.2025,2,Y,Validé manager
+2df1e2fe0fe1,CDI,Recouvrement,Formation,15.07.2024,19-07-2024,5,1,En attente validation
+2df1e2fe0fe1,cdi,Recouvrement,Congé Payé,02-10-2024,08.10.2024,7,0,
+2df1e2fe0fe1,cdi,Recouvrement,CP,21/03/2026,25/03/26,5,NON,
+2df1e2fe0fe1,cdi,Recouvrement,Formation CFA,20-11-2024,2024-11-23,4,N,
+af1fc8f0b311,CDI,Conformité KYC,Formation CFA,28/05/2024,29/05/2024,2,OUI,A régulariser
+af1fc8f0b311,CDI,Conformité KYC,Maladie,2024-01-05,05-01-2024,1,Y,URGENT
+af1fc8f0b311,CDI,Conformité KYC,Maladie,20.09.2025,24-09-2025,5,N,
+af1fc8f0b311,CDI,Conformité KYC,Formation CFA,01-02-2026,2026-02-04,4,OUI,Validé manager
+af1fc8f0b311,CDI,Conformité KYC,RTT,24.08.2024,24.08.2024,1,N,A régulariser
+af1fc8f0b311,CDI,Conformité KYC,Maladie,04/14/2025,16/04/25,3,N,Certificat fourni
+af1fc8f0b311,CDI,Conformité KYC,FORMATION,04/25/2025,24/04/2025,3,O,
+af1fc8f0b311,cdi,Conformité KYC,Congé Payé,27.07.2025,03/08/2025,8,O,En attente validation
+af1fc8f0b311,cdi,Conformité KYC,Congé Payé,2025-08-29,2025-09-06,9,OUI,A régulariser
+af1fc8f0b311,CDI,Conformité KYC,RTT,2025-11-27,27-11-2025,1,N,
+af1fc8f0b311,CDI,Conformité KYC,RTT,28/05/2024,05/28/2024,1,NON,
+af1fc8f0b311,cdi,Conformité KYC,CP,31-01-2026,06/02/2026,7,OUI,En attente validation
+af1fc8f0b311,cdi,Conformité KYC,Maladie,2026-03-03,2026-03-06,4,OUI,
+af1fc8f0b311,cdi,Conformité KYC,MALADIE,10/01/2026,14.01.2026,5,Y,En attente validation
+af1fc8f0b311,CDI,Conformité KYC,rtt,2025-11-04,04.11.2025,1,N,RAS
+af1fc8f0b311,CDI,Conformité KYC,MALADIE,05/27/2025,31/05/2025,5,OUI,RAS
+af1fc8f0b311,CDI,Conformité KYC,FORMATION,05-09-2025,06/09/2025,2,NON,
+af1fc8f0b311,CDI,Conformité KYC,Formation CFA,12/28/2025,2026-01-01,5,0,URGENT
+af1fc8f0b311,cdi,Conformité KYC,Congé Payé,22.02.2026,02/28/2026,7,O,URGENT
+af1fc8f0b311,cdi,Conformité KYC,Formation,09/04/2026,10-04-2026,2,0,Validé manager
+af1fc8f0b311,cdi,Conformité KYC,MALADIE,2026-03-15,16/03/26,2,0,En attente validation
+af1fc8f0b311,cdi,Conformité KYC,CP,01.03.2024,07.03.2024,7,OUI,URGENT
+af1fc8f0b311,CDI,Conformité KYC,rtt,26/10/24,26.10.2024,1,O,RAS
+af1fc8f0b311,CDI,Conformité KYC,CP,17-11-2025,2025-11-21,5,Y,RAS
+23b966efd308,CDI,Crédit Immobilier,MALADIE,12.08.2025,15-08-2025,4,NON,A régulariser
+23b966efd308,CDI,Crédit Immobilier,Congé Payé,24.04.2025,2025-05-03,10,1,En attente validation
+23b966efd308,CDI,Crédit Immobilier,Formation,27.02.2025,01-03-2025,3,OUI,
+23b966efd308,CDI,Crédit Immobilier,rtt,28/07/25,28/07/2025,1,O,
+23b966efd308,CDI,Crédit Immobilier,CONGE_PAYE,07/20/2025,2025-07-28,9,OUI,A régulariser
+23b966efd308,CDI,Crédit Immobilier,RTT,25-02-2024,02/25/2024,1,1,Validé manager
+23b966efd308,cdi,,CONGE_PAYE,01/20/2024,28-01-2024,9,1,RAS
+23b966efd308,cdi,Crédit Immobilier,rtt,10/28/2025,10/28/2025,1,1,
+23b966efd308,CDI,Crédit Immobilier,Maladie,2025-06-18,22.06.2025,5,NON,RAS
+23b966efd308,CDI,Crédit Immobilier,rtt,11/13/2024,13/11/24,1,0,A régulariser
+23b966efd308,cdi,Crédit Immobilier,CP,07.08.2024,15.08.2024,9,0,URGENT
+23b966efd308,CDI,Crédit Immobilier,MALADIE,15-02-2026,16/02/26,2,O,A régulariser
+23b966efd308,CDI,Crédit Immobilier,FORMATION,2024-07-24,27.07.2024,4,NON,
+23b966efd308,CDI,Crédit Immobilier,Congé Payé,05-08-2025,11-08-2025,7,1,
+23b966efd308,cdi,Crédit Immobilier,CONGE_PAYE,2026-03-17,2026-03-25,9,Y,En attente validation
+23b966efd308,CDI,Crédit Immobilier,MALADIE,2025-05-23,23.05.2025,1,OUI,
+23b966efd308,cdi,Crédit Immobilier,Maladie,2025-11-17,17/11/25,1,Y,En attente validation
+23b966efd308,cdi,Crédit Immobilier,FORMATION,16/03/24,03/17/2024,2,OUI,A régulariser
+23b966efd308,CDI,Crédit Immobilier,RTT,25-07-2024,25/07/2024,1,N,Certificat fourni
+23b966efd308,cdi,Crédit Immobilier,Formation CFA,08/26/2025,2025-08-29,4,Y,RAS
+23b966efd308,CDI,Crédit Immobilier,rtt,2024-11-25,25/11/2024,1,1,RAS
+23b966efd308,CDI,Crédit Immobilier,CP,08-10-2025,2025-10-14,7,1,A régulariser
+23b966efd308,CDI,Crédit Immobilier,Absent,17/11/2024,17/11/24,1,N,En attente validation
+23b966efd308,cdi,Crédit Immobilier,rtt,30/08/25,30/08/2025,1,O,URGENT
+23b966efd308,cdi,Crédit Immobilier,FORMATION,04/26/2024,04/29/2024,4,N,En attente validation
+23b966efd308,CDI,Crédit Immobilier,Absent,2026-04-02,02-04-2026,1,O,URGENT
+23b966efd308,CDI,Crédit Immobilier,Formation,2026-03-22,03/25/2026,4,NON,
+23b966efd308,cdi,Crédit Immobilier,FORMATION,25/10/24,2024-10-26,2,OUI,RAS
+23b966efd308,cdi,Crédit Immobilier,rtt,2025-07-27,2025-07-27,1,Y,
+23b966efd308,CDI,Crédit Immobilier,Congé Payé,2024-10-10,15/10/2024,-1,OUI,Certificat fourni
+a13be7df55a9,CDD,Crédit Immobilier,Congé Payé,11-11-2025,11/15/2025,5,N,A régulariser
+a13be7df55a9,CDD,Crédit Immobilier,MALADIE,25/05/26,05/28/2026,4,1,RAS
+a13be7df55a9,cdd,Crédit Immobilier,MALADIE,11/11/2025,11.11.2025,1,NON,Validé manager
+a13be7df55a9,cdd,Crédit Immobilier,MALADIE,2026-04-28,01-05-2026,4,1,Certificat fourni
+a13be7df55a9,CDD,Crédit Immobilier,Maladie,02.03.2026,05/03/2026,4,OUI,En attente validation
+a13be7df55a9,cdd,Crédit Immobilier,MALADIE,02.12.2025,05-12-2025,4,O,Validé manager
+a13be7df55a9,cdd,Crédit Immobilier,RTT,28-03-2026,28-03-2026,1,O,Certificat fourni
+a13be7df55a9,CDD,,CONGE_PAYE,02.10.2025,2025-10-11,10,1,Validé manager
+a13be7df55a9,CDD,Crédit Immobilier,Maladie,12-02-2026,2026-02-16,5,O,Certificat fourni
+a13be7df55a9,CDD,Crédit Immobilier,Maladie,09/22/2025,26/09/25,95,N,RAS
+a13be7df55a9,CDD,Crédit Immobilier,rtt,19-05-2026,19-05-2026,1,NON,
+a13be7df55a9,cdd,Crédit Immobilier,Congé Payé,08.01.2026,01/15/2026,8,N,Validé manager
+a13be7df55a9,CDD,Crédit Immobilier,Maladie,2026-01-18,21/01/26,4,N,En attente validation
+a13be7df55a9,CDD,Crédit Immobilier,Formation,22/11/2025,26.11.2025,5,Y,Certificat fourni
+a13be7df55a9,CDD,Crédit Immobilier,MALADIE,21-09-2025,21/09/2025,1,1,RAS
+a13be7df55a9,CDD,Crédit Immobilier,rtt,26/04/2026,26/04/2026,1,OUI,A régulariser
+a13be7df55a9,cdd,Crédit Immobilier,Congé Payé,28/12/2025,2026-01-03,7,NON,Certificat fourni
+a13be7df55a9,CDD,Crédit Immobilier,FORMATION,25/11/25,28/11/2025,4,O,A régulariser
+a13be7df55a9,CDD,Crédit Immobilier,Congé Payé,2025-10-01,08/10/2025,8,0,URGENT
+a13be7df55a9,CDD,Crédit Immobilier,MALADIE,25/01/2026,27/01/2026,3,0,Validé manager
+a13be7df55a9,CDD,Crédit Immobilier,FORMATION,09.12.2025,13/12/2025,5,Y,
+a13be7df55a9,CDD,Crédit Immobilier,Formation CFA,13-02-2026,17/02/26,5,N,
+a13be7df55a9,CDD,Crédit Immobilier,Maladie,2026-05-07,2026-05-09,3,0,Validé manager
+a13be7df55a9,CDD,Crédit Immobilier,rtt,24/12/2025,24.12.2025,1,OUI,Validé manager
+f6e7ff7af9d4,CDI,Crédit Immobilier,MALADIE,18-11-2024,21.11.2024,4,OUI,
+f6e7ff7af9d4,cdi,Crédit Immobilier,Formation,11.03.2026,14-03-2026,4,Y,
+f6e7ff7af9d4,cdi,Crédit Immobilier,Maladie,2025-11-08,2025-11-10,3,O,URGENT
+f6e7ff7af9d4,cdi,Crédit Immobilier,MALADIE,14/05/25,05/18/2025,5,1,Validé manager
+f6e7ff7af9d4,cdi,Crédit Immobilier,Maladie,25/08/2024,2024-08-29,5,Y,
+f6e7ff7af9d4,CDI,Crédit Immobilier,CP,26-06-2025,05/07/2025,10,1,A régulariser
+f6e7ff7af9d4,cdi,Crédit Immobilier,Maladie,2025-06-11,14/06/2025,4,1,A régulariser
+f6e7ff7af9d4,cdi,Crédit Immobilier,RTT,03/03/2025,03.03.2025,1,1,URGENT
+f6e7ff7af9d4,cdi,Crédit Immobilier,FORMATION,2024-08-03,07.08.2024,5,O,URGENT
+f6e7ff7af9d4,cdi,,Congé Payé,19/09/25,25.09.2025,7,OUI,Certificat fourni
+f6e7ff7af9d4,cdi,Crédit Immobilier,MALADIE,02/23/2024,23-02-2024,1,Y,
+f6e7ff7af9d4,CDI,Crédit Immobilier,MALADIE,04-03-2026,2026-03-08,5,O,A régulariser
+f6e7ff7af9d4,CDI,Crédit Immobilier,Maladie,2026-03-07,2026-03-11,5,O,URGENT
+f6e7ff7af9d4,cdi,Crédit Immobilier,Congé Payé,04/22/2026,01-05-2026,10,OUI,URGENT
+f6e7ff7af9d4,cdi,Crédit Immobilier,Formation CFA,03/04/2024,06/04/2024,4,1,A régulariser
+f6e7ff7af9d4,CDI,Crédit Immobilier,Maladie,20/06/2025,06/24/2025,5,1,
+f6e7ff7af9d4,cdi,Crédit Immobilier,Congé Payé,2025-04-20,28-04-2025,9,NON,RAS
+f6e7ff7af9d4,CDI,Crédit Immobilier,rtt,2025-05-09,09/05/2025,1,Y,Validé manager
+f6e7ff7af9d4,cdi,Crédit Immobilier,Congé Payé,22-06-2025,26/06/2025,5,0,A régulariser
+f6e7ff7af9d4,cdi,Crédit Immobilier,CONGE_PAYE,23/05/25,01/06/2025,10,Y,RAS
+f6e7ff7af9d4,cdi,Crédit Immobilier,CONGE_PAYE,07-04-2024,12-04-2024,6,N,Certificat fourni
+f6e7ff7af9d4,cdi,Crédit Immobilier,Maladie,20.01.2026,22-01-2026,3,Y,
+f6e7ff7af9d4,cdi,Crédit Immobilier,Formation,17.10.2024,21-10-2024,5,0,URGENT
+f6e7ff7af9d4,CDI,Crédit Immobilier,RTT,17.05.2026,05/17/2026,1,NON,RAS
+8d9565b51e23,CDD,Crédit Immobilier,RTT,20-04-2024,20-04-2024,1,Y,RAS
+8d9565b51e23,cdd,Crédit Immobilier,Absent,02/20/2024,20/02/2024,1,NON,Certificat fourni
+8d9565b51e23,CDD,Crédit Immobilier,rtt,25-04-2024,25-04-2024,1,1,URGENT
+8d9565b51e23,cdd,Crédit Immobilier,CONGE_PAYE,22/04/2024,29/04/24,8,N,En attente validation
+8d9565b51e23,cdd,Crédit Immobilier,CONGE_PAYE,15/01/2024,20/01/24,6,O,Certificat fourni
+8d9565b51e23,CDD,Crédit Immobilier,Formation,14/05/24,2024-05-13,2,1,Validé manager
+8d9565b51e23,cdd,Crédit Immobilier,MALADIE,01-01-2024,2024-01-02,2,NON,
+8d9565b51e23,CDD,Crédit Immobilier,CONGE_PAYE,01/19/2024,01/27/2024,9,N,RAS
+8d9565b51e23,CDD,Crédit Immobilier,CONGE_PAYE,2024-02-05,12/02/2024,8,Y,
+8d9565b51e23,CDD,Crédit Immobilier,CP,04-01-2024,10-01-2024,7,OUI,En attente validation
+8d9565b51e23,cdd,Crédit Immobilier,RTT,15.06.2024,15/06/24,1,1,
+8d9565b51e23,cdd,Crédit Immobilier,CP,04/27/2024,2024-05-01,5,N,Certificat fourni
+8d9565b51e23,cdd,Crédit Immobilier,MALADIE,13/04/2024,13.04.2024,1,Y,
+8d9565b51e23,CDD,Crédit Immobilier,FORMATION,26.05.2024,30.05.2024,5,Y,
+8d9565b51e23,cdd,Crédit Immobilier,RTT,28.01.2024,28/01/2024,1,OUI,RAS
+8d9565b51e23,CDD,Crédit Immobilier,Formation,22-03-2024,03/23/2024,2,0,Validé manager
+8d9565b51e23,cdd,Crédit Immobilier,RTT,2024-06-06,06.06.2024,1,O,A régulariser
+8d9565b51e23,CDD,Crédit Immobilier,CP,03/28/2024,2024-04-02,6,NON,A régulariser
+8d9565b51e23,CDD,Crédit Immobilier,rtt,05/28/2024,28/05/24,1,Y,RAS
+8d9565b51e23,CDD,Crédit Immobilier,CP,08-03-2024,16/03/2024,9,N,Certificat fourni
+8d9565b51e23,CDD,Crédit Immobilier,Maladie,01/22/2024,2024-01-25,4,N,
+8d9565b51e23,cdd,Crédit Immobilier,Maladie,12/02/2024,14/02/24,3,0,Validé manager
+8d9565b51e23,cdd,Crédit Immobilier,Formation CFA,2024-03-28,2024-03-29,2,N,RAS
+8d9565b51e23,CDD,Crédit Immobilier,MALADIE,2024-03-18,22/03/2024,5,NON,RAS
+8d9565b51e23,cdd,Crédit Immobilier,Formation,02/20/2024,02/23/2024,4,0,En attente validation
+8d9565b51e23,CDD,Crédit Immobilier,RTT,16-05-2024,2024-05-16,1,0,RAS
+8d9565b51e23,CDD,Crédit Immobilier,CONGE_PAYE,2024-01-27,2024-02-01,6,O,Certificat fourni
+8d9565b51e23,cdd,Crédit Immobilier,CP,12.06.2024,20/06/2024,9,1,
+48508d1b1541,alternant,Recouvrement,Maladie,2025-09-04,04-09-2025,1,O,
+48508d1b1541,Alternant,Recouvrement,Formation CFA,28/06/24,02/07/2024,5,0,Certificat fourni
+48508d1b1541,alternant,Recouvrement,CP,2025-10-12,17/10/2025,6,0,Validé manager
+48508d1b1541,alternant,Recouvrement,rtt,25/11/2025,25/11/2025,1,O,En attente validation
+48508d1b1541,alternant,Recouvrement,Formation,24/07/24,27/07/2024,4,N,
+48508d1b1541,alternant,Recouvrement,RTT,27/04/2025,04/27/2025,1,N,Certificat fourni
+48508d1b1541,Alternant,Recouvrement,RTT,28.01.2025,28/01/2025,1,N,En attente validation
+48508d1b1541,alternant,Recouvrement,FORMATION,27/03/2025,03/28/2025,2,NON,A régulariser
+48508d1b1541,Alternant,Recouvrement,RTT,27/12/2024,27.12.2024,1,0,Certificat fourni
+48508d1b1541,Alternant,Recouvrement,RTT,15-03-2025,2025-03-15,1,N,RAS
+48508d1b1541,alternant,Recouvrement,CP,14/05/25,05/18/2025,5,Y,A régulariser
+48508d1b1541,Alternant,Recouvrement,CP,26/10/24,31-10-2024,6,N,Certificat fourni
+48508d1b1541,alternant,Recouvrement,CP,13/07/2024,18/07/2024,6,0,RAS
+48508d1b1541,alternant,Recouvrement,CONGE_PAYE,29-06-2024,2024-07-06,8,NON,URGENT
+48508d1b1541,Alternant,Recouvrement,rtt,01.08.2024,2024-08-01,1,NON,Validé manager
+48508d1b1541,alternant,Recouvrement,RTT,15.09.2024,15/09/2024,1,OUI,Validé manager
+48508d1b1541,Alternant,Recouvrement,CP,01/29/2025,06-02-2025,9,O,En attente validation
+48508d1b1541,Alternant,Recouvrement,MALADIE,01-07-2024,05.07.2024,5,N,Validé manager
+48508d1b1541,Alternant,Recouvrement,Congé Payé,26-08-2024,2024-09-03,9,NON,En attente validation
+48508d1b1541,alternant,Recouvrement,rtt,08.03.2025,08/03/2025,1,1,Certificat fourni
+48508d1b1541,alternant,Recouvrement,Maladie,21/06/2025,25.06.2025,5,O,
+48508d1b1541,alternant,Recouvrement,Formation,11.05.2025,15.05.2025,5,OUI,A régulariser
+48508d1b1541,Alternant,Recouvrement,CP,2024-07-25,03/08/2024,10,O,A régulariser
+48508d1b1541,alternant,Recouvrement,Formation,27.05.2024,30/05/24,4,NON,A régulariser
+48508d1b1541,alternant,Recouvrement,rtt,25/06/2025,25.06.2025,1,1,Certificat fourni
+48508d1b1541,Alternant,Recouvrement,CONGE_PAYE,25.11.2024,2024-12-01,7,0,Certificat fourni
+48508d1b1541,alternant,Recouvrement,CONGE_PAYE,08/26/2024,30.08.2024,5,0,En attente validation
+48508d1b1541,alternant,Recouvrement,Maladie,2025-10-30,2025-11-01,3,Y,Certificat fourni
+48508d1b1541,alternant,Recouvrement,CP,06/12/2025,2025-12-13,8,0,A régulariser
+48508d1b1541,Alternant,Recouvrement,rtt,17.12.2024,17/12/24,1,N,A régulariser
+48508d1b1541,alternant,Recouvrement,RTT,2024-09-23,23/09/24,1,0,A régulariser
+48508d1b1541,alternant,Recouvrement,RTT,27/07/25,27/07/25,1,OUI,Validé manager
+8d5da99add9f,cdi,Conformité KYC,Formation,12/29/2024,2024-12-30,2,Y,A régulariser
+8d5da99add9f,CDI,Conformité KYC,CP,04/02/2026,12-02-2026,9,O,RAS
+8d5da99add9f,cdi,Conformité KYC,CONGE_PAYE,10-04-2024,14-04-2024,5,O,Certificat fourni
+8d5da99add9f,cdi,Conformité KYC,Formation,26-08-2024,28.08.2024,3,1,Validé manager
+8d5da99add9f,cdi,Conformité KYC,Congé Payé,2025-01-14,01/21/2025,8,NON,RAS
+8d5da99add9f,CDI,Conformité KYC,rtt,28/04/2026,28.04.2026,1,O,Certificat fourni
+8d5da99add9f,cdi,Conformité KYC,RTT,26/08/2025,26-08-2025,1,NON,En attente validation
+8d5da99add9f,cdi,Conformité KYC,MALADIE,11-07-2025,13/07/2025,3,1,Certificat fourni
+8d5da99add9f,CDI,Conformité KYC,MALADIE,05-02-2024,07-02-2024,3,Y,Certificat fourni
+8d5da99add9f,CDI,Conformité KYC,Congé Payé,08-01-2026,2026-01-12,5,NON,
+8d5da99add9f,CDI,Conformité KYC,CONGE_PAYE,15.10.2025,19/10/25,5,OUI,
+8d5da99add9f,cdi,Conformité KYC,Formation,08/26/2024,28.08.2024,3,0,
+8d5da99add9f,CDI,Conformité KYC,Maladie,02/15/2026,2026-02-15,1,O,
+8d5da99add9f,CDI,,RTT,2026-05-21,17-05-2026,1,1,
+8d5da99add9f,cdi,Conformité KYC,RTT,2024-06-06,06/06/2024,1,OUI,RAS
+8d5da99add9f,cdi,Conformité KYC,Congé Payé,11/11/2025,19/11/2025,9,0,
+8d5da99add9f,CDI,Conformité KYC,Absent,03.02.2026,03.02.2026,1,Y,A régulariser
+8d5da99add9f,CDI,Conformité KYC,Formation,2025-05-02,2025-05-06,5,0,RAS
+8d5da99add9f,CDI,Conformité KYC,CP,01-11-2024,05/11/2024,5,Y,
+8d5da99add9f,cdi,Conformité KYC,RTT,04-03-2025,04.03.2025,1,Y,Certificat fourni
+8d5da99add9f,cdi,Conformité KYC,Formation CFA,16/12/24,12/17/2024,2,Y,RAS
+8d5da99add9f,cdi,Conformité KYC,Congé Payé,23.04.2024,28.04.2024,6,OUI,Certificat fourni
+8d5da99add9f,CDI,Conformité KYC,FORMATION,24/05/25,28-05-2025,5,1,
+8d5da99add9f,cdi,Conformité KYC,FORMATION,12/12/2025,15.12.2025,4,OUI,RAS
+8d5da99add9f,CDI,Conformité KYC,Congé Payé,09-04-2024,2024-04-17,9,1,
+29ac0afb44b0,cdd,Crédit Immobilier,FORMATION,2024-10-26,2024-10-29,4,OUI,Validé manager
+29ac0afb44b0,cdd,Crédit Immobilier,RTT,24-07-2024,07/24/2024,1,1,Certificat fourni
+29ac0afb44b0,cdd,Crédit Immobilier,rtt,24.03.2024,03/24/2024,1,OUI,URGENT
+29ac0afb44b0,cdd,Crédit Immobilier,Formation CFA,24/07/2024,25/07/24,2,O,RAS
+29ac0afb44b0,CDD,Crédit Immobilier,Formation CFA,27-09-2024,30.09.2024,-1,NON,En attente validation
+29ac0afb44b0,cdd,Crédit Immobilier,MALADIE,27/07/24,28/07/24,2,N,
+29ac0afb44b0,cdd,Crédit Immobilier,rtt,06/27/2024,27-06-2024,1,N,Validé manager
+29ac0afb44b0,cdd,Crédit Immobilier,Maladie,19/01/2025,01/20/2025,2,Y,RAS
+29ac0afb44b0,cdd,Crédit Immobilier,CONGE_PAYE,27/07/2024,04.08.2024,9,O,En attente validation
+29ac0afb44b0,CDD,Crédit Immobilier,Formation CFA,05/27/2024,31.05.2024,5,N,RAS
+29ac0afb44b0,cdd,Crédit Immobilier,RTT,25/11/2024,2024-11-25,1,Y,URGENT
+29ac0afb44b0,cdd,Crédit Immobilier,CONGE_PAYE,2024-03-12,21.03.2024,10,1,
+29ac0afb44b0,cdd,Crédit Immobilier,CP,13/12/24,21-12-2024,9,OUI,URGENT
+29ac0afb44b0,cdd,Crédit Immobilier,CONGE_PAYE,06/06/2024,13/06/2024,8,Y,Validé manager
+29ac0afb44b0,cdd,,RTT,2024-02-28,28-02-2024,1,Y,
+29ac0afb44b0,cdd,Crédit Immobilier,CP,18.04.2024,22/04/24,5,N,Certificat fourni
+29ac0afb44b0,cdd,Crédit Immobilier,CP,07.08.2024,11-08-2024,5,NON,En attente validation
+29ac0afb44b0,CDD,Crédit Immobilier,Absent,26/01/2024,2024-01-26,1,NON,En attente validation
+29ac0afb44b0,CDD,Crédit Immobilier,rtt,28-03-2024,03/28/2024,1,0,RAS
+29ac0afb44b0,CDD,Crédit Immobilier,Congé Payé,25.11.2024,03/12/2024,9,0,RAS
+29ac0afb44b0,CDD,Crédit Immobilier,Congé Payé,21/06/2024,29.06.2024,9,O,URGENT
+29ac0afb44b0,cdd,Crédit Immobilier,Congé Payé,2025-01-31,04/02/2025,5,Y,RAS
+29ac0afb44b0,cdd,Crédit Immobilier,Congé Payé,16.07.2024,21/07/24,6,O,
+29ac0afb44b0,cdd,Crédit Immobilier,Congé Payé,05.05.2024,2024-05-13,9,0,En attente validation
+29ac0afb44b0,CDD,Crédit Immobilier,CP,17/01/24,22/01/24,6,1,RAS
+29ac0afb44b0,CDD,Crédit Immobilier,CP,2024-07-24,31/07/2024,8,NON,En attente validation
+29ac0afb44b0,CDD,Crédit Immobilier,Congé Payé,2024-09-26,05-10-2024,10,0,RAS
+29ac0afb44b0,CDD,,CP,02.10.2024,07/10/2024,6,O,
+29ac0afb44b0,cdd,Crédit Immobilier,CONGE_PAYE,29.10.2024,05/11/2024,8,Y,Validé manager
+29ac0afb44b0,CDD,Crédit Immobilier,MALADIE,07-07-2024,11-07-2024,5,O,RAS
+29ac0afb44b0,cdd,Crédit Immobilier,rtt,25-02-2024,25-02-2024,1,NON,Validé manager
+29ac0afb44b0,cdd,Crédit Immobilier,MALADIE,31-01-2024,03/02/2024,4,OUI,A régulariser
+d54cf7e9aa35,CDI,Conformité KYC,CP,31/10/2024,05-11-2024,6,0,
+d54cf7e9aa35,cdi,Conformité KYC,Formation,01/24/2025,26/01/2025,3,Y,
+d54cf7e9aa35,cdi,Conformité KYC,CONGE_PAYE,2026-01-25,03/02/2026,10,O,A régulariser
+d54cf7e9aa35,cdi,Conformité KYC,CONGE_PAYE,07.08.2025,16-08-2025,10,1,
+d54cf7e9aa35,cdi,Conformité KYC,Formation CFA,24/05/24,26-05-2024,3,Y,Validé manager
+d54cf7e9aa35,CDI,,CONGE_PAYE,02/03/2025,2025-03-08,7,OUI,A régulariser
+d54cf7e9aa35,cdi,Conformité KYC,MALADIE,13/04/2025,15/04/2025,3,N,Validé manager
+d54cf7e9aa35,CDI,Conformité KYC,MALADIE,11-09-2024,2024-09-15,5,N,
+d54cf7e9aa35,cdi,Conformité KYC,CP,03/05/2025,30/04/2025,6,Y,Certificat fourni
+d54cf7e9aa35,CDI,Conformité KYC,MALADIE,12/26/2024,2024-12-29,4,N,
+d54cf7e9aa35,CDI,Conformité KYC,Maladie,01/31/2025,03-02-2025,4,N,Validé manager
+d54cf7e9aa35,CDI,Conformité KYC,CONGE_PAYE,29-12-2025,02.01.2026,5,O,En attente validation
+d54cf7e9aa35,cdi,Conformité KYC,Congé Payé,09.03.2024,14.03.2024,6,NON,Certificat fourni
+d54cf7e9aa35,CDI,Conformité KYC,rtt,26/05/24,26/05/2024,1,NON,A régulariser
+d54cf7e9aa35,CDI,Conformité KYC,FORMATION,25-05-2024,28-05-2024,4,OUI,En attente validation
+d54cf7e9aa35,CDI,,RTT,31.05.2025,31/05/25,1,OUI,En attente validation
+d54cf7e9aa35,cdi,Conformité KYC,RTT,26-08-2024,26/08/2024,1,0,Certificat fourni
+d54cf7e9aa35,cdi,Conformité KYC,CP,23-09-2024,09/30/2024,8,1,Validé manager
+d54cf7e9aa35,cdi,Conformité KYC,CONGE_PAYE,02/18/2025,22/02/2025,5,OUI,
+d54cf7e9aa35,cdi,Conformité KYC,Absent,2025-06-17,06/17/2025,1,0,
+d54cf7e9aa35,CDI,Conformité KYC,Formation,07/16/2024,18-07-2024,3,1,Certificat fourni
+d54cf7e9aa35,CDI,Conformité KYC,CONGE_PAYE,31-01-2026,06/02/2026,7,0,En attente validation
+d54cf7e9aa35,CDI,Conformité KYC,Congé Payé,24-08-2025,29.08.2025,6,NON,
+d54cf7e9aa35,CDI,Conformité KYC,Maladie,27-09-2024,30/09/2024,4,1,
+d54cf7e9aa35,CDI,Conformité KYC,MALADIE,03.03.2026,06-03-2026,4,O,RAS
+d54cf7e9aa35,cdi,Conformité KYC,Formation CFA,26.04.2024,29.04.2024,95,N,Validé manager
+d54cf7e9aa35,cdi,Conformité KYC,Maladie,2024-08-27,08/29/2024,3,1,En attente validation
+d54cf7e9aa35,CDI,Conformité KYC,Absent,24/06/24,06/24/2024,1,0,Certificat fourni
+d54cf7e9aa35,cdi,Conformité KYC,Congé Payé,2025-12-07,14-12-2025,8,1,URGENT
+d54cf7e9aa35,cdi,Conformité KYC,Formation CFA,25-04-2026,28/04/26,4,NON,RAS
+d54cf7e9aa35,CDI,Conformité KYC,RTT,04/24/2026,24-04-2026,1,NON,Certificat fourni
+bf7d8673f2bb,alternant,Conformité KYC,Maladie,16/04/2024,2024-04-19,4,NON,
+bf7d8673f2bb,Alternant,Conformité KYC,RTT,27/02/24,2024-02-27,1,1,
+bf7d8673f2bb,Alternant,Conformité KYC,RTT,25/03/2024,25/03/2024,1,NON,URGENT
+bf7d8673f2bb,Alternant,Conformité KYC,Congé Payé,28/02/2024,07/03/2024,9,0,
+bf7d8673f2bb,alternant,Conformité KYC,Formation CFA,19.03.2024,22.03.2024,4,NON,Certificat fourni
+bf7d8673f2bb,Alternant,Conformité KYC,MALADIE,11/01/2024,14/01/2024,4,Y,
+bf7d8673f2bb,alternant,Conformité KYC,CP,03-01-2024,10/01/2024,8,O,A régulariser
+bf7d8673f2bb,Alternant,Conformité KYC,CONGE_PAYE,20.01.2024,01/29/2024,10,NON,Certificat fourni
+bf7d8673f2bb,alternant,Conformité KYC,CP,2024-04-15,22/04/2024,8,0,Validé manager
+bf7d8673f2bb,alternant,Conformité KYC,rtt,27.02.2024,27.02.2024,1,O,
+bf7d8673f2bb,alternant,Conformité KYC,rtt,07-01-2024,07-01-2024,1,0,En attente validation
+bf7d8673f2bb,Alternant,Conformité KYC,MALADIE,18/04/2024,21-04-2024,4,OUI,URGENT
+bf7d8673f2bb,Alternant,Conformité KYC,FORMATION,01/25/2024,28/01/2024,4,1,En attente validation
+bf7d8673f2bb,alternant,Conformité KYC,RTT,2024-04-05,05.04.2024,1,1,URGENT
+bf7d8673f2bb,alternant,Conformité KYC,RTT,22-02-2024,22/02/24,1,O,En attente validation
+bf7d8673f2bb,alternant,Conformité KYC,FORMATION,27.01.2024,01/28/2024,2,OUI,
+bf7d8673f2bb,alternant,Conformité KYC,Formation,16.04.2024,04/18/2024,3,0,A régulariser
+bf7d8673f2bb,alternant,Conformité KYC,Congé Payé,15-03-2024,21/03/24,7,O,En attente validation
+bf7d8673f2bb,Alternant,Conformité KYC,CONGE_PAYE,16.03.2024,2024-03-24,9,1,A régulariser
+bf7d8673f2bb,alternant,Conformité KYC,Congé Payé,02/18/2024,24/02/2024,7,0,En attente validation
+bf7d8673f2bb,alternant,Conformité KYC,Maladie,13/01/24,17/01/24,5,0,
+bf7d8673f2bb,Alternant,Conformité KYC,FORMATION,26-02-2024,29-02-2024,4,0,En attente validation
+7273d82ef112,Alternant,Épargne & Placements,RTT,2024-03-12,12/03/2024,1,0,
+ab163c46da67,CDI,Épargne & Placements,Maladie,2026-05-27,27.05.2026,1,Y,A régulariser
+1d35b98de7d8,CDI,Épargne & Placements,FORMATION,07/24/2024,07/26/2024,3,0,Certificat fourni
+bd771913927c,cdd,Crédit Immobilier,Congé Payé,01/19/2024,27/01/2024,9,N,Validé manager
+3a22b132e0ad,cdi,Épargne & Placements,CP,08/31/2025,09-09-2025,10,OUI,URGENT
+26bc6c078665,CDI,Épargne & Placements,MALADIE,17/04/26,04/19/2026,3,N,RAS
+0c84277a6559,cdi,Épargne & Placements,RTT,2026-05-25,25-05-2026,1,0,Certificat fourni
+23b966efd308,cdi,Crédit Immobilier,rtt,10/28/2025,10/28/2025,1,1,
+4d877115cedd,INTERIMAIRE,Crédit Immobilier,FORMATION,06.04.2024,2024-04-10,5,Y,
+f48bd15c9ab4,Prestataire,Recouvrement,rtt,2024-05-28,2024-05-28,1,1,En attente validation
+b22077adf2ca,cdi,Crédit Immobilier,CONGE_PAYE,19-04-2025,26-04-2025,8,Y,
+cd1dc16cb9cd,CDI,Conformité KYC,CP,02/15/2026,02/23/2026,9,O,URGENT
+20a8323e4291,alternant,Recouvrement,CP,05.03.2024,14.03.2024,10,N,A régulariser
+c80712ac62d7,CDI,Conformité KYC,CONGE_PAYE,05/26/2024,03-06-2024,9,NON,
+c4a1b2fdeb5e,cdi,Crédit Immobilier,rtt,24.01.2025,2025-01-24,1,1,Validé manager
+d54cf7e9aa35,CDI,Conformité KYC,CONGE_PAYE,29-12-2025,02.01.2026,5,O,En attente validation
+814dd660e7ef,cdi,Épargne & Placements,MALADIE,2024-10-06,2024-10-10,5,O,Validé manager
+71d540203fde,cdd,Recouvrement,RTT,15-02-2026,02/15/2026,1,Y,Certificat fourni
+814dd660e7ef,cdi,Épargne & Placements,rtt,17/10/24,17/10/2024,1,N,En attente validation
+4d877115cedd,INTERIMAIRE,Crédit Immobilier,rtt,2024-03-28,28-03-2024,1,Y,Validé manager
+c0973ce58b06,CDI,Recouvrement,CONGE_PAYE,28-04-2025,04-05-2025,7,O,RAS
+264d28d68214,CDI,Recouvrement,rtt,2024-11-20,20.11.2024,1,NON,Validé manager
+264d28d68214,CDI,Recouvrement,FORMATION,25-10-2025,10/28/2025,4,OUI,
+763e5af1d1d5,cdd,Recouvrement,CONGE_PAYE,13.08.2025,19/08/2025,7,O,Validé manager
+aabe73103df3,CDI,Conformité KYC,MALADIE,08/04/2025,12.04.2025,5,Y,
+cd1dc16cb9cd,CDI,Conformité KYC,Formation,24.11.2024,28/11/24,5,O,URGENT
+d5d3fea0d185,cdi,Conformité KYC,RTT,22.03.2026,21/03/26,1,0,En attente validation
+d5d3fea0d185,cdi,Conformité KYC,RTT,22.03.2026,21/03/26,1,0,En attente validation
+073896489b66,CDI,Conformité KYC,Formation,16.03.2026,19.03.2026,4,0,Certificat fourni
+38488e69482b,CDI,Recouvrement,MALADIE,31-01-2024,03.02.2024,4,N,Certificat fourni
+5be217607699,CDD,Recouvrement,rtt,26.08.2025,2025-08-26,1,N,
+24e708becf23,cdi,Épargne & Placements,CONGE_PAYE,04/19/2025,23/04/25,5,Y,En attente validation
+41368782cdae,Alternant,Épargne & Placements,CP,09/18/2025,27-09-2025,10,N,Validé manager
+e88f8d4c892d,cdi,Recouvrement,CP,10-06-2024,06/19/2024,10,O,
+ff1c8a129b7b,cdi,Conformité KYC,CP,14/08/2025,2025-08-22,9,0,En attente validation
+aabe73103df3,CDI,Conformité KYC,rtt,27-09-2025,2025-09-27,1,N,
+29ac0afb44b0,cdd,Crédit Immobilier,FORMATION,2024-10-26,2024-10-29,4,OUI,Validé manager
+0c84277a6559,cdi,Épargne & Placements,CP,14/06/25,06/23/2025,10,O,
+3ab5fd23b6cc,alternant,Recouvrement,RTT,27-10-2025,2025-10-27,1,1,En attente validation
+4275e01c69ac,cdi,Crédit Immobilier,FORMATION,26.03.2024,29-03-2024,4,N,En attente validation
+9d719ebffb3e,cdd,Recouvrement,Formation,03-04-2026,05/04/2026,120,O,A régulariser
+cf4a083b5221,cdd,Conformité KYC,Absent,20-02-2025,2025-02-20,1,N,
+71d540203fde,CDD,Recouvrement,rtt,04/26/2026,2026-04-26,1,Y,En attente validation
+b0d111d6b116,Prestataire,Conformité KYC,CP,2025-09-20,29.09.2025,10,O,
+0c06b7975393,PRESTATAIRE,Conformité KYC,CONGE_PAYE,21/05/24,26/05/24,6,1,Certificat fourni
+6bbeffeb0e5e,cdi,Recouvrement,FORMATION,28.03.2024,03/31/2024,4,N,Validé manager
+f6e7ff7af9d4,cdi,Crédit Immobilier,Maladie,20.01.2026,22-01-2026,3,Y,
+f41fbc2fc4f1,CDI,Conformité KYC,FORMATION,24.01.2025,2025-01-27,4,1,URGENT
+1d35b98de7d8,cdi,Épargne & Placements,FORMATION,20/11/24,19/11/2024,3,O,
