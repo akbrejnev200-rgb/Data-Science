@@ -67,7 +67,7 @@ SOUS_TITRES = {
     "incidents": "Incidents ETP et annonces d'activité",
 }
 TITRES = {"surcharge": "Surcharge & prévisions", "reallocation": "Réallocation équitable",
-          "derive": "Dérive individuelle", "fiabilite": "Fiabilité du modèle",
+          "derive": "Analyse des performances", "fiabilite": "Fiabilité du modèle",
           "incidents": "Incidents & Annonces"}
 
 

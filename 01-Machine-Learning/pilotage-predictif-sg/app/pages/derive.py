@@ -28,15 +28,6 @@ LIBELLES_FEATURES_SHAP = {
     "Temps_Passe_Declare_Min": "Temps déclaré (minutes)",
 }
 
-# Le modele flague ~2% de TOUTES les taches (contamination=0.02) : avec des
-# centaines/milliers de taches par agent, chaque agent a statistiquement au
-# moins une tache flaguee -- un simple "a au moins 1 anomalie" ne veut donc
-# rien dire (90/90 agents dans ce cas). Le vrai signal est le TAUX d'anomalie
-# de l'agent compare au taux global, pas le compte brut (qui n'est qu'un
-# proxy du nombre de taches traitees). Seuil : 3x le taux global.
-MULTIPLICATEUR_SEUIL = 3
-
-
 def _taux_par_agent(df_anomalies):
     par_agent = df_anomalies["par_agent"].groupby("Matricule_Agent").agg(
         nb_taches=("nb_taches_evaluees", "sum"), nb_anomalies=("nb_anomalies", "sum"),
@@ -48,18 +39,13 @@ def _taux_par_agent(df_anomalies):
 def construire_kpis(df_feat, df_anomalies):
     par_agent = _taux_par_agent(df_anomalies)
     n_agents = len(df_feat)
-    taux_global = df_anomalies["par_agent"]["nb_anomalies"].sum() / df_anomalies["par_agent"]["nb_taches_evaluees"].sum() * 100
-    seuil = taux_global * MULTIPLICATEUR_SEUIL
-    n_taux_eleve = int((par_agent["taux_pct"] > seuil).sum())
 
-    # "Productivite moyenne" retire : une moyenne globale (tous agents, tous
-    # services confondus) n'apporte pas de valeur actionnable -- remarque de
-    # l'utilisateur. Ne restent que des KPI directement lies au suivi de
-    # derive (agents suivis, agents a taux anormal, pic d'anomalie).
+    # "Productivite moyenne" et "Agents a taux anormal" retires (le 2e etait
+    # un classement d'agents individuels par taux, juge pas assez ethique --
+    # remarque de l'utilisateur). Ne restent que des KPI qui ne pointent pas
+    # d'agent precis.
     return kpi_row(
         kpi_card("Agents suivis", n_agents, "au total"),
-        kpi_card("Agents à taux anormal", n_taux_eleve, f"> {seuil:.1f}% (3x le taux global {taux_global:.1f}%)",
-                  statut="avertissement" if n_taux_eleve else "bon"),
         kpi_card("Taux d'anomalie le plus élevé", f"{par_agent['taux_pct'].max():.1f}%", "d'un seul agent"),
     )
 
@@ -112,25 +98,6 @@ def construire_fig_scatter(df_feat, df_anomalies, service=TOUS_SERVICES):
     return figure_layout_defaults(fig, hauteur=300)
 
 
-def construire_fig_top_agents(df_anomalies, n=10):
-    # Trie par TAUX (proportion de taches atypiques), pas par compte brut :
-    # sinon ce classement ne refleterait que qui a traite le plus de taches.
-    services_par_agent = df_anomalies["par_agent"].drop_duplicates("Matricule_Agent").set_index("Matricule_Agent")["Service"]
-    par_agent = _taux_par_agent(df_anomalies).sort_values("taux_pct", ascending=False).head(n)
-    par_agent["Service"] = par_agent["Matricule_Agent"].map(services_par_agent)
-
-    fig = go.Figure(go.Bar(
-        y=par_agent["Matricule_Agent"].astype(str) + " · " + par_agent["Service"],
-        x=par_agent["taux_pct"], orientation="h", marker_color=SG_ROUGE,
-        customdata=par_agent[["nb_anomalies", "nb_taches"]],
-        hovertemplate="%{y}<br>%{x:.1f}%% de taches atypiques<br>"
-                      "(%{customdata[0]:.0f} sur %{customdata[1]:.0f} taches)<extra></extra>",
-    ))
-    fig.update_layout(yaxis=dict(autorange="reversed"))
-    fig.update_xaxes(title_text="Taux de tâches atypiques (%)")
-    return figure_layout_defaults(fig, hauteur=340)
-
-
 def construire_fig_shap_importance():
     """Remplace le graphique SHAP "beeswarm" (image brute shap.summary_plot,
     pensee pour un public data science : nuage de points colore avec une
@@ -160,36 +127,29 @@ def layout(df_feat, df_anomalies):
     contenu = [
         html.Div(id="derive-kpi-row", children=construire_kpis(df_feat, df_anomalies)),
         html.Div([
+            html.H3("Productivité vs ancienneté", className="chart-title"),
             html.Div([
-                html.H3("Productivité vs ancienneté", className="chart-title"),
-                html.Div([
-                    html.Span("Service :", className="filtre-label"),
-                    dcc.Dropdown(
-                        id="derive-service-filter",
-                        options=[{"label": TOUS_SERVICES, "value": TOUS_SERVICES}] +
-                                [{"label": s, "value": s} for s in ORDRE_SERVICES],
-                        value=TOUS_SERVICES, clearable=False, style={"width": "220px"},
-                    ),
-                ], className="filtre-row"),
-                html.Div(id="derive-chart-scatter", children=dcc.Graph(
-                    figure=construire_fig_scatter(df_feat, df_anomalies), config={"displayModeBar": False})),
-                html.P(
-                    "Un point sous la ligne pointillée = agent moins productif que la moyenne équipe ; "
-                    "plus le point est gros, plus la proportion de tâches atypiques de l'agent est élevée. " + NOTE_ETHIQUE,
-                    className="chart-caption",
+                html.Span("Service :", className="filtre-label"),
+                dcc.Dropdown(
+                    id="derive-service-filter",
+                    options=[{"label": TOUS_SERVICES, "value": TOUS_SERVICES}] +
+                            [{"label": s, "value": s} for s in ORDRE_SERVICES],
+                    value=TOUS_SERVICES, clearable=False, style={"width": "220px"},
                 ),
-            ], className="chart-block"),
-            chart_block(
-                "Agents les plus atypiques",
-                dcc.Graph(figure=construire_fig_top_agents(df_anomalies), config={"displayModeBar": False}),
-                NOTE_ETHIQUE,
+            ], className="filtre-row"),
+            html.Div(id="derive-chart-scatter", children=dcc.Graph(
+                figure=construire_fig_scatter(df_feat, df_anomalies), config={"displayModeBar": False})),
+            html.P(
+                "Un point sous la ligne pointillée = agent moins productif que la moyenne équipe ; "
+                "plus le point est gros, plus la proportion de tâches atypiques de l'agent est élevée. " + NOTE_ETHIQUE,
+                className="chart-caption",
             ),
-        ], className="grid-2"),
+        ], className="chart-block"),
         chart_block(
             "Importance des caractéristiques (SHAP)",
             dcc.Graph(figure=fig_shap, config={"displayModeBar": False}) if fig_shap is not None
             else html.Img(src="/model-assets/shap_anomalies_summary.png", style={"maxWidth": "100%", "borderRadius": "3px"}),
-            "Plus la barre est longue, plus cette caractéristique pèse dans la décision du modèle pour juger "
+            "Plus la barre est longue, plus cette caractéristique pèse dans la décision du modèle pour repérer "
             "une tâche atypique ou non (Bloc 3D, Isolation Forest).",
         ),
         html.Div([

@@ -12,7 +12,7 @@ from dash import dcc, html
 PAGES = [
     ("surcharge", "Surcharge & prévisions", "Vue d'ensemble"),
     ("reallocation", "Réallocation équitable", "Vue d'ensemble"),
-    ("derive", "Dérive individuelle", "Qualité & contrôle"),
+    ("derive", "Analyse des performances", "Qualité & contrôle"),
     ("fiabilite", "Fiabilité du modèle", "Qualité & contrôle"),
     ("incidents", "Incidents & Annonces", "Saisie manuelle"),
 ]
