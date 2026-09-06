@@ -14,7 +14,9 @@ Ameliorations vs notebook d'origine :
   plus de Service et Type_Contrat deja encodes dans la version originale.
 - Recherche d'hyperparametres sur validation (au lieu de max_depth=6/10
   et min_samples_leaf=50/20 fixes a la main).
-- Seuil de decision ajuste sur validation (maximisation du F1) au lieu du
+- Seuil de decision ajuste sur validation (maximisation du F2, qui priorise
+  le rappel : dans un back-office, manquer un vrai retard coute plus cher
+  que verifier une fausse alerte) au lieu du
   seuil par defaut 0.5, pour mieux gerer le desequilibre de classes en
   complement de class_weight="balanced".
 
@@ -67,12 +69,18 @@ def walk_forward_clf(X, y, model_class, model_kwargs, taille_fenetre=50000, tail
     return accs
 
 
-def meilleur_seuil(y_true, proba):
+def meilleur_seuil(y_true, proba, beta=2):
+    # F2 (beta=2) plutot que F1 : dans un back-office, manquer un vrai retard
+    # coute plus cher que verifier une fausse alerte -- on priorise donc le
+    # rappel deux fois plus que la precision au moment de choisir le seuil.
     precisions, recalls, seuils = precision_recall_curve(y_true, proba)
-    f1s = 2 * precisions * recalls / np.where((precisions + recalls) == 0, np.nan, precisions + recalls)
-    f1s = np.nan_to_num(f1s)
-    idx = np.argmax(f1s[:-1]) if len(seuils) > 0 else 0
-    return (seuils[idx], f1s[idx]) if len(seuils) > 0 else (0.5, f1s[-1])
+    beta2 = beta ** 2
+    fbetas = (1 + beta2) * precisions * recalls / np.where(
+        (beta2 * precisions + recalls) == 0, np.nan, beta2 * precisions + recalls
+    )
+    fbetas = np.nan_to_num(fbetas)
+    idx = np.argmax(fbetas[:-1]) if len(seuils) > 0 else 0
+    return (seuils[idx], fbetas[idx]) if len(seuils) > 0 else (0.5, fbetas[-1])
 
 
 def run():
@@ -198,13 +206,13 @@ def run():
         modele_final, model_final, type_final = "Decision Tree", model_tree, "decision_tree"
     print(f"\n  Modele retenu pour la production : {modele_final}")
 
-    # --- SEUIL DE DECISION AJUSTE (F1 sur validation) ---
+    # --- SEUIL DE DECISION AJUSTE (F2 sur validation, priorise le rappel) ---
     print("\n" + "-" * 60)
-    print("AJUSTEMENT DU SEUIL DE DECISION (maximisation F1 sur validation)")
+    print("AJUSTEMENT DU SEUIL DE DECISION (maximisation F2 sur validation)")
     print("-" * 60)
     proba_val = model_final.predict_proba(X_val)[:, 1]
-    seuil_optimal, f1_val = meilleur_seuil(y_val, proba_val)
-    print(f"  Seuil optimal : {seuil_optimal:.3f} (F1 validation = {f1_val:.3f}, vs 0.5 par defaut)")
+    seuil_optimal, f2_val = meilleur_seuil(y_val, proba_val)
+    print(f"  Seuil optimal : {seuil_optimal:.3f} (F2 validation = {f2_val:.3f}, vs 0.5 par defaut)")
 
     proba_test = model_final.predict_proba(X_test)[:, 1]
     pred_test_defaut = (proba_test >= 0.5).astype(int)
