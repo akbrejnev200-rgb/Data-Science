@@ -1,17 +1,19 @@
+﻿# Environnements virtuels
 venv/
+.venv/
 __pycache__/
 *.pyc
+
+# Donnees et artefacts
 *.csv
 *.joblib
-.env
 *.log
-
-*.txt
+LI-Small_Patterns.txt
 
 # Secrets et credentials
-*.json
 .env
 service-account*.json
 credentials*.json
 *.pem
 *.key
+application_default_credentials.json
