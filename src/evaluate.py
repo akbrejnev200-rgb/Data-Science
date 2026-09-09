@@ -20,16 +20,22 @@ def evaluate_isolation_forest(model, X_scaled, y):
     return anomaly_pred, report, detection_rate
 
 
-def calibrate_threshold(model, X_val, y_val):
-    """Trouve le seuil qui maximise le F1-score sur le jeu de validation."""
+def calibrate_threshold(model, X_val, y_val, beta=2.0):
+    """Trouve le seuil qui maximise le F-beta sur le jeu de validation.
+
+    beta > 1 privilégie le rappel : avec beta=2, le rappel compte deux fois plus
+    que la précision. Adapté à la détection de comptes suspects, où un faux
+    négatif (suspect manqué) coûte plus cher qu'un faux positif (alerte à trier).
+    """
     val_proba = model.predict_proba(X_val)[:, 1]
     precisions, recalls, thresholds = precision_recall_curve(y_val, val_proba)
 
-    f1_scores = np.divide(
-        2 * precisions * recalls, precisions + recalls,
-        out=np.zeros_like(precisions), where=(precisions + recalls) != 0
+    beta2 = beta ** 2
+    fbeta_scores = np.divide(
+        (1 + beta2) * precisions * recalls, beta2 * precisions + recalls,
+        out=np.zeros_like(precisions), where=(beta2 * precisions + recalls) != 0
     )
-    best_idx = np.argmax(f1_scores[:-1])
+    best_idx = np.argmax(fbeta_scores[:-1])
     best_threshold = thresholds[best_idx]
 
     threshold_table = {

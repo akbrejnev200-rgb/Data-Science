@@ -30,6 +30,11 @@ MODELS_DIR = Path(__file__).resolve().parent.parent / "models"
 # y.mean(), qui suppose la vérité terrain connue et n'existe pas en production.
 CONTAMINATION_PRIOR = 0.02
 
+# Poids du rappel dans le choix du seuil de décision (F-beta). beta=2 : on
+# accepte de perdre en précision pour manquer moins de comptes suspects, un faux
+# négatif étant plus coûteux qu'une alerte à trier en détection AML.
+BETA = 2.0
+
 
 def main():
     print("Chargement des données depuis BigQuery...")
@@ -120,8 +125,8 @@ def main():
     # pas à un proxy entraîné sur train seul. Limite résiduelle assumée : X_val
     # fait partie de l'entraînement de final_model, le seuil est donc un peu
     # optimiste — compromis préférable à un seuil issu d'un modèle différent.
-    best_threshold, threshold_table = calibrate_threshold(final_model, X_val, y_val)
-    print(f"Seuil optimal (F1, validation) : {best_threshold:.3f}")
+    best_threshold, threshold_table = calibrate_threshold(final_model, X_val, y_val, beta=BETA)
+    print(f"Seuil optimal (F{BETA:g}, validation) : {best_threshold:.3f}")
     print("Table des compromis rappel/précision :")
     for target_recall, vals in threshold_table.items():
         print(f"  Rappel visé {target_recall} -> seuil={vals['threshold']:.3f}, "
