@@ -13,6 +13,7 @@ dist/
 *.csv
 *.joblib
 *.log
+models/
 LI-Small_Patterns.txt
 
 # Secrets et credentials

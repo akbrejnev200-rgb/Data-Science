@@ -1,0 +1,16 @@
+# Ne pas envoyer ces éléments dans le contexte de build (image plus légère,
+# build plus rapide, pas de secrets embarqués).
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.git/
+.gitignore
+models/
+scratchpad/
+notebooks/
+*.md
+!README.md
+.dockerignore
+Dockerfile

@@ -26,6 +26,13 @@ MODELS_DIR = Path(os.environ.get("AML_MODELS_DIR", str(REPO_ROOT / "models")))
 # l'étape conteneurisation ; vide tant qu'on travaille en local.
 GCS_BUCKET = os.environ.get("AML_GCS_BUCKET", "")
 
+# Destination GCS des artefacts d'entraînement (modèles + metrics.json).
+# - vide  -> on écrit seulement en local (MODELS_DIR), pour les runs sur PC
+# - gs://… -> on pousse aussi les fichiers là-bas après la sauvegarde locale
+# AIP_MODEL_DIR est renseigné automatiquement par Vertex AI Custom Training :
+# un job cloud publie donc ses artefacts sans configuration supplémentaire.
+ARTIFACTS_URI = os.environ.get("AML_ARTIFACTS_URI", os.environ.get("AIP_MODEL_DIR", ""))
+
 # --- Hyperparamètres métier ---
 # Contamination a priori de l'Isolation Forest : ordre de grandeur (~2 %) des
 # comptes signalés suspects dans les portefeuilles AML réels. Indépendant des

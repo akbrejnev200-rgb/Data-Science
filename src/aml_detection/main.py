@@ -2,6 +2,8 @@
 Pipeline complet : chargement, split, entraînement, calibration, évaluation, sauvegarde.
 """
 
+import json
+
 import pandas as pd
 import joblib
 from sklearn.model_selection import train_test_split
@@ -10,7 +12,7 @@ from sklearn.metrics import (
     average_precision_score, classification_report, confusion_matrix,
 )
 
-from .config import MODELS_DIR, CONTAMINATION_PRIOR, TARGET_RECALL
+from .config import MODELS_DIR, CONTAMINATION_PRIOR, TARGET_RECALL, ARTIFACTS_URI
 from .data_loading import load_account_features
 from .features import prepare_features
 from .train import (
@@ -18,6 +20,7 @@ from .train import (
     select_best_xgboost_params, train_xgboost,
 )
 from .evaluate import evaluate_isolation_forest, calibrate_threshold, evaluate_final
+from .artifacts import upload_dir
 
 
 def main():
@@ -152,7 +155,31 @@ def main():
     joblib.dump(xgb_final, MODELS_DIR / "xgboost_model.joblib")
     joblib.dump(scaler, MODELS_DIR / "scaler.joblib")
     joblib.dump(best_threshold, MODELS_DIR / "decision_threshold.joblib")
-    print(f"\nModèles sauvegardés dans {MODELS_DIR}/")
+
+    # Métriques du modèle retenu : consommées à l'étape Model Registry et pour
+    # décider (ou non) d'enregistrer une nouvelle version.
+    metrics = {
+        "model_name": model_name,
+        "hyperparameters": best_xgb_params if model_name == "XGBoost" else {"max_depth": best_depth},
+        "decision_threshold": float(best_threshold),
+        "target_recall": TARGET_RECALL,
+        "validation": {"auc_pr": float(model_val_auc_pr)},
+        "test": {
+            "auc_roc": float(result["auc_roc"]),
+            "auc_pr": float(result["auc_pr"]),
+            "precision_suspect": float(result["report"]["suspect"]["precision"]),
+            "recall_suspect": float(result["report"]["suspect"]["recall"]),
+            "support_suspect": int(result["report"]["suspect"]["support"]),
+        },
+    }
+    (MODELS_DIR / "metrics.json").write_text(json.dumps(metrics, indent=2), encoding="utf-8")
+    print(f"\nArtefacts sauvegardés dans {MODELS_DIR}/")
+
+    # --- Publication vers Google Cloud Storage (si configuré) ---
+    if ARTIFACTS_URI:
+        print(f"Publication vers {ARTIFACTS_URI} …")
+        for uri in upload_dir(MODELS_DIR, ARTIFACTS_URI):
+            print(f"  {uri}")
 
 
 if __name__ == "__main__":
