@@ -4,6 +4,11 @@ venv/
 __pycache__/
 *.pyc
 
+# Build / packaging
+*.egg-info/
+build/
+dist/
+
 # Donnees et artefacts
 *.csv
 *.joblib

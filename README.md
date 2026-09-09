@@ -33,31 +33,50 @@ Google Cloud Platform (BigQuery, Cloud Storage, Vertex AI), Python
 ## Architecture du projet
 
 ```
-mlops_project/
-├── src/
-│   ├── data_loading.py   # Chargement des données depuis BigQuery
-│   ├── features.py        # Définition et préparation des features
-│   ├── train.py            # Entraînement des modèles
-│   ├── evaluate.py         # Évaluation et calibration du seuil
+mlops-vertex-demo/
+├── src/aml_detection/       # Package Python installable
+│   ├── config.py            # Configuration centrale (env AML_*, défauts)
+│   ├── data_loading.py      # Chargement des données depuis BigQuery
+│   ├── features.py          # Définition et préparation des features
+│   ├── train.py             # Entraînement des modèles
+│   ├── evaluate.py          # Évaluation et calibration du seuil
 │   └── main.py              # Orchestration du pipeline complet
+├── check_importance.py      # Diagnostic : importance des features
 ├── models/                  # Modèles entraînés (.joblib, non versionnés)
-├── requirements.txt
+├── pyproject.toml
+├── requirements-lock.txt    # Versions figées (reproductibilité)
 └── README.md
+```
+
+## Installation
+
+```bash
+python -m venv .venv && source .venv/bin/activate   # Windows : .venv\Scripts\activate
+pip install -e ".[dev]"
 ```
 
 ## Utilisation
 
 ```bash
-cd src
-python main.py
+# Authentification GCP (une fois)
+gcloud auth application-default login
+
+# Pipeline complet : chargement, entraînement, calibration, évaluation, sauvegarde
+python -m aml_detection
 ```
+
+La configuration (projet GCP, région, dataset BigQuery, rappel cible…) se surcharge
+par variables d'environnement `AML_*` — voir `src/aml_detection/config.py`.
 
 ## Méthodologie
 
 - Split stratifié 70/15/15 (train/validation/test)
-- Sélection d'hyperparamètre (profondeur d'arbre) sur le jeu de validation
-- Calibration du seuil de décision par optimisation du F1-score sur validation
-- Évaluation finale unique sur le jeu de test, jamais utilisé avant cette étape
+- Sélection d'hyperparamètre **et** choix du modèle (RF vs XGBoost) sur le jeu de validation
+- Scaler ajusté sur le train uniquement ; Isolation Forest entraîné sur le train,
+  contamination fixée a priori (pas de fuite de label)
+- Seuil de décision fixé par une **règle métier** : le seuil le plus précis
+  atteignant un rappel cible sur la classe suspecte (validation)
+- Évaluation finale unique sur le jeu de test, du seul modèle retenu
 
 ## Résultats clés
 

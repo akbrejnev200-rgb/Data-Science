@@ -1,8 +1,12 @@
-﻿import sys, joblib, pandas as pd
-sys.path.insert(0, "src")
-from features import FEATURES
+"""Diagnostic rapide : importance des features du modèle XGBoost sauvegardé."""
 
-m = joblib.load("models/xgboost_model.joblib")
+import joblib
+import pandas as pd
+
+from aml_detection.config import MODELS_DIR
+from aml_detection.features import FEATURES
+
+m = joblib.load(MODELS_DIR / "xgboost_model.joblib")
 s = pd.Series(m.feature_importances_, index=FEATURES).sort_values(ascending=False)
 
 print(s.head(12).to_string())

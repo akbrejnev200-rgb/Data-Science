@@ -2,8 +2,6 @@
 Pipeline complet : chargement, split, entraînement, calibration, évaluation, sauvegarde.
 """
 
-from pathlib import Path
-
 import pandas as pd
 import joblib
 from sklearn.model_selection import train_test_split
@@ -12,34 +10,19 @@ from sklearn.metrics import (
     average_precision_score, classification_report, confusion_matrix,
 )
 
-from data_loading import load_account_features
-from features import prepare_features, FEATURES
-from train import (
+from .config import MODELS_DIR, CONTAMINATION_PRIOR, TARGET_RECALL
+from .data_loading import load_account_features
+from .features import prepare_features
+from .train import (
     train_isolation_forest, select_best_depth, train_random_forest,
     select_best_xgboost_params, train_xgboost,
 )
-from evaluate import evaluate_isolation_forest, calibrate_threshold, evaluate_final
-
-PROJECT_ID = "mlops-vertex-demo"
-# Chemin absolu (indépendant du répertoire de lancement) : <racine du repo>/models
-MODELS_DIR = Path(__file__).resolve().parent.parent / "models"
-
-# Taux de contamination fixé a priori pour l'Isolation Forest : ordre de grandeur
-# (~2 %) des comptes signalés comme suspects dans les portefeuilles AML réels.
-# Valeur métier indépendante des labels du jeu courant — contrairement à
-# y.mean(), qui suppose la vérité terrain connue et n'existe pas en production.
-CONTAMINATION_PRIOR = 0.02
-
-# Rappel minimal exigé sur la classe suspecte pour fixer le seuil de décision
-# (règle métier / conformité). Le seuil retenu est le plus précis qui atteint ce
-# rappel sur la validation ; le rappel réel sur le test est plus bas (la
-# validation entre dans l'entraînement du modèle final).
-TARGET_RECALL = 0.80
+from .evaluate import evaluate_isolation_forest, calibrate_threshold, evaluate_final
 
 
 def main():
     print("Chargement des données depuis BigQuery...")
-    df = load_account_features(PROJECT_ID)
+    df = load_account_features()
     print(f"{len(df)} comptes chargés. Suspects : {df['label_laundering'].sum()} "
           f"({df['label_laundering'].mean()*100:.2f}%)\n")
 
