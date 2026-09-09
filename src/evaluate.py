@@ -20,31 +20,35 @@ def evaluate_isolation_forest(model, X_scaled, y):
     return anomaly_pred, report, detection_rate
 
 
-def calibrate_threshold(model, X_val, y_val, beta=2.0):
-    """Trouve le seuil qui maximise le F-beta sur le jeu de validation.
+def calibrate_threshold(model, X_val, y_val, target_recall=0.80):
+    """Choisit le seuil métier sur la validation : le seuil le plus élevé (donc
+    la meilleure précision) qui atteint au moins `target_recall` sur la classe
+    suspecte.
 
-    beta > 1 privilégie le rappel : avec beta=2, le rappel compte deux fois plus
-    que la précision. Adapté à la détection de comptes suspects, où un faux
-    négatif (suspect manqué) coûte plus cher qu'un faux positif (alerte à trier).
+    En détection AML, la contrainte vient de la conformité — un niveau de rappel
+    minimal à garantir — et la précision est ce qu'on obtient en conséquence.
+    Aucune valeur de F-beta ne fixe le rappel ; un rappel cible, si. Si aucun
+    seuil n'atteint la cible, on retient le seuil le plus bas (rappel maximal).
+
+    Note : la validation faisant partie de l'entraînement du modèle final, le
+    rappel réel sur le test est sensiblement plus bas que `target_recall`.
     """
     val_proba = model.predict_proba(X_val)[:, 1]
     precisions, recalls, thresholds = precision_recall_curve(y_val, val_proba)
 
-    beta2 = beta ** 2
-    fbeta_scores = np.divide(
-        (1 + beta2) * precisions * recalls, beta2 * precisions + recalls,
-        out=np.zeros_like(precisions), where=(beta2 * precisions + recalls) != 0
-    )
-    best_idx = np.argmax(fbeta_scores[:-1])
+    # precision_recall_curve : recalls décroît quand le seuil croît ; thresholds
+    # est aligné sur precisions[:-1] / recalls[:-1] (dernier point : pas de seuil).
+    atteint_cible = recalls[:-1] >= target_recall
+    best_idx = int(np.max(np.flatnonzero(atteint_cible))) if atteint_cible.any() else 0
     best_threshold = thresholds[best_idx]
 
     threshold_table = {
-        target_recall: {
-            "threshold": thresholds[np.argmin(np.abs(recalls[:-1] - target_recall))],
-            "precision": precisions[np.argmin(np.abs(recalls[:-1] - target_recall))],
-            "recall": recalls[np.argmin(np.abs(recalls[:-1] - target_recall))],
+        cible: {
+            "threshold": thresholds[np.argmin(np.abs(recalls[:-1] - cible))],
+            "precision": precisions[np.argmin(np.abs(recalls[:-1] - cible))],
+            "recall": recalls[np.argmin(np.abs(recalls[:-1] - cible))],
         }
-        for target_recall in [0.5, 0.6, 0.7, 0.8]
+        for cible in [0.5, 0.6, 0.7, 0.8, 0.9]
     }
 
     return best_threshold, threshold_table

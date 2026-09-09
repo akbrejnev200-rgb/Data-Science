@@ -30,10 +30,11 @@ MODELS_DIR = Path(__file__).resolve().parent.parent / "models"
 # y.mean(), qui suppose la vérité terrain connue et n'existe pas en production.
 CONTAMINATION_PRIOR = 0.02
 
-# Poids du rappel dans le choix du seuil de décision (F-beta). beta=2 : on
-# accepte de perdre en précision pour manquer moins de comptes suspects, un faux
-# négatif étant plus coûteux qu'une alerte à trier en détection AML.
-BETA = 2.0
+# Rappel minimal exigé sur la classe suspecte pour fixer le seuil de décision
+# (règle métier / conformité). Le seuil retenu est le plus précis qui atteint ce
+# rappel sur la validation ; le rappel réel sur le test est plus bas (la
+# validation entre dans l'entraînement du modèle final).
+TARGET_RECALL = 0.80
 
 
 def main():
@@ -125,8 +126,10 @@ def main():
     # pas à un proxy entraîné sur train seul. Limite résiduelle assumée : X_val
     # fait partie de l'entraînement de final_model, le seuil est donc un peu
     # optimiste — compromis préférable à un seuil issu d'un modèle différent.
-    best_threshold, threshold_table = calibrate_threshold(final_model, X_val, y_val, beta=BETA)
-    print(f"Seuil optimal (F{BETA:g}, validation) : {best_threshold:.3f}")
+    best_threshold, threshold_table = calibrate_threshold(
+        final_model, X_val, y_val, target_recall=TARGET_RECALL
+    )
+    print(f"Seuil métier (rappel visé {TARGET_RECALL:.0%} sur validation) : {best_threshold:.3f}")
     print("Table des compromis rappel/précision :")
     for target_recall, vals in threshold_table.items():
         print(f"  Rappel visé {target_recall} -> seuil={vals['threshold']:.3f}, "
