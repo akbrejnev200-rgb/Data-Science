@@ -1,0 +1,18 @@
+# Spécification du Custom Training Job Vertex AI (entraînement du pipeline AML).
+# Lancement :
+#   gcloud ai custom-jobs create --region=us-central1 \
+#     --display-name=aml-train-v1 --config=deploy/custom_job.yaml
+#
+# baseOutputDirectory : Vertex renseigne alors automatiquement la variable
+# d'environnement AIP_MODEL_DIR = <outputUriPrefix>/model, que le pipeline lit
+# (config.ARTIFACTS_URI) pour publier modèles + metrics.json sur GCS.
+
+workerPoolSpecs:
+  - machineSpec:
+      machineType: e2-standard-4
+    replicaCount: 1
+    containerSpec:
+      imageUri: us-central1-docker.pkg.dev/mlops-vertex-demo/aml-detection/trainer:v1
+
+baseOutputDirectory:
+  outputUriPrefix: gs://mlops-vertex-demo-aml/jobs/aml-train-v1
