@@ -23,7 +23,7 @@ dependencies = [
 [project.optional-dependencies]
 # Orchestration MLOps (Model Registry, pipelines) — pas nécessaire à l'image
 # d'entraînement, seulement aux scripts deploy/ et au pipeline.
-mlops = ["google-cloud-aiplatform"]
+mlops = ["google-cloud-aiplatform", "kfp"]
 dev = ["pytest", "ruff"]
 
 [project.scripts]
