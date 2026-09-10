@@ -34,17 +34,22 @@ Google Cloud Platform (BigQuery, Cloud Storage, Vertex AI), Python
 
 ```
 mlops-vertex-demo/
-├── src/aml_detection/       # Package Python installable
+├── src/aml_detection/       # Package Python installable (pipeline d'entraînement)
 │   ├── config.py            # Configuration centrale (env AML_*, défauts)
 │   ├── data_loading.py      # Chargement des données depuis BigQuery
 │   ├── features.py          # Définition et préparation des features
 │   ├── train.py             # Entraînement des modèles
 │   ├── evaluate.py          # Évaluation et calibration du seuil
+│   ├── artifacts.py         # Publication des artefacts vers GCS
 │   └── main.py              # Orchestration du pipeline complet
+├── deploy/                  # Scripts MLOps (Model Registry, jobs Vertex)
+│   ├── custom_job.yaml      # Spéc. du Custom Training Job
+│   └── register_model.py    # Enregistrement dans le Vertex AI Model Registry
+├── Dockerfile               # Image d'entraînement
 ├── check_importance.py      # Diagnostic : importance des features
-├── models/                  # Modèles entraînés (.joblib, non versionnés)
+├── models/                  # Artefacts entraînés (non versionnés)
 ├── pyproject.toml
-├── requirements-lock.txt    # Versions figées (reproductibilité)
+├── requirements-lock.txt    # Versions figées de l'image d'entraînement
 └── README.md
 ```
 
@@ -52,7 +57,7 @@ mlops-vertex-demo/
 
 ```bash
 python -m venv .venv && source .venv/bin/activate   # Windows : .venv\Scripts\activate
-pip install -e ".[dev]"
+pip install -e ".[mlops,dev]"     # cœur + SDK Vertex (deploy/) + outils de test
 ```
 
 ## Utilisation

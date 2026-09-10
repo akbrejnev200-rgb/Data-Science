@@ -156,6 +156,11 @@ def main():
     joblib.dump(scaler, MODELS_DIR / "scaler.joblib")
     joblib.dump(best_threshold, MODELS_DIR / "decision_threshold.joblib")
 
+    # Format natif XGBoost : attendu par le conteneur de serving pré-construit
+    # de Vertex AI (Model Registry). Seulement si XGBoost est le modèle retenu.
+    if model_name == "XGBoost":
+        final_model.get_booster().save_model(str(MODELS_DIR / "model.bst"))
+
     # Métriques du modèle retenu : consommées à l'étape Model Registry et pour
     # décider (ou non) d'enregistrer une nouvelle version.
     metrics = {
