@@ -1,10 +1,13 @@
-# Détection AML — Transactions suspectes (Datalab RISQ)
-
-# Détection AML — Pipeline de scoring de risque sur transactions bancaires
+# Détection AML — scoring de risque sur transactions bancaires
 
 Pipeline de détection de blanchiment d'argent (AML) construit sur Google Cloud
 Platform, combinant détection d'anomalies non supervisée et scoring de risque
-supervisé, avec calibration de seuil orientée métier.
+supervisé, avec calibration de seuil orientée métier — et son déploiement
+complet en MLOps sur Vertex AI (entraînement conteneurisé, pipeline avec
+enregistrement conditionnel, Model Registry, app de scoring sur Cloud Run).
+
+**Démo en ligne :** https://aml-suspect-scoring-demo-69646548838.us-central1.run.app
+(scale-to-zero — la première requête peut prendre quelques secondes)
 
 ## Contexte
 
@@ -21,14 +24,42 @@ graph learning).
 ## Approche technique
 
 - **Isolation Forest** (non supervisé) : détection d'anomalies sans a priori sur les labels
-- **Random Forest** (supervisé) : scoring de risque par compte, avec gestion explicite du déséquilibre de classes
-- **Calibration de seuil** : optimisation du compromis précision/rappel sur un jeu de validation dédié, plutôt que d'utiliser le seuil par défaut de 0.5
-- **Feature engineering** : agrégation des comportements d'envoi et de réception par compte (montants, diversité des contreparties, vélocité temporelle, ratios)
+- **Random Forest / XGBoost** (supervisé) : scoring de risque par compte, sélectionnés
+  sur un jeu de validation dédié, avec gestion explicite du déséquilibre de classes
+- **Calibration de seuil** : règle métier (rappel cible sur validation), pas le
+  seuil par défaut de 0,5 ni un score F arbitraire
+- **Feature engineering** : agrégation des comportements d'envoi et de réception
+  par compte (montants, diversité des contreparties, vélocité temporelle, ratios)
 
 ## Stack technique
 
-Google Cloud Platform (BigQuery, Cloud Storage, Vertex AI), Python
-(scikit-learn, pandas), SQL.
+Google Cloud Platform (BigQuery, Cloud Storage, Artifact Registry, Cloud Build,
+Vertex AI Training/Pipelines/Model Registry, Cloud Run), Python (scikit-learn,
+xgboost, pandas, FastAPI, KFP), Docker, SQL.
+
+## Architecture MLOps
+
+```
+BigQuery (features)
+      │
+      ▼
+┌───────────────────────────┐
+│  Vertex AI Pipeline (KFP)  │
+│                            │
+│  train ──▶ auc_pr ≥ seuil ?│
+│         ├─ oui → register  │──▶ Vertex AI Model Registry (versions + métriques)
+│         └─ non → rapport   │           │
+└───────────────────────────┘            │
+                                          ▼
+                              Cloud Run — app de scoring (FastAPI)
+```
+
+- **train** tourne dans l'image `trainer` (Custom Training Job ou composant de
+  pipeline), publie modèle + métriques sur GCS
+- **register** n'enregistre une nouvelle version que si le modèle dépasse un
+  seuil d'AUC-PR — garde-fou contre la régression silencieuse
+- L'**app de démo** charge la version enregistrée depuis GCS au démarrage :
+  code et modèle sont déployés indépendamment
 
 ## Architecture du projet
 
@@ -41,15 +72,26 @@ mlops-vertex-demo/
 │   ├── train.py             # Entraînement des modèles
 │   ├── evaluate.py          # Évaluation et calibration du seuil
 │   ├── artifacts.py         # Publication des artefacts vers GCS
+│   ├── registry.py          # Enregistrement dans le Model Registry (CLI + pipeline)
 │   └── main.py              # Orchestration du pipeline complet
-├── deploy/                  # Scripts MLOps (Model Registry, jobs Vertex)
+├── pipelines/                # Pipeline Vertex AI (KFP)
+│   ├── training_pipeline.py # Composants train / register / report_rejection
+│   ├── training_pipeline.json  # Pipeline compilé (exécuté par Vertex)
+│   └── run_pipeline.py      # Compilation + soumission d'un run
+├── deploy/                   # Scripts MLOps ponctuels
 │   ├── custom_job.yaml      # Spéc. du Custom Training Job
-│   └── register_model.py    # Enregistrement dans le Vertex AI Model Registry
-├── Dockerfile               # Image d'entraînement
-├── check_importance.py      # Diagnostic : importance des features
-├── models/                  # Artefacts entraînés (non versionnés)
+│   └── register_model.py    # CLI d'enregistrement (utilise aml_detection.registry)
+├── serving/                   # App de démo (Cloud Run)
+│   ├── app.py                # API FastAPI (/predict, /health, page HTML)
+│   ├── static/index.html    # Formulaire de test + exemples réels
+│   ├── requirements.txt     # Dépendances minimales (image de serving allégée)
+│   ├── Dockerfile
+│   └── deploy.sh             # Build + déploiement Cloud Run
+├── Dockerfile                 # Image d'entraînement (racine du repo)
+├── check_importance.py       # Diagnostic : importance des features
+├── models/                    # Artefacts entraînés localement (non versionnés)
 ├── pyproject.toml
-├── requirements-lock.txt    # Versions figées de l'image d'entraînement
+├── requirements-lock.txt     # Versions figées de l'image d'entraînement
 └── README.md
 ```
 
@@ -57,7 +99,7 @@ mlops-vertex-demo/
 
 ```bash
 python -m venv .venv && source .venv/bin/activate   # Windows : .venv\Scripts\activate
-pip install -e ".[mlops,dev]"     # cœur + SDK Vertex (deploy/) + outils de test
+pip install -e ".[mlops,dev]"     # cœur + SDK Vertex/KFP (deploy/, pipelines/) + outils de test
 ```
 
 ## Utilisation
@@ -66,8 +108,21 @@ pip install -e ".[mlops,dev]"     # cœur + SDK Vertex (deploy/) + outils de tes
 # Authentification GCP (une fois)
 gcloud auth application-default login
 
-# Pipeline complet : chargement, entraînement, calibration, évaluation, sauvegarde
+# Pipeline complet en local : chargement, entraînement, calibration, évaluation, sauvegarde
 python -m aml_detection
+
+# Entraînement dans le cloud (Custom Training Job)
+gcloud builds submit --tag us-central1-docker.pkg.dev/mlops-vertex-demo/aml-detection/trainer:v2 .
+gcloud ai custom-jobs create --region=us-central1 --display-name=aml-train --config=deploy/custom_job.yaml
+
+# Pipeline complet (entraînement + enregistrement conditionnel)
+python pipelines/run_pipeline.py
+
+# Enregistrer un modèle existant manuellement
+python deploy/register_model.py --artifact-uri gs://.../model --min-auc-pr 0.08
+
+# App de démo
+bash serving/deploy.sh
 ```
 
 La configuration (projet GCP, région, dataset BigQuery, rappel cible…) se surcharge
@@ -85,11 +140,25 @@ par variables d'environnement `AML_*` — voir `src/aml_detection/config.py`.
 
 ## Résultats clés
 
-À compléter au fil des itérations (AUC-ROC, AUC-PR, rappel/précision par seuil).
+Modèle retenu : **XGBoost** (`max_depth=6`, `learning_rate=0.1`), sélectionné sur
+validation face à un Random Forest (AUC-PR validation 0,101 vs 0,053).
+
+| Métrique (jeu de test) | Valeur |
+|---|---|
+| AUC-ROC | 0,851 |
+| AUC-PR (base rate 0,0075) | 0,093 |
+| Seuil de décision (rappel cible 80 % sur validation) | 0,648 |
+| Précision / rappel au seuil déployé | 0,052 / 0,476 |
+
+Le modèle classe correctement (AUC-ROC élevé) mais la précision reste faible :
+le jeu de features actuel ne sépare pas assez nettement les deux classes pour un
+usage en production sans faux positifs massifs. Prochaine piste : enrichir les
+features avec la structure du graphe de transactions (`feature_engineering_graph.sql`).
 
 ## Pistes d'évolution
 
+- Prédiction par lots (batch) et réécriture des scores dans BigQuery
+- CI/CD (GitHub Actions + déclenchement du pipeline sur push)
+- Model card et documentation de gouvernance
 - Classification NLP des libellés de transaction
 - Génération automatique de synthèses de risque (LLM)
-- Déploiement en production via Vertex AI Pipelines
-- Documentation de gouvernance modèle (model card)
