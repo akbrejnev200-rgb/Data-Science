@@ -73,6 +73,7 @@ mlops-vertex-demo/
 │   ├── evaluate.py          # Évaluation et calibration du seuil
 │   ├── artifacts.py         # Publication des artefacts vers GCS
 │   ├── registry.py          # Enregistrement dans le Model Registry (CLI + pipeline)
+│   ├── batch_score.py       # Scoring par lots -> BigQuery (account_risk_scores)
 │   └── main.py              # Orchestration du pipeline complet
 ├── pipelines/                # Pipeline Vertex AI (KFP)
 │   ├── training_pipeline.py # Composants train / register / report_rejection
@@ -80,6 +81,7 @@ mlops-vertex-demo/
 │   └── run_pipeline.py      # Compilation + soumission d'un run
 ├── deploy/                   # Scripts MLOps ponctuels
 │   ├── custom_job.yaml      # Spéc. du Custom Training Job
+│   ├── batch_score_job.yaml # Spéc. du job de scoring par lots
 │   └── register_model.py    # CLI d'enregistrement (utilise aml_detection.registry)
 ├── serving/                   # App de démo (Cloud Run)
 │   ├── app.py                # API FastAPI (/predict, /health, page HTML)
@@ -121,6 +123,10 @@ python pipelines/run_pipeline.py
 # Enregistrer un modèle existant manuellement
 python deploy/register_model.py --artifact-uri gs://.../model --min-auc-pr 0.08
 
+# Scoring par lots de tous les comptes -> BigQuery (aml_detection.account_risk_scores)
+python -m aml_detection.batch_score --model-artifact-uri gs://.../model
+gcloud ai custom-jobs create --region=us-central1 --display-name=aml-batch-score --config=deploy/batch_score_job.yaml
+
 # App de démo
 bash serving/deploy.sh
 ```
@@ -157,7 +163,6 @@ features avec la structure du graphe de transactions (`feature_engineering_graph
 
 ## Pistes d'évolution
 
-- Prédiction par lots (batch) et réécriture des scores dans BigQuery
 - CI/CD (GitHub Actions + déclenchement du pipeline sur push)
 - Model card et documentation de gouvernance
 - Classification NLP des libellés de transaction

@@ -271,7 +271,7 @@
             "program_path=$(mktemp -d)\n\nprintf \"%s\" \"$0\" > \"$program_path/ephemeral_component.py\"\n_KFP_RUNTIME=true python3 -m kfp.dsl.executor_main                         --component_module_path                         \"$program_path/ephemeral_component.py\"                         \"$@\"\n",
             "\nimport kfp\nfrom kfp import dsl\nfrom kfp.dsl import *\nfrom typing import *\n\ndef register(project_id: str, region: str, model: Input[Model]) -> str:\n    \"\"\"Cr\u00e9e une nouvelle version du mod\u00e8le dans le Vertex AI Model Registry.\"\"\"\n    from aml_detection.registry import register_version\n\n    resource_name = register_version(project_id, region, model.uri)\n    return resource_name or \"\"\n\n"
           ],
-          "image": "us-central1-docker.pkg.dev/mlops-vertex-demo/aml-detection/trainer:v2"
+          "image": "us-central1-docker.pkg.dev/mlops-vertex-demo/aml-detection/trainer:v3"
         }
       },
       "exec-report-rejection": {
@@ -291,7 +291,7 @@
             "program_path=$(mktemp -d)\n\nprintf \"%s\" \"$0\" > \"$program_path/ephemeral_component.py\"\n_KFP_RUNTIME=true python3 -m kfp.dsl.executor_main                         --component_module_path                         \"$program_path/ephemeral_component.py\"                         \"$@\"\n",
             "\nimport kfp\nfrom kfp import dsl\nfrom kfp.dsl import *\nfrom typing import *\n\ndef report_rejection(auc_pr: float, min_auc_pr: float):\n    \"\"\"Chemin \u00ab mod\u00e8le rejet\u00e9 \u00bb : on trace pourquoi, rien n'est enregistr\u00e9.\"\"\"\n    print(f\"Mod\u00e8le REJET\u00c9 : AUC-PR test {auc_pr:.3f} < seuil {min_auc_pr:.3f}.\")\n    print(\"Aucune nouvelle version enregistr\u00e9e \u2014 la version courante reste en place.\")\n\n"
           ],
-          "image": "us-central1-docker.pkg.dev/mlops-vertex-demo/aml-detection/trainer:v2"
+          "image": "us-central1-docker.pkg.dev/mlops-vertex-demo/aml-detection/trainer:v3"
         }
       },
       "exec-train": {
@@ -311,7 +311,7 @@
             "program_path=$(mktemp -d)\n\nprintf \"%s\" \"$0\" > \"$program_path/ephemeral_component.py\"\n_KFP_RUNTIME=true python3 -m kfp.dsl.executor_main                         --component_module_path                         \"$program_path/ephemeral_component.py\"                         \"$@\"\n",
             "\nimport kfp\nfrom kfp import dsl\nfrom kfp.dsl import *\nfrom typing import *\n\ndef train(\n    project_id: str,\n    region: str,\n    model: Output[Model],\n    metrics: Output[Metrics],\n) -> NamedTuple(\"Outputs\", [(\"auc_pr\", float)]):\n    \"\"\"Ex\u00e9cute le pipeline aml_detection : BigQuery -> entra\u00eenement -> \u00e9valuation.\n\n    Les artefacts (model.bst, metrics.json, .joblib) sont publi\u00e9s dans `model.uri`\n    (dossier GCS g\u00e9r\u00e9 par Vertex Pipelines, donc trac\u00e9 automatiquement).\n    \"\"\"\n    import json\n    import os\n\n    os.environ[\"AML_PROJECT_ID\"] = project_id\n    os.environ[\"AML_REGION\"] = region\n    os.environ[\"AML_ARTIFACTS_URI\"] = model.uri\n\n    from aml_detection.main import main as run_training\n\n    run_training()\n\n    m = json.loads(open(\"/app/models/metrics.json\", encoding=\"utf-8\").read())\n    t = m[\"test\"]\n    metrics.log_metric(\"auc_pr_test\", t[\"auc_pr\"])\n    metrics.log_metric(\"auc_roc_test\", t[\"auc_roc\"])\n    metrics.log_metric(\"recall_suspect\", t[\"recall_suspect\"])\n    metrics.log_metric(\"precision_suspect\", t[\"precision_suspect\"])\n    metrics.log_metric(\"decision_threshold\", m[\"decision_threshold\"])\n    model.metadata[\"model_name\"] = m[\"model_name\"]\n\n    out = NamedTuple(\"Outputs\", [(\"auc_pr\", float)])\n    return out(float(t[\"auc_pr\"]))\n\n"
           ],
-          "image": "us-central1-docker.pkg.dev/mlops-vertex-demo/aml-detection/trainer:v2"
+          "image": "us-central1-docker.pkg.dev/mlops-vertex-demo/aml-detection/trainer:v3"
         }
       }
     }

@@ -16,7 +16,7 @@ from kfp.dsl import Input, Metrics, Model, Output
 from aml_detection import config
 
 TRAINER_IMAGE = (
-    f"{config.REGION}-docker.pkg.dev/{config.PROJECT_ID}/aml-detection/trainer:v2"
+    f"{config.REGION}-docker.pkg.dev/{config.PROJECT_ID}/aml-detection/trainer:v3"
 )
 KFP_PIN = "kfp==2.17.0"
 MIN_AUC_PR = 0.08

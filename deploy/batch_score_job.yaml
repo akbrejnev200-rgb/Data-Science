@@ -1,0 +1,18 @@
+# Job de scoring par lots (réutilise l'image trainer, commande différente).
+# Lancement :
+#   gcloud ai custom-jobs create --region=us-central1 \
+#     --display-name=aml-batch-score --config=deploy/batch_score_job.yaml
+
+workerPoolSpecs:
+  - machineSpec:
+      machineType: e2-standard-4
+    replicaCount: 1
+    containerSpec:
+      imageUri: us-central1-docker.pkg.dev/mlops-vertex-demo/aml-detection/trainer:v3
+      command:
+        - python
+        - -m
+        - aml_detection.batch_score
+      args:
+        - --model-artifact-uri=gs://mlops-vertex-demo-aml/pipeline-root/69646548838/aml-training-20260911004231/train_6702289541920718848/model
+        - --model-version=aml-suspect-scoring-v2
