@@ -45,10 +45,19 @@ jobs:
 
       - uses: google-github-actions/setup-gcloud@v2
 
-      - name: Build de l'image (Cloud Build)
+      # Build direct dans le runner (pas de passage par Cloud Build) : le
+      # bucket de staging legacy de Cloud Build n'accorde l'accès qu'aux rôles
+      # primitifs (Owner/Editor/Viewer), pas aux rôles fins du SA dédié.
+      # Docker build + push est plus simple et demande moins de permissions.
+      - name: Auth Docker sur Artifact Registry
+        run: gcloud auth configure-docker "${REGION}-docker.pkg.dev" --quiet
+
+      - name: Build et push de l'image
         run: |
           TAG="${GITHUB_SHA::7}"
-          gcloud builds submit --config serving/cloudbuild.yaml --substitutions=_TAG="$TAG" .
+          IMAGE="${REGION}-docker.pkg.dev/${PROJECT_ID}/aml-detection/serving:${TAG}"
+          docker build -f serving/Dockerfile -t "$IMAGE" .
+          docker push "$IMAGE"
           echo "IMAGE_TAG=$TAG" >> "$GITHUB_ENV"
 
       - name: Déploiement Cloud Run
