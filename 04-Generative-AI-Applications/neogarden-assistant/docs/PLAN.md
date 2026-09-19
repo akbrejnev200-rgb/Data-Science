@@ -5,9 +5,27 @@ GitHub propre, sans changer le comportement de l'application. Une phase à la
 fois, validation à chaque étape.
 
 **Décisions déjà prises (à ne pas re-discuter) :**
-- Nom du repo : `neogarden-assistant`
+- Emplacement : dans le monorepo `Data-Science`, sous
+  `04-Generative-AI-Applications/neogarden-assistant/` (pas de repo séparé,
+  choix de l'utilisateur, comme le projet MLOps)
 - Le notebook d'exploration (Mistral local) n'est **pas** inclus dans le repo
 - Les `except Exception` larges sont remplacés par des erreurs plus précises
+
+**Conséquences du monorepo (à garder en tête pour les phases suivantes) :**
+- Tout ce qui doit être « à la racine du repo » l'est pour `Data-Science`, pas
+  pour ce dossier : `.pre-commit-config.yaml` (Phase 3) et
+  `.github/workflows/` (Phase 6). On les **restreint à ce dossier** (`files:`
+  pour pre-commit, `paths:` pour GitHub Actions) afin de ne pas toucher aux
+  autres projets du repo.
+- `pyproject.toml`, `.env.example`, `.gitignore`, `src/`, `tests/` restent
+  dans le dossier du projet : on travaille depuis
+  `04-Generative-AI-Applications/neogarden-assistant/`.
+- Les PR se font sur `Data-Science` (branche de phase → `main`).
+- Ordre : un `pyproject.toml` **minimal** est créé au début de la Phase 2 (pour
+  que `rag_garden` soit importable), puis complété en Phase 3.
+- `Lancer_NeoGarden.bat` contient un chemin personnel en dur (venv local) :
+  à rendre portable ou remplacer par une commande documentée en Phase 2,
+  quand `app.py` est déplacé.
 
 **Git, pour toutes les phases :** une branche par phase
 (`feat/xxx`, `refactor/xxx`, `test/xxx`, `ci/xxx`…), commits au format
@@ -32,6 +50,10 @@ préparation matérielle.
   "avant/après" à tout moment.
 - Vérification manuelle rapide : aucun `.docx` ne contient de clé API collée
   par erreur (peu probable, mais rapide à vérifier).
+- Puis fusion dans `Data-Science` sous `04-Generative-AI-Applications/
+  neogarden-assistant/` avec `git subtree` : l'historique est conservé, et le
+  dossier local autonome `projets\neogarden-assistant\` ne sert plus que de
+  sauvegarde (la suite se fait dans le clone de `Data-Science`).
 
 **Validation :** je te montre `git log` et `git status`, tu confirmes avant
 la suite.
@@ -103,7 +125,8 @@ comportement n'a changé, je te montre le résultat avant de continuer.
 - `pyproject.toml` : dépendances **avec versions figées** (le
   `requirements.txt` actuel n'en a aucune).
 - Ruff configuré (lint + format), tout ce qu'il remonte est corrigé.
-- `pre-commit` avec le hook Ruff.
+- `pre-commit` avec le hook Ruff (le fichier de config est à la racine de
+  `Data-Science`, restreint à ce dossier via `files:`).
 - Je t'explique les règles Ruff activées au fur et à mesure qu'elles
   remontent quelque chose (pas une liste abstraite à l'avance).
 
@@ -160,7 +183,8 @@ disent des limites déjà identifiées (`LIMITES_RAG_EXEMPLES.md`).
 
 **Branche :** `ci/github-actions`
 
-- `.github/workflows/ci.yml` : à chaque push/PR → install dépendances,
+- `.github/workflows/neogarden-ci.yml` (à la racine de `Data-Science`, filtré
+  sur ce dossier avec `paths:`) : à chaque push/PR → install dépendances,
   `ruff check`, `ruff format --check`, `pytest`.
 - Badge de statut dans le README.
 - Explication de CI/CD et de chaque étape du workflow à ce moment-là.
