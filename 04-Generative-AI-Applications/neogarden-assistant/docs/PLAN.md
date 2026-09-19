@@ -1,0 +1,201 @@
+# Plan de restructuration — NeoGarden Assistant
+
+Objectif : transformer le projet actuel (un fichier `app.py` unique) en dépôt
+GitHub propre, sans changer le comportement de l'application. Une phase à la
+fois, validation à chaque étape.
+
+**Décisions déjà prises (à ne pas re-discuter) :**
+- Nom du repo : `neogarden-assistant`
+- Le notebook d'exploration (Mistral local) n'est **pas** inclus dans le repo
+- Les `except Exception` larges sont remplacés par des erreurs plus précises
+
+**Git, pour toutes les phases :** une branche par phase
+(`feat/xxx`, `refactor/xxx`, `test/xxx`, `ci/xxx`…), commits au format
+Conventional Commits, PR à la fin de chaque phase (voir « Workflow Git » en
+bas de ce document).
+
+---
+
+## Étape 0 — Mise en place (avant la Phase 1)
+
+**Pourquoi une étape 0 :** avant de pouvoir appliquer la Phase 1 (hygiène du
+dépôt), il faut un dépôt. Ce n'est pas une des 7 phases demandées, c'est la
+préparation matérielle.
+
+- Copier le projet de `OneDrive\Bureau\RAG Jardin\` vers
+  `C:\Users\akbre\projets\neogarden-assistant\` (hors OneDrive : Git et la
+  synchronisation cloud ne font pas bon ménage — fichiers "en ligne
+  seulement", verrous, lenteurs).
+- Le notebook `.ipynb` ne fait **pas** partie de la copie (décision prise).
+- `git init`, premier commit `chore: import du projet existant (avant
+  restructuration)` — un point de départ figé, pour pouvoir comparer
+  "avant/après" à tout moment.
+- Vérification manuelle rapide : aucun `.docx` ne contient de clé API collée
+  par erreur (peu probable, mais rapide à vérifier).
+
+**Validation :** je te montre `git log` et `git status`, tu confirmes avant
+la suite.
+
+---
+
+## Phase 1 — Sécurité et hygiène du dépôt
+
+**Branche :** `chore/repo-hygiene`
+
+- `.env.example` : liste les variables attendues (`OPENROUTER_API_KEY=`),
+  sans valeur réelle.
+- `.gitignore` : déjà correct pour `.env`/`.venv`/`__pycache__`/`streamlit.log`
+  — j'ajoute la règle pour l'index FAISS qu'on va générer en Phase 2
+  (dossier `vectorstore/` ou équivalent, jamais versionné : c'est un
+  artefact recalculable, pas du code).
+- `src/rag_garden/config.py` créé dès cette phase (juste le chargement des
+  variables d'env + les chemins) — le reste de la config (chunk_size, k...)
+  arrive en Phase 2 avec le code qui les utilise.
+- Confirmation qu'aucun secret n'est dans l'historique Git (trivial ici :
+  l'étape 0 vient de créer l'historique, donc rien à nettoyer).
+
+**Validation :** l'appli tourne toujours (`streamlit run app.py` inchangé à
+ce stade), `git log` propre, je résume les changements.
+
+---
+
+## Phase 2 — Restructuration en modules
+
+**Branche :** `refactor/modular-structure`
+
+La partie la plus grosse. Découpage de `app.py` (236 lignes, tout mélangé)
+en modules à responsabilité unique :
+
+| Fichier | Contenu repris de `app.py` |
+|---|---|
+| `src/rag_garden/ingestion.py` | chargement des 3 `.docx` + du catalogue CSV, construction du texte par produit, chunking |
+| `src/rag_garden/embeddings.py` | embeddings CamemBERT + construction **et persistance sur disque** de l'index FAISS (aujourd'hui recalculé à chaque démarrage) |
+| `src/rag_garden/retriever.py` | le retriever (`as_retriever(search_kwargs={"k": ...})`) |
+| `src/rag_garden/prompts.py` | `system_prompt` et `contextualize_q_system_prompt` |
+| `src/rag_garden/generation.py` | configuration du LLM (`ChatOpenAI`/OpenRouter) + `invoke_with_retry` avec gestion d'erreurs **précisée** (erreur réseau / erreur API / réponse invalide, au lieu d'un `except Exception` générique) |
+| `src/rag_garden/memory.py` | conversion historique Streamlit ↔ messages LangChain (`HumanMessage`/`AIMessage`) |
+| `src/rag_garden/pipeline.py` | assemble tout — remplace `init_rag_chain()` |
+| `src/rag_garden/config.py` | complété : `chunk_size=1000`, `chunk_overlap=150`, `k=4`, noms des modèles, chemins des fichiers de données — tout ce qui est en dur aujourd'hui |
+| `app/streamlit_app.py` | ce qui reste : `st.chat_input`, `st.session_state`, affichage — **aucune logique métier** |
+| `scripts/build_index.py` | nouveau : construit l'index FAISS et le sauvegarde sur disque, pour ne plus le recalculer à chaque démarrage à froid |
+
+- `data/` : les `.docx` + le `.csv` catalogue déplacés ici (données, pas du code).
+- Chaque fonction : type hints + docstring courte (1-2 lignes, ce qu'elle
+  fait et pourquoi, pas un roman).
+- `print()` → `logging` (niveau INFO pour le déroulement normal, WARNING/ERROR
+  pour les erreurs gérées).
+- Les guardrails (`guardrails.py`) sont créés **vides/minimaux** ici (juste
+  la structure), le contenu réel arrive en Phase 2bis ci-dessous si tu veux
+  vraiment les implémenter — sinon le fichier peut rester un stub documenté
+  "non implémenté, piste d'amélioration" (cohérent avec tes limites déjà
+  identifiées).
+
+**Validation :** je relance l'appli (`streamlit run app/streamlit_app.py`),
+je repose les 15 questions du golden set à la main pour vérifier qu'aucun
+comportement n'a changé, je te montre le résultat avant de continuer.
+
+---
+
+## Phase 3 — Qualité de code
+
+**Branche :** `chore/tooling`
+
+- `pyproject.toml` : dépendances **avec versions figées** (le
+  `requirements.txt` actuel n'en a aucune).
+- Ruff configuré (lint + format), tout ce qu'il remonte est corrigé.
+- `pre-commit` avec le hook Ruff.
+- Je t'explique les règles Ruff activées au fur et à mesure qu'elles
+  remontent quelque chose (pas une liste abstraite à l'avance).
+
+**Validation :** `ruff check .` et `ruff format --check .` propres, appli
+toujours fonctionnelle.
+
+---
+
+## Phase 4 — Tests
+
+**Branche :** `test/unit-tests`
+
+Tests `pytest`, **aucun appel réseau réel** (LLM et embeddings mockés) :
+
+- `test_ingestion.py` : le chunking découpe correctement un document de test
+- `test_retriever.py` : le retriever renvoie les k documents attendus (FAISS
+  factice ou mocké)
+- `test_prompts.py` : le prompt final contient bien le contexte et la
+  question
+- `test_memory.py` : conversion historique Streamlit → messages LangChain
+- `test_guardrails.py` : selon ce qui est implémenté en Phase 2
+
+Je t'expliquerai concrètement, avec un exemple du projet, la différence
+test unitaire / test d'intégration à ce moment-là (demandé dans tes
+consignes).
+
+**Validation :** `pytest` passe, rapide (aucun test ne dépend d'une clé API).
+
+---
+
+## Phase 5 — Évaluation du RAG
+
+**Branche :** `feat/evaluation`
+
+- `evaluation/golden_set.csv` : reprend tes 15 questions existantes, colonne
+  `statut` à remplir automatiquement par le script (plus à la main).
+- Ajout de quelques questions **hors périmètre** (pour vérifier que le
+  système refuse de répondre plutôt que d'halluciner — ta question 15
+  actuelle en est déjà une, j'en ajoute 2-3 autres dans le même esprit).
+- `evaluation/evaluate.py` :
+  - **Retrieval** : précision/recall — les bons chunks sont-ils dans le
+    top-k ?
+  - **Génération** : fidélité au contexte, pertinence, refus correct quand
+    l'info manque — via LLM-as-a-judge (un modèle note la réponse).
+  - Produit un rapport lisible (markdown ou texte), pas juste un chiffre brut.
+- Ce script reste **hors CI** (il appelle une vraie API, comme demandé).
+
+**Validation :** rapport généré, je te montre les résultats et ce qu'ils
+disent des limites déjà identifiées (`LIMITES_RAG_EXEMPLES.md`).
+
+---
+
+## Phase 6 — CI/CD
+
+**Branche :** `ci/github-actions`
+
+- `.github/workflows/ci.yml` : à chaque push/PR → install dépendances,
+  `ruff check`, `ruff format --check`, `pytest`.
+- Badge de statut dans le README.
+- Explication de CI/CD et de chaque étape du workflow à ce moment-là.
+
+**Validation :** premier run vert sur GitHub, je te montre le lien.
+
+---
+
+## Phase 7 — Documentation
+
+**Branche :** `docs/readme-and-learnings`
+
+- `README.md` réécrit : objectif, schéma Mermaid de l'architecture, pourquoi
+  un RAG plutôt qu'un fine-tuning ici, installation, lancement, tests,
+  évaluation + résultats, limites (reprend `LIMITES_RAG_EXEMPLES.md`).
+- `docs/APPRENTISSAGES.md` : une notion par entrée (linter, formateur, tests,
+  mocks, CI/CD, branches, PR, LLM-as-a-judge...), avec question d'entretien
+  probable + réponse courte pour chacune.
+
+**Validation :** relecture ensemble, dernière PR vers `main`.
+
+---
+
+## Workflow Git (rappel, appliqué à chaque phase)
+
+```bash
+git checkout -b feat/nom-de-la-phase
+# ... travail, commits Conventional Commits (feat:, fix:, refactor:, test:, ci:, docs:) ...
+git push -u origin feat/nom-de-la-phase
+```
+Puis sur GitHub : ouvrir une Pull Request vers `main`, relire le diff,
+merger (je t'explique le geste précis quand on y arrive, pas maintenant en
+abstrait).
+
+## Ce qui ne change à aucun moment
+- Le comportement de l'appli (mêmes réponses aux mêmes questions)
+- Les données (FAQ, CGU, politique de retour, catalogue) : contenu inchangé,
+  seulement déplacées dans `data/`
