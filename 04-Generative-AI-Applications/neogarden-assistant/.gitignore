@@ -1,5 +1,19 @@
+# --- Secrets et environnement local (ne jamais versionner) ---
 .env
 .venv/
+.streamlit/secrets.toml
+
+# --- Python ---
 __pycache__/
 *.pyc
-streamlit.log
+.pytest_cache/
+.ruff_cache/
+
+# --- Artefacts générés (recalculables, pas du code) ---
+vectorstore/
+*.log
+
+# --- Éditeurs / système ---
+.vscode/
+.idea/
+.DS_Store
