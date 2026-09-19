@@ -14,9 +14,8 @@ from dotenv import load_dotenv
 # Racine du projet : deux niveaux au-dessus de ce fichier (src/rag_garden/).
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
-# Les documents sont encore à la racine. La Phase 2 les déplacera dans data/ ;
-# cette ligne deviendra alors `PROJECT_ROOT / "data"`.
-DATA_DIR = PROJECT_ROOT
+# Documents sources du RAG (FAQ, CGU, politique de retour, catalogue).
+DATA_DIR = PROJECT_ROOT / "data"
 # Index FAISS généré : artefact recalculable, ignoré par git.
 VECTORSTORE_DIR = PROJECT_ROOT / "vectorstore"
 
