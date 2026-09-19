@@ -1,0 +1,14 @@
+# Build de l'image de serving. Contexte = racine du repo (besoin de src/),
+# Dockerfile = serving/Dockerfile.
+#   gcloud builds submit --config serving/cloudbuild.yaml .
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - build
+      - -f
+      - serving/Dockerfile
+      - -t
+      - us-central1-docker.pkg.dev/mlops-vertex-demo/aml-detection/serving:v2
+      - .
+images:
+  - us-central1-docker.pkg.dev/mlops-vertex-demo/aml-detection/serving:v2

@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aml-detection"
+version = "0.1.0"
+description = "Détection AML — scoring de risque de blanchiment par compte (démo MLOps Vertex AI)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas",
+    "numpy",
+    "scikit-learn",
+    "xgboost",
+    "google-cloud-bigquery",
+    "google-cloud-storage",
+    "db-dtypes",
+    "pyarrow",
+    "joblib",
+]
+
+[project.optional-dependencies]
+# Orchestration MLOps (Model Registry, pipelines) — pas nécessaire à l'image
+# d'entraînement, seulement aux scripts deploy/ et au pipeline.
+mlops = ["google-cloud-aiplatform", "kfp"]
+dev = ["pytest", "ruff"]
+
+[project.scripts]
+aml-train = "aml_detection.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100

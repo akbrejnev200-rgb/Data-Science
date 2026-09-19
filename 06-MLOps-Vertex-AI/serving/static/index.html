@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Détection AML — Démo</title>
+<style>
+  :root {
+    --bg: #0b1220; --card: #131c31; --border: #23304a; --text: #e6ebf5;
+    --muted: #8b98b3; --accent: #5b8def; --ok: #34c789; --danger: #e5534b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+    padding: 32px 16px 64px;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  h1 { font-size: 1.5rem; margin-bottom: 4px; }
+  p.sub { color: var(--muted); margin-top: 0; margin-bottom: 28px; }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 24px; margin-bottom: 20px;
+  }
+  .examples { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+  button {
+    font: inherit; cursor: pointer; border-radius: 8px; border: 1px solid var(--border);
+    padding: 9px 16px; background: #1b2740; color: var(--text);
+  }
+  button:hover { border-color: var(--accent); }
+  button.primary { background: var(--accent); border-color: var(--accent); color: white; font-weight: 600; }
+  button.primary:hover { filter: brightness(1.08); }
+  .grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 14px 16px;
+  }
+  label { display: block; font-size: 0.78rem; color: var(--muted); margin-bottom: 4px; }
+  input[type="number"] {
+    width: 100%; padding: 8px 10px; border-radius: 7px; border: 1px solid var(--border);
+    background: #0e1626; color: var(--text); font: inherit;
+  }
+  input[type="number"]:focus { outline: none; border-color: var(--accent); }
+  .actions { margin-top: 22px; display: flex; align-items: center; gap: 14px; }
+  #result { display: none; }
+  #result.show { display: block; }
+  .verdict {
+    display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px;
+    border-radius: 999px; font-weight: 700; font-size: 0.9rem;
+  }
+  .verdict.normal { background: rgba(52, 199, 137, 0.15); color: var(--ok); }
+  .verdict.suspect { background: rgba(229, 83, 75, 0.15); color: var(--danger); }
+  .bar-track { height: 8px; border-radius: 4px; background: #0e1626; margin-top: 10px; overflow: hidden; }
+  .bar-fill { height: 100%; background: var(--accent); transition: width 0.3s ease; }
+  .metrics { display: flex; gap: 28px; margin-top: 14px; flex-wrap: wrap; }
+  .metric .v { font-size: 1.3rem; font-weight: 700; }
+  .metric .k { font-size: 0.75rem; color: var(--muted); }
+  footer { color: var(--muted); font-size: 0.78rem; margin-top: 24px; text-align: center; }
+  footer a { color: var(--accent); }
+  #error { color: var(--danger); display: none; margin-top: 10px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Détection AML — scoring de risque par compte</h1>
+  <p class="sub">
+    Modèle entraîné et enregistré via un pipeline Vertex AI (Model Registry).
+    Saisis les caractéristiques d'un compte ou charge un exemple.
+  </p>
+
+  <div class="card">
+    <div class="examples">
+      <button onclick="loadExample('normal')">📄 Exemple compte normal</button>
+      <button onclick="loadExample('suspect')">🚩 Exemple compte suspect</button>
+      <button onclick="fillZero()">Réinitialiser</button>
+    </div>
+    <form id="form">
+      <div class="grid" id="grid"></div>
+      <div class="actions">
+        <button type="submit" class="primary">Scorer ce compte</button>
+        <span id="loading" style="display:none; color: var(--muted);">Calcul…</span>
+      </div>
+      <div id="error"></div>
+    </form>
+  </div>
+
+  <div class="card" id="result">
+    <span id="verdict" class="verdict"></span>
+    <div class="metrics">
+      <div class="metric"><div class="v" id="proba">–</div><div class="k">Probabilité (classe suspecte)</div></div>
+      <div class="metric"><div class="v" id="threshold">–</div><div class="k">Seuil de décision</div></div>
+      <div class="metric"><div class="v" id="modelname">–</div><div class="k">Modèle</div></div>
+    </div>
+    <div class="bar-track"><div class="bar-fill" id="bar" style="width:0%"></div></div>
+  </div>
+
+  <footer>
+    API : <a href="/docs">/docs</a> (OpenAPI) · <a href="/predict">POST /predict</a> ·
+    Projet <a href="https://github.com" target="_blank" rel="noopener">mlops-vertex-demo</a>
+  </footer>
+</div>
+
+<script>
+// Ordre et noms strictement identiques à aml_detection.features.FEATURES
+const FEATURES = [
+  ["nb_transactions_envoyees", "Nb transactions envoyées"],
+  ["nb_transactions_recues", "Nb transactions reçues"],
+  ["montant_total_envoye", "Montant total envoyé"],
+  ["montant_total_recu", "Montant total reçu"],
+  ["montant_moyen_envoye", "Montant moyen envoyé"],
+  ["montant_moyen_recu", "Montant moyen reçu"],
+  ["montant_max_envoye", "Montant max envoyé"],
+  ["montant_max_recu", "Montant max reçu"],
+  ["nb_devises_envoi", "Nb devises (envoi)"],
+  ["nb_devises_reception", "Nb devises (réception)"],
+  ["nb_banques_destinataires", "Nb banques destinataires"],
+  ["nb_banques_expediteurs", "Nb banques expéditrices"],
+  ["nb_formats_paiement", "Nb formats de paiement"],
+  ["max_transactions_jour", "Max transactions / jour"],
+  ["ratio_recu_envoye", "Ratio reçu / envoyé"],
+  ["nb_contreparties_envoi", "Nb contreparties (envoi)"],
+  ["nb_contreparties_reception", "Nb contreparties (réception)"],
+  ["nb_contreparties_reciproques", "Nb contreparties réciproques"],
+  ["ratio_reciprocite", "Ratio de réciprocité"],
+];
+
+// Deux comptes réels du jeu de test, tous deux bien classés par le modèle
+// (vrai négatif net et vrai positif net) — issus de aml-suspect-scoring v2.
+const EXAMPLES = {
+  "normal": {
+    "nb_transactions_envoyees": 65, "nb_transactions_recues": 1,
+    "montant_total_envoye": 128337363.28, "montant_total_recu": 1558130910,
+    "montant_moyen_envoye": 1974420.97, "montant_moyen_recu": 1558130910,
+    "montant_max_envoye": 12255436.09, "montant_max_recu": 1558130910,
+    "nb_devises_envoi": 1, "nb_devises_reception": 1,
+    "nb_banques_destinataires": 13, "nb_banques_expediteurs": 1,
+    "nb_formats_paiement": 2, "max_transactions_jour": 10,
+    "ratio_recu_envoye": 12.14, "nb_contreparties_envoi": 15,
+    "nb_contreparties_reception": 1, "nb_contreparties_reciproques": 0,
+    "ratio_reciprocite": 0
+  },
+  "suspect": {
+    "nb_transactions_envoyees": 19254, "nb_transactions_recues": 160,
+    "montant_total_envoye": 9356174980.56, "montant_total_recu": 137820.22,
+    "montant_moyen_envoye": 485934.09, "montant_moyen_recu": 861.38,
+    "montant_max_envoye": 1377593048.11, "montant_max_recu": 52762.43,
+    "nb_devises_envoi": 1, "nb_devises_reception": 1,
+    "nb_banques_destinataires": 77, "nb_banques_expediteurs": 76,
+    "nb_formats_paiement": 3, "max_transactions_jour": 2980,
+    "ratio_recu_envoye": 0, "nb_contreparties_envoi": 1637,
+    "nb_contreparties_reception": 81, "nb_contreparties_reciproques": 0,
+    "ratio_reciprocite": 0
+  }
+};
+
+const grid = document.getElementById("grid");
+for (const [name, label] of FEATURES) {
+  const field = document.createElement("div");
+  field.innerHTML = `<label for="${name}">${label}</label>
+    <input type="number" step="any" id="${name}" name="${name}" value="0">`;
+  grid.appendChild(field);
+}
+
+function loadExample(kind) {
+  const data = EXAMPLES[kind];
+  for (const [name] of FEATURES) {
+    document.getElementById(name).value = data[name] ?? 0;
+  }
+}
+function fillZero() {
+  for (const [name] of FEATURES) document.getElementById(name).value = 0;
+}
+
+document.getElementById("form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const errorEl = document.getElementById("error");
+  const loading = document.getElementById("loading");
+  errorEl.style.display = "none";
+  loading.style.display = "inline";
+
+  const payload = {};
+  for (const [name] of FEATURES) payload[name] = parseFloat(document.getElementById(name).value) || 0;
+
+  try {
+    const res = await fetch("/predict", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    if (!res.ok) throw new Error(`Erreur API (${res.status})`);
+    const data = await res.json();
+
+    const verdictEl = document.getElementById("verdict");
+    verdictEl.textContent = data.verdict === "suspect" ? "🚩 Compte suspect" : "✅ Compte normal";
+    verdictEl.className = "verdict " + data.verdict;
+
+    document.getElementById("proba").textContent = (data.probability * 100).toFixed(1) + " %";
+    document.getElementById("threshold").textContent = (data.threshold * 100).toFixed(1) + " %";
+    document.getElementById("modelname").textContent = data.model;
+    document.getElementById("bar").style.width = (data.probability * 100).toFixed(1) + "%";
+    document.getElementById("bar").style.background = data.verdict === "suspect" ? "#e5534b" : "#5b8def";
+
+    document.getElementById("result").classList.add("show");
+  } catch (err) {
+    errorEl.textContent = err.message;
+    errorEl.style.display = "block";
+  } finally {
+    loading.style.display = "none";
+  }
+});
+</script>
+</body>
+</html>

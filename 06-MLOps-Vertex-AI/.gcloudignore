@@ -1,0 +1,13 @@
+# Fichiers exclus de l'envoi vers Cloud Build (contexte de build).
+.git/
+.gitignore
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.egg-info/
+models/
+scratchpad/
+notebooks/
+*.md
+!README.md

@@ -1,0 +1,9 @@
+pandas
+numpy
+scikit-learn
+xgboost
+google-cloud-bigquery
+google-cloud-storage
+db-dtypes
+pyarrow
+joblib
