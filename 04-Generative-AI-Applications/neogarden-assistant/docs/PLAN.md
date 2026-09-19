@@ -231,9 +231,13 @@ taux de faux positifs sur le golden set est acceptable.
 
 **Branche :** `docs/readme-and-learnings`
 
-- `README.md` réécrit : objectif, schéma Mermaid de l'architecture, pourquoi
-  un RAG plutôt qu'un fine-tuning ici, installation, lancement, tests,
-  évaluation + résultats, limites (reprend `LIMITES_RAG_EXEMPLES.md`).
+- `README.md` : une **version propre a déjà été écrite en Phase 2** (demande de
+  l'utilisateur : l'ancien « kit de démarrage » contenait des notes personnelles
+  et des chiffres faux). Elle couvre déjà objectif, schémas Mermaid, RAG vs
+  fine-tuning, installation, lancement, données, limites et feuille de route.
+  La Phase 7 l'enrichit de ce qui n'existe pas encore : commandes de test et de
+  lint, badge de CI, **résultats chiffrés de l'évaluation**, garde-fous, et
+  passe la feuille de route à jour.
 - `docs/APPRENTISSAGES.md` : une notion par entrée (linter, formateur, tests,
   mocks, CI/CD, branches, PR, LLM-as-a-judge...), avec question d'entretien
   probable + réponse courte pour chacune.
