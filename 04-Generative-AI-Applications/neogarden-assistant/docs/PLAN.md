@@ -174,6 +174,9 @@ consignes).
   - **Génération** : fidélité au contexte, pertinence, refus correct quand
     l'info manque — via LLM-as-a-judge (un modèle note la réponse).
   - Produit un rapport lisible (markdown ou texte), pas juste un chiffre brut.
+- **Expérience de prompt** (point d'attention n°2) : score de référence avec le
+  prompt actuel (règles 3 et 4 collées sur une ligne), puis correction du saut
+  de ligne dans un commit `fix:` séparé et comparaison avant/après.
 - Ce script reste **hors CI** (il appelle une vraie API, comme demandé).
 
 **Validation :** rapport généré, je te montre les résultats et ce qu'ils
