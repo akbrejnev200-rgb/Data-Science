@@ -71,7 +71,9 @@ Deux workflows GitHub Actions, déclenchés uniquement quand ce dossier change
 
 - **CI** (`aml-ci.yml`) : sur chaque push/PR → lint (`ruff`) + tests (`pytest`)
 - **CD** (`aml-cd.yml`) : sur push vers `main` (code de `serving/` ou `src/`) →
-  rebuild l'image de démo, redéploie Cloud Run automatiquement
+  rebuild l'image de démo, redéploie Cloud Run, puis **vérifie que `/health`
+  répond réellement** (un déploiement "réussi" ne garantit pas qu'une app qui
+  plante au démarrage soit détectée — ce smoke test, si)
 
 L'authentification GCP se fait par **Workload Identity Federation** : GitHub
 prouve son identité via OIDC, Google échange ça contre un jeton court terme

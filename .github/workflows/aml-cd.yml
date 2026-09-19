@@ -72,4 +72,28 @@ jobs:
           # réinitialise pas tant qu'on ne les redéfinit pas explicitement.
 
       - name: URL du service
-        run: gcloud run services describe "$SERVICE" --region="$REGION" --format="value(status.url)"
+        id: url
+        run: |
+          URL=$(gcloud run services describe "$SERVICE" --region="$REGION" --format="value(status.url)")
+          echo "url=$URL" >> "$GITHUB_OUTPUT"
+          echo "URL : $URL"
+
+      - name: Vérification post-déploiement (smoke test)
+        # Un déploiement "réussi" ne veut pas dire que l'app tourne vraiment :
+        # si elle plante au démarrage, gcloud run deploy dit quand même OK.
+        # On vérifie ici que /health répond réellement avant de considérer
+        # le run comme un succès (quelques essais : Cloud Run peut mettre
+        # quelques secondes à réveiller le conteneur après un déploiement).
+        run: |
+          URL="${{ steps.url.outputs.url }}"
+          for i in $(seq 1 6); do
+            CODE=$(curl -s -o /dev/null -w "%{http_code}" --max-time 15 "$URL/health" || echo "000")
+            if [ "$CODE" = "200" ]; then
+              echo "OK : $URL/health -> 200"
+              exit 0
+            fi
+            echo "Tentative $i/6 : reçu $CODE, nouvel essai dans 10s…"
+            sleep 10
+          done
+          echo "ÉCHEC : le service ne répond pas correctement après déploiement."
+          exit 1

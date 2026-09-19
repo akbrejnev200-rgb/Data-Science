@@ -24,7 +24,7 @@ dependencies = [
 # Orchestration MLOps (Model Registry, pipelines) — pas nécessaire à l'image
 # d'entraînement, seulement aux scripts deploy/ et au pipeline.
 mlops = ["google-cloud-aiplatform", "kfp"]
-dev = ["pytest", "ruff"]
+dev = ["pytest", "ruff", "fastapi", "httpx"]  # fastapi/httpx : tests de serving/app.py
 
 [project.scripts]
 aml-train = "aml_detection.main:main"

@@ -31,4 +31,7 @@ jobs:
         run: ruff check .
 
       - name: Tests unitaires
-        run: pytest -q
+        # python -m pytest (pas juste `pytest`) : ajoute le dossier courant au
+        # sys.path, nécessaire pour que tests/test_serving.py importe le
+        # package serving/ (à la racine, hors de src/aml_detection).
+        run: python -m pytest -q
