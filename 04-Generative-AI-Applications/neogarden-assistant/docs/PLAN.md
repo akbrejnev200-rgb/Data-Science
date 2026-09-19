@@ -147,7 +147,11 @@ Tests `pytest`, **aucun appel réseau réel** (LLM et embeddings mockés) :
   question
 - `test_memory.py` : conversion historique Streamlit → messages LangChain
 - `test_guardrails.py` : le raccourci « salutations » (seul garde-fou existant
-  à ce stade ; les autres arrivent en Phase 5bis, avec leurs propres tests)
+  à ce stade ; les autres arrivent en Phase 5bis, avec leurs propres tests).
+  **Bug connu, corrigé test d'abord** (point d'attention n°6) : `is_greeting("Bonjour !")`
+  renvoie faux à cause de l'espace avant « ! ». On écrit le test **avant** le
+  correctif, on constate qu'il échoue (rouge), puis un commit `fix:`
+  (`rstrip(" !.?")`) le fait passer (vert).
 
 Je t'expliquerai concrètement, avec un exemple du projet, la différence
 test unitaire / test d'intégration à ce moment-là (demandé dans tes
