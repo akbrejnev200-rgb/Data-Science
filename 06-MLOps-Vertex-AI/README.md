@@ -12,6 +12,10 @@ enregistrement conditionnel, Model Registry, app de scoring sur Cloud Run).
 **Démo en ligne :** https://aml-suspect-scoring-demo-69646548838.us-central1.run.app
 (scale-to-zero — la première requête peut prendre quelques secondes)
 
+**[Model Card →](MODEL_CARD.md)** — usage prévu, données, métriques, limites
+et considérations éthiques du modèle déployé. À lire avant toute décision
+d'usage.
+
 ## Contexte
 
 Le blanchiment d'argent représente un défi majeur pour les institutions
@@ -119,6 +123,7 @@ Aucune clé de compte de service à faire fuiter.
 ├── models/                    # Artefacts entraînés localement (non versionnés)
 ├── pyproject.toml
 ├── requirements-lock.txt     # Versions figées de l'image d'entraînement
+├── MODEL_CARD.md              # Documentation du modèle (usage, données, limites)
 └── README.md
 ```
 
@@ -139,7 +144,7 @@ gcloud auth application-default login
 python -m aml_detection
 
 # Entraînement dans le cloud (Custom Training Job)
-gcloud builds submit --tag us-central1-docker.pkg.dev/mlops-vertex-demo/aml-detection/trainer:v2 .
+gcloud builds submit --tag us-central1-docker.pkg.dev/mlops-vertex-demo/aml-detection/trainer:v3 .
 gcloud ai custom-jobs create --region=us-central1 --display-name=aml-train --config=deploy/custom_job.yaml
 
 # Pipeline complet (entraînement + enregistrement conditionnel)
@@ -188,6 +193,7 @@ features avec la structure du graphe de transactions (`feature_engineering_graph
 
 ## Pistes d'évolution
 
-- Model card et documentation de gouvernance
+- Monitoring de dérive (Vertex AI Model Monitoring) sur le modèle déployé
+- Audit de biais formel avant tout usage au-delà de la démo (voir Model Card)
 - Classification NLP des libellés de transaction
 - Génération automatique de synthèses de risque (LLM)
