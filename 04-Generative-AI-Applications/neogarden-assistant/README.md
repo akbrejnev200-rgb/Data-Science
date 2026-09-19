@@ -19,16 +19,17 @@ Les trois documents sont **cohérents entre eux** : franchise de port à 59 €,
 
 ## Installation
 
-Place tous ces fichiers dans le **même dossier que `app.py`**, puis :
+Les documents sont dans `data/`, le code dans `src/rag_garden/`, l'interface dans `app/`. Depuis le dossier du projet :
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate        # Windows : .venv\Scripts\activate
-pip install -r requirements.txt
-streamlit run app.py
+pip install -e .
+cp .env.example .env             # Windows : copy .env.example .env
+streamlit run app/streamlit_app.py
 ```
 
-Colle ta clé Mistral dans la barre latérale.
+Renseigne ta clé OpenRouter dans le fichier `.env` (`OPENROUTER_API_KEY=...`). Sous Windows, `Lancer_NeoGarden.bat` lance l'appli (les commentaires du script expliquent comment choisir l'environnement Python).
 
 > **Fais-le ce soir, pas demain.** Le premier lancement télécharge le modèle CamemBERT (plusieurs centaines de Mo) puis calcule les embeddings des ~180 chunks. Compte 3 à 6 minutes. Ensuite le modèle est en cache local et le démarrage est rapide.
 
