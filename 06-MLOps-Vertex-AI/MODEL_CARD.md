@@ -17,7 +17,7 @@ et du Model Registry Vertex AI). À lire avant toute décision d'usage.
 | Produit par | Vertex AI Pipeline `aml-training`, run `aml-training-20260911004231`, 2026-09-11 |
 | Registre | Vertex AI Model Registry, projet `mlops-vertex-demo`, région `us-central1` |
 | Auteur / contact | Koffi Brejnev Akoumani |
-| Licence des données | Dataset public de recherche IBM AML (usage académique/démo) |
+| Licence des données | Dataset Kaggle « IBM Transactions for Anti Money Laundering (AML) » (usage académique/démo) |
 
 ## Usage prévu
 
@@ -34,9 +34,15 @@ serving, CI/CD) sur un cas d'usage AML. Le score produit illustre une
 
 ## Données
 
-- **Source** : dataset public de recherche [IBM AML](https://github.com/IBM/AMLSim)
-  — transactions synthétiques générées par simulation multi-agents, aucune
+- **Source** : dataset Kaggle [« IBM Transactions for Anti Money Laundering
+  (AML) »](https://www.kaggle.com/datasets/ealtman2019/ibm-transactions-for-anti-money-laundering-aml)
+  (Erik Altman / IBM Research) — transactions synthétiques générées par le
+  simulateur multi-agents [AMLSim](https://github.com/IBM/AMLSim), aucune
   donnée personnelle ou bancaire réelle.
+- **Variante utilisée** : `LI-Small` (*Low Illicit ratio*) — choisie
+  délibérément comme la plus déséquilibrée des variantes disponibles
+  (HI/LI × Small/Medium/Large), la plus proche d'un contexte réel où la
+  fraude est rare.
 - **Feature engineering** : agrégation par compte (montants, diversité des
   contreparties et devises, vélocité temporelle, réciprocité des échanges —
   voir `feature_engineering_graph.sql`), 19 features numériques.

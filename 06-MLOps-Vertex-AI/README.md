@@ -23,10 +23,12 @@ financières : les schémas sont volontairement conçus pour se fondre dans le
 volume de transactions légitimes, et les jeux de données sont extrêmement
 déséquilibrés (souvent moins de 1% de cas positifs). Ce projet explore une
 approche de bout en bout, du stockage cloud des données jusqu'au scoring de
-risque par compte, en s'appuyant sur le dataset public de recherche IBM AML
-(transactions synthétiques générées par un simulateur multi-agents,
-largement utilisé dans la littérature académique sur la détection AML et le
-graph learning).
+risque par compte, en s'appuyant sur le dataset Kaggle [« IBM Transactions for
+Anti Money Laundering (AML) »](https://www.kaggle.com/datasets/ealtman2019/ibm-transactions-for-anti-money-laundering-aml)
+(transactions synthétiques générées par le simulateur multi-agents
+[AMLSim](https://github.com/IBM/AMLSim), largement utilisé dans la
+littérature académique sur la détection AML et le graph learning) — variante
+`LI-Small`, délibérément la plus déséquilibrée des variantes disponibles.
 
 ## Approche technique
 
