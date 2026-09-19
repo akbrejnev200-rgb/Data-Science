@@ -106,11 +106,10 @@ en modules à responsabilité unique :
   fait et pourquoi, pas un roman).
 - `print()` → `logging` (niveau INFO pour le déroulement normal, WARNING/ERROR
   pour les erreurs gérées).
-- Les guardrails (`guardrails.py`) sont créés **vides/minimaux** ici (juste
-  la structure), le contenu réel arrive en Phase 2bis ci-dessous si tu veux
-  vraiment les implémenter — sinon le fichier peut rester un stub documenté
-  "non implémenté, piste d'amélioration" (cohérent avec tes limites déjà
-  identifiées).
+- `guardrails.py` ne contient ici que le raccourci « salutations » (comportement
+  existant, déplacé). Les vrais garde-fous changeraient le comportement : décision
+  prise (point d'attention n°1) de les ajouter **après l'évaluation**, en
+  Phase 5bis, pour pouvoir les mesurer.
 
 **Validation :** je relance l'appli (`streamlit run app/streamlit_app.py`),
 je repose les 15 questions du golden set à la main pour vérifier qu'aucun
@@ -147,7 +146,8 @@ Tests `pytest`, **aucun appel réseau réel** (LLM et embeddings mockés) :
 - `test_prompts.py` : le prompt final contient bien le contexte et la
   question
 - `test_memory.py` : conversion historique Streamlit → messages LangChain
-- `test_guardrails.py` : selon ce qui est implémenté en Phase 2
+- `test_guardrails.py` : le raccourci « salutations » (seul garde-fou existant
+  à ce stade ; les autres arrivent en Phase 5bis, avec leurs propres tests)
 
 Je t'expliquerai concrètement, avec un exemple du projet, la différence
 test unitaire / test d'intégration à ce moment-là (demandé dans tes
@@ -165,7 +165,9 @@ consignes).
   `statut` à remplir automatiquement par le script (plus à la main).
 - Ajout de quelques questions **hors périmètre** (pour vérifier que le
   système refuse de répondre plutôt que d'halluciner — ta question 15
-  actuelle en est déjà une, j'en ajoute 2-3 autres dans le même esprit).
+  actuelle en est déjà une, j'en ajoute 2-3 autres dans le même esprit), et
+  quelques **questions d'attaque** (tentatives d'injection de prompt) : elles
+  servent de banc d'essai à la Phase 5bis.
 - `evaluation/evaluate.py` :
   - **Retrieval** : précision/recall — les bons chunks sont-ils dans le
     top-k ?
@@ -176,6 +178,31 @@ consignes).
 
 **Validation :** rapport généré, je te montre les résultats et ce qu'ils
 disent des limites déjà identifiées (`LIMITES_RAG_EXEMPLES.md`).
+
+---
+
+## Phase 5bis — Garde-fous (après l'évaluation)
+
+**Branche :** `feat/guardrails`
+
+Pourquoi ici et pas en Phase 2 : un garde-fou **refuse** des entrées, donc il
+change le comportement, et un garde-fou non mesuré peut refuser de vraies
+questions (faux positifs). On les ajoute une fois le banc d'essai de la
+Phase 5 en place, pour mesurer leur effet avant/après.
+
+- **Injection de prompt** (entrée) : détection par motifs des attaques
+  évidentes, réponse de refus polie. Première ligne de défense, contournable :
+  à documenter comme telle.
+- **Hors sujet** (entrée) : seuil sur le score de similarité du retriever,
+  réglé sur le golden set.
+- **Réponse ancrée** (sortie) : contrôle que la réponse est soutenue par les
+  passages retrouvés (juge LLM, réutilise l'outillage de la Phase 5).
+- Chaque garde-fou est mesuré avec `evaluation/evaluate.py` : attaques
+  bloquées **et** questions légitimes refusées à tort.
+- Tests unitaires (mocks) pour chacun.
+
+**Validation :** rapport avant/après ; on ne garde un garde-fou que si son
+taux de faux positifs sur le golden set est acceptable.
 
 ---
 

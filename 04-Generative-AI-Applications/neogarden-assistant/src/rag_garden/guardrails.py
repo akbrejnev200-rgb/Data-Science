@@ -5,9 +5,10 @@ directe, sans passer par le RAG : pas de recherche inutile, pas de sources hors
 sujet).
 
 NON implémenté (limite connue, voir README) : détection de prompt injection,
-masquage de données personnelles, contrôle que la réponse est ancrée dans le
-contexte. Les ajouter changerait le comportement (certaines questions seraient
-refusées) : à décider à part.
+questions hors sujet, contrôle que la réponse est ancrée dans le contexte. Les
+ajouter change le comportement (certaines entrées seraient refusées) : ils sont
+prévus en Phase 5bis (docs/PLAN.md), une fois l'évaluation en place pour mesurer
+leurs faux positifs.
 """
 
 GREETINGS = frozenset(
