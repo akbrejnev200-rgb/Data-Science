@@ -1,5 +1,8 @@
 # Détection AML — scoring de risque sur transactions bancaires
 
+[![CI](https://github.com/akbrejnev200-rgb/Data-Science/actions/workflows/aml-ci.yml/badge.svg)](https://github.com/akbrejnev200-rgb/Data-Science/actions/workflows/aml-ci.yml)
+[![CD](https://github.com/akbrejnev200-rgb/Data-Science/actions/workflows/aml-cd.yml/badge.svg)](https://github.com/akbrejnev200-rgb/Data-Science/actions/workflows/aml-cd.yml)
+
 Pipeline de détection de blanchiment d'argent (AML) construit sur Google Cloud
 Platform, combinant détection d'anomalies non supervisée et scoring de risque
 supervisé, avec calibration de seuil orientée métier — et son déploiement
@@ -61,10 +64,29 @@ BigQuery (features)
 - L'**app de démo** charge la version enregistrée depuis GCS au démarrage :
   code et modèle sont déployés indépendamment
 
+## CI/CD
+
+Deux workflows GitHub Actions, déclenchés uniquement quand ce dossier change
+(le repo est un monorepo — voir note plus bas), sans aucune clé/secret stocké :
+
+- **CI** (`aml-ci.yml`) : sur chaque push/PR → lint (`ruff`) + tests (`pytest`)
+- **CD** (`aml-cd.yml`) : sur push vers `main` (code de `serving/` ou `src/`) →
+  rebuild l'image de démo, redéploie Cloud Run automatiquement
+
+L'authentification GCP se fait par **Workload Identity Federation** : GitHub
+prouve son identité via OIDC, Google échange ça contre un jeton court terme
+pour un compte de service dédié (`github-deployer`, droits limités au build/
+déploiement — pas les droits larges du compte utilisé pour l'entraînement).
+Aucune clé de compte de service à faire fuiter.
+
 ## Architecture du projet
 
+> Ce projet vit dans `06-MLOps-Vertex-AI/`, un sous-dossier du monorepo
+> [Data-Science](https://github.com/akbrejnev200-rgb/Data-Science). Les workflows
+> GitHub Actions (`.github/workflows/`) sont donc à la racine du repo, pas ici.
+
 ```
-mlops-vertex-demo/
+06-MLOps-Vertex-AI/
 ├── src/aml_detection/       # Package Python installable (pipeline d'entraînement)
 │   ├── config.py            # Configuration centrale (env AML_*, défauts)
 │   ├── data_loading.py      # Chargement des données depuis BigQuery
@@ -89,7 +111,8 @@ mlops-vertex-demo/
 │   ├── requirements.txt     # Dépendances minimales (image de serving allégée)
 │   ├── Dockerfile
 │   └── deploy.sh             # Build + déploiement Cloud Run
-├── Dockerfile                 # Image d'entraînement (racine du repo)
+├── Dockerfile                 # Image d'entraînement
+├── tests/                     # Tests unitaires (features, seuil, registry, config)
 ├── check_importance.py       # Diagnostic : importance des features
 ├── models/                    # Artefacts entraînés localement (non versionnés)
 ├── pyproject.toml
@@ -163,7 +186,6 @@ features avec la structure du graphe de transactions (`feature_engineering_graph
 
 ## Pistes d'évolution
 
-- CI/CD (GitHub Actions + déclenchement du pipeline sur push)
 - Model card et documentation de gouvernance
 - Classification NLP des libellés de transaction
 - Génération automatique de synthèses de risque (LLM)

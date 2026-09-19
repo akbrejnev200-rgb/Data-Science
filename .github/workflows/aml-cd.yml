@@ -1,0 +1,66 @@
+name: AML — CD (app de démo Cloud Run)
+
+# Sur push vers main touchant le code de serving : rebuild l'image et redéploie
+# l'app de démo. L'entraînement (long, coûteux en temps) reste déclenché à la
+# main — pas question de relancer un pipeline de 20 min sur chaque commit.
+#
+# Authentification sans clé stockée (Workload Identity Federation) : GitHub
+# prouve son identité directement à Google via OIDC, aucun secret à gérer.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "06-MLOps-Vertex-AI/serving/**"
+      - "06-MLOps-Vertex-AI/src/**"
+      - "06-MLOps-Vertex-AI/pyproject.toml"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  id-token: write # requis par Workload Identity Federation
+
+defaults:
+  run:
+    working-directory: 06-MLOps-Vertex-AI
+
+env:
+  PROJECT_ID: mlops-vertex-demo
+  REGION: us-central1
+  SERVICE: aml-suspect-scoring-demo
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    needs: []
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: auth
+        name: Authentification GCP (Workload Identity Federation)
+        uses: google-github-actions/auth@v2
+        with:
+          project_id: ${{ env.PROJECT_ID }}
+          workload_identity_provider: projects/69646548838/locations/global/workloadIdentityPools/github-pool/providers/github-provider
+          service_account: github-deployer@mlops-vertex-demo.iam.gserviceaccount.com
+
+      - uses: google-github-actions/setup-gcloud@v2
+
+      - name: Build de l'image (Cloud Build)
+        run: |
+          TAG="${GITHUB_SHA::7}"
+          gcloud builds submit --config serving/cloudbuild.yaml --substitutions=_TAG="$TAG" .
+          echo "IMAGE_TAG=$TAG" >> "$GITHUB_ENV"
+
+      - name: Déploiement Cloud Run
+        run: |
+          gcloud run deploy "$SERVICE" \
+            --image="${REGION}-docker.pkg.dev/${PROJECT_ID}/aml-detection/serving:${IMAGE_TAG}" \
+            --region="$REGION" \
+            --platform=managed \
+            --quiet
+          # Les autres réglages (env vars, accès public, min/max instances)
+          # sont hérités de la révision précédente — gcloud run deploy ne les
+          # réinitialise pas tant qu'on ne les redéfinit pas explicitement.
+
+      - name: URL du service
+        run: gcloud run services describe "$SERVICE" --region="$REGION" --format="value(status.url)"

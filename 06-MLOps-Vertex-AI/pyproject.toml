@@ -34,3 +34,10 @@ where = ["src"]
 
 [tool.ruff]
 line-length = 100
+
+[tool.ruff.lint.per-file-ignores]
+# pipelines/training_pipeline.py : les fonctions de composants KFP tournent en
+# isolation dans un conteneur distant — leur corps ne doit importer/définir que
+# ce dont l'exécution à distance a besoin. SIM115/UP014 sont des préférences de
+# style ; les appliquer risquerait de casser un pipeline déjà validé en prod.
+"pipelines/training_pipeline.py" = ["SIM115", "UP014"]

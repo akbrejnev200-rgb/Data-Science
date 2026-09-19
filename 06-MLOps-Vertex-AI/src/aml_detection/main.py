@@ -4,23 +4,28 @@ Pipeline complet : chargement, split, entraînement, calibration, évaluation, s
 
 import json
 
-import pandas as pd
 import joblib
+import pandas as pd
+from sklearn.metrics import (
+    average_precision_score,
+    classification_report,
+    confusion_matrix,
+)
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-from sklearn.metrics import (
-    average_precision_score, classification_report, confusion_matrix,
-)
 
-from .config import MODELS_DIR, CONTAMINATION_PRIOR, TARGET_RECALL, ARTIFACTS_URI
+from .artifacts import upload_dir
+from .config import ARTIFACTS_URI, CONTAMINATION_PRIOR, MODELS_DIR, TARGET_RECALL
 from .data_loading import load_account_features
+from .evaluate import calibrate_threshold, evaluate_final, evaluate_isolation_forest
 from .features import prepare_features
 from .train import (
-    train_isolation_forest, select_best_depth, train_random_forest,
-    select_best_xgboost_params, train_xgboost,
+    select_best_depth,
+    select_best_xgboost_params,
+    train_isolation_forest,
+    train_random_forest,
+    train_xgboost,
 )
-from .evaluate import evaluate_isolation_forest, calibrate_threshold, evaluate_final
-from .artifacts import upload_dir
 
 
 def main():

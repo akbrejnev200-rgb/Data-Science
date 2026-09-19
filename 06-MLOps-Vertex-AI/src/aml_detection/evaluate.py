@@ -4,8 +4,11 @@
 
 import numpy as np
 from sklearn.metrics import (
-    classification_report, confusion_matrix,
-    roc_auc_score, average_precision_score, precision_recall_curve
+    average_precision_score,
+    classification_report,
+    confusion_matrix,
+    precision_recall_curve,
+    roc_auc_score,
 )
 
 

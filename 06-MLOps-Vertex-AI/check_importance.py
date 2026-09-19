@@ -13,5 +13,5 @@ print(s.head(12).to_string())
 
 vol = ["nb_transactions_envoyees", "nb_transactions_recues", "max_transactions_jour"]
 print()
-print("Part des 2 features de volume brut : {:.1%}".format(s[vol[:2]].sum()))
-print("En ajoutant max_transactions_jour  : {:.1%}".format(s[vol].sum()))
+print(f"Part des 2 features de volume brut : {s[vol[:2]].sum():.1%}")
+print(f"En ajoutant max_transactions_jour  : {s[vol].sum():.1%}")

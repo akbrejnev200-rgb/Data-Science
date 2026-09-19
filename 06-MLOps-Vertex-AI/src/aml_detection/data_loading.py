@@ -5,7 +5,7 @@ Chargement des données depuis BigQuery.
 import pandas as pd
 from google.cloud import bigquery
 
-from .config import PROJECT_ID, BQ_DATASET, BQ_TABLE
+from .config import BQ_DATASET, BQ_TABLE, PROJECT_ID
 
 
 def load_account_features(

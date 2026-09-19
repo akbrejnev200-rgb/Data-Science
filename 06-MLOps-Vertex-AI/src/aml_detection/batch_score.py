@@ -16,7 +16,7 @@ from pathlib import Path
 import joblib
 from google.cloud import bigquery, storage
 
-from .config import PROJECT_ID, BQ_DATASET
+from .config import BQ_DATASET, PROJECT_ID
 from .data_loading import load_account_features
 from .features import FEATURES, prepare_features
 
