@@ -1,0 +1,14 @@
+repos:
+  # NeoGarden Assistant (04-Generative-AI-Applications/neogarden-assistant) :
+  # verifications limitees a ce dossier via `files`, pour ne pas affecter
+  # les autres projets du monorepo.
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.16.8
+    hooks:
+      - id: ruff
+        name: ruff (lint) - neogarden-assistant
+        files: ^04-Generative-AI-Applications/neogarden-assistant/
+        args: [--fix]
+      - id: ruff-format
+        name: ruff (format) - neogarden-assistant
+        files: ^04-Generative-AI-Applications/neogarden-assistant/

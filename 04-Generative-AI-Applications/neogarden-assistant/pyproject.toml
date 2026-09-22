@@ -8,22 +8,41 @@ version = "0.1.0"
 description = "NeoGarden Assistant : assistant RAG pour une boutique de jardinage fictive"
 readme = "README.md"
 requires-python = ">=3.10"
-# Versions figées : Phase 3.
 dependencies = [
-    "streamlit",
-    "pandas",
-    "python-dotenv",
-    "langchain-core",
-    "langchain-community",
-    "langchain-classic",
-    "langchain-text-splitters",
-    "langchain-huggingface",
-    "langchain-openai",
-    "openai",
-    "sentence-transformers",  # requis à l'exécution par HuggingFaceEmbeddings
-    "faiss-cpu",
-    "docx2txt",  # requis à l'exécution par Docx2txtLoader
+    "streamlit==1.63.0",
+    "pandas==2.3.3",
+    "python-dotenv==1.2.3",
+    "langchain-core==1.6.3",
+    "langchain-community==0.4.2",
+    "langchain-classic==1.0.8",
+    "langchain-text-splitters==1.1.2",
+    "langchain-huggingface==1.2.2",
+    "langchain-openai==1.6.2",
+    "openai==3.13.0",
+    "sentence-transformers==6.0.1",  # requis à l'exécution par HuggingFaceEmbeddings
+    "faiss-cpu==1.15.0",
+    "docx2txt==0.9",  # requis à l'exécution par Docx2txtLoader
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff==0.16.8",
 ]
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+# E/W pycodestyle, F pyflakes, I tri des imports, UP syntaxe moderne, B pieges frequents
+select = ["E", "W", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+# Contenu des prompts fige a l'identique de l'original (verifie par comparaison
+# d'AST en Phase 2) : la longueur de ligne n'est pas corrigee ici pour eviter
+# tout risque de modifier le texte envoye au LLM. Traite en Phase 5 (correction
+# mesuree des regles 3/4 collees), qui touchera ce fichier de toute facon.
+"src/rag_garden/prompts.py" = ["E501"]

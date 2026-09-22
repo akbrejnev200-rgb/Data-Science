@@ -81,7 +81,7 @@ def load_or_build_vectorstore(
     index_dir: Path = config.VECTORSTORE_DIR,
     force_rebuild: bool = False,
 ) -> FAISS:
-    """Renvoie l'index FAISS : rechargé depuis le disque s'il est à jour, sinon reconstruit."""
+    """Renvoie l'index FAISS : rechargé s'il est à jour, sinon reconstruit."""
     embeddings = get_embeddings()
     fingerprint = compute_fingerprint(
         source_paths(data_dir),

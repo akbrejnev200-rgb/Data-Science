@@ -19,6 +19,4 @@ def build_history_aware_retriever(
     llm: BaseChatModel, retriever: BaseRetriever
 ) -> Runnable:
     """Retriever qui reformule d'abord la question de suivi grâce à l'historique."""
-    return create_history_aware_retriever(
-        llm, retriever, build_contextualize_prompt()
-    )
+    return create_history_aware_retriever(llm, retriever, build_contextualize_prompt())

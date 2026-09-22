@@ -53,7 +53,9 @@ def load_catalogue_documents(csv_path: Path) -> list[Document]:
     try:
         catalogue = pd.read_csv(csv_path)
     except FileNotFoundError:
-        logger.warning("Catalogue introuvable (%s) : index sans les produits.", csv_path)
+        logger.warning(
+            "Catalogue introuvable (%s) : index sans les produits.", csv_path
+        )
         return []
     catalogue["rag_content"] = catalogue.apply(catalogue_row_to_text, axis=1)
     return DataFrameLoader(catalogue, page_content_column="rag_content").load()
