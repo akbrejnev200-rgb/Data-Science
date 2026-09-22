@@ -24,5 +24,25 @@ dependencies = [
     "docx2txt==0.9",  # requis à l'exécution par Docx2txtLoader
 ]
 
+[project.optional-dependencies]
+dev = [
+    "ruff==0.16.8",
+]
+
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+# E/W pycodestyle, F pyflakes, I tri des imports, UP syntaxe moderne, B pieges frequents
+select = ["E", "W", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+# Contenu des prompts fige a l'identique de l'original (verifie par comparaison
+# d'AST en Phase 2) : la longueur de ligne n'est pas corrigee ici pour eviter
+# tout risque de modifier le texte envoye au LLM. Traite en Phase 5 (correction
+# mesuree des regles 3/4 collees), qui touchera ce fichier de toute facon.
+"src/rag_garden/prompts.py" = ["E501"]

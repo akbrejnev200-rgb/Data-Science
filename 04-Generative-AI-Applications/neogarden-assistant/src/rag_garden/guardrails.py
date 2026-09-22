@@ -35,5 +35,5 @@ GREETING_REPLY = (
 
 
 def is_greeting(text: str) -> bool:
-    """Vrai si le message est une simple salutation (casse et ponctuation finale ignorées)."""
+    """Vrai si le message est une simple salutation (casse/ponctuation ignorées)."""
     return text.strip().lower().rstrip("!.?") in GREETINGS

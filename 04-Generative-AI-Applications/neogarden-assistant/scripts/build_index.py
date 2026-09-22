@@ -37,7 +37,9 @@ def main() -> None:
     args = parse_args()
     vectorstore = load_or_build_vectorstore(force_rebuild=args.force)
     logger.info(
-        "Index prêt : %d vecteurs dans %s", vectorstore.index.ntotal, config.VECTORSTORE_DIR
+        "Index prêt : %d vecteurs dans %s",
+        vectorstore.index.ntotal,
+        config.VECTORSTORE_DIR,
     )
 
 

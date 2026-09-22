@@ -42,7 +42,7 @@ def get_retriever():
 
 @st.cache_resource(show_spinner=False)
 def get_chain(api_key: str) -> Runnable:
-    """Chaîne RAG : partie légère, refaite si la clé change (sans recalculer l'index)."""
+    """Chaîne RAG, refaite si la clé change (sans recalculer l'index)."""
     return build_rag_chain(get_retriever(), api_key)
 
 
@@ -57,7 +57,9 @@ def render_sidebar(api_key: str | None) -> None:
             st.error(
                 "Aucune clé API trouvée. Ajoute OPENROUTER_API_KEY dans le fichier .env"
             )
-            st.markdown("Obtenez votre clé sur [openrouter.ai/keys](https://openrouter.ai/keys)")
+            st.markdown(
+                "Obtenez votre clé sur [openrouter.ai/keys](https://openrouter.ai/keys)"
+            )
         st.markdown("---")
         model_name = config.LLM_MODEL.split(":")[0]
         st.markdown(
@@ -132,9 +134,7 @@ def generate_answer(chain: Runnable, question: str) -> Answer | None:
 
 def handle_user_input(chain: Runnable | None) -> None:
     """Traite la question saisie : l'affiche, obtient la réponse, la mémorise."""
-    prompt = st.chat_input(
-        "Tapez votre message ici (ex: Livrez-vous en Belgique ?)..."
-    )
+    prompt = st.chat_input("Tapez votre message ici (ex: Livrez-vous en Belgique ?)...")
     if not prompt:
         return
     if chain is None:
@@ -164,10 +164,13 @@ def handle_user_input(chain: Runnable | None) -> None:
 
 def main() -> None:
     """Assemble la page."""
-    st.set_page_config(page_title="NeoGarden Assistant", page_icon="🌿", layout="centered")
+    st.set_page_config(
+        page_title="NeoGarden Assistant", page_icon="🌿", layout="centered"
+    )
     st.title("🌿 Assistant NeoGarden")
     st.markdown(
-        "Posez vos questions sur nos produits, vos commandes ou nos conditions de retour !"
+        "Posez vos questions sur nos produits, vos commandes "
+        "ou nos conditions de retour !"
     )
     api_key = config.OPENROUTER_API_KEY
     render_sidebar(api_key)
