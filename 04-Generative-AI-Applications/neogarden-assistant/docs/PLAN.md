@@ -152,6 +152,13 @@ Tests `pytest`, **aucun appel réseau réel** (LLM et embeddings mockés) :
   renvoie faux à cause de l'espace avant « ! ». On écrit le test **avant** le
   correctif, on constate qu'il échoue (rouge), puis un commit `fix:`
   (`rstrip(" !.?")`) le fait passer (vert).
+- `test_generation.py` (ajouté, hors liste initiale) : la politique de retry
+  sur erreurs LLM — erreurs simulées (openai.*, et la vraie `ValueError(dict)`
+  que LangChain lève pour une erreur renvoyée dans un corps HTTP 200), sans
+  aucun appel réseau. Reprend et formalise le script de vérification jetable
+  utilisé en Phase 2 : c'est la logique la plus fragile du projet (une
+  régression de résilience y avait été introduite puis corrigée pendant la
+  Phase 2), elle mérite une couverture permanente.
 
 Je t'expliquerai concrètement, avec un exemple du projet, la différence
 test unitaire / test d'intégration à ce moment-là (demandé dans tes
