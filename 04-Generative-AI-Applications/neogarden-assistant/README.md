@@ -130,10 +130,9 @@ Elles sont détaillées avec des cas réels dans [`LIMITES_RAG_EXEMPLES.md`](LIM
 4. **Aucun suivi** des tokens, de la latence ni du coût par requête.
 5. Les sources s'affichent **même quand l'assistant refuse** de répondre.
 
-Déjà traitées depuis la première version : l'historique de conversation dans la recherche, l'index sauvegardé sur disque, et un cache qui ne dépend plus de la clé API.
+Déjà traitées depuis la première version : l'historique de conversation dans la recherche, l'index sauvegardé sur disque, un cache qui ne dépend plus de la clé API, et « Bonjour ! » (avec l'espace avant le point d'exclamation) désormais reconnu comme une salutation (corrigé en Phase 4, test écrit avant le correctif).
 
-**Défauts identifiés, correction planifiée** (voir [`docs/PLAN.md`](docs/PLAN.md)) :
-- « Bonjour ! » (avec l'espace avant le point d'exclamation) n'est pas reconnu comme une salutation et passe par la recherche. Correction en Phase 4, en écrivant d'abord le test.
+**Défaut identifié, correction planifiée** (voir [`docs/PLAN.md`](docs/PLAN.md)) :
 - Le prompt système fusionne ses règles 3 et 4 sur une même ligne (saut de ligne manquant). Correction en Phase 5, après avoir mesuré l'effet du changement.
 
 ## Feuille de route
@@ -144,8 +143,8 @@ Le détail est dans [`docs/PLAN.md`](docs/PLAN.md). Une branche et une revue par
 |---|---|---|
 | 1 | Hygiène du dépôt : `.env.example`, `.gitignore`, configuration centralisée | ✅ |
 | 2 | Découpage en modules, index persistant, erreurs précises | ✅ |
-| 3 | Qualité : versions figées, Ruff, pre-commit | à venir |
-| 4 | Tests unitaires (sans appel à l'API) | à venir |
+| 3 | Qualité : versions figées, Ruff, pre-commit | ✅ |
+| 4 | Tests unitaires (sans appel à l'API) | ✅ |
 | 5 | Évaluation : retrieval et génération, LLM-as-a-judge | à venir |
 | 5bis | Garde-fous, mesurés avec l'évaluation | à venir |
 | 6 | Intégration continue (GitHub Actions) | à venir |
