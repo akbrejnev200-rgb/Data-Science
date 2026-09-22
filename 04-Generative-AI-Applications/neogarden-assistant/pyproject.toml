@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rag-garden"
+version = "0.1.0"
+description = "NeoGarden Assistant : assistant RAG pour une boutique de jardinage fictive"
+readme = "README.md"
+requires-python = ">=3.10"
+# Versions figées : Phase 3.
+dependencies = [
+    "streamlit",
+    "pandas",
+    "python-dotenv",
+    "langchain-core",
+    "langchain-community",
+    "langchain-classic",
+    "langchain-text-splitters",
+    "langchain-huggingface",
+    "langchain-openai",
+    "openai",
+    "sentence-transformers",  # requis à l'exécution par HuggingFaceEmbeddings
+    "faiss-cpu",
+    "docx2txt",  # requis à l'exécution par Docx2txtLoader
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

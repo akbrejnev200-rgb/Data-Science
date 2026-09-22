@@ -106,11 +106,10 @@ en modules à responsabilité unique :
   fait et pourquoi, pas un roman).
 - `print()` → `logging` (niveau INFO pour le déroulement normal, WARNING/ERROR
   pour les erreurs gérées).
-- Les guardrails (`guardrails.py`) sont créés **vides/minimaux** ici (juste
-  la structure), le contenu réel arrive en Phase 2bis ci-dessous si tu veux
-  vraiment les implémenter — sinon le fichier peut rester un stub documenté
-  "non implémenté, piste d'amélioration" (cohérent avec tes limites déjà
-  identifiées).
+- `guardrails.py` ne contient ici que le raccourci « salutations » (comportement
+  existant, déplacé). Les vrais garde-fous changeraient le comportement : décision
+  prise (point d'attention n°1) de les ajouter **après l'évaluation**, en
+  Phase 5bis, pour pouvoir les mesurer.
 
 **Validation :** je relance l'appli (`streamlit run app/streamlit_app.py`),
 je repose les 15 questions du golden set à la main pour vérifier qu'aucun
@@ -147,7 +146,12 @@ Tests `pytest`, **aucun appel réseau réel** (LLM et embeddings mockés) :
 - `test_prompts.py` : le prompt final contient bien le contexte et la
   question
 - `test_memory.py` : conversion historique Streamlit → messages LangChain
-- `test_guardrails.py` : selon ce qui est implémenté en Phase 2
+- `test_guardrails.py` : le raccourci « salutations » (seul garde-fou existant
+  à ce stade ; les autres arrivent en Phase 5bis, avec leurs propres tests).
+  **Bug connu, corrigé test d'abord** (point d'attention n°6) : `is_greeting("Bonjour !")`
+  renvoie faux à cause de l'espace avant « ! ». On écrit le test **avant** le
+  correctif, on constate qu'il échoue (rouge), puis un commit `fix:`
+  (`rstrip(" !.?")`) le fait passer (vert).
 
 Je t'expliquerai concrètement, avec un exemple du projet, la différence
 test unitaire / test d'intégration à ce moment-là (demandé dans tes
@@ -165,17 +169,47 @@ consignes).
   `statut` à remplir automatiquement par le script (plus à la main).
 - Ajout de quelques questions **hors périmètre** (pour vérifier que le
   système refuse de répondre plutôt que d'halluciner — ta question 15
-  actuelle en est déjà une, j'en ajoute 2-3 autres dans le même esprit).
+  actuelle en est déjà une, j'en ajoute 2-3 autres dans le même esprit), et
+  quelques **questions d'attaque** (tentatives d'injection de prompt) : elles
+  servent de banc d'essai à la Phase 5bis.
 - `evaluation/evaluate.py` :
   - **Retrieval** : précision/recall — les bons chunks sont-ils dans le
     top-k ?
   - **Génération** : fidélité au contexte, pertinence, refus correct quand
     l'info manque — via LLM-as-a-judge (un modèle note la réponse).
   - Produit un rapport lisible (markdown ou texte), pas juste un chiffre brut.
+- **Expérience de prompt** (point d'attention n°2) : score de référence avec le
+  prompt actuel (règles 3 et 4 collées sur une ligne), puis correction du saut
+  de ligne dans un commit `fix:` séparé et comparaison avant/après.
 - Ce script reste **hors CI** (il appelle une vraie API, comme demandé).
 
 **Validation :** rapport généré, je te montre les résultats et ce qu'ils
 disent des limites déjà identifiées (`LIMITES_RAG_EXEMPLES.md`).
+
+---
+
+## Phase 5bis — Garde-fous (après l'évaluation)
+
+**Branche :** `feat/guardrails`
+
+Pourquoi ici et pas en Phase 2 : un garde-fou **refuse** des entrées, donc il
+change le comportement, et un garde-fou non mesuré peut refuser de vraies
+questions (faux positifs). On les ajoute une fois le banc d'essai de la
+Phase 5 en place, pour mesurer leur effet avant/après.
+
+- **Injection de prompt** (entrée) : détection par motifs des attaques
+  évidentes, réponse de refus polie. Première ligne de défense, contournable :
+  à documenter comme telle.
+- **Hors sujet** (entrée) : seuil sur le score de similarité du retriever,
+  réglé sur le golden set.
+- **Réponse ancrée** (sortie) : contrôle que la réponse est soutenue par les
+  passages retrouvés (juge LLM, réutilise l'outillage de la Phase 5).
+- Chaque garde-fou est mesuré avec `evaluation/evaluate.py` : attaques
+  bloquées **et** questions légitimes refusées à tort.
+- Tests unitaires (mocks) pour chacun.
+
+**Validation :** rapport avant/après ; on ne garde un garde-fou que si son
+taux de faux positifs sur le golden set est acceptable.
 
 ---
 
@@ -197,9 +231,13 @@ disent des limites déjà identifiées (`LIMITES_RAG_EXEMPLES.md`).
 
 **Branche :** `docs/readme-and-learnings`
 
-- `README.md` réécrit : objectif, schéma Mermaid de l'architecture, pourquoi
-  un RAG plutôt qu'un fine-tuning ici, installation, lancement, tests,
-  évaluation + résultats, limites (reprend `LIMITES_RAG_EXEMPLES.md`).
+- `README.md` : une **version propre a déjà été écrite en Phase 2** (demande de
+  l'utilisateur : l'ancien « kit de démarrage » contenait des notes personnelles
+  et des chiffres faux). Elle couvre déjà objectif, schémas Mermaid, RAG vs
+  fine-tuning, installation, lancement, données, limites et feuille de route.
+  La Phase 7 l'enrichit de ce qui n'existe pas encore : commandes de test et de
+  lint, badge de CI, **résultats chiffrés de l'évaluation**, garde-fous, et
+  passe la feuille de route à jour.
 - `docs/APPRENTISSAGES.md` : une notion par entrée (linter, formateur, tests,
   mocks, CI/CD, branches, PR, LLM-as-a-judge...), avec question d'entretien
   probable + réponse courte pour chacune.
