@@ -103,7 +103,7 @@ neogarden-assistant/
 ├── golden_set.csv             15 questions de test avec réponse et source attendues
 ├── LIMITES_RAG_EXEMPLES.md    Exemples concrets des limites du RAG
 ├── Lancer_NeoGarden.bat       Lanceur Windows
-└── pyproject.toml, requirements.txt
+└── pyproject.toml             Dépendances (versions figées)
 ```
 
 ## Données
