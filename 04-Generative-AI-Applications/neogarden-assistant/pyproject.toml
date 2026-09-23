@@ -42,8 +42,6 @@ target-version = "py310"
 select = ["E", "W", "F", "I", "UP", "B"]
 
 [tool.ruff.lint.per-file-ignores]
-# Contenu des prompts fige a l'identique de l'original (verifie par comparaison
-# d'AST en Phase 2) : la longueur de ligne n'est pas corrigee ici pour eviter
-# tout risque de modifier le texte envoye au LLM. Traite en Phase 5 (correction
-# mesuree des regles 3/4 collees), qui touchera ce fichier de toute facon.
+# Le texte des prompts (phrases longues en une seule chaine) depasse par nature
+# 88 caracteres ; le decouper romprait la lisibilite du prompt sans benefice.
 "src/rag_garden/prompts.py" = ["E501"]

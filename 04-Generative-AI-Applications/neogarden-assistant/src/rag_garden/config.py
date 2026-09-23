@@ -37,6 +37,15 @@ EMBEDDING_MODEL = "dangvantuan/sentence-camembert-base"
 # modèle non conversationnel et casser la démo).
 LLM_MODEL = "nvidia/nemotron-3-super-120b-a12b:free"
 LLM_BASE_URL = "https://openrouter.ai/api/v1"
+# Juge pour l'évaluation (Phase 5) : un modèle DIFFÉRENT de LLM_MODEL (550B vs
+# 120B de paramètres), pour limiter le biais d'un modèle qui se juge lui-même.
+# Choisi après un vrai test de fiabilité (5 appels d'affilée), pas seulement de
+# disponibilité : google/gemma-4-31b-it:free, qwen/qwen3.8-27b:free et
+# z-ai/glm-5.2:free (fournisseurs différents de Nvidia, testés en priorité pour
+# une indépendance plus forte) étaient tous saturés (429 persistants, y compris
+# après plusieurs tentatives). Limite assumée et documentée dans le rapport :
+# même fournisseur (Nvidia) que le modèle évalué, faute de mieux en gratuit.
+JUDGE_MODEL = "nvidia/nemotron-3-ultra-550b-a55b:free"
 
 # --- Découpage des documents et recherche ------------------------------------
 CHUNK_SIZE = 1000

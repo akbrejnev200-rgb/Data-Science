@@ -99,8 +99,9 @@ neogarden-assistant/
 │   └── pipeline.py            Assemblage du RAG complet
 ├── scripts/build_index.py     Construit l'index FAISS à l'avance
 ├── data/                      Documents sources
+├── tests/                     Tests unitaires (mocks, sans appel réseau)
+├── evaluation/                golden_set.csv, evaluate.py, rapports générés
 ├── docs/PLAN.md               Plan de restructuration, phase par phase
-├── golden_set.csv             15 questions de test avec réponse et source attendues
 ├── LIMITES_RAG_EXEMPLES.md    Exemples concrets des limites du RAG
 ├── Lancer_NeoGarden.bat       Lanceur Windows
 └── pyproject.toml             Dépendances (versions figées)
@@ -130,10 +131,13 @@ Elles sont détaillées avec des cas réels dans [`LIMITES_RAG_EXEMPLES.md`](LIM
 4. **Aucun suivi** des tokens, de la latence ni du coût par requête.
 5. Les sources s'affichent **même quand l'assistant refuse** de répondre.
 
-Déjà traitées depuis la première version : l'historique de conversation dans la recherche, l'index sauvegardé sur disque, un cache qui ne dépend plus de la clé API, et « Bonjour ! » (avec l'espace avant le point d'exclamation) désormais reconnu comme une salutation (corrigé en Phase 4, test écrit avant le correctif).
+Déjà traitées depuis la première version : l'historique de conversation dans la recherche, l'index sauvegardé sur disque, un cache qui ne dépend plus de la clé API, « Bonjour ! » (avec l'espace avant le point d'exclamation) désormais reconnu comme une salutation (corrigé en Phase 4, test écrit avant le correctif), et le prompt système qui fusionnait ses règles 3 et 4 sur une même ligne (corrigé en Phase 5).
 
-**Défaut identifié, correction planifiée** (voir [`docs/PLAN.md`](docs/PLAN.md)) :
-- Le prompt système fusionne ses règles 3 et 4 sur une même ligne (saut de ligne manquant). Correction en Phase 5, après avoir mesuré l'effet du changement.
+## Évaluation
+
+Outillage dans [`evaluation/`](evaluation/) (`evaluate.py`) : retrieval (le bon document source est-il retrouvé ?), génération jugée par un second LLM (fidélité au contexte, pertinence, refus correct hors périmètre, résistance aux tentatives d'injection). Hors CI (appels API réels, non déterministes).
+
+Le golden set complet compte 20 questions ; par prudence sur le quota gratuit d'OpenRouter (50 requêtes/jour pour tout le compte), l'outillage a d'abord été validé sur un sous-ensemble de 6 questions représentatives — voir [`evaluation/rapport_reduit_avant.md`](evaluation/rapport_reduit_avant.md) et [`rapport_reduit_apres.md`](evaluation/rapport_reduit_apres.md) (avant/après le correctif du prompt). L'évaluation complète sur les 20 questions est prévue en suivant (voir [`docs/PLAN.md`](docs/PLAN.md)).
 
 ## Feuille de route
 
@@ -145,7 +149,7 @@ Le détail est dans [`docs/PLAN.md`](docs/PLAN.md). Une branche et une revue par
 | 2 | Découpage en modules, index persistant, erreurs précises | ✅ |
 | 3 | Qualité : versions figées, Ruff, pre-commit | ✅ |
 | 4 | Tests unitaires (sans appel à l'API) | ✅ |
-| 5 | Évaluation : retrieval et génération, LLM-as-a-judge | à venir |
+| 5 | Évaluation : retrieval et génération, LLM-as-a-judge | ✅ (sous-ensemble réduit, complète à suivre) |
 | 5bis | Garde-fous, mesurés avec l'évaluation | à venir |
 | 6 | Intégration continue (GitHub Actions) | à venir |
 | 7 | Documentation finale et résultats chiffrés | à venir |
