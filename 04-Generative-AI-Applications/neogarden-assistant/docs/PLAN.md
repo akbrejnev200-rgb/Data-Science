@@ -193,6 +193,19 @@ consignes).
 **Validation :** rapport généré, je te montre les résultats et ce qu'ils
 disent des limites déjà identifiées (`LIMITES_RAG_EXEMPLES.md`).
 
+**Note (2026-09-23) — contrainte réelle découverte en cours de route :**
+OpenRouter limite les modèles gratuits à 50 requêtes/jour pour tout le
+compte (tous modèles confondus), pas 50 par modèle. Une évaluation complète
+(20 questions × avant/après correctif) demande ~80 appels, largement
+au-dessus. Décision prise avec l'utilisateur : l'outillage (`evaluate.py`,
+golden set enrichi, juge LLM, correctif du prompt) est livré et validé sur
+un **sous-ensemble réduit de 6 questions représentatives** (id 1, 3, 10, 14,
+15, 18 — couvrent FAQ, Politique de retour, Catalogue, la fusion entre deux
+sources, une question hors périmètre et une tentative d'injection),
+`evaluation/rapport_reduit_avant.md` et `rapport_reduit_apres.md`.
+L'évaluation complète sur les 20 questions sera relancée plus tard (étalée
+sur deux jours, gratuitement) et remplacera ces rapports réduits.
+
 ---
 
 ## Phase 5bis — Garde-fous (après l'évaluation)
