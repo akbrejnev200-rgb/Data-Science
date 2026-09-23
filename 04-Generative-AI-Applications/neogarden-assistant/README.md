@@ -1,9 +1,11 @@
 # NeoGarden Assistant
 
+[![CI](https://github.com/akbrejnev200-rgb/Data-Science/actions/workflows/neogarden-ci.yml/badge.svg?branch=main)](https://github.com/akbrejnev200-rgb/Data-Science/actions/workflows/neogarden-ci.yml)
+
 Assistant conversationnel (RAG) pour une boutique de jardinage fictive. Il répond en français aux questions sur les produits, la livraison, le paiement, les retours et les garanties, **uniquement à partir des documents de la boutique**, et montre les passages qui fondent chaque réponse.
 
 > Projet de démonstration : la boutique, ses documents et ses marques sont fictifs.
-> Le dépôt est en cours de restructuration en dépôt professionnel : voir la [feuille de route](#feuille-de-route). Il n'y a pas encore de tests automatisés, d'évaluation chiffrée ni d'intégration continue.
+> Le dépôt est en cours de restructuration en dépôt professionnel : voir la [feuille de route](#feuille-de-route).
 
 ## Ce que fait l'assistant
 
@@ -107,6 +109,8 @@ neogarden-assistant/
 └── pyproject.toml             Dépendances (versions figées)
 ```
 
+Deux fichiers vivent à la racine du monorepo `Data-Science` (contrainte de GitHub, ils ne peuvent pas être ailleurs), mais restreints à ce dossier via `paths:`/`files:` pour ne pas affecter les autres projets : `.github/workflows/neogarden-ci.yml` et `.pre-commit-config.yaml`.
+
 ## Données
 
 Corpus fictif, en français :
@@ -151,5 +155,5 @@ Le détail est dans [`docs/PLAN.md`](docs/PLAN.md). Une branche et une revue par
 | 4 | Tests unitaires (sans appel à l'API) | ✅ |
 | 5 | Évaluation : retrieval et génération, LLM-as-a-judge | ✅ (sous-ensemble réduit, complète à suivre) |
 | 5bis | Garde-fous, mesurés avec l'évaluation | à venir |
-| 6 | Intégration continue (GitHub Actions) | à venir |
+| 6 | Intégration continue (GitHub Actions) | ✅ |
 | 7 | Documentation finale et résultats chiffrés | à venir |
