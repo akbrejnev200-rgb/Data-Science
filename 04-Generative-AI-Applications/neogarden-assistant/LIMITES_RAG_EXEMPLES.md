@@ -44,19 +44,3 @@ changer d'une formulation à l'autre, même pour une intention identique. La
 recherche vectorielle pure n'est pas robuste aux paraphrases.
 
 **Limite README concernée :** n°2 (recherche vectorielle pure, k=4 fixe).
-
----
-
-## Comment en parler en entretien
-
-- Ne pas cacher ces limites : les énoncer avec assurance, avant qu'on te les
-  trouve.
-- Montrer que le diagnostic va jusqu'à la cause précise (chunking, dilution
-  vectorielle), pas juste jusqu'au symptôme (« ça rate parfois »).
-- Pistes d'amélioration à citer (non implémentées ce soir, faute de temps) :
-  - chunking sémantique respectant les frontières logiques (Q/R, articles)
-    plutôt qu'une taille fixe en caractères
-  - recherche hybride (BM25 + vectoriel) pour rattraper les correspondances
-    exactes de mots-clés
-  - reranker après le retrieval initial
-  - `k` plus élevé, ou dynamique selon le score de confiance
