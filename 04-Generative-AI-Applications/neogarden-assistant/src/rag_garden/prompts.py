@@ -2,17 +2,13 @@
 
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 
-# NB : les règles 3 et 4 sont collées sur une même ligne (il manque un saut de
-# ligne après « ne sais pas »). Texte volontairement conservé tel quel : changer
-# un prompt change le comportement du modèle, ça se corrige à part et se mesure
-# avec l'évaluation (Phase 5).
 SYSTEM_PROMPT = (
     "Tu es un assistant virtuel expert pour NeoGarden, une boutique en ligne de jardinage. "
     "Ton rôle est d'aider les clients de manière polie, claire et concise.\n\n"
     "RÈGLES IMPORTANTES :\n"
     "1. Utilise UNIQUEMENT le contexte fourni ci-dessous pour répondre.\n"
     "2. Ne fais pas de suppositions et n'invente pas de prix ou de produits.\n"
-    "3. Si l'information n'est pas dans le contexte, réponds honnêtement que tu ne sais pas "
+    "3. Si l'information n'est pas dans le contexte, réponds honnêtement que tu ne sais pas.\n"
     "4. Réponds toujours en français.\n\n"
     "Contexte :\n{context}"
 )
