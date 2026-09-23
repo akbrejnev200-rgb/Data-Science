@@ -79,6 +79,19 @@ streamlit run app/streamlit_app.py
 - **Windows** : `Lancer_NeoGarden.bat` lance l'application. Il utilise, dans l'ordre, la variable `NEOGARDEN_PYTHON` (chemin complet de `python.exe`), le dossier `.venv` du projet, puis le `python` du système.
 - **Préparer l'index à l'avance** (par exemple avant une démo) : `python scripts/build_index.py`. L'option `--force` le reconstruit. L'index est écrit dans `vectorstore/`, ignoré par git.
 
+## Développement
+
+```bash
+pip install -e ".[dev]"     # installe aussi Ruff et pytest
+ruff check .                # lint
+ruff format --check .       # formatage (sans --check : applique les corrections)
+pytest -q                   # tests unitaires (mocks, aucun appel réseau)
+```
+
+Ces trois commandes sont celles lancées automatiquement par la CI ([`.github/workflows/neogarden-ci.yml`](../../.github/workflows/neogarden-ci.yml), badge en haut de ce fichier) à chaque push ou pull request touchant ce dossier. Un hook [pre-commit](../../.pre-commit-config.yaml) lance en plus Ruff avant chaque commit local.
+
+Évaluation du RAG (appels API réels, hors CI) : voir la section [Évaluation](#évaluation) ci-dessous.
+
 ## Configuration
 
 Le seul secret est `OPENROUTER_API_KEY`, lu depuis le fichier `.env` (jamais versionné ; `.env.example` sert de modèle). Tous les autres réglages sont dans [`src/rag_garden/config.py`](src/rag_garden/config.py) : chemins, modèles, taille et chevauchement des chunks, nombre de passages retrouvés (`RETRIEVER_K`), nombre de tentatives en cas d'erreur temporaire.
@@ -104,6 +117,7 @@ neogarden-assistant/
 ├── tests/                     Tests unitaires (mocks, sans appel réseau)
 ├── evaluation/                golden_set.csv, evaluate.py, rapports générés
 ├── docs/PLAN.md               Plan de restructuration, phase par phase
+├── docs/APPRENTISSAGES.md     Notions apprises, format question d'entretien
 ├── LIMITES_RAG_EXEMPLES.md    Exemples concrets des limites du RAG
 ├── Lancer_NeoGarden.bat       Lanceur Windows
 └── pyproject.toml             Dépendances (versions figées)
@@ -141,11 +155,21 @@ Déjà traitées depuis la première version : l'historique de conversation dans
 
 Outillage dans [`evaluation/`](evaluation/) (`evaluate.py`) : retrieval (le bon document source est-il retrouvé ?), génération jugée par un second LLM (fidélité au contexte, pertinence, refus correct hors périmètre, résistance aux tentatives d'injection). Hors CI (appels API réels, non déterministes).
 
-Le golden set complet compte 20 questions ; par prudence sur le quota gratuit d'OpenRouter (50 requêtes/jour pour tout le compte), l'outillage a d'abord été validé sur un sous-ensemble de 6 questions représentatives — voir [`evaluation/rapport_reduit_avant.md`](evaluation/rapport_reduit_avant.md) et [`rapport_reduit_apres.md`](evaluation/rapport_reduit_apres.md) (avant/après le correctif du prompt). L'évaluation complète sur les 20 questions est prévue en suivant (voir [`docs/PLAN.md`](docs/PLAN.md)).
+Le golden set complet compte 20 questions ; par prudence sur le quota gratuit d'OpenRouter (50 requêtes/jour pour tout le compte, pas par modèle), l'outillage a d'abord été validé sur un **sous-ensemble de 6 questions représentatives** (FAQ, Politique de retour, Catalogue, une question qui croise deux sources, une hors périmètre, une tentative d'injection de prompt). L'évaluation complète sur les 20 questions est prévue en suivant (voir [`docs/PLAN.md`](docs/PLAN.md)), et remplacera ces résultats.
+
+| Métrique | Avant correctif du prompt | Après correctif |
+|---|---|---|
+| Retrieval : bon document retrouvé (top-4) | 4/4 | 4/4 |
+| Génération fidèle et pertinente | 3/4 | 3/4 |
+| Refus correct (question hors périmètre) | 1/1 | 1/1 |
+| Résistance (tentative d'injection de prompt) | 1/1 | 1/1 |
+| **Score global** | **5/6 (83 %)** | **5/6 (83 %)** |
+
+Le seul échec, dans les deux cas, porte sur une question qui croise deux sources (FAQ + Catalogue) : le retrieval trouve bien les bons documents, mais le modèle refuse de répondre plutôt que de synthétiser l'information. C'est une vraie limite (recherche purement vectorielle, voir [Limites connues](#limites-connues)), sans rapport avec le bug de prompt corrigé — d'où le score identique avant/après, cohérent avec l'hypothèse de départ. Détail question par question : [`evaluation/rapport_reduit_avant.md`](evaluation/rapport_reduit_avant.md) et [`rapport_reduit_apres.md`](evaluation/rapport_reduit_apres.md).
 
 ## Feuille de route
 
-Le détail est dans [`docs/PLAN.md`](docs/PLAN.md). Une branche et une revue par phase.
+Le détail est dans [`docs/PLAN.md`](docs/PLAN.md). Une branche et une revue par phase. Les notions apprises en cours de route (linter, tests, CI/CD, LLM-as-a-judge...) sont rassemblées dans [`docs/APPRENTISSAGES.md`](docs/APPRENTISSAGES.md).
 
 | Phase | Contenu | État |
 |---|---|---|
@@ -156,4 +180,4 @@ Le détail est dans [`docs/PLAN.md`](docs/PLAN.md). Une branche et une revue par
 | 5 | Évaluation : retrieval et génération, LLM-as-a-judge | ✅ (sous-ensemble réduit, complète à suivre) |
 | 5bis | Garde-fous, mesurés avec l'évaluation | à venir |
 | 6 | Intégration continue (GitHub Actions) | ✅ |
-| 7 | Documentation finale et résultats chiffrés | à venir |
+| 7 | Documentation finale et résultats chiffrés | ✅ |
