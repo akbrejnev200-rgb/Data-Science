@@ -14,7 +14,13 @@ from langchain_core.runnables import Runnable
 from rag_garden import config
 from rag_garden.errors import KnowledgeBaseError, LLMRequestError, LLMUnavailableError
 from rag_garden.memory import to_langchain_messages
-from rag_garden.pipeline import Answer, answer_question, build_rag_chain, load_retriever
+from rag_garden.pipeline import (
+    Answer,
+    answer_question,
+    build_rag_chain,
+    load_domain_vocabulary,
+    load_retriever,
+)
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s"
@@ -38,6 +44,12 @@ FRIENDLY_ERROR = (
 def get_retriever():
     """Base de connaissances : partie lourde, indépendante de la clé API."""
     return load_retriever()
+
+
+@st.cache_resource(show_spinner=False)
+def get_domain_vocabulary() -> frozenset[str]:
+    """Vocabulaire du corpus (garde-fou "hors sujet"), calculé une seule fois."""
+    return load_domain_vocabulary()
 
 
 @st.cache_resource(show_spinner=False)
@@ -123,7 +135,7 @@ def generate_answer(chain: Runnable, question: str) -> Answer | None:
     # On exclut le message de bienvenue (index 0) et la question actuelle (dernier).
     history = to_langchain_messages(st.session_state.messages[1:-1])
     try:
-        return answer_question(chain, question, history)
+        return answer_question(chain, question, history, get_domain_vocabulary())
     except (LLMUnavailableError, LLMRequestError) as exc:
         logger.error("Appel au LLM en échec : %s", exc)
     except Exception:

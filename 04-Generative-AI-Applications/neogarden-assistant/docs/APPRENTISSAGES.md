@@ -204,3 +204,45 @@ après, pas en le supposant. Ici, le score est resté identique (5/6) : le
 bug corrigé n'était pas la cause de l'échec restant, ce qui est une
 information utile en soi (évite de croire à tort qu'on a réglé le
 problème).
+
+---
+
+## Abandonner une approche après l'avoir mesurée (garde-fous)
+
+Le plan initial prévoyait un garde-fou "question hors sujet" basé sur un
+seuil de distance vectorielle (FAISS). Mesuré sur de vraies questions avant
+de l'implémenter pour de bon : une question de suivi légitime ("Et combien
+ça coûte ?", distance 12.3) avait un score aussi mauvais — voire pire —
+qu'une vraie question hors sujet ("capitale de l'Australie ?", distance
+12.5). Un seuil fixe aurait donc bloqué de vraies questions. Remplacé par
+une approche plus simple (recouvrement avec le vocabulaire du corpus),
+mesurée avec 0 faux positif sur les 14 questions normales du golden set.
+
+**Question probable :** « Comment as-tu choisi cette approche plutôt que
+l'autre ? »
+**Réponse courte :** je n'ai pas choisi à l'avance — j'ai mesuré les deux
+sur de vraies données avant de trancher. La première idée (la plus
+"sophistiquée", embeddings) s'est avérée moins fiable que la plus simple
+(vocabulaire) pour ce cas précis. Une approche qui semble plus avancée
+n'est pas forcément la meilleure ; seule la mesure le dit.
+
+---
+
+## Coût d'un garde-fou côté production, pas seulement côté évaluation
+
+Le plan prévoyait un garde-fou "réponse ancrée" vérifié par un second appel
+LLM (comme le juge de la Phase 5). Problème identifié avant de l'implémenter
+: appliqué à *chaque* question réelle de l'application (pas seulement en
+évaluation), ça double le nombre d'appels API à chaque usage — un risque
+concret après avoir déjà épuisé un quota gratuit pendant ce projet.
+Remplacé par une heuristique locale (recouvrement lexical), gratuite, validée
+par des tests unitaires avec des exemples fabriqués plutôt que par des
+appels réels.
+
+**Question probable :** « As-tu pensé au coût de ta solution en
+production, pas seulement à sa précision ? »
+**Réponse courte :** un contrôle plus fin (juge LLM) n'est pas toujours le
+bon choix s'il double le coût de chaque requête réelle. Le compromis retenu
+ici privilégie une heuristique gratuite légèrement moins précise, plutôt
+qu'un contrôle plus fiable mais qui fragilise la disponibilité du service
+(risque de quota épuisé).
