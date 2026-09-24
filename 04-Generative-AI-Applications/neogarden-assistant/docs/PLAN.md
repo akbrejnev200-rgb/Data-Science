@@ -220,16 +220,37 @@ Phase 5 en place, pour mesurer leur effet avant/après.
 - **Injection de prompt** (entrée) : détection par motifs des attaques
   évidentes, réponse de refus polie. Première ligne de défense, contournable :
   à documenter comme telle.
-- **Hors sujet** (entrée) : seuil sur le score de similarité du retriever,
-  réglé sur le golden set.
-- **Réponse ancrée** (sortie) : contrôle que la réponse est soutenue par les
-  passages retrouvés (juge LLM, réutilise l'outillage de la Phase 5).
-- Chaque garde-fou est mesuré avec `evaluation/evaluate.py` : attaques
-  bloquées **et** questions légitimes refusées à tort.
-- Tests unitaires (mocks) pour chacun.
+- **Hors sujet** (entrée) : ~~seuil sur le score de similarité du retriever~~
+  **changé après mesure.** Un seuil de distance FAISS a été testé sur les 20
+  questions du golden set + des questions de suivi courtes : il pénalisait
+  autant une question de suivi légitime ("Et combien ça coûte ?", distance
+  12.3) qu'une vraie question hors sujet ("capitale de l'Australie ?",
+  distance 12.5) — chevauchement trop important pour être fiable. Remplacé
+  par une absence de recouvrement avec le **vocabulaire du corpus** (mots
+  significatifs des documents sources) : mesuré sur le même golden set,
+  0 faux positif sur les 14 questions normales, 3/3 questions hors périmètre
+  détectées, et les questions de suivi courtes passent correctement.
+- **Réponse ancrée** (sortie) : ~~juge LLM, réutilise l'outillage de la
+  Phase 5~~ **changé après discussion.** Un juge LLM à chaque réponse
+  doublerait le coût de chaque question réelle posée dans l'application (pas
+  seulement en évaluation) — risque accru d'épuiser le quota gratuit
+  d'OpenRouter, y compris pendant une démo. Remplacé par une heuristique
+  locale (recouvrement lexical entre la réponse et le contexte retrouvé),
+  gratuite, validée par tests unitaires (exemples fabriqués : réponse fidèle,
+  réponse inventée, refus légitime).
+- Chaque garde-fou est mesuré : injection et hors sujet sur le texte des 20
+  questions du golden set (aucun appel API, calcul local) ; ancrage par tests
+  unitaires. Confirmé aussi de bout en bout avec `evaluation/evaluate.py` sur
+  le sous-ensemble réduit (`evaluation/rapport_reduit_garde_fous.md`) : les
+  questions hors périmètre et d'attaque sont bloquées avant tout appel LLM
+  (0 appel juge nécessaire pour elles), sans regression sur les questions
+  normales.
+- Tests unitaires (mocks) pour chacun (`tests/test_guardrails.py`).
 
 **Validation :** rapport avant/après ; on ne garde un garde-fou que si son
-taux de faux positifs sur le golden set est acceptable.
+taux de faux positifs sur le golden set est acceptable. Ici : 0 faux positif
+mesuré sur l'ensemble du golden set (20 questions) pour l'injection et le
+hors sujet.
 
 ---
 

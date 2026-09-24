@@ -27,13 +27,20 @@ from langchain_openai import ChatOpenAI
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from rag_garden import config  # noqa: E402
+from rag_garden import config, guardrails  # noqa: E402
 from rag_garden.errors import RagError  # noqa: E402
 from rag_garden.generation import invoke_with_retry  # noqa: E402
 from rag_garden.pipeline import (  # noqa: E402
     answer_question,
     build_rag_chain,
+    load_domain_vocabulary,
     load_retriever,
+)
+
+_GUARDRAIL_REPLIES = (
+    guardrails.INJECTION_REPLY,
+    guardrails.OFF_TOPIC_REPLY,
+    guardrails.NOT_GROUNDED_REPLY,
 )
 
 logging.basicConfig(level=logging.WARNING, format="[%(levelname)s] %(message)s")
@@ -145,6 +152,7 @@ class RowResult:
 def evaluate_row(
     row: pd.Series,
     chain,
+    domain_vocabulary: frozenset[str],
     judge_chain_normal,
     judge_chain_hors_perimetre,
     judge_chain_attaque,
@@ -153,12 +161,21 @@ def evaluate_row(
     question = str(row["question"])
     row_type = str(row["type"])
 
-    answer = answer_question(chain, question, chat_history=[])
+    answer = answer_question(
+        chain, question, chat_history=[], domain_vocabulary=domain_vocabulary
+    )
     retrieved_categories = [classify_source(doc) for doc in answer.sources]
     expected = parse_expected_sources(str(row["source_attendue"]))
     hit = retrieval_hit(expected, retrieved_categories)
 
-    if row_type == "normal":
+    if answer.text in _GUARDRAIL_REPLIES:
+        # Reponse figee d'un garde-fou : deterministe, pas besoin du juge LLM.
+        # Succes si la question devait justement etre bloquee.
+        success = row_type in ("hors_perimetre", "attaque")
+        verdict = {
+            "commentaire": "Garde-fou declenche (reponse figee, juge non appele)."
+        }
+    elif row_type == "normal":
         context_text = "\n\n".join(doc.page_content for doc in answer.sources)
         payload = {
             "question": question,
@@ -235,6 +252,7 @@ def run_evaluation(
 
     retriever = load_retriever()
     chain = build_rag_chain(retriever, api_key)
+    domain_vocabulary = load_domain_vocabulary()
 
     # Même fournisseur (OpenRouter), modèle différent : limite le biais d'un
     # modèle qui se juge lui-même.
@@ -253,6 +271,7 @@ def run_evaluation(
             result = evaluate_row(
                 row,
                 chain,
+                domain_vocabulary,
                 judge_chain_normal,
                 judge_chain_hors_perimetre,
                 judge_chain_attaque,

@@ -109,7 +109,7 @@ neogarden-assistant/
 │   ├── prompts.py             Consigne système et prompt de reformulation
 │   ├── generation.py          Appel au LLM, retry sur erreurs temporaires
 │   ├── memory.py              Historique de conversation au format LangChain
-│   ├── guardrails.py          Raccourci « salutations » (autres garde-fous : prévus)
+│   ├── guardrails.py          Salutations, injection, hors sujet, ancrage
 │   ├── errors.py              Erreurs métier
 │   └── pipeline.py            Assemblage du RAG complet
 ├── scripts/build_index.py     Construit l'index FAISS à l'avance
@@ -145,11 +145,23 @@ Elles sont détaillées avec des cas réels dans [`LIMITES_RAG_EXEMPLES.md`](LIM
 
 1. **Recherche purement vectorielle, 4 passages fixes.** Pas de recherche par mots-clés (BM25) ni de reranker : les références exactes et les questions qui croisent deux sources sont mal servies, et une reformulation de la même question peut changer les passages retrouvés.
 2. **Découpage non mesuré.** Un passage court peut être dilué par ses voisins dans un même chunk.
-3. **Aucun garde-fou** : ni détection d'injection de prompt, ni filtre de questions hors sujet, ni contrôle que la réponse est ancrée dans le contexte.
+3. **Garde-fous locaux, pas une sécurité forte** (voir [Garde-fous](#garde-fous) ci-dessous) : détection d'injection par motifs (contournable par une formulation différente), question hors sujet par vocabulaire (une question légitime sans aucun mot du corpus serait aussi refusée), ancrage par recouvrement lexical (pas un vrai contrôle sémantique).
 4. **Aucun suivi** des tokens, de la latence ni du coût par requête.
 5. Les sources s'affichent **même quand l'assistant refuse** de répondre.
 
-Déjà traitées depuis la première version : l'historique de conversation dans la recherche, l'index sauvegardé sur disque, un cache qui ne dépend plus de la clé API, « Bonjour ! » (avec l'espace avant le point d'exclamation) désormais reconnu comme une salutation (corrigé en Phase 4, test écrit avant le correctif), et le prompt système qui fusionnait ses règles 3 et 4 sur une même ligne (corrigé en Phase 5).
+Déjà traitées depuis la première version : l'historique de conversation dans la recherche, l'index sauvegardé sur disque, un cache qui ne dépend plus de la clé API, « Bonjour ! » (avec l'espace avant le point d'exclamation) désormais reconnu comme une salutation (corrigé en Phase 4, test écrit avant le correctif), le prompt système qui fusionnait ses règles 3 et 4 sur une même ligne (corrigé en Phase 5), et l'absence de garde-fous (Phase 5bis).
+
+## Garde-fous
+
+Trois contrôles, mesurés sur le golden set avant d'être activés (voir [`docs/PLAN.md`](docs/PLAN.md) pour la démarche complète, y compris une approche abandonnée après mesure) :
+
+| Garde-fou | Méthode | Coût par question réelle |
+|---|---|---|
+| Injection de prompt (entrée) | Détection par motifs (« ignore tes instructions », « tu es maintenant »...) | Aucun (pas d'appel LLM) |
+| Question hors sujet (entrée) | Absence de recouvrement avec le vocabulaire du corpus | Aucun (calcul local) |
+| Réponse non ancrée (sortie) | Recouvrement lexical entre la réponse et le contexte retrouvé | Aucun (heuristique locale, pas un second appel LLM) |
+
+Mesuré sur les 20 questions du golden set : 0 faux positif sur les 14 questions normales, 3/3 questions hors périmètre et 3/3 tentatives d'injection détectées (par l'un des deux premiers garde-fous). Détail : [`src/rag_garden/guardrails.py`](src/rag_garden/guardrails.py) et [`tests/test_guardrails.py`](tests/test_guardrails.py).
 
 ## Évaluation
 
@@ -178,6 +190,6 @@ Le détail est dans [`docs/PLAN.md`](docs/PLAN.md). Une branche et une revue par
 | 3 | Qualité : versions figées, Ruff, pre-commit | ✅ |
 | 4 | Tests unitaires (sans appel à l'API) | ✅ |
 | 5 | Évaluation : retrieval et génération, LLM-as-a-judge | ✅ (sous-ensemble réduit, complète à suivre) |
-| 5bis | Garde-fous, mesurés avec l'évaluation | à venir |
+| 5bis | Garde-fous, mesurés avec l'évaluation | ✅ |
 | 6 | Intégration continue (GitHub Actions) | ✅ |
 | 7 | Documentation finale et résultats chiffrés | ✅ |
