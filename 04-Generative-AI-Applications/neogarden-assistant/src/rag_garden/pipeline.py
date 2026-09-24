@@ -18,7 +18,13 @@ from rag_garden.retriever import build_history_aware_retriever, build_retriever
 
 @dataclass(frozen=True)
 class Answer:
-    """Réponse de l'assistant et passages qui la fondent (vide pour un refus)."""
+    """Réponse de l'assistant et passages qui la fondent.
+
+    Vide pour une salutation, une injection détectée ou une question hors
+    sujet (aucune recherche effectuée). Non vide pour un refus "réponse non
+    ancrée" : les sources retrouvées sont gardées, pour que l'utilisateur
+    puisse les vérifier lui-même.
+    """
 
     text: str
     sources: list[Document]
