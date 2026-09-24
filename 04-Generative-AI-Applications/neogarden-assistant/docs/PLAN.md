@@ -202,9 +202,16 @@ golden set enrichi, juge LLM, correctif du prompt) est livré et validé sur
 un **sous-ensemble réduit de 6 questions représentatives** (id 1, 3, 10, 14,
 15, 18 — couvrent FAQ, Politique de retour, Catalogue, la fusion entre deux
 sources, une question hors périmètre et une tentative d'injection),
-`evaluation/rapport_reduit_avant.md` et `rapport_reduit_apres.md`.
-L'évaluation complète sur les 20 questions sera relancée plus tard (étalée
-sur deux jours, gratuitement) et remplacera ces rapports réduits.
+`evaluation/rapport_reduit_avant.md` et `rapport_reduit_apres.md` (gardés :
+seule trace de l'expérience avant/après le correctif du prompt).
+
+**Mise à jour (2026-09-24) :** évaluation complète relancée sur les 20
+questions, avec les garde-fous de la Phase 5bis actifs — coût réduit
+(~28 appels au lieu de ~80) car les 6 questions hors périmètre/attaque sont
+désormais bloquées avant tout appel LLM. Résultat : 19/20 (95 %), zéro
+erreur de quota. `evaluation/rapport.md`. Le seul échec (« Puis-je payer en
+plusieurs fois ? ») correspond à la limite déjà documentée dans
+`LIMITES_RAG_EXEMPLES.md` (dilution de chunk).
 
 ---
 
@@ -279,9 +286,10 @@ hors sujet.
   La Phase 7 l'enrichit de ce qui n'existe pas encore : commandes de test et de
   lint, badge de CI, **résultats chiffrés de l'évaluation**, garde-fous, et
   passe la feuille de route à jour.
-- `docs/APPRENTISSAGES.md` : une notion par entrée (linter, formateur, tests,
-  mocks, CI/CD, branches, PR, LLM-as-a-judge...), avec question d'entretien
-  probable + réponse courte pour chacune.
+- `docs/APPRENTISSAGES.md` : écrit puis retiré du dépôt public (2026-09-24, à
+  la demande de l'utilisateur) — préparation d'entretien personnelle, pas de
+  la documentation projet. Gardé en local, hors dépôt Git, à
+  `C:\Users\akbre\projets\neogarden-assistant\APPRENTISSAGES-prive-entretien.md`.
 
 **Validation :** relecture ensemble, dernière PR vers `main`.
 
