@@ -117,7 +117,6 @@ neogarden-assistant/
 ├── tests/                     Tests unitaires (mocks, sans appel réseau)
 ├── evaluation/                golden_set.csv, evaluate.py, rapports générés
 ├── docs/PLAN.md               Plan de restructuration, phase par phase
-├── docs/APPRENTISSAGES.md     Notions apprises, format question d'entretien
 ├── LIMITES_RAG_EXEMPLES.md    Exemples concrets des limites du RAG
 ├── Lancer_NeoGarden.bat       Lanceur Windows
 └── pyproject.toml             Dépendances (versions figées)
@@ -167,21 +166,23 @@ Mesuré sur les 20 questions du golden set : 0 faux positif sur les 14 questions
 
 Outillage dans [`evaluation/`](evaluation/) (`evaluate.py`) : retrieval (le bon document source est-il retrouvé ?), génération jugée par un second LLM (fidélité au contexte, pertinence, refus correct hors périmètre, résistance aux tentatives d'injection). Hors CI (appels API réels, non déterministes).
 
-Le golden set complet compte 20 questions ; par prudence sur le quota gratuit d'OpenRouter (50 requêtes/jour pour tout le compte, pas par modèle), l'outillage a d'abord été validé sur un **sous-ensemble de 6 questions représentatives** (FAQ, Politique de retour, Catalogue, une question qui croise deux sources, une hors périmètre, une tentative d'injection de prompt). L'évaluation complète sur les 20 questions est prévue en suivant (voir [`docs/PLAN.md`](docs/PLAN.md)), et remplacera ces résultats.
+**Résultat sur l'ensemble des 20 questions du golden set** (garde-fous actifs) :
 
-| Métrique | Avant correctif du prompt | Après correctif |
-|---|---|---|
-| Retrieval : bon document retrouvé (top-4) | 4/4 | 4/4 |
-| Génération fidèle et pertinente | 3/4 | 3/4 |
-| Refus correct (question hors périmètre) | 1/1 | 1/1 |
-| Résistance (tentative d'injection de prompt) | 1/1 | 1/1 |
-| **Score global** | **5/6 (83 %)** | **5/6 (83 %)** |
+| Métrique | Résultat |
+|---|---|
+| Retrieval : bon document retrouvé (top-4) | 14/14 (100 %) |
+| Génération fidèle et pertinente | 13/14 (93 %) |
+| Refus correct (questions hors périmètre) | 3/3 (100 %, bloquées par les garde-fous) |
+| Résistance (tentatives d'injection de prompt) | 3/3 (100 %, bloquées par les garde-fous) |
+| **Score global** | **19/20 (95 %)** |
 
-Le seul échec, dans les deux cas, porte sur une question qui croise deux sources (FAQ + Catalogue) : le retrieval trouve bien les bons documents, mais le modèle refuse de répondre plutôt que de synthétiser l'information. C'est une vraie limite (recherche purement vectorielle, voir [Limites connues](#limites-connues)), sans rapport avec le bug de prompt corrigé — d'où le score identique avant/après, cohérent avec l'hypothèse de départ. Détail question par question : [`evaluation/rapport_reduit_avant.md`](evaluation/rapport_reduit_avant.md) et [`rapport_reduit_apres.md`](evaluation/rapport_reduit_apres.md).
+Le seul échec (« Puis-je payer en plusieurs fois ? ») correspond à une limite déjà documentée dans [`LIMITES_RAG_EXEMPLES.md`](LIMITES_RAG_EXEMPLES.md) : l'information existe, mais son chunk est dilué par du texte voisin sur un autre sujet. Détail question par question : [`evaluation/rapport.md`](evaluation/rapport.md).
+
+**Expérience de prompt** (avant/après le correctif des règles 3 et 4 collées, voir [Limites connues](#limites-connues)), mesurée séparément sur un sous-ensemble de 6 questions représentatives, par prudence sur le quota gratuit d'OpenRouter (50 requêtes/jour pour tout le compte, pas par modèle) : même score avant et après (5/6), l'échec restant portant sur une question qui croise deux sources — sans rapport avec le bug corrigé. Détail : [`evaluation/rapport_reduit_avant.md`](evaluation/rapport_reduit_avant.md) et [`rapport_reduit_apres.md`](evaluation/rapport_reduit_apres.md).
 
 ## Feuille de route
 
-Le détail est dans [`docs/PLAN.md`](docs/PLAN.md). Une branche et une revue par phase. Les notions apprises en cours de route (linter, tests, CI/CD, LLM-as-a-judge...) sont rassemblées dans [`docs/APPRENTISSAGES.md`](docs/APPRENTISSAGES.md).
+Le détail est dans [`docs/PLAN.md`](docs/PLAN.md). Une branche et une revue par phase.
 
 | Phase | Contenu | État |
 |---|---|---|
@@ -189,7 +190,7 @@ Le détail est dans [`docs/PLAN.md`](docs/PLAN.md). Une branche et une revue par
 | 2 | Découpage en modules, index persistant, erreurs précises | ✅ |
 | 3 | Qualité : versions figées, Ruff, pre-commit | ✅ |
 | 4 | Tests unitaires (sans appel à l'API) | ✅ |
-| 5 | Évaluation : retrieval et génération, LLM-as-a-judge | ✅ (sous-ensemble réduit, complète à suivre) |
+| 5 | Évaluation : retrieval et génération, LLM-as-a-judge | ✅ |
 | 5bis | Garde-fous, mesurés avec l'évaluation | ✅ |
 | 6 | Intégration continue (GitHub Actions) | ✅ |
 | 7 | Documentation finale et résultats chiffrés | ✅ |
