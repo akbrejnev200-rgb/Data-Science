@@ -23,8 +23,8 @@ vecteur du chunk vers le thème livraison plutôt que paiement. Avec `k=4` fixe,
 ce chunk se fait doubler par d'autres chunks plus nettement orientés sur un
 seul thème.
 
-**Limites README concernées :** n°2 (recherche vectorielle pure, k=4 fixe) et
-n°6 (chunking à 1000/150, choisi sans mesure).
+**Limites README concernées :** n°1 (recherche vectorielle pure, k=4 fixe) et
+n°2 (chunking à 1000/150, choisi sans mesure).
 
 ---
 
@@ -43,4 +43,4 @@ légèrement différent. Le jeu des `k=4` chunks les plus proches peut donc
 changer d'une formulation à l'autre, même pour une intention identique. La
 recherche vectorielle pure n'est pas robuste aux paraphrases.
 
-**Limite README concernée :** n°2 (recherche vectorielle pure, k=4 fixe).
+**Limite README concernée :** n°1 (recherche vectorielle pure, k=4 fixe).

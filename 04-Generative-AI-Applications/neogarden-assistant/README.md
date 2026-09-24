@@ -5,7 +5,7 @@
 Assistant conversationnel (RAG) pour une boutique de jardinage fictive. Il répond en français aux questions sur les produits, la livraison, le paiement, les retours et les garanties, **uniquement à partir des documents de la boutique**, et montre les passages qui fondent chaque réponse.
 
 > Projet de démonstration : la boutique, ses documents et ses marques sont fictifs.
-> Le dépôt est en cours de restructuration en dépôt professionnel : voir la [feuille de route](#feuille-de-route).
+> Projet restructuré en dépôt professionnel, phase par phase : voir la [feuille de route](#feuille-de-route).
 
 ## Ce que fait l'assistant
 
@@ -15,7 +15,7 @@ Assistant conversationnel (RAG) pour une boutique de jardinage fictive. Il répo
 - **Refuse de répondre quand l'information manque**, au lieu d'inventer.
 - **Répond directement aux salutations**, sans recherche.
 
-Extrait d'une conversation réelle :
+Exemple de conversation (les deux premières réponses sont un vrai extrait observé ; la troisième a été mise à jour pour refléter le garde-fou ajouté depuis) :
 
 ```
 Vous       : Livrez-vous en Belgique ?
@@ -23,7 +23,7 @@ Assistant  : Oui, nous livrons en Belgique. (…)
 Vous       : Et combien ça coûte ?
 Assistant  : Pour la Belgique, la livraison coûte 9,90 € et devient gratuite à partir de 99 € d'achat.
 Vous       : Quel est votre chiffre d'affaires 2025 ?
-Assistant  : Je ne dispose pas de cette information dans le contexte fourni. (…)
+Assistant  : Je ne trouve rien dans mes sources qui corresponde à votre question. (…)
 ```
 
 ## Comment ça marche
@@ -42,13 +42,19 @@ flowchart LR
 
 ```mermaid
 flowchart TD
-    Q[Question] --> S{"Simple salutation ?"}
+    Q[Question] --> INJ{"Injection de prompt ?"}
+    INJ -- oui --> R1["Refus : reste l'assistant NeoGarden"]
+    INJ -- non --> S{"Simple salutation ?"}
     S -- oui --> R0[Réponse directe]
-    S -- non --> H["Reformulation<br/>si question de suivi"]
+    S -- non --> OT{"Hors sujet ?<br/>vocabulaire du corpus"}
+    OT -- oui --> R2[Refus poli]
+    OT -- non --> H["Reformulation<br/>si question de suivi"]
     H --> I[("Index FAISS")]
     I -- "4 passages" --> P["Prompt : consigne + passages + historique"]
     P --> L["LLM via OpenRouter"]
-    L --> A["Réponse + sources affichées"]
+    L --> G{"Réponse ancrée ?<br/>recouvrement lexical"}
+    G -- non --> R3["Refus : demande de reformuler"]
+    G -- oui --> A["Réponse + sources affichées"]
 ```
 
 ## Choix techniques
