@@ -3,6 +3,9 @@
 .venv/
 .streamlit/secrets.toml
 
+# --- Notes personnelles (ex: preparation d'entretien) : jamais publiees ---
+notes-privees/
+
 # --- Python ---
 __pycache__/
 *.pyc

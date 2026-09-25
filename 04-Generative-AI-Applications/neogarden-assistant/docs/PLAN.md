@@ -288,8 +288,8 @@ hors sujet.
   passe la feuille de route à jour.
 - `docs/APPRENTISSAGES.md` : écrit puis retiré du dépôt public (2026-09-24, à
   la demande de l'utilisateur) — préparation d'entretien personnelle, pas de
-  la documentation projet. Gardé en local, hors dépôt Git, à
-  `C:\Users\akbre\projets\neogarden-assistant\APPRENTISSAGES-prive-entretien.md`.
+  la documentation projet. Gardé en local dans `notes-privees/` (dossier du
+  projet, ignoré par git — voir `.gitignore`), jamais publié.
 
 **Validation :** relecture ensemble, dernière PR vers `main`.
 
